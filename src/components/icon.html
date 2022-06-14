@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('@@webRoot/include/head.html')
+    </head>
+
+    <body>
+        <div class="wrap">
+            <section>
+                <h2>Icon size</h2>
+                <div class="contents">
+                    <ul>
+                        <li>
+                            <span class="icon"><i class="ico star xs"></i></span>
+                            <span class="text">xs</span>
+                            <span class="size">12×12</span>
+                        </li>
+                        <li>
+                            <span class="icon"><i class="ico star sm"></i></span>
+                            <span class="text">sm</span>
+                            <span class="size">16×16</span>
+                        </li>
+                        <li>
+                            <span class="icon"><i class="ico star md"></i></span>
+                            <span class="text">md</span>
+                            <span class="size">24×24</span>
+                        </li>
+                        <li>
+                            <span class="icon"><i class="ico star lg"></i></span>
+                            <span class="text">lg</span>
+                            <span class="size">32×32</span>
+                        </li>
+                        <li>
+                            <span class="icon"><i class="ico star xl"></i></span>
+                            <span class="text">xl</span>
+                            <span class="size">40×40</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section>
+                <h2>Icons</h2>
+                <select id="categoryFilter" class="form-select" style="width: 150px;">
+                    <option value="all">ALL</option>
+                    <option value="a">Common</option>
+                    <option value="b">Main</option>
+                    <option value="c">Sub-A</option>
+                    <option value="d">Sub-B</option>
+                </select>
+
+
+                <div id="parent" class="contents">
+                    <div class="box a">
+                        <ul>
+                            <li>
+                                <span class="icon"><i class="ico arrow-right lg"></i></span>
+                                <span class="text">arrow-right</span>
+                            </li>
+                            <li>
+                                <span class="icon"><i class="ico arrow-right lg"></i></span>
+                                <span class="text">arrow-right</span>
+                            </li>
+                            <li>
+                                <span class="icon"><i class="ico arrow-right lg"></i></span>
+                                <span class="text">arrow-right</span>
+                            </li>
+                            <li>
+                                <span class="icon"><i class="ico arrow-right lg"></i></span>
+                                <span class="text">arrow-right</span>
+                            </li>
+                            <li>
+                                <span class="icon"><i class="ico arrow-right lg"></i></span>
+                                <span class="text">arrow-right</span>
+                            </li>
+                            <li>
+                                <span class="icon"><i class="ico arrow-right lg"></i></span>
+                                <span class="text">arrow-right</span>
+                            </li>
+                            <li>
+                                <span class="icon"><i class="ico arrow-right lg"></i></span>
+                                <span class="text">arrow-right</span>
+                            </li>
+                            <li>
+                                <span class="icon"><i class="ico arrow-right lg"></i></span>
+                                <span class="text">arrow-right</span>
+                            </li>
+                            <li>
+                                <span class="icon"><i class="ico arrow-right lg"></i></span>
+                                <span class="text">arrow-right</span>
+                            </li>
+                            <li>
+                                <span class="icon"><i class="ico arrow-right lg"></i></span>
+                                <span class="text">arrow-right</span>
+                            </li>
+                            <li>
+                                <span class="icon"><i class="ico arrow-right lg"></i></span>
+                                <span class="text">arrow-right</span>
+                            </li>
+                            <li>
+                                <span class="icon"><i class="ico arrow-right lg"></i></span>
+                                <span class="text">arrow-right</span>
+                            </li>
+                            <li>
+                                <span class="icon"><i class="ico arrow-right lg"></i></span>
+                                <span class="text">arrow-right</span>
+                            </li>
+                            <li>
+                                <span class="icon"><i class="ico arrow-right lg"></i></span>
+                                <span class="text">arrow-right</span>
+                            </li>
+                            <li>
+                                <span class="icon"><i class="ico arrow-right lg"></i></span>
+                                <span class="text">arrow-right</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="box b">
+                        <ul>
+                            <li>
+                                <span class="icon"><i class="ico star lg"></i></span>
+                                <span class="text">star</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="box c">
+                        <ul>
+                            <li>
+                                <span class="icon"><i class="ico bookmark lg"></i></span>
+                                <span class="text">bookmark</span>
+                            </li>
+                            <li>
+                                <span class="icon"><i class="ico bookmark-active lg"></i></span>
+                                <span class="text">bookmark-active</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="box d">
+                        <ul>
+                            <li>
+                                <span class="icon"><i class="ico eye-on lg"></i></span>
+                                <span class="text">eye-on</span>
+                            </li>
+                            <li>
+                                <span class="icon"><i class="ico eye-off lg"></i></span>
+                                <span class="text">eye-off</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script>
+            // Select Change
+            $("#categoryFilter").change(function () {
+                var category = $(this).val();
+
+                if (category === "all") {
+                    $("#parent > div").fadeIn(450);
+                } else {
+                    $("#parent > div").fadeIn(450);
+                    $("#parent > div")
+                        .not("." + category)
+                        .hide();
+                }
+            });
+        </script>
+        <style>
+            .wrap {
+                padding: 40px 20px;
+            }
+
+            h2 {
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+
+            section + section {
+                margin-top: 60px;
+            }
+
+            .contents {
+                width: 100%;
+                margin-top: 20px;
+            }
+
+            .contents ul {
+                display: inline-flex;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            .contents ul li {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100px;
+                height: 100px;
+                padding: 10px 0;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                background-color: #fff;
+            }
+
+            .contents ul li:hover i {
+                transition: all 0.5s;
+            }
+
+            li .icon {
+                display: flex;
+                align-items: center;
+                flex: 1;
+            }
+
+            li .text {
+                flex: 0 0 auto;
+                height: 20px;
+                font-size: 12px;
+            }
+
+            li .size {
+                font-size: 12px;
+                color: #ccc;
+            }
+            .box + .box{
+                margin-top: 10px;
+            }
+        </style>
+    </body>
+</html>

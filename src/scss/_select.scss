@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+/* select */
+select {
+	height:40px;
+	padding:0 40px 0 15px;
+	border:1px solid red;
+	background-color:#fff;
+	background-repeat:no-repeat;
+	background-position:right 20px center;
+	// background-image:url(''+$url-common+'icon_select03.png');
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	appearance:none;
+	cursor: pointer;
+	@include ell;
+
+	&::-ms-expand {
+		display: none;
+	}
+}

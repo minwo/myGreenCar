@@ -1,0 +1,109 @@
+@charset "UTF-8";
+
+// button color type
+$btn-colors: (
+    "primary":   gc(btn-primary),
+    "secondary": gc(btn-secondary),
+    "success":   gc(btn-success),
+    "info":      gc(btn-info),
+    "warning":   gc(btn-warning),
+    "danger":    gc(btn-danger),
+) !default;
+
+// button size
+$btn-size: (
+    "xs" : (
+        "size" : 30px,
+        "font-size" : 12px
+    ),
+    "sm" : (
+        "size" : 35px,
+        "font-size" : 14px
+    ),
+    "lg" : (
+        "size" : 40px,
+        "font-size" : 16px
+    ),
+    "xl" : (
+        "size" : 45px,
+        "font-size" : 18px
+    )
+) !default;
+
+/* button */
+.btn {
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    height: map-get($btn-size,"xs","size");
+    padding:0 20px;
+    border:1px solid gc(btn-border-default);
+    background-color:gc(btn-bg-default);
+    color:gc(btn-color-default);
+    font-size: map-get($btn-size,"xs","font-size");
+    font-weight:400;
+    -webkit-transition: all 1s cubic-bezier(.17, .07, .32, .76);
+    -moz-transition: all 1s cubic-bezier(.17, .07, .32, .76);
+
+    @include btnDrt();
+
+    &.line {
+        border-color:gc(btn-border-default);
+        background-color:#fff;
+        color:#000;
+    }
+
+    @each $value, $color in $btn-colors {
+        &.#{$value} {
+            // 변수순서: border-color, background-color, font-color
+            @include buttonType ($color, $color, gc(btn-color-default));
+            &.line {
+                // 변수순서: border-color, background-color, font-color
+                @include buttonType ($color,#fff, #000);
+            }
+        }
+    }
+
+    // button disabled
+    &.disabled,
+    &:disabled {
+        border-color:gc(btn-bg-disabled);
+        background-color:gc(btn-bg-disabled);
+        color:gc(btn-color-disabled);
+        cursor: default;
+    }
+
+    // button group
+    &-group, &-left, &-center, &-right {
+        display:flex;
+        align-items:center;
+        .btn + .btn {
+            margin-left:10px;
+
+        }
+    }
+    &-group {
+        justify-content:space-between;
+
+        &.column{
+            justify-content:space-between;
+            flex-direction: column;
+            
+            .btn{
+                width:100%;
+                margin:5px 0 0 !important;
+
+                @include btnDrt('col');
+            }
+        }
+    }
+    &-left {
+        justify-content:flex-start;
+    }
+    &-center {
+        justify-content:center;
+    }
+    &-right {
+        justify-content:flex-end;
+    }
+}

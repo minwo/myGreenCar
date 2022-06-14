@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('@@webRoot/include/head.html')
+        <style>
+            .contents {
+                padding: 20px 40px 20px !important;
+            }
+            .contents .tmp-guide-box {
+                margin-left: 0;
+                margin-right: 0;
+            }
+            h2 {
+                margin-bottom: 20px;
+                font-size: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <!-- container -->
+            <section id="container">
+                <div class="contents">
+                    <h2>INPUT</h2>
+
+                    <!-- Input -->
+                    <div class="tmp-guide-box">
+                        <h2 class="guide-box-tit">Input</h2>
+                        <input type="text" placeholder="이름" />
+                        <br /><br />
+                        <input type="text" value="홍길동" />
+                        <br /><br />
+                        <input type="text" value="disabled" disabled />
+                    </div>
+                    <!-- //Input -->
+
+                    <!-- Password -->
+                    <div class="tmp-guide-box">
+                        <h2 class="guide-box-tit">Password</h2>
+                        <div class="password-field">
+                            <input type="password" id="fakePassword" placeholder="Enter Password" />
+                            <span><i id="toggler" class="ico eye-on md"></i></span>
+                        </div>
+                    </div>
+
+                    <!-- Password -->
+
+                    <!-- Select -->
+                    <div class="tmp-guide-box">
+                        <h2 class="guide-box-tit">Select</h2>
+                        <select name="" id="">
+                            <option value="옵션1">옵션1</option>
+                            <option value="옵션2">옵션2</option>
+                            <option value="옵션3">옵션3</option>
+                        </select>
+                    </div>
+                    <!-- Select -->
+                </div>
+            </section>
+        </div>
+
+        <script type="text/javascript">
+			// 비밀번호 입력필드
+            var password = document.getElementById("fakePassword");
+            var toggler = document.getElementById("toggler");
+
+            showHidePassword = () => {
+                if (password.type == "password") {
+                    password.setAttribute("type", "text");
+                    toggler.classList.add("eye-off");
+                } else {
+                    toggler.classList.remove("eye-off");
+                    password.setAttribute("type", "password");
+                }
+            };
+
+            toggler.addEventListener("click", showHidePassword);
+			// 비밀번호 입력필드 end
+        </script>
+    </body>
+</html>

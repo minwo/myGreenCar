@@ -1,0 +1,6 @@
+@charset "UTF-8";
+
+/* radio */
+.gc-radio {
+	@include form(radio);
+}

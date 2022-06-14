@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+$icon-size: (
+    "xs": (
+        "width": 12px,
+        "height": 12px
+    ),
+    "sm": (
+        "width": 16px,
+        "height": 16px
+    ),
+    "md": (
+        "width": 24px,
+        "height": 24px
+    ),
+    "lg": (
+        "width": 32px,
+        "height": 32px
+    ),
+    "xl": (
+        "width": 40px,
+        "height": 40px
+    ),
+    "file": (
+        "arrow-right": "arrow-right.svg",
+        "arrow-left": "arrow-left.svg",
+        "star": "star.svg",
+        "eye-on": "eye_on.svg",
+        "eye-off": "eye_off.svg",
+        "bookmark": "bookmark.svg",
+        "bookmark-active": "bookmark_active.svg",
+    )
+    
+) !default;
+
+.ico {
+    display: inline-block;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    @include icType();
+}
+
+

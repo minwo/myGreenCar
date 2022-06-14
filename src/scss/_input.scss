@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+/* input */
+input[type="text"],
+input[type="password"],
+input[type="number"],
+input[type="email"] {
+	height:40px;
+	padding:0 15px;
+	border:1px solid #6c757d;
+	background-color:#fff;
+	color:#000;
+	@include ell;
+	&::-ms-clear {
+		display:none;
+	}
+	&::placeholder {
+		color:#6c757d;
+	}
+	&[readonly],
+	&:disabled {
+		color:#6c757d;
+		background-color:#dee2e6;
+	}
+	&:read-only {
+		color:#6c757d;
+		background-color:#dee2e6;
+	}
+}
