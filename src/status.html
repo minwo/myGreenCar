@@ -43,7 +43,20 @@
 				.header ul li {
 					display:inline;
 				}
+				.header > div {
+					display:flex;
+					margin:1em 0;
+					font-weight:bold;
+					color:#000;
+				}
+				.header > div div {
+					margin-right:30px;
+				}
+				.header .h-percent {
+					color:red;
+				}
             .button-group{
+				position:relative;
                 padding:5px 2em 10px
             }
             .button-group a{
@@ -61,6 +74,17 @@
                 border-radius: 0.5rem;
                 transition: 0.3s ease;
             }
+			.button-group div{
+				position:absolute;
+				top:0;
+				right:0;
+				display:flex;
+				align-items:center;
+				height:100%;
+			}
+			.button-group div span{
+				margin-right:2em;
+			}
 			.group-title {
 				margin-top:1em;
 				color:#000;
@@ -162,10 +186,19 @@
 							stat: 'td.stat',
 							index: 0,
 							openAll: false,
-							speed: 'fast'
+							speed: 'fast',
+							completed: 0
 						}, options),
 						all_sections = this,
 						header = $('div.header');
+
+					$(settings.stat).each(function () {
+						$(this).text() == '⚫' && settings.completed++;
+					});
+					$('.h-completed').text(settings.completed);
+					$('.h-total').text($(settings.files).length);
+					$('.h-percent span').text(Math.round(settings.completed / $(settings.files).length * 100));
+
 					return this.each(function () {
 						var self = this,
 							$self = $(self),
@@ -178,7 +211,7 @@
 							var stat = $(settings.stat, this);
 							stat.each(function () {
 								var text = $(this).text();
-								if (text) {
+								if (text == "⚫") {
 									completed++;
 								}
 							});
@@ -202,7 +235,6 @@
 				};
 				$(document).ready(function () {
 					$('div.section').stat({ openAll: true });
-					$('#total').text($('tbody tr').length);
 					$('tbody tr:even').addClass('even');
 					$('tbody td[rowspan][rowspan!=1]').addClass('multi');
 				});
@@ -213,6 +245,10 @@
 		<script type="text/javascript">document.body.className += ' js';</script>
 		<div class="header">
 			<h1>그린카</h1>
+			<div>
+				<div>Total : <strong class="h-completed">0</strong> / <strong class="h-total">0</strong></div>
+				<div>진척율 : <strong class="h-percent"><span>0</span>%</strong></div>
+			</div>
 		</div>
         <div class="button-group">
             <a href="components/button.html" target="_blank">Button</a>
@@ -220,6 +256,11 @@
             <a href="components/input.html" target="_blank">Input</a>
             <a href="components/form.html" target="_blank">Form</a>
             <a href="components/etc.html" target="_blank">ETC</a>
+
+			<div>
+				<span>⚫ 작업완료</span>
+				<span>⚪ 작업중</span>
+			</div>
         </div>
 		<div class="section" id="menu01" name="menu01">
 			<h2 class="title total">TOTAL</h2>
@@ -263,7 +304,7 @@
 							<td></td>
 							<td>/</td>
 							<td><a target="_blank" href="html/.html">.html</a></td>
-							<td class="stat">⚫</td>
+							<td class="stat">⚪</td>
 							<td class="date"></td>
 							<td></td>
 						</tr>
