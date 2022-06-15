@@ -96,7 +96,7 @@ button,
 input,
 select,
 textarea {
-    color: #000;
+    color: #333;
     font-size: 15px;
     font-weight: 400;
     font-family: 'Noto Sans KR', sans-serif;
@@ -197,3 +197,73 @@ textarea {
     }
 }
 
+/* text */
+.title{
+	font-size:25px;
+	font-weight:500;
+	line-height:1.12;
+	text-align:center;
+}
+
+/* header */
+#header{
+	.head-wrap{
+		&.fixed{
+			position:fixed;
+			top:0;
+			left:0;
+			width:100%;
+			background-color:#fff;
+		}
+		.head{
+			position:relative;
+			height:48px;
+
+			.title{
+				height:100%;
+				padding:0 44px;
+				line-height:1.92;
+			}
+
+			.left{
+				display:flex;
+				position:absolute;
+				top:0;
+				left:20px;
+				height:100%;
+			}
+
+			.right{
+				display:flex;
+				position:absolute;
+				top:0;
+				right:20px;
+				height:100%;
+			}
+
+		}
+	}
+}
+
+.ani{
+	.head{
+		position:fixed;
+		top:0;
+		left:0;
+		width:100%;
+	}
+}
+
+/* button bottom fixed */
+.bot-btn-fix{
+	height:72px;
+	.btn-wrap{
+		position:fixed;
+		left:0;
+		bottom:0;
+		width:100%;
+		height:72px;
+		padding:17px 20px 10px;
+		box-sizing: border-box;
+	}
+}

@@ -1,13 +1,26 @@
 @charset "UTF-8";
 
+$btn-color-default:  #fff !default;
+$btn-color-disabled: #333 !default;
+$btn-border-default: #000 !default;
+$btn-bg-default:     #000 !default;
+$btn-bg-disabled:    #999 !default;
+
+$btn-primary:        #0d6efd !default;
+$btn-secondary:      #198754 !default;
+$btn-success:        #6610f2 !default;
+$btn-info:           #0dcaf0 !default;
+$btn-warning:        #ffc107 !default;
+$btn-danger:         #dc3545 !default;
+
 // button color type
 $btn-colors: (
-    "primary":   gc(btn-primary),
-    "secondary": gc(btn-secondary),
-    "success":   gc(btn-success),
-    "info":      gc(btn-info),
-    "warning":   gc(btn-warning),
-    "danger":    gc(btn-danger),
+    "primary":   $btn-primary,
+    "secondary": $btn-secondary,
+    "success":   $btn-success,
+    "info":      $btn-info,
+    "warning":   $btn-warning,
+    "danger":    $btn-danger,
 ) !default;
 
 // button size
@@ -32,23 +45,29 @@ $btn-size: (
 
 /* button */
 .btn {
-    display:inline-flex;
+    // display:inline-flex;
+	&:first-child{
+		margin-top:0 !important;
+	}
+	flex:1;
     justify-content:center;
     align-items:center;
     height: map-get($btn-size,"xs","size");
     padding:0 20px;
-    border:1px solid gc(btn-border-default);
-    background-color:gc(btn-bg-default);
-    color:gc(btn-color-default);
+    border:1px solid $btn-border-default;
+    background-color:$btn-bg-default;
+    color:$btn-color-default;
     font-size: map-get($btn-size,"xs","font-size");
     font-weight:400;
-    -webkit-transition: all 1s cubic-bezier(.17, .07, .32, .76);
-    -moz-transition: all 1s cubic-bezier(.17, .07, .32, .76);
+
+	@include border-radius(10px);
+    // -webkit-transition: all 1s cubic-bezier(.17, .07, .32, .76);
+    // -moz-transition: all 1s cubic-bezier(.17, .07, .32, .76);
 
     @include btnDrt();
 
     &.line {
-        border-color:gc(btn-border-default);
+        border-color:$btn-border-default;
         background-color:#fff;
         color:#000;
     }
@@ -56,7 +75,7 @@ $btn-size: (
     @each $value, $color in $btn-colors {
         &.#{$value} {
             // 변수순서: border-color, background-color, font-color
-            @include buttonType ($color, $color, gc(btn-color-default));
+            @include buttonType ($color, $color, $btn-color-default);
             &.line {
                 // 변수순서: border-color, background-color, font-color
                 @include buttonType ($color,#fff, #000);
@@ -67,9 +86,9 @@ $btn-size: (
     // button disabled
     &.disabled,
     &:disabled {
-        border-color:gc(btn-bg-disabled);
-        background-color:gc(btn-bg-disabled);
-        color:gc(btn-color-disabled);
+        border-color:$btn-bg-disabled;
+        background-color:$btn-bg-disabled;
+        color:$btn-color-disabled;
         cursor: default;
     }
 
@@ -85,13 +104,21 @@ $btn-size: (
     &-group {
         justify-content:space-between;
 
+		.btn{
+			display:flex;
+			justify-items: center;
+			align-items: center;
+		}
+
         &.column{
             justify-content:space-between;
             flex-direction: column;
             
             .btn{
+				display:flex;
                 width:100%;
-                margin:5px 0 0 !important;
+				flex-basis: map-get($btn-size,"xs","size");
+                margin:5px 0 0;
 
                 @include btnDrt('col');
             }

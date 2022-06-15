@@ -1,48 +1,71 @@
-		<header id="header">
-		@@if (type === "main"){
-			<h1 class="logo"><a href="#">LOGO</a></h1>
-
-			<a href="#" class="my-bag">장바구니</a>
-
-			<div class="h-search-box">
-				<input type="text" onclick="showSearchGroup();" placeholder="apple.com 검색">
-				<button type="button" class="cancel" onclick="hideSearchGroup();">취소</button>
+<header id="header">
+	<div class="head-cont">
+		<div class="head-wrap">
+			@@if (type === "main"){
+			<div class="head">
+				<div class="left">
+					<button type="button" class="btn"><i class="ico bell sm"></i></button>
+				</div>
+				<div class=""><h1 class="logo"><a href="">그린카</a></h1></div>
+				<div class="right">
+					<button type="button" class="btn"><i class="ico user sm"></i></button>
+				</div>
 			</div>
+			}
 			
-			<nav id="globalNav">
-				<button type="button" class="btn-global-nav" onclick="openGlobalNav();">Global Nav 메뉴 열기</button>
-				<ul class="global-nav-list">
-					<li><a href="#">스토어</a></li>
-					<li><a href="#">Mac</a></li>
-					<li><a href="#">iPad</a></li>
-					<li><a href="#">iPhone</a></li>
-					<li><a href="#">Watch</a></li>
-					<li><a href="#">AirPods</a></li>
-					<li><a href="#">TV 및 홈</a></li>
-					<li><a href="#">Apple 독점 제공</a></li>
-					<li><a href="#">액세서리</a></li>
-					<li><a href="#">고객지원</a></li>
-				</ul>
-			</nav>
-			<script type="text/javascript">
-				// 퍼블 임시 js
-				const openGlobalNav = () => {
-					document.documentElement.classList.toggle('global-nav-open')
-				};
-
-				const showSearchGroup = () => {
-					document.getElementById('header').classList.add('search-open')
-				};
-
-				const hideSearchGroup = () => {
-					document.getElementById('header').classList.remove('search-open')
-				};
-			</script>
-		}
-
-		@@if (type === "sub"){
-			<div style="display:flex; justify-content:center; align-items:center; height:100%; color:#fff;">
-				SUB Type
+			@@if (type === "sub_01"){
+				<!-- 뒤로가기 버튼 |  타이틀  | 세팅 버튼 -->
+			<div class="head">
+				<div class="left">
+					<button type="button" class="btn-head">
+						<i class="ico back md"></i>
+					</button>
+				</div>
+				<h2 class="title">Title</h2>
+				<div class="right">
+					<button type="button" class="btn-head">
+						<i class="ico home md"></i>
+					</button>
+				</div>
 			</div>
+			}
+		</div>
+	</div>
+
+	<script>
+		window.scrollPosition = document.documentElement.scrollTop || 0;
+		let documentY, direction, headHeight;
+		
+		document.addEventListener('DOMContentLoaded', function(){
+			scrollDirection(documentY, direction, headHeight);
+		});
+
+		document.addEventListener('scroll', function () {
+			scrollDirection();
+		});
+
+		const scrollDirection = () => {
+			headHeight = document.querySelector('#header .head-wrap').offsetHeight;
+			documentY = document.documentElement.scrollTop;
+			direction = documentY - window.scrollPosition >= 0 ? 1 : -1;
+
+			if( 0 < documentY){
+				document.querySelector('.head-cont').style.height = headHeight + 'px';
+				document.querySelector('#header .head-wrap').classList.add('fixed');
+			} else {
+				document.querySelector('.head-cont').removeAttribute('style');
+				document.querySelector('#header .head-wrap').classList.remove('fixed');
+			}
+
+			if (direction === 1) {
+				console.log('scrollDown')
+				document.querySelector('html').classList.remove('ani');
+			} else {
+				console.log('scrollUp')
+				document.querySelector('html').classList.add('ani');
+			}
+
+			window.scrollPosition = documentY;
 		}
-		</header>
+	</script>
+</header>

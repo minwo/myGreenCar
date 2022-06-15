@@ -69,7 +69,6 @@
 
 @mixin btnDrt($direction:null){
     @each $key, $value in $btn-size{
-        
         @if ($direction == 'col'){
             &.#{$key}{
                 flex-basis: map-get($value, "size");
@@ -220,4 +219,34 @@
 	 -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
     	  background-clip: padding-box;
+}
+
+/* 기준이 되는 뷰포트 사이즈 */
+$mobile-size : 360;
+
+/* vw 변환 function */
+@function vw($target) {
+    @if type-of($target)==number {
+        @return (($target * 100) / $mobile-size) * 1vw;
+    }
+
+    @else if type-of($target)==list {
+        $vw: ();
+
+        @each $value in $target {
+            @if type-of($value)==number {
+                $vw: append($vw, (($value * 100) / $mobile-size) * 1vw);
+            }
+
+            @else if type-of($value)==string {
+                $vw: append($vw, $value);
+            }
+        }
+
+        @return $vw;
+    }
+
+    @else {
+        @return $target;
+    }
 }

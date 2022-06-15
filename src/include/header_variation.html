@@ -1,79 +1,140 @@
 <header id="header">
-    @@if (type === "main"){
-    <div class="left">
-        <button type="button" class="btn btn-icon sm"><i class="ico bell sm"></i></button>
-    </div>
-    <div class=""><h1 class="logo"><a href="">그린카</a></h1></div>
-    <div class="right">
-        <button type="button" class="btn btn-icon sm"><i class="ico user sm"></i></button>
-    </div>
+	<div class="head-cont">
+		<div class="head-wrap">
+			@@if (type === "main"){
+			<div class="head">
+				<div class="left">
+					<button type="button" class="btn"><i class="ico bell sm"></i></button>
+				</div>
+				<div class=""><h1 class="logo"><a href="">그린카</a></h1></div>
+				<div class="right">
+					<button type="button" class="btn"><i class="ico user sm"></i></button>
+				</div>
+			</div>
+			}
+			
+			@@if (type === "sub_01"){
+				<!-- 뒤로가기 버튼 |  타이틀  | 세팅 버튼 -->
+			<div class="head">
+				<div class="left">
+					<button type="button" class="btn-head">
+						<i class="ico back md"></i>
+						<i class="ico back md"></i>
+						<i class="ico back md"></i>
+						<i class="ico back md"></i>
+					</button>
+				</div>
+				<h2 class="title">Title</h2>
+				<div class="right">
+					<button type="button" class="btn-head">
+						<i class="ico setting sm"></i>
+					</button>
+				</div>
+			</div>
+			}
+			<!-- 
+				[[ 사용법 ]]
 
-    }
-	
-	@@if (type === "sub_01"){
-		<!-- 뒤로가기 버튼 |  타이틀  | 세팅 버튼 -->
-    <div class="left">
-        <button type="button" class="btn btn-icon sm"><i class="ico prev sm"></i></button>
-    </div>
-    <div class=""><h2 class="title">@@title</h2></div>
-    <div class="right">
-        <button type="button" class="btn btn-icon sm"><i class="ico setting sm"></i></button>
-    </div>
-	<!-- 
-		[[ 사용법 ]]
+				@@include('@@webRoot/include/header.html', {type: "main"}) {
+					title: "시간 조정하기"
+				})
 
-		@@include('@@webRoot/include/header.html', {type: "main"}) {
-			title: "시간 조정하기"
-		})
+			} -->
+			@@if (type === "sub_02"){
+				<!-- 뒤로가기 버튼 |  타이틀  -->
+			<div class="head">
+				<div class="left">
+					<button type="button" class="btn"><i class="ico prev sm"></i></button>
+				</div>
+				<h2 class="title">Title</h2>
+			</div>
+			}
 
-    } -->
-	}
-	@@if (type === "sub_02"){
-		<!-- 뒤로가기 버튼 |  타이틀  -->
-    <div class="left">
-        <button type="button" class="btn btn-icon sm"><i class="ico prev sm"></i></button>
-    </div>
-    <div class=""><h2 class="title">@@title</h2></div>
-    }
+			@@if (type === "sub_03"){
+			<!-- 뒤로가기 버튼 |  타이틀  |  새로고침 버튼  -->
+			<div class="head">
+				<div class="left">
+					<button type="button" class="btn"><i class="ico prev sm"></i></button>
+				</div>
+				<h2 class="title">Title</h2>
+				<div class="right">
+					<button type="button" class="btn"><i class="ico refresh sm"></i></button>
+				</div>
+			</div>
+			}
 
-	@@if (type === "sub_03"){
-		<!-- 뒤로가기 버튼 |  타이틀  |  새로고침 버튼  -->
-		<div class="left">
-			<button type="button" class="btn btn-icon sm"><i class="ico prev sm"></i></button>
+			@@if (type === "sub_04"){
+			<!-- 닫기 버튼 |  타이틀  | "재설정" 텍스트 버튼 -->
+			<div class="head">
+				<div class="left">
+					<button type="button" class="btn"><i class="ico close sm"></i></button>
+				</div>
+				<h2 class="title">Title</h2>
+				<div class="right">
+					<button type="button" class="btn btn-link sm"><span class="text">재설정</span></i></button>
+				</div>
+			</div>
+			}
+			@@if (type === "sub_05"){
+			<!-- 닫기 버튼 |  타이틀  -->
+			<div class="head">
+				<div class="left">
+					<button type="button" class="btn"><i class="ico close sm"></i></button>
+				</div>
+				<h2 class="title">Title</h2>
+			</div>
+			}
+			@@if (type === "sub_06"){
+			<!-- 뒤로가기 버튼 |  검색창  -->
+			<div class="head">
+				<div class="left">
+					<button type="button" class="btn"><i class="ico close sm"></i></button>
+				</div>
+				<div class="search-box">
+					<input type="text" class="search">
+					<button class="btn btn-icon xs"><i class="ico close-circle sm"></i></button>
+					<button class="btn btn-icon md"><i class="ico search md"></i></button>
+				</div>
+			</div>
+			}
 		</div>
-		<div class=""><h2 class="title">@@title</h2></div>
-		<div class="right">
-			<button type="button" class="btn btn-icon sm"><i class="ico refresh sm"></i></button>
-		</div>
-	}
+	</div>
 
-	@@if (type === "sub_04"){
-		<!-- 닫기 버튼 |  타이틀  | "재설정" 텍스트 버튼 -->
-		<div class="left">
-			<button type="button" class="btn btn-icon sm"><i class="ico close sm"></i></button>
-		</div>
-		<div class=""><h2 class="title">@@title</h2></div>
-		<div class="right">
-			<button type="button" class="btn btn-link sm"><span class="text">재설정</span></i></button>
-		</div>
-	}
-	@@if (type === "sub_05"){
-		<!-- 닫기 버튼 |  타이틀  -->
-		<div class="left">
-			<button type="button" class="btn btn-icon sm"><i class="ico close sm"></i></button>
-		</div>
-		<div class=""><h2 class="title">@@title</h2></div>
-	}
-	@@if (type === "sub_06"){
-		<!-- 뒤로가기 버튼 |  검색창  -->
-		<div class="left">
-			<button type="button" class="btn btn-icon sm"><i class="ico close sm"></i></button>
-		</div>
-		<div class="search-box">
-			<input type="text" class="search">
-			<button class="btn btn-icon xs"><i class="ico close-circle sm"></i></button>
-			<button class="btn btn-icon md"><i class="ico search md"></i></button>
-		</div>
-	}
+	<script>
+		window.scrollPosition = document.documentElement.scrollTop || 0;
+		let documentY, direction, headHeight;
+		
+		document.addEventListener('DOMContentLoaded', function(){
+			scrollDirection(documentY, direction, headHeight);
+		});
+
+		document.addEventListener('scroll', function () {
+			scrollDirection();
+		});
+
+		const scrollDirection = () => {
+			headHeight = document.querySelector('#header .head-wrap').offsetHeight;
+			documentY = document.documentElement.scrollTop;
+			direction = documentY - window.scrollPosition >= 0 ? 1 : -1;
+
+			if( 0 < documentY){
+				document.querySelector('.head-cont').style.height = headHeight + 'px';
+				document.querySelector('#header .head-wrap').classList.add('fixed');
+			} else {
+				document.querySelector('.head-cont').removeAttribute('style');
+				document.querySelector('#header .head-wrap').classList.remove('fixed');
+			}
+
+			if (direction === 1) {
+				console.log('scrollDown')
+				document.querySelector('html').classList.remove('ani');
+			} else {
+				console.log('scrollUp')
+				document.querySelector('html').classList.add('ani');
+			}
+
+			window.scrollPosition = documentY;
+		}
+	</script>
 </header>
 
