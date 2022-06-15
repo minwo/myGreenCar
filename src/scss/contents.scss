@@ -14,18 +14,23 @@
 @import "layer";
 @import "quick-menu";
 @import "icon";
-@import "bundle";
 // 카테고리 scss
 @import "notice";
 
 /* layout */
 html {
 	&.is-open {
-		overflow:hidden;
-		height:auto;
+		// overflow:hidden;
+		// height:auto;
+		touch-action: none;
+		-webkit-overflow-scrolling: none;
+		overflow: hidden;
+		overscroll-behavior: none;
 		body {
-			overflow:hidden;
-			height:auto;
+			touch-action: none;
+			-webkit-overflow-scrolling: none;
+			overflow: hidden;
+			overscroll-behavior: none;
 		}
 	}
 	&.global-nav-open {
@@ -98,27 +103,27 @@ html {
 		// width:100%;
 		// height:48px;
 		// background-color:rgba(0, 0, 0, .8);
-		backdrop-filter:saturate(180%) blur(20px);
-		transition:background .3s cubic-bezier(0.32, 0.08, 0.24, 1), height .6s cubic-bezier(0.32, 0.08, 0.24, 1);
-		flex-shrink:0;
-		z-index:10;
+		// backdrop-filter:saturate(180%) blur(20px);
+		// transition:background .3s cubic-bezier(0.32, 0.08, 0.24, 1), height .6s cubic-bezier(0.32, 0.08, 0.24, 1);
+		// flex-shrink:0;
+		// z-index:10;
 		// -webkit-backface-visibility:hidden;
 		// -webkit-transform:translateZ(0);
-		.logo {
-			position:relative;
-			display:flex;
-			justify-content:center;
-			height:48px;
-			a {
-				position:relative;
-				display:block;
-				width:48px;
-				height:100%;
-				z-index:2;
-				background-image:url('https://www.apple.com/ac/globalnav/7/ko_KR/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_apple_image__b5er5ngrzxqq_small.svg');
-				@include hideTxt(auto, auto);
-			}
-		}
+		// .logo {
+		// 	position:relative;
+		// 	display:flex;
+		// 	justify-content:center;
+		// 	height:48px;
+		// 	a {
+		// 		position:relative;
+		// 		display:block;
+		// 		width:48px;
+		// 		height:100%;
+		// 		z-index:2;
+		// 		background-image:url('https://www.apple.com/ac/globalnav/7/ko_KR/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_apple_image__b5er5ngrzxqq_small.svg');
+		// 		@include hideTxt(auto, auto);
+		// 	}
+		// }
 		.my-bag {
 			position:absolute;
 			top:0;
