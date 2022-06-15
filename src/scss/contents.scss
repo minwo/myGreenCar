@@ -247,7 +247,7 @@ html {
 		flex:1 auto;
 		.contents {
 			overflow:hidden;
-			padding-top:50px;
+			padding-top:20px;
 		}
 	}
 	/* footer */
@@ -307,3 +307,91 @@ html {
 		font-weight:700;
 	}
 }
+
+/* main vw test */
+.main{
+	background-color: #f4f4f4;
+	.contents{
+		padding:0 15px;
+	}
+	img{
+		width:100%;
+		height:100%
+	}
+	.block-module{
+		display:flex;
+		.col{
+			flex:1;
+			flex-basis: 37.5%;
+			margin-left:10px;
+			&:first-child{
+				flex-basis: 62.5%;
+				margin:0;
+			}
+		}
+		.box01{
+			width:vw(200);
+			height:vw(240);
+		}
+		.box02{
+			width:vw(200);
+			height:vw(119);
+			margin-top:vw(10);
+		}
+		.box03{
+			width:vw(120);
+			height:vw(115);
+		}
+		.box04{
+			width:vw(120);
+			height:vw(115);
+			margin-top:vw(10);
+		}
+		.box05{
+			width:vw(120);
+			height:vw(119);
+			margin-top:vw(10);
+		}
+	}
+	.banner{
+		margin-top:vw(10);
+	}
+	.menu-module{
+		margin-top:vw(10);
+		.row{
+			&:first-child{
+				display:flex;
+			}
+			.menu-box{
+				flex:1;
+				margin-left:vw(10);
+				padding:vw(60 0 7 0);
+				text-align:center;
+				font-size:vw(11);
+				border-radius: vw(10);
+				font-weight:500;
+				color:#143c56;
+				background-color: #fff;
+				&:first-child{
+					margin-left:0;
+				}
+			}
+		}
+
+		.menu-group{
+			display:flex;
+			margin-top:vw(10);
+			border-radius: vw(10);
+			background-color: #fff;
+			.quick-menu{
+				flex:1;
+				padding:vw(60 0 7 0);
+				text-align:center;
+				font-size:vw(12);
+				font-weight:500;
+				color:#143c56;
+			}
+		}
+	}
+}
+
