@@ -71,8 +71,8 @@ h2{margin-bottom:20px;font-size:30px}
 				<div class="tmp-guide-box">
 					<h2 class="guide-box-tit">Etc</h2>
 					<button type="button" class="btn primary" onclick="accodianBox(slideDownBox);">Accodian Up Down</button>
-					<button type="button" class="btn primary" onclick="openLayerPopup(tmpLayer01);">Layer Popup</button>
-					<button type="button" class="btn primary" onclick="openLayerPopup(tmpLayer02);">Bottom Layer Popup</button>
+					<button type="button" class="btn primary" onclick="openLayerPopup(tmpLayer01);" style="margin-top:10px">Layer Popup</button>
+					<button type="button" class="btn primary" onclick="openLayerPopup(tmpLayer02);" style="margin-top:10px">Bottom Layer Popup</button>
 					<div class="accodian-box" id="slideDownBox">
 						<div class="accodian-box-inner">
 							내용<br>
@@ -119,55 +119,15 @@ h2{margin-bottom:20px;font-size:30px}
 	<div class="layer-popup-wrap" id="tmpLayer01">
 		<div class="layer-container">
 			<div class="layer-header">Layer Popup</div>
-			<div class="layer-contents">
-				상품구매 및 리뷰를 등록하시면 마일리지가 적립됩니다.<br>
-				상품구매 및 리뷰를 등록하시면 마일리지가 적립됩니다.<br>
-				상품구매 및 리뷰를 등록하시면 마일리지가 적립됩니다.<br>
-				상품구매 및 리뷰를 등록하시면 마일리지가 적립됩니다.<br>
-				상품구매 및 리뷰를 등록하시면 마일리지가 적립됩니다.<br>
-				상품구매 및 리뷰를 등록하시면 마일리지가 적립됩니다.<br>
-				상품구매 및 리뷰를 등록하시면 마일리지가 적립됩니다.<br>
-				상품구매 및 리뷰를 등록하시면 마일리지가 적립됩니다.<br>
-			</div>
+			
+			@@include('@@webRoot/components/middle_popup.html')
 			<button type="button" class="layer-close" onclick="closeLayerPopup(this);">닫기</button>
 		</div>
 	</div>
 	<div class="layer-popup-wrap type-bottom" id="tmpLayer02">
 		<div class="layer-container">
 			<div class="layer-header">Bottom Layer Popup</div>
-			<div class="layer-contents" style="height:300px;">
-				상품구매 및 리뷰를 등록하시면 마일리지가 적립됩니다.<br>
-				상품구매 및 리뷰를 등록하시면 마일리지가 적립됩니다.<br>
-				상품구매 및 리뷰를 등록하시면 마일리지가 적립됩니다.<br>
-				상품구매 및 리뷰를 등록하시면 마일리지가 적립됩니다.<br>
-				상품구매 및 리뷰를 등록하시면 마일리지가 적립됩니다.<br>
-				상품구매 및 리뷰를 등록하시면 마일리지가 적립됩니다.<br>
-				상품구매 및 리뷰를 등록하시면 마일리지가 적립됩니다.<br>
-				상품구매 및 리뷰를 등록하시면 마일리지가 적립됩니다.<br>
-				상품구매 및 리뷰를 등록하시면 마일리지가 적립됩니다.<br>
-				상품구매 및 리뷰를 등록하시면 마일리지가 적립됩니다.<br>
-				상품구매 및 리뷰를 등록하시면 마일리지가 적립됩니다.<br>
-				상품구매 및 리뷰를 등록하시면 마일리지가 적립됩니다.<br>
-				상품구매 및 리뷰를 등록하시면 마일리지가 적립됩니다.<br>
-				상품구매 및 리뷰를 등록하시면 마일리지가 적립됩니다.<br>
-				상품구매 및 리뷰를 등록하시면 마일리지가 적립됩니다.<br>
-				상품구매 및 리뷰를 등록하시면 마일리지가 적립됩니다.<br>
-				상품구매 및 리뷰를 등록하시면 마일리지가 적립됩니다.<br>
-				상품구매 및 리뷰를 등록하시면 마일리지가 적립됩니다.<br>
-				상품구매 및 리뷰를 등록하시면 마일리지가 적립됩니다.<br>
-				상품구매 및 리뷰를 등록하시면 마일리지가 적립됩니다.<br>
-				상품구매 및 리뷰를 등록하시면 마일리지가 적립됩니다.<br>
-				상품구매 및 리뷰를 등록하시면 마일리지가 적립됩니다.<br>
-				상품구매 및 리뷰를 등록하시면 마일리지가 적립됩니다.<br>
-				상품구매 및 리뷰를 등록하시면 마일리지가 적립됩니다.<br>
-				상품구매 및 리뷰를 등록하시면 마일리지가 적립됩니다.<br>
-				상품구매 및 리뷰를 등록하시면 마일리지가 적립됩니다.<br>
-				상품구매 및 리뷰를 등록하시면 마일리지가 적립됩니다.<br>
-				상품구매 및 리뷰를 등록하시면 마일리지가 적립됩니다.<br>
-				상품구매 및 리뷰를 등록하시면 마일리지가 적립됩니다.<br>
-				상품구매 및 리뷰를 등록하시면 마일리지가 적립됩니다.<br>
-				상품구매 및 리뷰를 등록하시면 마일리지가 적립됩니다.
-			</div>
+			@@include('@@webRoot/components/layer_bot_popup.html')
 			<button type="button" class="layer-close" onclick="closeLayerPopup(this);">닫기</button>
 		</div>
 	</div>

@@ -123,6 +123,14 @@ $btn-size: (
                 @include btnDrt('col');
             }
         }
+
+		&.single{
+			display:block;
+			text-align:center;
+			.btn{
+				display:inline-flex;
+			}
+		}
     }
     &-left {
         justify-content:flex-start;

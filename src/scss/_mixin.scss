@@ -192,8 +192,6 @@
 	}
 }
 
-
-
 // Rounded corners
 @mixin border-top-radius($radius) {
 	border-top-right-radius: $radius;
@@ -249,4 +247,29 @@ $mobile-size : 360;
     @else {
         @return $target;
     }
+}
+
+@mixin popupType() {
+	&:not(.type-bottom) {
+		.bot-btn-fix{
+			height:auto;
+			.btn-wrap{
+				position:static;
+				height:auto;
+				padding:10px 0 0;
+			}
+		}
+	}
+
+	&.type-bottom{
+		.layer-container{
+			padding-bottom:74px;
+		}
+		.bot-btn-fix{
+			position:absolute;
+			left:0;
+			bottom:0;
+			width:100%;
+		}
+	}
 }
