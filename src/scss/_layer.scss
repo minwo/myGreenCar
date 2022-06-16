@@ -87,8 +87,6 @@
 			transform:translateY(100%);
 			transition:transform .5s;
 		}
-
-		@include popupType();
 	}
 	// type Drag Bottom Sheet
 	&.type-drag {

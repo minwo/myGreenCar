@@ -73,6 +73,7 @@ h2{margin-bottom:20px;font-size:30px}
 					<button type="button" class="btn primary" onclick="accodianBox(slideDownBox);">Accodian Up Down</button>
 					<button type="button" class="btn primary" onclick="openLayerPopup(tmpLayer01);" style="margin-top:10px">Layer Popup</button>
 					<button type="button" class="btn primary" onclick="openLayerPopup(tmpLayer02);" style="margin-top:10px">Bottom Layer Popup</button>
+					<button type="button" class="btn primary" onclick="openLayerPopup(tmpLayer03);" style="margin-top:10px">Full Popup</button>
 					<div class="accodian-box" id="slideDownBox">
 						<div class="accodian-box-inner">
 							내용<br>
@@ -128,6 +129,23 @@ h2{margin-bottom:20px;font-size:30px}
 		<div class="layer-container">
 			<div class="layer-header">Bottom Layer Popup</div>
 			@@include('@@webRoot/components/layer_bot_popup.html')
+			<button type="button" class="layer-close" onclick="closeLayerPopup(this);">닫기</button>
+		</div>
+	</div>
+	<div class="layer-popup-wrap type-full" id="tmpLayer03">
+		<div class="layer-container">
+			<div class="layer-header">Full Popup</div>
+			<div class="layer-contents">
+				Content<br>
+				Content<br>
+				Content<br>
+				Content<br>
+				Content<br>
+				Content<br>
+				Content<br>
+				Content<br>
+				Content<br>
+			</div>
 			<button type="button" class="layer-close" onclick="closeLayerPopup(this);">닫기</button>
 		</div>
 	</div>

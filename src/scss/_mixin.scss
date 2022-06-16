@@ -225,7 +225,7 @@ $mobile-size : 360;
 /* vw 변환 function */
 @function vw($target) {
     @if type-of($target)==number {
-        @return (($target * 100) / $mobile-size) * 1vw;
+        @return math.div($target * 100, $mobile-size) * 1vw;
     }
 
     @else if type-of($target)==list {
@@ -270,6 +270,11 @@ $mobile-size : 360;
 			left:0;
 			bottom:0;
 			width:100%;
+			height:auto;
+			.btn-wrap{
+				position:static;
+				height:auto;
+			}
 		}
 	}
 }
