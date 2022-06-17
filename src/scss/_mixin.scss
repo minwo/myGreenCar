@@ -1,6 +1,8 @@
 @charset "UTF-8";
 
 // hide Text && bg icon
+@use "sass:math";
+
 @mixin hideTxt($bgImgW:null, $bgImgH:null) {
 	@if $bgImgW {
 		background-size:$bgImgW $bgImgH;
@@ -233,7 +235,7 @@ $mobile-size : 360;
 
         @each $value in $target {
             @if type-of($value)==number {
-                $vw: append($vw, (($value * 100) / $mobile-size) * 1vw);
+                $vw: append($vw, math.div($value * 100, $mobile-size) * 1vw);
             }
 
             @else if type-of($value)==string {
