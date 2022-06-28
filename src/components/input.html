@@ -26,8 +26,35 @@
                     <!-- Input -->
                     <div class="tmp-guide-box">
                         <h2 class="guide-box-tit">Input</h2>
-                        <input type="text" placeholder="이름" />
-                        <br /><br />
+
+						<div class="ip-group box">
+							<input type="text" class="ip-txt" placeholder="이름">
+							<div class="line"></div>
+						</div>
+
+						<br>
+
+						<div class="ip-group box error">
+							<input type="text" class="ip-txt" placeholder="이름">
+							<div class="line"></div>
+						</div>
+
+						<br>
+
+						<div class="ip-group">
+							<input type="text" class="ip-txt" required placeholder="이름">
+							<!-- <input required type="password" class="ip-txt" name="password" placeholder="비밀번호" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"> -->
+							<div class="line"></div>
+						</div>
+
+                        <br />
+						
+						<div class="ip-group error">
+							<input type="text" class="ip-txt" required placeholder="이름">
+							<div class="line"></div>
+						</div>
+
+						<br />
                         <input type="text" value="홍길동" />
                         <br /><br />
                         <input type="text" value="disabled" disabled />
@@ -37,9 +64,13 @@
                     <!-- Password -->
                     <div class="tmp-guide-box">
                         <h2 class="guide-box-tit">Password</h2>
+						<div class="ip-group box">
+							<input type="password" id="fakePassword" class="ip-txt" placeholder="Enter Password">
+							<div class="line"></div>
+							<i id="toggler" class="ico eye-on md"></i>
+							<span></span>
+						</div>
                         <div class="password-field">
-                            <input type="password" id="fakePassword" placeholder="Enter Password" />
-                            <span><i id="toggler" class="ico eye-on md"></i></span>
                         </div>
                     </div>
 

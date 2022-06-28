@@ -1,8 +1,8 @@
 @charset "UTF-8";
 
-// hide Text && bg icon
-@use "sass:math";
+@use 'sass:math'; 
 
+// hide Text && bg icon
 @mixin hideTxt($bgImgW:null, $bgImgH:null) {
 	@if $bgImgW {
 		background-size:$bgImgW $bgImgH;
@@ -251,6 +251,7 @@ $mobile-size : 360;
     }
 }
 
+// popup 가로 세로
 @mixin popupType() {
 	&:not(.type-bottom) {
 		.bot-btn-fix{
@@ -278,5 +279,93 @@ $mobile-size : 360;
 				height:auto;
 			}
 		}
+	}
+}
+
+// 텍스트 세로 정렬
+@mixin vDom(){
+	display:inline-flex;
+	justify-items:center;
+	align-items:center;
+}
+
+// input line
+@mixin ipLine(){
+	.line{
+		position:absolute;
+		left:0;
+		bottom:0;
+		z-index:-1;
+		width:100%;
+		border-radius: $border-radius;
+	}
+
+	&:not(.box){
+		.line{
+			height:1px;
+			background-color:$line-color;
+			transition: $animation;
+			
+			&:before{
+				display:block;
+				width:0;
+				height:1px;
+				position:absolute;
+				left:0;
+				bottom:0;
+				content:"";
+				transition: $animation;
+			}
+		}
+
+		& .ip-txt:focus ~ .line{
+			&:before{
+				width:100%;
+				background-color: $line-color-active;
+			}
+		}
+
+		&.error{
+			& .ip-txt ~ .line{
+				&:before{
+					width:100%;
+					background-color: $validation-error;
+				}
+			}
+		}
+
+		// .ip-txt{
+		// 	&:invalid:not(:focus):not(:placeholder-shown)  ~ .line,
+		// 	&:invalid:focus:not(:placeholder-shown)  ~ .line{
+		// 		&:before{
+		// 			width:100%;
+		// 			background-color: $validation-error;
+		// 		}
+		// 	}
+
+		// 	&:before{
+		// 		width:100%;
+		// 		background-color: $validation-error;
+		// 	}
+		// }
+	}
+	
+	&.box{
+		.line{
+			border:1px solid $line-color;
+			height:$input-height;
+			transition: $animation;
+		}
+
+		.ip-txt:focus ~ .line{
+			border-color: $line-color-active;
+		}
+
+		&.error{
+			& .ip-txt ~ .line{
+				border-color: $validation-error;
+			}
+		}
+		
 	}
 }

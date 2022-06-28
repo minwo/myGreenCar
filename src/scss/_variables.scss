@@ -3,7 +3,73 @@
 // url
 $url-path:   "../images/" !default;
 $url-common: ""+$url-path+"common/" !default;
+$url-content: $url-path+"/contents/" !default;
 $url-ico:    $url-path + "icon/" !default;
+
+// font-size
+$font-xs:  10px !default;
+$font-sm:  12px !default;
+$font-sm2: 14px !default;
+// 디폴트 사이즈 body 15 가정
+$font-md:  16px !default;
+$font-lg:  18px !default;
+$font-xl:  20px !default;
+$font-xl2: 24px !default;
+$font-xl3: 28px !default;
+$font-xl4: 32px !default;
+
+// border-radius
+$border-radius: 10px;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // // light theme && dark theme
 // $themes: (

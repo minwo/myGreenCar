@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+// 내정보 화면
+.mypage{
+	&.rating{
+		.ui-svg-chart{
+			position:relative;
+		}
+		.circle_progress_wrap {
+			position: relative;
+			width: 182px;
+			height: 182px;
+			margin:0 auto;
+		}
+		.circle_progress {
+			transform: rotate(135deg);
+		}
+		.frame,
+		.circle {
+			fill: none;
+			stroke-linecap:round
+		}
+		.frame {
+			stroke-dasharray:527.788;
+			stroke-dashoffset:131.947;
+			stroke: #eceeef;
+		}
+		.circle {
+			opacity:0;
+			stroke: #00c88c;
+			transition: opacity .3s 1.3s, stroke-dashoffset 1s .3s;
+		}
+		.value {
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			top: 0;
+			text-align: center;
+			color: #888;
+			font-size: 16px;
+			line-height: 120px;
+		}
+		.rating-badge{
+			display:inline-block;
+			position:absolute;
+			top:50%;
+			left:50%;
+			width:88px;
+			height:88px;
+			background:url('#{$url-content}bg_rating01.svg');
+			transform:translate(-50%, -50%);
+		}
+		.txt-module{
+			margin-top:-14px;
+			text-align:center;
+		}
+		.txt-lv{
+			@include vDom();
+			height:18px;
+			padding:0 6px;
+			font-size:10px;
+			color:#8c9496;
+			font-weight:100;
+			border-radius:10px;
+			border:1px solid #dbdfe0;
+		}
+		.txt{
+			display:inline-block;
+			margin-left:4px;
+			font-size:13px;
+			font-weight:700
+		}
+	}
+}

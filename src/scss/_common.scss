@@ -197,14 +197,6 @@ textarea {
     }
 }
 
-/* text */
-.title{
-	font-size:25px;
-	font-weight:500;
-	line-height:1.12;
-	text-align:center;
-}
-
 /* header */
 #header{
 	.head-wrap{
@@ -223,6 +215,7 @@ textarea {
 				height:100%;
 				padding:0 44px;
 				line-height:1.92;
+				text-align:center;
 			}
 
 			.left{
@@ -245,14 +238,6 @@ textarea {
 	}
 }
 
-.ani{
-	.head{
-		position:fixed;
-		top:0;
-		left:0;
-		width:100%;
-	}
-}
 
 /* button bottom fixed */
 .bot-btn-fix{

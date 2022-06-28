@@ -4,6 +4,7 @@
 @import "mixin";
 @import "base";
 @import "common";
+@import "text";
 @import "button";
 @import "input";
 @import "select";
@@ -17,6 +18,7 @@
 // @import "bundle";
 // 카테고리 scss
 @import "notice";
+@import "mypage";
 
 /* layout */
 html {
@@ -293,7 +295,7 @@ html {
 	margin:20px;
 	padding:20px;
 	border:1px solid #ccc;
-	border-radius:10px;
+	border-radius:$border-radius;
 	box-shadow:0 0 15px #888888;
 	&.guide-btn {
 		button:not(.btn-block) {
@@ -395,3 +397,51 @@ html {
 	}
 }
 
+
+
+.shimmer{
+	.wrap{
+		width:400px;
+		border-radius:20px;
+	}
+	.sm-title{
+		height:20px;
+		margin-top:20px;
+		background-color: #FFF;
+	}
+	.sm-card{
+		height:200px;
+		background-color: #FFF;
+	}
+
+	.animate {
+		// transform: skewX(-45deg);
+		animation-duration: 2.2s;
+		animation-fill-mode: forwards;
+		animation-iteration-count: infinite;
+		animation-name: shimmer;
+		animation-timing-function: linear;
+		background: #E5F0FB;
+		background: linear-gradient(to right, #c1dceb 4%, #a3cbe1 25%, #c1dceb 36%);
+		background-size: 1200px 100%;
+	}
+	
+
+	@-webkit-keyframes shimmer {
+		0% {
+			background-position: -100% 0;
+		}
+		100% {
+			background-position: 100% 0;
+		}
+	}
+	
+	@keyframes shimmer {
+		0% {
+			background-position: -1200px 0;
+		}
+		100% {
+			background-position: 1200px 0;
+		}
+	}
+}

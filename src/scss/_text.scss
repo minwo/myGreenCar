@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+// title default 24
+.title{
+	font-size: $font-xl2; //24
+
+	&-md{
+		font-size: $font-xl; //20
+	}
+	&-sm{
+		font-size: $font-lg; //18
+	}
+}
+ 
+// description default 15
+.desc{
+	font-size:14px;
+
+	&-xs{
+		font-size: $font-xs; //10
+	}
+	&-sm{
+		font-size: $font-sm; //12
+	}
+
+	&-md{
+		font-size: $font-md; //16
+	}
+	&-xl{
+		font-size: $font-lg; //16
+	}
+}
+
+.txt-list{
+
+	&.dot{
+
+	}
+}

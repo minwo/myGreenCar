@@ -1,16 +1,34 @@
 @charset "UTF-8";
 
+$input-height: 40px;
+$line-color: #ECEEEF !default;
+$line-color-active: #5CD79A !default;
+$validation-error: #FF384F !default;
+$line-color-disabled: #989898 !default;
+$animation: all .2s ease;
+
+.ip-group {
+	position:relative;
+	
+	.ip-txt{
+		width:100%;
+		background:transparent;
+		outline:none;
+	}
+	
+	@include ipLine();
+}
 /* input */
 input[type="text"],
 input[type="password"],
 input[type="number"],
 input[type="email"] {
-	height:40px;
+	height:$input-height;
 	padding:0 15px;
-	border:1px solid #6c757d;
-	background-color:#fff;
 	color:#000;
+
 	@include ell;
+	
 	&::-ms-clear {
 		display:none;
 	}
