@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+@@include('@@webRoot/include/head.html')
+<script src="../js/swiper.min.js"></script>
+
+<style>
+.swiper {
+	width: 100%;
+	height: 100%;
+	margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+}
+
+.swiper-pointer-events {
+    touch-action: pan-y;
+}
+
+.swiper-wrapper{
+	position: relative;
+	width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    transition-property: transform;
+    box-sizing: content-box;
+}
+
+.swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
+
+	/* Center slide text vertically */
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	flex-shrink: 0;
+	/* -webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center; */
+	position: relative;
+	height: 100%;
+	transform: translateZ(0);
+	transition-property: transform;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	align-items: center;
+}
+.swiper-slide img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.swiper-pagination-bullet{
+	display:inline-block;
+	width:5px;
+	height:5px;
+	border-radius:50%;
+	background-color: ;
+}
+
+</style>
+</head>
+<body>
+	<div id="wrap">
+		<!-- header -->
+@@include('@@webRoot/include/header.html', {type: "sub_01"})
+		<!-- //header -->
+		
+		<!-- container -->
+		<section id="container">
+			<div class="contents" style="height:3000px">
+				
+				<div class="swiper-module">
+					<div class="swiper">
+						<div class="swiper-wrapper">
+						  <div class="swiper-slide">Slide 1</div>
+						  <div class="swiper-slide">Slide 2</div>
+						  <div class="swiper-slide">Slide 3</div>
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+
+				<script>
+					const swiper = new Swiper('.swiper', {
+						slidesPerView: 1.3,
+						touchAngle: 40,
+						spaceBetween: 20,
+						pagination: {
+							el: ".swiper-pagination",
+						}
+					});
+				</script>
+
+			</div>
+			@@include('@@webRoot/include/bot_fix.html')
+		</section>
+		<!-- //container -->
+
+	</div>
+</body>
+</html>
