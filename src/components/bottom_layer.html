@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+@@include('@@webRoot/include/head.html')
+
+</head>
+<body>
+	<div id="wrap">
+		
+		<!-- container -->
+		<section id="container">
+			<div class="contents">
+
+				<div class="layer-popup-wrap type-bottom" id="tmpLayer01">
+					<div class="layer-container">
+						
+					</div>
+				</div>
+				
+			</div>
+		</section>
+
+	</div>
+
+	<script>
+		document.addEventListener('DOMContentLoaded', function(){
+			const page = location.href;
+			const pageName = page.split('#');
+			const dom = document.querySelector('.layer-container');
+			const url = '/html/popup/'+pageName[1] +'.html';
+			console.log(url)
+
+			fetch(url).then(response => response.text()).then(data =>{
+				dom.innerHTML = data;
+				console.log(data);
+
+				document.querySelector('.layer-popup-wrap').classList.add('active');
+			});
+		})
+	</script>
+</body>
+</html>
