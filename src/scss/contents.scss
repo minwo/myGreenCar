@@ -397,51 +397,100 @@ html {
 	}
 }
 
-
-
 .shimmer{
-	.wrap{
-		width:400px;
-		border-radius:20px;
+.wrap{
+	width:400px;
+	border-radius:20px;
+}
+.sm-title{
+	height:20px;
+	margin-top:20px;
+	background-color: #FFF;
+}
+.sm-card{
+	height:200px;
+	background-color: #FFF;
+}
+
+.animate {
+	// transform: skewX(-45deg);
+	animation-duration: 2.2s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: infinite;
+	animation-name: shimmer;
+	animation-timing-function: linear;
+	background: #E5F0FB;
+	background: linear-gradient(to right, #c1dceb 4%, #a3cbe1 25%, #c1dceb 36%);
+	background-size: 1200px 100%;
+}
+
+
+@-webkit-keyframes shimmer {
+	0% {
+		background-position: -100% 0;
 	}
-	.sm-title{
-		height:20px;
-		margin-top:20px;
-		background-color: #FFF;
+	100% {
+		background-position: 100% 0;
 	}
-	.sm-card{
-		height:200px;
-		background-color: #FFF;
+}
+
+@keyframes shimmer {
+	0% {
+		background-position: -1200px 0;
+	}
+	100% {
+		background-position: 1200px 0;
+	}
+}
+}
+
+/* 회원계정 */
+.member{
+	padding:0 20px;
+
+	.desc-xl{
+		font-weight:700;
 	}
 
-	.animate {
-		// transform: skewX(-45deg);
-		animation-duration: 2.2s;
-		animation-fill-mode: forwards;
-		animation-iteration-count: infinite;
-		animation-name: shimmer;
-		animation-timing-function: linear;
-		background: #E5F0FB;
-		background: linear-gradient(to right, #c1dceb 4%, #a3cbe1 25%, #c1dceb 36%);
-		background-size: 1200px 100%;
+	.ip-group{
+		margin-top:30px;
+		
+		label{
+			margin-bottom:5px;
+		}
 	}
-	
 
-	@-webkit-keyframes shimmer {
-		0% {
-			background-position: -100% 0;
+	.id-group{
+		margin-top:27px;
+		.desc{
+			color:#6E7375;
+			font-weight:400;
 		}
-		100% {
-			background-position: 100% 0;
-		}
-	}
-	
-	@keyframes shimmer {
-		0% {
-			background-position: -1200px 0;
-		}
-		100% {
-			background-position: 1200px 0;
+		.item{
+			margin-top:12px;
+			border:1px solid #D9D9D9;
+			border-radius: $border-radius;
+
+			&:first-child{
+				margin-top:7px;
+			}
+
+			a{
+				display:block;
+				height:48px;
+				padding:0 18px;
+				line-height:44px;
+				font-size: $font-md;
+				box-sizing: border-box;
+
+				.lpoint{
+					display:inline-block;
+					margin-left:5px;
+					font-size: 16px;
+					font-weight:700;
+					color:#009BFA
+				}
+			}
 		}
 	}
 }

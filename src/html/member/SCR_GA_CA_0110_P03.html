@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+@@include('@@webRoot/include/head.html')
+</head>
+<body>
+	<div id="wrap">
+		<!-- header -->
+@@include('@@webRoot/include/header.html', {type: "sub_pop"})
+		<!-- //header -->
+		
+		<!-- container -->
+		<section id="container">
+			<div class="contents">
+
+				<div class="member"> 
+					
+					<p class="desc-xl">
+						프르모션 코드를 입력해주세요
+					</p>
+
+					<div class="ip-group">
+						<label for="ip01" class="ip-label">프르모션 코드</label>
+						<input id="ip01" type="text" class="ip-txt" placeholder="프르모션 코드 입력">
+						<button type="button" class="btn-del">
+							<span class="icon"><i class="ico delete md"></i></span>
+						</button>
+						<div class="line"></div>
+					</div>
+
+				</div>
+
+			</div>
+			@@include('@@webRoot/include/bot_fix.html')
+		</section>
+		<!-- //container -->
+
+	</div>
+
+</body>
+</html>

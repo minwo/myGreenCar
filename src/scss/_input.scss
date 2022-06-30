@@ -1,11 +1,12 @@
 @charset "UTF-8";
 
 $input-height: 40px;
-$line-color: #ECEEEF !default;
+$line-color: #878787 !default;
 $line-color-active: #5CD79A !default;
 $validation-error: #FF384F !default;
 $line-color-disabled: #989898 !default;
 $animation: all .2s ease;
+
 
 .ip-group {
 	position:relative;
@@ -17,6 +18,19 @@ $animation: all .2s ease;
 	}
 	
 	@include ipLine();
+
+	.ip-label{
+		display:inline-block;
+		font-size: $font-sm;
+		font-weight:700;
+	}
+
+	.btn-del{
+		position:absolute;
+		top:50%;
+		right:0;
+		// transform: translate(0,-50%);
+	}
 }
 /* input */
 input[type="text"],
@@ -24,7 +38,7 @@ input[type="password"],
 input[type="number"],
 input[type="email"] {
 	height:$input-height;
-	padding:0 15px;
+	padding:0 15px 0 0;
 	color:#000;
 
 	@include ell;
@@ -33,7 +47,9 @@ input[type="email"] {
 		display:none;
 	}
 	&::placeholder {
-		color:#6c757d;
+		font-size: $font-lg;
+		color:#CFD4D7;
+		font-weight:500;
 	}
 	&[readonly],
 	&:disabled {

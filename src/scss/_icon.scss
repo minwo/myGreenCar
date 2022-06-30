@@ -22,6 +22,8 @@ $icon-size: (
         "height": 40px
     ),
     "file": (
+        "delete": "delete.svg",
+        "close": "close.svg", 
         "home": "home.svg",
         "back": "back.svg",
         "arrow-right": "arrow-right.svg",
@@ -34,6 +36,12 @@ $icon-size: (
     )
     
 ) !default;
+
+.icon{
+	display: flex;
+    align-items: center;
+    flex: 1;
+}
 
 .ico {
     display: inline-block;
