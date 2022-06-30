@@ -11,7 +11,7 @@
 		<section id="container">
 			<div class="contents">
 
-				<div class="layer-popup-wrap type-bottom" id="tmpLayer01">
+				<div class="layer-popup-wrap" id="tmpLayer01">
 					<div class="layer-container">
 						
 					</div>
@@ -26,14 +26,13 @@
 		document.addEventListener('DOMContentLoaded', function(){
 			const page = location.href;
 			const pageName = page.split('#');
+			const domWrap = document.querySelector('.layer-popup-wrap');
 			const dom = document.querySelector('.layer-container');
 			const url = '/html/popup/'+pageName[1] +'.html';
-			console.log(url)
-
+			pageName[2] && domWrap.classList.add('type-' + pageName[2]);
 			fetch(url).then(response => response.text()).then(data =>{
 				dom.innerHTML = data;
-				console.log(data);
-
+				// console.log(data);
 				document.querySelector('.layer-popup-wrap').classList.add('active');
 			});
 		})
