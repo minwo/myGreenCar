@@ -303,7 +303,7 @@ $mobile-size : 360;
 	&:not(.box){
 		.line{
 			height:1px;
-			background-color:$line-color;
+			background-color: $line-color;
 			transition: $animation;
 			
 			&:before{
