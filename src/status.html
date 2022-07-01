@@ -4,213 +4,71 @@
 		<meta http-equiv="content-type" content="text/html; charset=utf-8">
 		<title>그린카</title>
 		<style type="text/css">
-			html, body {
-				margin:0;
-				padding:0;
-			}
-			html {
-				overflow-y:scroll;
-			}
-			body {
-				color:#666;
-				background-color:#fff;
-				font:12px/1.5 '맑은 고딕','Malgun Gothic','Apple-Gothic','애플고딕','돋움',Dotum,'굴림',Gulim,Helvetica,Arial, Sans-serif;
-			}
-			a {
-				color:#27e;
-				text-decoration:none;
-			}
+			html, body {margin:0; padding:0;}
+			html {overflow-y:scroll;}
+			body {color:#666; background-color:#fff; font:12px/1.5 '맑은 고딕','Malgun Gothic','Apple-Gothic','애플고딕','돋움',Dotum,'굴림',Gulim,Helvetica,Arial, Sans-serif;}
+			a {color:#27e; text-decoration:none;}
 			a:focus,
 			a:hover,
-			a:active {
-				text-decoration:underline;
-			}
-			.header {
-				padding:2em;
-                padding-bottom:0
-			}
-				.header h1 {
-					display:inline;
-					margin-right:1em;
-					color:#000;
-					font-size:2em;
-				}
-				.header ul {
-					display:inline;
-					font-size:1.5em;
-					list-style:none;
-				}
-				.header ul li {
-					display:inline;
-				}
-				.header > div {
-					display:flex;
-					margin:1em 0;
-					font-weight:bold;
-					color:#000;
-				}
-				.header > div div {
-					margin-right:30px;
-				}
-				.header .h-percent {
-					color:red;
-				}
-            .button-group{
-				position:relative;
-                padding:5px 2em 10px
-            }
-            .button-group a{
-                padding: 3px 13px;
-                white-space: nowrap;
-                font-family: "Questrial Bold", sans-serif;
-                font-weight: 600;
-                font-size: 1rem;
-                border: none;
-                display:inline-flex;
-                justify-content: center;
-                cursor: pointer;
-                background: linear-gradient(to right, #7460fc, #d34fff);
-                color: white;
-                border-radius: 0.5rem;
-                transition: 0.3s ease;
-            }
-			.button-group div{
-				position:absolute;
-				top:0;
-				right:0;
-				display:flex;
-				align-items:center;
-				height:100%;
-			}
-			.button-group div span{
-				margin-right:2em;
-			}
-			.group-title {
-				margin-top:1em;
-				color:#000;
-				font-weight:bold;
-				font-size:1.5em;
-			}
-			table {
-				width:100%;
-				border-collapse:collapse;
-				border-spacing:0;
-			}
-				table caption {
-					display:none;
-				}
-				table tr td:first-child {
-					color:black;
-					font-weight:bold;
-				}
-				table th {
-					color:#333;
-					background-color:#eee;
-				}
-				table th,
-				table td {
-					padding:.5em;
-					border:1px solid #ddd;
-					text-align:left;
-				}
-				table th,
-				table td.stat,
-				table td.date {
-					text-align:center;
-				}
-				table tr.even,
-				table tr td.multi {
-					background-color:#fafafa;
-				}
-				table tr.add td {
-					background-color:#fd0;
-				}
-				table tr.modify td {
-					background-color:#fffeb4;
-				}
-				table tr.hover td {
-					background-color:#eee;
-				}
-			table tr.none td {
-				color:#000;
-				background-color:#fc8989;
-			}
+			a:active {text-decoration:underline;}
+			.header {padding:2em; padding-bottom:0}
+			.header h1 {display:inline; margin-right:1em; color:#000; font-size:2em;}
+			.header > div {display:flex; margin:1em 0; font-weight:bold; color:#000;}
+			.header > div div {margin-right:30px;}
+			.header .h-percent {color:red;}
+			.button-group{position:relative; padding:5px 2em 10px;}
+			.button-group a{padding:3px 13px; white-space:nowrap; font-family:"Questrial Bold", sans-serif; font-weight:600; font-size:1rem; border:none; display:inline-flex; justify-content:center; cursor:pointer; background:linear-gradient(to right, #7460fc, #d34fff); color:white; border-radius:0.5rem; transition:0.3s ease;}
+			.button-group div{position:absolute; top:0; right:0; display:flex; align-items:center; height:100%;}
+			.button-group div span{margin-right:2em;}
+			table {width:100%; border-collapse:collapse; border-spacing:0;}
+			table caption {display:none;}
+			table tr td:first-child {color:black; font-weight:bold;}
 			table tr td:nth-child(1),
 			table tr td:nth-child(2),
 			table tr td:nth-child(3),
 			table tr td:nth-child(4),
 			table tr td:nth-child(5),
-			table tr td:nth-child(6){
-				width:200px
-			}
-			table tr td:nth-child(8){
-				width:250px
-			}
-			
-			table tr.up td {
-				background-color:#ffe9f5;
-			}
-				.section {
-					margin:3em 0;
-				}
-				body.js .section {
-					margin:0;
-				}
-					.section .title {
-						margin:0;
-						padding:0;
-						color:#000;
-						font-weight:bold;
-						font-size:100%;
-					}
-					body.js .section .title {
-						padding:1em;
-						border:1px solid #ccc;
-						background-color:#ddd;
-						cursor:pointer;
-					}
-					body.js .section + .section .title {
-						border-top:0;
-					}
-						body.js .section .title .page-count {
-							color:#666;
-							font-weight:normal;
-						}
-					body.js .section .content {
-						display:none;
-					}
-				#sb-body{border:none !important;}
-				.menu-list{position:fixed;bottom:0;left:0;width:100%;background:rgba(0,0,0,0.7);padding:0;margin:0;}
-				.menu-list ul{display: table;table-layout: fixed;width: 100%;padding:0;margin:0;}
-				.menu-list li{list-style:none;display: table-cell;text-align:center;width: 50%;padding:0;margin:0;}
-				.menu-list li a{display:block;color:#fff;line-height:60px;padding:0;margin:0;font-size:13px;font-weight:bold;}
-				.menu-list li.btn{border-left:1px solid #fff;}
-				body .section:last-child{margin-bottom:100px;}
+			table tr td:nth-child(6){width:200px;}
+			table tr td:nth-child(8){width:250px;}
+			table th {color:#333; background-color:#ddd;}
+			table th,
+			table td {padding:.5em; border:1px solid #ccc; text-align:left;}
+			table th,
+			table td.stat,
+			table td.date {text-align:center;}
+			/* table tr.even,
+			table tr td.multi {background-color:#eee;} */
+			table tr.hover {position:relative; background-color:#eee; box-shadow:inset 0 0 10px 0 #ccc; z-index:1;}
+			.section {margin:0;}
+			.section .title {margin:0; padding:1em; border:1px solid #bbb; background-color:#ccc; color:#000; font-weight:bold; font-size:100%; cursor:pointer;}
+			.section + .section .title {border-top:0;}
+			.section .title .page-count {color:#666; font-weight:normal;}
+			.section .content {display:none;}
+			.section:last-child{margin-bottom:100px;}
 		</style>
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 		<script type="text/javascript">
 			(function ($) {
 				$.fn.stat = function (options) {
 					var settings = $.extend({
-							title: 'h2.title',
-							content: 'div.content',
-							files: 'tbody tr',
-							stat: 'td.stat',
-							index: 0,
-							openAll: false,
-							speed: 'fast',
-							completed: 0
-						}, options),
-						all_sections = this,
-						header = $('div.header');
-
+						title: 'h2.title',
+						content: 'div.content',
+						files: 'tbody tr',
+						stat: 'td.stat',
+						index: 0,
+						openAll: false,
+						speed: 'fast',
+						completed: 0
+					}, options),
+					all_sections = this,
+					header = $('div.header');
 					$(settings.stat).each(function () {
 						$(this).text() == '⚫' && settings.completed++;
 					});
 					$('.h-completed').text(settings.completed);
 					$('.h-total').text($(settings.files).length);
 					$('.h-percent span').text(Math.round(settings.completed / $(settings.files).length * 100));
-
+					settings.openAll && $('h1').addClass('open');
 					return this.each(function () {
 						var self = this,
 							$self = $(self),
@@ -223,21 +81,16 @@
 							var stat = $(settings.stat, this);
 							stat.each(function () {
 								var text = $(this).text();
-								if (text == "⚫") {
-									completed++;
-								}
+								text == "⚫" && completed++;
 							});
 						});
-						self.files
-							.bind('mouseenter', function () {
-								$(this).addClass('hover');
-							})
-							.bind('mouseleave', function () {
-								$(this).removeClass('hover');
-							});
+						self.files.on({
+							mouseenter: function () {$(this).addClass('hover');},
+							mouseleave: function () {$(this).removeClass('hover');}
+						});
 						title_text = [self.section_title.text(), ' <span class="page-count">(', completed, '/', self.files.length, ')</span>'];
 						self.section_title.html(title_text.join(''));
-						self.section_title.bind('click', function () {
+						self.section_title.on('click', function () {
 							self.content.slideToggle(settings.speed);
 						});
 						if (settings.openAll || ((settings.index - 1) === all_sections.index(this))) {
@@ -249,12 +102,12 @@
 					$('div.section').stat({ openAll: true });
 					$('tbody tr:even').addClass('even');
 					$('tbody td[rowspan][rowspan!=1]').addClass('multi');
+					$('h1').on('click', function(){!$(this).hasClass('open') ? ($(this).addClass('open'), $('.content').slideDown(300)) : ($(this).removeClass('open'), $('.content').slideUp(300));});
 				});
 			}(jQuery));
 		</script>
 	</head>
 	<body>
-		<script type="text/javascript">document.body.className += ' js';</script>
 		<div class="header">
 			<h1>그린카</h1>
 			<div>
@@ -277,7 +130,7 @@
 			</div>
         </div>
 		<div class="section" id="menu01" name="menu01">
-			<h2 class="title total">TOTAL</h2>
+			<h2 class="title total">시작하기</h2>
 			<div class="content">
 				<table>
 					<thead>
@@ -328,7 +181,7 @@
         </div>
 
         <div class="section" id="menu02" name="menu02">
-            <h2 class="title">TOTAL</h2>
+            <h2 class="title">차량예약</h2>
             <div class="content">
                 <table>
                     <thead>
@@ -514,7 +367,7 @@
 		</div>
 
         <div class="section" id="menu03" name="menu03">
-            <h2 class="title">TOTAL</h2>
+            <h2 class="title">이용내역</h2>
             <div class="content">
                 <table>
                     <thead>
@@ -565,7 +418,7 @@
 		</div>
 
         <div class="section" id="menu04" name="menu04">
-            <h2 class="title">TOTAL</h2>
+            <h2 class="title">혜택</h2>
             <div class="content">
                 <table>
                     <thead>
@@ -889,7 +742,7 @@
 		</div>
 
         <div class="section" id="menu05" name="menu05">
-            <h2 class="title">TOTAL</h2>
+            <h2 class="title">내정보</h2>
             <div class="content">
                 <table>
                     <thead>
@@ -1226,7 +1079,7 @@
 		</div>
 
         <div class="section" id="menu06" name="menu06">
-            <h2 class="title">TOTAL</h2>
+            <h2 class="title">고객센터</h2>
             <div class="content">
                 <table>
                     <thead>
