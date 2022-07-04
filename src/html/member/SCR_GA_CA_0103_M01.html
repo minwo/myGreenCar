@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+@@include('@@webRoot/include/head.html')
+</head>
+<body>
+	<div id="wrap">
+		<!-- header -->
+@@include('@@webRoot/include/header.html', {type: "sub_01"})
+		<!-- //header -->
+		
+		<!-- container -->
+		<section id="container">
+			<div class="contents">
+
+				<div class="member"> 
+					
+					<p class="corporation"><span>소속</span> 그린컴퍼니</p>
+					<p class="desc-xl">약관 동의가 필요해요</p>
+
+					<div class="agree-wrap">
+						<div class="check-all">
+							<label for="check01" class="gc-checkbox round">
+								<input type="checkbox" id="check01" checked>
+								<span>회원 약관 모두 동의</span>
+							</label>
+						</div>
+
+						<div class="module">
+							<div class="check">
+								<label for="check02" class="gc-checkbox round">
+									<input type="checkbox" id="check02">
+									<span>회원 약관 모두 동의</span>
+								</label>
+							</div>
+
+							<div class="terms-list">
+								<a href="#">
+									<div class="list">
+										<i class="ico check md"></i>
+									</div>
+									<strong>필수</strong>
+									<p class="txt">그린카 회원 이용약관</p>
+									<div class="list">
+										<i class="ico arrow-right md"></i>
+									</div>
+								</a>
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+			<!-- @@include('@@webRoot/include/bot_fix.html') -->
+		</section>
+		<!-- //container -->
+
+	</div>
+
+</body>
+</html>
