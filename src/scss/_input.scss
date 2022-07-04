@@ -3,16 +3,19 @@
 $input-height: 40px;
 $line-color: #878787 !default;
 $line-color-active: #5CD79A !default;
-$validation-error: #FF384F !default;
+$validation-error: #D7535C !default;
 $line-color-disabled: #989898 !default;
 $animation: all .2s ease;
 
 
 .ip-group {
-	position:relative;
+	.row{
+		position:relative;
+	}
 	
 	.ip-txt{
 		width:100%;
+		font-weight:500;
 		background:transparent;
 		outline:none;
 	}
@@ -25,11 +28,28 @@ $animation: all .2s ease;
 		font-weight:700;
 	}
 
-	.btn-del{
+	.icon-group{
+		display:flex;
 		position:absolute;
-		top:50%;
+		bottom:9px;
 		right:0;
-		// transform: translate(0,-50%);
+
+		.ip-icon{
+			margin-left:10px;
+		}		
+	}
+
+	/* error */
+	.row.error{
+		.ip-txt{
+			color: $validation-error;
+		}
+		& + .error-txt{
+			margin-top:5px;
+			font-size: $font-sm;
+			color: $validation-error;
+			line-height:17px;
+		}
 	}
 }
 /* input */

@@ -19,11 +19,16 @@ $font-xl3: 28px !default;
 $font-xl4: 32px !default;
 
 // color
-$gray-light: #CFD4D7;
-$gray-dark: #40535E;
+$black         : #000;
+$black-100     : #333;
+
+$gray-light    : #CFD4D7;
+$gray-dark     : #40535E;
+$gray          : #636363;
 
 // border-radius
-$border-radius: 8px;
+$border-radius       : 8px;
+$border-radius-circle: 50%;
 
 
 

@@ -249,7 +249,7 @@ html {
 		flex:1 auto;
 		.contents {
 			overflow:hidden;
-			padding-top:20px;
+			padding:0 20px;
 		}
 	}
 	/* footer */
@@ -446,8 +446,6 @@ html {
 
 /* 회원계정 */
 .member{
-	padding:0 20px;
-
 	.desc-xl{
 		font-weight:700;
 	}
@@ -493,4 +491,17 @@ html {
 			}
 		}
 	}
+
+	/* 약관동의 */
+	.corporation{
+		color: $black;
+		font-size: $font-sm;
+		text-align:right;
+
+		span{
+			display:inline-block;
+			margin-right:4px;
+			color: $gray;
+		}
+	}	
 }

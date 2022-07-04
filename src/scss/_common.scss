@@ -209,12 +209,15 @@ textarea {
 		}
 		.head{
 			position:relative;
-			height:48px;
+			display: flex;
+			height:65px;
+			justify-content: center;
+			align-items: center;
 
 			.title{
-				height:100%;
+				width:100%;
 				padding:0 44px;
-				line-height:1.92;
+				line-height:28px;
 				text-align:center;
 			}
 
@@ -240,14 +243,16 @@ textarea {
 
 /* button bottom fixed */
 .bot-btn-fix{
-	height:72px;
+	height:74px;
 	.btn-wrap{
 		position:fixed;
 		left:0;
 		bottom:0;
 		width:100%;
-		height:72px;
-		padding:13px 20px 10px;
+		height:74px;
 		box-sizing: border-box;
+	}
+	.btn{
+		border-radius: 0;
 	}
 }
