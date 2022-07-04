@@ -9,6 +9,11 @@ $animation: all .2s ease;
 
 
 .ip-group {
+	margin-top:25px;
+	&:first-child{
+		margin-top:0;
+	}
+
 	.row{
 		position:relative;
 	}
