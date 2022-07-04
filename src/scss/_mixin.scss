@@ -121,21 +121,6 @@
 						inset 0 0 0 $before-shadow $checkradio-shadow-default,
 						inset 0 0 0 $checkradio-size $checkradio-shadow-primary;
 				}
-				@if $type == checkbox {
-					&:after {
-						content:"";
-						position:absolute;
-						top:0;
-						left:0;
-						border-right:calc($checkradio-size / 7) solid transparent;
-						border-bottom:calc($checkradio-size / 7) solid transparent;
-						transform-origin:100% 100%;
-						width:calc($checkradio-size / 5);
-						height:calc($checkradio-size / 2);
-						border-color:#fff;
-						transform:translate3d(calc($checkradio-size / 20), calc($checkradio-size / 8), 0) rotate(45deg);
-					}
-				}
 			}
 			&:disabled + span {
 				&:before {
@@ -165,14 +150,31 @@
 			width:$checkradio-size;
 			height:$checkradio-size;
 			margin-right:5px;
-			border:1px solid #6c757d;
+			border:1px solid #979797;
 			border-radius:$border-radius;
-			box-shadow:
-				0 0 0 -2px $checkradio-shadow-primary,
-				inset 0 0 0 $checkradio-size $checkradio-shadow-default,
-				inset 0 0 0 calc($checkradio-size / 2) $checkradio-shadow-primary;
+			background-color: #979797;
+			// box-shadow:
+			// 	0 0 0 -2px $checkradio-shadow-primary,
+			// 	inset 0 0 0 $checkradio-size $checkradio-shadow-default,
+			// 	inset 0 0 0 calc($checkradio-size / 2) $checkradio-shadow-primary;
 			transition:all .3s;
 			box-sizing:border-box;
+		}
+
+		@if $type == checkbox {
+			&:after {
+				content:"";
+				position:absolute;
+				top:0;
+				left:0;
+				border-right:calc($checkradio-size / 7) solid transparent;
+				border-bottom:calc($checkradio-size / 7) solid transparent;
+				transform-origin:100% 100%;
+				width:calc($checkradio-size / 5);
+				height:calc($checkradio-size / 2);
+				border-color:#fff;
+				transform:translate3d(calc($checkradio-size / 20), calc($checkradio-size / 8), 0) rotate(45deg);
+			}
 		}
 	}
 	&.no-label {
@@ -181,6 +183,15 @@
 			line-height:0;
 			&:before {
 				margin: 0;
+			}
+		}
+	}
+
+	// check round
+	&.round{
+		span{
+			&:before{
+				border-radius: $border-radius-circle;
 			}
 		}
 	}
@@ -325,8 +336,8 @@ $mobile-size : 360;
 			}
 		}
 
-		&.error{
-			& .ip-txt ~ .line{
+		& .error{
+			.ip-txt ~ .line{
 				&:before{
 					width:100%;
 					background-color: $validation-error;
@@ -357,12 +368,16 @@ $mobile-size : 360;
 			transition: $animation;
 		}
 
-		.ip-txt:focus ~ .line{
-			border-color: $line-color-active;
+		.ip-txt{
+			padding:0 20px;
+
+			&:focus ~ .line{
+				border-color: $line-color-active;
+			}
 		}
 
-		&.error{
-			& .ip-txt ~ .line{
+		& .error{
+			.ip-txt ~ .line{
 				border-color: $validation-error;
 			}
 		}
