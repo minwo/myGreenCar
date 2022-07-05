@@ -43,6 +43,9 @@ $animation: all .2s ease;
 			margin-left:10px;
 		}		
 	}
+	.error-txt{
+		display:none
+	}
 
 	/* error */
 	.row.error{
@@ -50,6 +53,7 @@ $animation: all .2s ease;
 			color: $validation-error;
 		}
 		& + .error-txt{
+			display:block;
 			margin-top:5px;
 			font-size: $font-sm;
 			color: $validation-error;
