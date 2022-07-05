@@ -135,22 +135,3 @@
     }
 }
 
-.layer-body {
-    .box {
-        border: 1px solid #ccc;
-        background-color: #f2f2f2;
-        border-radius: 8px;
-        padding: 20px;
-        margin-top: 20px;
-        .desc-list{
-			li + li{
-				margin-top: 8px;
-			}
-			.name{
-				display: inline-block;
-				width: 80px;
-				font-weight: bold;
-			}
-		}
-    }
-}
