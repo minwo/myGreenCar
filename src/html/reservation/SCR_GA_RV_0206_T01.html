@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('@@webRoot/include/head.html')
+    </head>
+    <body>
+        <div id="wrap">
+            <!-- header -->
+            @@include('@@webRoot/include/header.html', {type: "sub_01"})
+            <!-- //header -->
+
+            <!-- container -->
+            <section id="container">
+                <div class="contents" style="height: 3000px">
+                    <div class="reservation">
+                        <div class="gc-tab">
+                            <ul>
+                                <li><a href="#" class="active">쿠폰</a></li>
+                                <li><a href="#">KT멤버십</a></li>
+                                <li><a href="#">T멤버십</a></li>
+                            </ul>
+                            <span class="tab-indicator"></span>
+                        </div>
+                        <div class="wrap">
+							
+						</div>
+                    </div>
+                </div>
+                @@include('@@webRoot/include/bot_fix.html', {type: "type01"})
+            </section>
+            <!-- //container -->
+        </div>
+    </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('@@webRoot/include/head.html')
+    </head>
+    <body>
+        <div id="wrap">
+            <!-- header -->
+            @@include('@@webRoot/include/header.html', {type: "sub_01"})
+            <!-- //header -->
+
+            <!-- container -->
+            <section id="container">
+                <div class="contents" style="height: 3000px">
+                    <div class="reservation">
+                        <div class="gc-tab">
+                            <ul>
+                                <li><a href="#">쿠폰</a></li>
+                                <li><a href="#">KT멤버십</a></li>
+                                <li><a href="#" class="active">T멤버십</a></li>
+                            </ul>
+                            <span class="tab-indicator"></span>
+                        </div>
+                        <div class="wrap">
+                            <div class="st-">
+                                <a href="#">카드 신청</a>
+                                <a href="#">비밀번호 등록/수정</a>
+                            </div>
+							<section class="membership">
+                                <div class="membership-area">
+                                    <button class="btn secondary lg">
+                                        <i class="ico add md"></i>
+                                        <span class="text">등록하기</span>
+                                    </button>
+                                </div>
+                            </section>
+                            <section>
+                                <div class="guide">
+
+                                </div>
+                            </section>
+						</div>
+                    </div>
+                </div>
+                @@include('@@webRoot/include/bot_fix.html', {type: "type01"})
+            </section>
+            <!-- //container -->
+        </div>
+    </body>
+</html>

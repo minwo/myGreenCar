@@ -49,6 +49,7 @@ $btn-size: (
 	&:first-child{
 		margin-top:0 !important;
 	}
+    display: flex;
 	flex:1;
     justify-content:center;
     align-items:center;
