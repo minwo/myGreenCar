@@ -20,7 +20,10 @@
 @import "reservation";		// 차량예약
 @import "history";			// 이용내역
 @import "mypage";			// 내정보
-@import "notice";
+@import "customer";			// 고객센터
+@import "status";			// 사고접수&현황
+//공통영역은 contents.scss 스타일시트 작성
+@import "etc";				// 장애 + 기타
 
 /* layout */
 html {
