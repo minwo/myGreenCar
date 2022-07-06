@@ -70,33 +70,62 @@ h2{margin-bottom:20px;font-size:30px}
 				<!--  -->
 				<div class="tmp-guide-box">
 					<h2 class="guide-box-tit">Etc</h2>
-					<button type="button" class="btn primary" onclick="accodianBox(slideDownBox);">Accodian Up Down</button>
+					<ul class="tmp-faq-list">
+						<li>
+							<button type="button"><strong class="hide-txt">질문</strong>(1)질문 제목이 출력됩니다.</button>
+							<div data-box-type="accordion">
+								<strong class="hide-txt">답변</strong>
+								<div>
+									답변이 출력됩니다.<br>
+									답변이 출력됩니다.<br>
+									답변이 출력됩니다.
+								</div>
+							</div>
+						</li>
+						<li>
+							<button type="button"><strong class="hide-txt">질문</strong>(2)질문 제목이 출력됩니다.</button>
+							<div data-box-type="accordion">
+								<strong class="hide-txt">답변</strong>
+								<div>
+									답변이 출력됩니다.<br>
+									답변이 출력됩니다.
+								</div>
+							</div>
+						</li>
+					</ul>
+
+					<br>
+
+					<div>
+						<button type="button" class="btn primary" onclick="accordionBox();">accordion Up Down</button>
+						<div data-box-type="accordion">
+							<div>
+								내용<br>
+								내용<br>
+								내용<br>
+								내용<br>
+								내용<br>
+								내용<br>
+								내용<br>
+								내용<br>
+								내용<br>
+								내용<br>
+								내용<br>
+								내용<br>
+								내용<br>
+								내용<br>
+								내용<br>
+								내용<br>
+								내용<br>
+								내용<br>
+								내용
+							</div>
+						</div>
+					</div>
 					<button type="button" class="btn primary" onclick="openLayerPopup(tmpLayer01);" style="margin-top:10px">Layer Popup</button>
 					<button type="button" class="btn primary" onclick="openLayerPopup(tmpLayer02);" style="margin-top:10px">Bottom Layer Popup</button>
 					<button type="button" class="btn primary" onclick="openLayerPopup(tmpLayer03);" style="margin-top:10px">Full Popup</button>
-					<div class="accodian-box" id="slideDownBox">
-						<div class="accodian-box-inner">
-							내용<br>
-							내용<br>
-							내용<br>
-							내용<br>
-							내용<br>
-							내용<br>
-							내용<br>
-							내용<br>
-							내용<br>
-							내용<br>
-							내용<br>
-							내용<br>
-							내용<br>
-							내용<br>
-							내용<br>
-							내용<br>
-							내용<br>
-							내용<br>
-							내용
-						</div>
-					</div>
+					
 				</div>
 				<!-- // -->
 				<!-- //Etc -->
@@ -104,12 +133,12 @@ h2{margin-bottom:20px;font-size:30px}
 
 			<!-- Quick Menu -->
 			<div class="quick-menu-wrap">
-				<button type="button" class="quick-button" onclick="tmpQuickMenuCl(this);">Quick 메뉴 열기</button>
+				<button type="button" class="quick-button" onclick="tmpQuickMenuCl(this);"><span class="hide-txt">Quick 메뉴 열기</span></button>
 				<ul>
-					<li><a href="#" class="type-menu01">MENU01</a></li>
-					<li><a href="#" class="type-menu02">MENU02</a></li>
-					<li><a href="#" class="type-menu03">MENU03</a></li>
-					<li><a href="#" class="type-menu04">MENU04</a></li>
+					<li><a href="#" class="type-menu01"><span class="hide-txt">MENU01</span></a></li>
+					<li><a href="#" class="type-menu02"><span class="hide-txt">MENU02</span></a></li>
+					<li><a href="#" class="type-menu03"><span class="hide-txt">MENU03</span></a></li>
+					<li><a href="#" class="type-menu04"><span class="hide-txt">MENU04</span></a></li>
 				</ul>
 			</div>
 			<!-- //Quick Menu -->
@@ -152,20 +181,30 @@ h2{margin-bottom:20px;font-size:30px}
 	
 	<script type="text/javascript">
 
-		// 퍼블 임시 js
-		// toogle box
-		const accodianBox = (t) => {
-			t.classList.toggle('active');
-		};
+		/* 
+		* accordion box
+		* 퍼블 임시 js
+		*/
+		const accordionBox = () => event.target.parentNode.classList.toggle('active');
+		// 여러개 일떄
+		Array.from(document.querySelector('.tmp-faq-list').querySelectorAll('button')).forEach(t => {
+			t.addEventListener('click', accordionBox);
+		});
 
-		// open layer
-		const openLayerPopup = (t) => {
+		/*
+		* open layer
+		* 퍼블 임시 js
+		*/
+		const openLayerPopup = t => {
 			t.classList.add('active');
 			t.addEventListener('click', dimmCloseCl);
 			overflowCl(true);
 		};
 
-		// 영역밖 클릭시 layer close
+		/*
+		* 영역밖 클릭시 layer close
+		* 퍼블 임시 js
+		*/
 		const dimmCloseCl = () => {
 			if (event.target !== event.currentTarget) return;
 			event.currentTarget.classList.remove('active');
@@ -173,34 +212,35 @@ h2{margin-bottom:20px;font-size:30px}
 			overflowCl(false);
 		};
 
-		// close layer
-		const closeLayerPopup = (t) => {
+		/*
+		* close layer
+		* 퍼블 임시 js
+		*/
+		const closeLayerPopup = t => {
 			t.closest('.layer-popup-wrap').classList.remove('active');
 			overflowCl(false);
 		};
 
-		// body 스크롤 위치 저장
-		const scrollPosition = () => {
-			var de = document.documentElement;
-			var b = document.body;
-			var now = {};
-			now.Y = document.all ? (!de.scrollTop ? b.scrollTop : de.scrollTop) : (window.pageYOffset ? window.pageYOffset : window.scrollY);
-			return now.Y;
-		};
-
-		// body 스크롤 막기
-		const overflowCl = ($isHidden) => {
+		/*
+		* body 스크롤 막기
+		* 퍼블 임시 js
+		*/
+		const overflowCl = $isHidden => {
 			const tLength = document.querySelectorAll('.layer-popup-wrap.active').length;
 			$isHidden ? document.documentElement.classList.add('is-open') : tLength <= 0 && document.documentElement.classList.remove('is-open');
 		};
 
-		// quick menu
-		const tmpQuickMenuCl = (t) => {
-			t.closest('.quick-menu-wrap').classList.toggle('active');
-		};
+		/*
+		* quick menu
+		* 퍼블 임시 js
+		*/
+		const tmpQuickMenuCl = t => t.closest('.quick-menu-wrap').classList.toggle('active');
 		
-		// 별점
-		const ratingWrap = document.documentElement.querySelectorAll('.star-rating-wrap');
+		/*
+		* 별점
+		* 퍼블 임시 js
+		*/
+		const ratingWrap = Array.from(document.querySelectorAll('.star-rating-wrap'));
 		ratingWrap.forEach( t => {
 			const labels = t.querySelectorAll('label');
 			labels.forEach(l => {

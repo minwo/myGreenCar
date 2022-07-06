@@ -22,7 +22,6 @@
 		z-index:1;
 		touch-action:manipulation;
 		-webkit-tap-highlight-color:transparent;
-		@include hideTxt;
 		&:before {
 			content:'';
 			position:absolute;
@@ -61,7 +60,6 @@
 				width:40px;
 				height:40px;
 				border-radius:100%;
-				@include hideTxt;
 				&.type-menu01 {
 					background-color: skyblue;
 				}

@@ -2,18 +2,6 @@
 
 @use 'sass:math'; 
 
-// hide Text && bg icon
-@mixin hideTxt($bgImgW:null, $bgImgH:null) {
-	@if $bgImgW {
-		background-size:$bgImgW $bgImgH;
-		background-position:center center;
-		background-repeat:no-repeat;
-	}
-	overflow:hidden;
-	color:transparent;
-	font-size:1px;
-	text-indent:-9999px;
-}
 // slide Down && slide Up ( accodion )
 @mixin acdo($mh, $mt, $ts, $tcb) {
 	visibility:if($mt < 0, hidden, visible);
