@@ -89,22 +89,6 @@ input[type="number"]::-webkit-inner-spin-button {
 	padding: 0; /* 2 */
 }
 
-.clearfix:after {
-	content:'';
-	display:block;
-	clear:both;
-	visibility:hidden;
-}
-.invisible {
-	overflow:hidden;
-	visibility:hidden;
-	position:absolute;
-	width:0;
-	height:0;
-	font-size:0;
-	line-height:0;
-}
-
 /* NotoSansKR-Light */
 @font-face {
     font-family: 'Noto Sans KR';
@@ -208,6 +192,66 @@ textarea {
     letter-spacing: -.5px;
 }
 
+/* wrap */
+#wrap {
+	position:relative;
+	display:flex;
+	flex-direction:column;
+	width:100%;
+	min-height:100%;
+	/* header */
+	#header {
+		.head-wrap{
+			&.fixed{
+				position:fixed;
+				top:0;
+				left:0;
+				width:100%;
+				background-color:#fff;
+			}
+			.head{
+				position:relative;
+				display: flex;
+				height:65px;
+				justify-content: center;
+				align-items: center;
+
+				.title{
+					width:100%;
+					padding:0 44px;
+					line-height:28px;
+					text-align:center;
+				}
+
+				.left{
+					display:flex;
+					position:absolute;
+					top:0;
+					left:20px;
+					height:100%;
+				}
+
+				.right{
+					display:flex;
+					position:absolute;
+					top:0;
+					right:20px;
+					height:100%;
+				}
+
+			}
+		}
+	}
+	/* container */
+	#container {
+		flex:1 auto;
+		.contents {
+			overflow:hidden;
+			padding:0 20px;
+		}
+	}
+}
+
 /* 별점 */
 .star-rating-wrap {
     // icon width
@@ -302,50 +346,6 @@ textarea {
     }
 }
 
-/* header */
-#header{
-	.head-wrap{
-		&.fixed{
-			position:fixed;
-			top:0;
-			left:0;
-			width:100%;
-			background-color:#fff;
-		}
-		.head{
-			position:relative;
-			display: flex;
-			height:65px;
-			justify-content: center;
-			align-items: center;
-
-			.title{
-				width:100%;
-				padding:0 44px;
-				line-height:28px;
-				text-align:center;
-			}
-
-			.left{
-				display:flex;
-				position:absolute;
-				top:0;
-				left:20px;
-				height:100%;
-			}
-
-			.right{
-				display:flex;
-				position:absolute;
-				top:0;
-				right:20px;
-				height:100%;
-			}
-
-		}
-	}
-}
-
 /* button bottom fixed */
 .bot-btn-fix{
 	height:74px;
@@ -359,5 +359,17 @@ textarea {
 	}
 	.btn{
 		border-radius: 0;
+	}
+}
+
+/* accordion */
+[data-box-type="accordion"] {
+	overflow:hidden;
+	> div {
+		@include acdo(0, -100%, .4s, cubic-bezier(1, 0, 1, 1));
+	}
+	.active > & > div,
+	&.active > div {
+		@include acdo(100%, 0, .3s, cubic-bezier(0, 0, 0, 1));
 	}
 }
