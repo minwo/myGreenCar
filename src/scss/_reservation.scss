@@ -5,11 +5,11 @@
 
 .layer-body {
     .box {
-        border: 1px solid #ccc;
-        background-color: #f2f2f2;
-        border-radius: 8px;
         padding: 20px;
         margin-top: 20px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        background-color: #f2f2f2;
         .desc-list{
 			li + li{
 				margin-top: 8px;
@@ -21,4 +21,37 @@
 			}
 		}
     }
+}
+
+.reservation{
+	.title{
+		margin-bottom: 24px;
+		font-size: 20px;
+		.emphasis{
+			color: #FD8484;
+		}
+	}
+	.list{
+		li{
+			font-size: 16px;
+			color: #8C989E;
+			position: relative;
+			padding-left: 16px;
+			&:before{
+				content: " ";
+				display: inline-block;
+				width: 4px;
+				height: 4px;
+				border-radius: 2rem;
+				background-color: #8C989E;
+				position: absolute;
+				top: 10px;
+				left: 0;
+
+			}
+		}
+		li + li{
+			margin-top: 24px;
+		}
+	}
 }
