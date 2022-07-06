@@ -1,12 +1,9 @@
-<header id="header">
-	<div class="head-cont">
-		<div class="head-wrap">
 			@@if (type === "main"){
 			<div class="head">
 				<div class="left">
 					<button type="button" class="btn"><i class="ico bell sm"></i></button>
 				</div>
-				<div class=""><h1 class="logo"><a href="">그린카</a></h1></div>
+				<div class=""><h1 class="logo"><a href="">Title</a></h1></div>
 				<div class="right">
 					<button type="button" class="btn"><i class="ico user sm"></i></button>
 				</div>
@@ -31,7 +28,7 @@
 			}
 
 			@@if (type === "sub_pop"){
-			<div class="head">
+			<div class="head popup">
 				<div class="left">
 					<button type="button" class="btn-head">
 						<i class="ico close md"></i>
@@ -39,8 +36,18 @@
 				</div>
 			</div>
 			}
-		</div>
-	</div>
+
+			@@if (type === "sub_pop01"){
+				<div class="head">
+					<div class="left">
+						<button type="button" class="btn-head">
+							<span class="hide-txt">닫기</span>
+							<i class="ico close md"></i>
+						</button>
+					</div>
+					<h2 class="title">Title</h2>
+				</div>
+				}
 
 	<!-- <script>
 		window.scrollPosition = document.documentElement.scrollTop || 0;
@@ -78,4 +85,3 @@
 			window.scrollPosition = documentY;
 		}
 	</script> -->
-</header>

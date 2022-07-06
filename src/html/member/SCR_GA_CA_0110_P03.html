@@ -1,44 +1,35 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-@@include('@@webRoot/include/head.html')
-</head>
-<body>
-	<div id="wrap">
-		<!-- header -->
-@@include('@@webRoot/include/header.html', {type: "sub_pop"})
-		<!-- //header -->
+<div class="layer-header">
+	@@include('@@webRoot/include/header.html', {type: "sub_pop"})
+</div>
+
+<div class="layer-body">
+
+	<div class="member"> 
 		
-		<!-- container -->
-		<section id="container">
-			<div class="contents">
+		<p class="desc-xl">
+			프르모션 코드를 입력해주세요
+		</p>
 
-				<div class="member"> 
-					
-					<p class="desc-xl">
-						프르모션 코드를 입력해주세요
-					</p>
-
-					<div class="ip-group">
-						<div class="row">
-							<label for="ip01" class="ip-label">프르모션 코드</label>
-							<input id="ip01" type="text" class="ip-txt" placeholder="프르모션 코드 입력">
-							<button type="button" class="icon-group">
-								<span class="icon"><i class="ico delete md"></i></span>
-							</button>
-							<div class="line"></div>
-						</div>
-					</div>
-
-				</div>
-
+		<div class="ip-group">
+			<div class="row">
+				<label for="ip01" class="ip-label">프르모션 코드</label>
+				<input id="ip01" type="text" class="ip-txt" placeholder="프르모션 코드 입력">
+				<button type="button" class="icon-group">
+					<span class="icon"><i class="ico delete md"></i></span>
+				</button>
+				<div class="line"></div>
 			</div>
-			@@include('@@webRoot/include/bot_fix.html', {type: "type01"})
-			
-		</section>
-		<!-- //container -->
+		</div>
 
 	</div>
 
-</body>
-</html>
+</div>
+
+<div class="layer-footer bot-btn-fix">
+	<div class="btn-wrap">
+		<!-- column 클레스 적용하면 col 스타일 적용 -->
+		<div class="btn-group">
+			<button type="button" class="btn primary xl full black">등록하기</button>
+		</div>
+	</div>
+</div>

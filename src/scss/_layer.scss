@@ -130,13 +130,57 @@ html.is-open, html.is-open body {
             flex-direction: column;
             .layer-header {
                 flex: 0 0 auto;
+				padding:0;
+
+				.head{
+					position:relative;
+					display: flex;
+					height:65px;
+					justify-content: center;
+					align-items: center;
+					border-bottom:1px solid #D9D9D9;
+
+					&.popup{
+						border-bottom:0;
+					}
+
+					.title{
+						width:100%;
+						padding:0 44px;
+						line-height:28px;
+						text-align:center;
+					}
+	
+					.left{
+						display:flex;
+						position:absolute;
+						top:0;
+						left:20px;
+						height:100%;
+					}
+	
+					.right{
+						display:flex;
+						position:absolute;
+						top:0;
+						right:20px;
+						height:100%;
+					}
+				}
+
             }
             .layer-body {
                 flex: 1;
             }
             .layer-footer {
+				position:relative;
+				z-index:5;
                 flex: 0 0 auto;
                 margin-top: auto;
+				padding:0;
+				.btn-wrap{
+					padding:0;
+				}
             }
         }
     }
