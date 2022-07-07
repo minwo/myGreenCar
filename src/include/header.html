@@ -1,30 +1,42 @@
 			@@if (type === "main"){
-			<div class="head">
-				<div class="left">
-					<button type="button" class="btn"><i class="ico bell sm"></i></button>
+			<header id="header">
+				<div class="head-cont">
+					<div class="head-wrap">
+						<div class="head">
+							<div class="left">
+								<button type="button" class="btn"><i class="ico bell sm"></i></button>
+							</div>
+							<div class=""><h1 class="logo"><a href="">Title</a></h1></div>
+							<div class="right">
+								<button type="button" class="btn"><i class="ico user sm"></i></button>
+							</div>
+						</div>
+					</div>
 				</div>
-				<div class=""><h1 class="logo"><a href="">Title</a></h1></div>
-				<div class="right">
-					<button type="button" class="btn"><i class="ico user sm"></i></button>
-				</div>
-			</div>
+			</header>
 			}
 			
 			@@if (type === "sub_01"){
 			<!-- 뒤로가기 버튼 |  타이틀  | 세팅 버튼 -->
-			<div class="head">
-				<div class="left">
-					<button type="button" class="btn-head">
-						<i class="ico back md"></i>
-					</button>
+			<header id="header">
+				<div class="head-cont">
+					<div class="head-wrap">
+						<div class="head">
+							<div class="left">
+								<button type="button" class="btn-head">
+									<i class="ico back md"></i>
+								</button>
+							</div>
+							<h2 class="title">Title</h2>
+							<div class="right">
+								<button type="button" class="btn-head">
+									<i class="ico home md"></i>
+								</button>
+							</div>
+						</div>
+					</div>
 				</div>
-				<h2 class="title">Title</h2>
-				<div class="right">
-					<button type="button" class="btn-head">
-						<i class="ico home md"></i>
-					</button>
-				</div>
-			</div>
+			</header>
 			}
 
 			@@if (type === "sub_pop"){
@@ -45,7 +57,9 @@
 							<i class="ico close md"></i>
 						</button>
 					</div>
-					<h2 class="title">Title</h2>
+					@@if (title){
+						<h2 class="title">@@title</h2>
+					}
 				</div>
 				}
 
