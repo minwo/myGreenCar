@@ -26,6 +26,7 @@ $icon-size: (
         "close": "close.svg", 
         "home": "home.svg",
         "back": "back.svg",
+        "next-sm": "next_sm.svg",
         "arrow-right": "arrow-right.svg",
         "arrow-left": "arrow-left.svg",
         "star": "star.svg",
@@ -33,6 +34,8 @@ $icon-size: (
         "eye-off": "eye_off.svg",
         "bookmark": "bookmark.svg",
         "bookmark-active": "bookmark_active.svg",
+        "search": "search.svg",
+        "sort": "sort.svg",
     )
     
 ) !default;
@@ -40,7 +43,10 @@ $icon-size: (
 .icon{
 	display: flex;
     align-items: center;
-    flex: 1;
+    flex: 0 0 auto;
+    background-color: transparent;
+    border: 0;
+    padding:0
 }
 
 .ico {

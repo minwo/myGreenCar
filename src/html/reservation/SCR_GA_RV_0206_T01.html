@@ -6,12 +6,15 @@
     <body>
         <div id="wrap">
             <!-- header -->
-            @@include('@@webRoot/include/header.html', {type: "sub_01"})
+            @@include('@@webRoot/include/header.html', {
+                type: "sub_01",
+                title: "할인/적립"
+            })
             <!-- //header -->
 
             <!-- container -->
             <section id="container">
-                <div class="contents" style="height: 3000px">
+                <div class="contents">
                     <div class="reservation">
                         <div class="gc-tab">
                             <ul>
@@ -21,12 +24,81 @@
                             </ul>
                             <span class="tab-indicator"></span>
                         </div>
-                        <div class="wrap">
-							
-						</div>
+                        <div class="cont coupon">
+                            <section class="section">
+                                <h3 class="section-title">쿠폰 번호 입력</h3>
+                                <div class="section-cont">
+                                    <div class="ip-group">
+                                        <div class="row">
+                                            <input type="text" placeholder="쿠폰 번호 입력" />
+                                            <button class="btn primary lg"><span class="text">등록</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <hr class="divider" />
+                            <section class="section">
+                                <h3 class="section-title">사용 가능한 쿠폰<span class="badge-num">5</span></h3>
+                                <div class="section-cont">
+                                    <div class="coupon-list">
+                                        <div class="coupon-item">
+                                            <div class="discount-type">비율할인</div>
+                                            <div class="discount-value">
+                                                <span>50% 할인</span>
+                                                <span>-6,865원</span>
+                                            </div>
+                                            <p>[매일] 월화수목금토일 언제나 50% 할인</p>
+                                            <div class="effective-date">
+                                                <span class="date">2022.04.01 ~ 2022.04.30</span>
+                                                <span class="badge warning sm">D-7</span>
+                                            </div>
+                                        </div>
+                                        <div class="coupon-item">
+                                            <div class="discount-type">정액할인</div>
+                                            <div class="discount-value">
+                                                <span>2,000원 할인</span>
+                                                <span>-2,000원</span>
+                                            </div>
+                                            <p>[매일] 월화수목금토일 언제나 50% 할인</p>
+                                            <div class="effective-date">
+                                                <span class="date">2022.04.01 ~ 2022.04.30</span>
+                                                <span class="badge normal sm">D-35</span>
+                                            </div>
+                                        </div>
+                                        <div class="coupon-item">
+                                            <div class="discount-type">비율할인</div>
+                                            <div class="discount-value">
+                                                <span>50% 할인</span>
+                                                <span>-6,865원</span>
+                                            </div>
+                                            <p>[매일] 월화수목금토일 언제나 50% 할인</p>
+                                            <div class="effective-date">
+                                                <span class="date">2022.04.01 ~ 2022.04.30</span>
+                                                <span class="badge warning sm">D-7</span>
+                                            </div>
+                                        </div>
+                                        <div class="coupon-item expired">
+                                            <div class="discount-type">비율할인</div>
+                                            <div class="discount-value">
+                                                <span>50% 할인</span>
+                                                <span>-6,865원</span>
+                                            </div>
+                                            <p>[매일] 월화수목금토일 언제나 50% 할인</p>
+                                            <div class="effective-date">
+                                                <span class="date">2022.04.01 ~ 2022.04.30</span>
+                                                <span class="badge warning sm">D-7</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn-sort">
+                                    <i class="ico sort md"></i>
+                                    <span class="text">혜택순</span>
+                                </button>
+                            </section>
+                        </div>
                     </div>
                 </div>
-                @@include('@@webRoot/include/bot_fix.html', {type: "type01"})
             </section>
             <!-- //container -->
         </div>
