@@ -135,10 +135,9 @@ html.is-open, html.is-open body {
 				.head{
 					position:relative;
 					display: flex;
-					height:65px;
+					height:66px;
 					justify-content: center;
 					align-items: center;
-					border-bottom:1px solid #D9D9D9;
 
 					&.popup{
 						border-bottom:0;
@@ -146,9 +145,12 @@ html.is-open, html.is-open body {
 
 					.title{
 						width:100%;
-						padding:0 44px;
-						line-height:28px;
+						height:100%;
+						padding:0 60px;
+						border-bottom:1px solid #D9D9D9;
+						line-height:66px;
 						text-align:center;
+						@include ell;
 					}
 	
 					.left{

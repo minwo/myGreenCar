@@ -27,7 +27,7 @@
 									<i class="ico back md"></i>
 								</button>
 							</div>
-							<h2 class="title">Title</h2>
+							<h2 class="title">@@title</h2>
 							<div class="right">
 								<button type="button" class="btn-head">
 									<i class="ico home md"></i>
@@ -46,22 +46,11 @@
 						<i class="ico close md"></i>
 					</button>
 				</div>
+				@@if (title !== false){
+					<h2 class="title">@@title</h2>
+				}
 			</div>
 			}
-
-			@@if (type === "sub_pop01"){
-				<div class="head">
-					<div class="left">
-						<button type="button" class="btn-head">
-							<span class="hide-txt">닫기</span>
-							<i class="ico close md"></i>
-						</button>
-					</div>
-					@@if (title){
-						<h2 class="title">@@title</h2>
-					}
-				</div>
-				}
 
 	<!-- <script>
 		window.scrollPosition = document.documentElement.scrollTop || 0;
