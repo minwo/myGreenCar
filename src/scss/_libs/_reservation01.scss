@@ -1,35 +1,5 @@
 @charset "UTF-8";
 
-.btn-tab{
-	.scroll-area{
-		display: flex;
-		flex-wrap: nowrap;
-		padding:20px 0;
-		overflow: auto;
-		-webkit-overflow-scrolling: touch;
-		-ms-overflow-style: -ms-autohiding-scrollbar;
-
-		.btn{
-			display:inline-flex;
-			flex:0 0 auto;
-			margin-left:8px;
-			color:$navy-070;
-			border-radius:$border-radius-50;
-
-			
-			&.active{
-				color:$gray-000;
-				border-color:$btn-primary;
-				background-color:$btn-primary;
-			}
-
-			&:first-child{
-				margin-left:0;
-			}
-		}
-	}
-}
-
 .reservation{
 	.search-result{
 		li{
