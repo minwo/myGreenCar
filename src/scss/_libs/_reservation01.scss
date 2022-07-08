@@ -1,6 +1,7 @@
 @charset "UTF-8";
 
 .reservation{
+	// 프리존 반납 & 그린존 반납
 	.search-result{
 		li{
 			border-bottom:1px solid #F3F4F5;
@@ -56,6 +57,19 @@
 					margin-left:3px;
 					font-size:13px;
 				}
+			}
+		}
+	}
+
+	// 대여예약 약관동의
+	&.terms{
+		.desc-xl{
+			color:$navy-070;
+			font-weight:700;
+		}
+		.agree-wrap{
+			.check-all{
+				border-bottom:1px solid $navy-020;
 			}
 		}
 	}
