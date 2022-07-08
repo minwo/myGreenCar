@@ -1,1 +1,92 @@
 @charset "UTF-8";
+
+.btn-tab{
+	.scroll-area{
+		display: flex;
+		flex-wrap: nowrap;
+		padding:20px 0;
+		overflow: auto;
+		-webkit-overflow-scrolling: touch;
+		-ms-overflow-style: -ms-autohiding-scrollbar;
+
+		.btn{
+			display:inline-flex;
+			flex:0 0 auto;
+			margin-left:8px;
+			color:$navy-070;
+			border-radius:$border-radius-50;
+
+			
+			&.active{
+				color:$gray-000;
+				border-color:$btn-primary;
+				background-color:$btn-primary;
+			}
+
+			&:first-child{
+				margin-left:0;
+			}
+		}
+	}
+}
+
+.reservation{
+	.search-result{
+		li{
+			border-bottom:1px solid #F3F4F5;
+		}
+		a{
+			display:block;
+			padding:17px 0;
+		}
+		.keyword{
+			font-size:$font-lg;
+			font-weight:700;
+			color:$navy-070;
+			line-height:26px;
+			@include ell;
+
+			strong{
+				color:$pink-060;
+			}
+		}
+		.address{
+			font-size:$font-sm2;
+			color:$navy-040;
+			line-height:20px;
+			@include ell;
+		}
+
+		&.greenzon{
+			a{
+				position:relative;
+				padding:17px 100px 17px 38px;
+			}
+			.keyword,.address{
+				strong{
+					color:$green-060;
+				}
+			}
+			.ico{
+				position:absolute;
+				top:50%;
+				left:0;
+				transform:translate(0, -50%)
+			}
+			.price{
+				position:absolute;
+				bottom:15px;
+				right:0;
+				font-size:$font-xl;
+				color:$navy-100;
+				line-height:28px;
+
+				em{
+					display:inline-block;
+					margin-left:3px;
+					font-size:13px;
+				}
+			}
+		}
+	}
+}

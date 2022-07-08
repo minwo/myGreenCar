@@ -18,6 +18,10 @@ $icon-size: (
         "height": 24px
     ),
     "xl": (
+        "width": 28px,
+        "height": 28px
+    ),
+	"xl2": (
         "width": 32px,
         "height": 32px
     ),
@@ -36,6 +40,7 @@ $icon-size: (
         "bookmark-active": "bookmark_active.svg",
         "search": "search.svg",
         "sort": "sort.svg",
+        "badge-g": "badge-g.svg",
     )
     
 ) !default;

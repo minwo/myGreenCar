@@ -6,8 +6,8 @@ $btn-border-default: #000 !default;
 $btn-bg-default:     #000 !default;
 $btn-bg-disabled:    #CFD4D7 !default;
 
-$btn-primary:        #0d6efd !default;
-$btn-secondary:      #198754 !default;
+$btn-primary:        $green-060 !default;
+$btn-secondary:      $navy-060 !default;
 $btn-success:        #6610f2 !default;
 $btn-info:           #0dcaf0 !default;
 $btn-warning:        #ffc107 !default;
@@ -26,8 +26,8 @@ $btn-colors: (
 // button size
 $btn-size: (
     "xs" : (
-        "size" : 30px,
-        "font-size" : 12px
+        "size" : 32px,
+        "font-size" : $font-sm2
     ),
     "sm" : (
         "size" : 35px,
@@ -39,7 +39,7 @@ $btn-size: (
     ),
     "xl" : (
         "size" : 74px,
-        "font-size" : 16px
+        "font-size" : $font-md
     )
 ) !default;
 

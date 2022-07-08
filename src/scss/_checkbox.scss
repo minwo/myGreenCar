@@ -4,9 +4,9 @@
 .gc-checkbox {
 	@include form(checkbox);
 
-	&:not(.round){
+	// &:not(.round){
 				
-	}
+	// }
 
 	&.round{
 		input{
