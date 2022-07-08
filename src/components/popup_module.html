@@ -13,9 +13,9 @@
 
 				<!-- 
 					기본 팝업    : 미들 팝업
-					바텀 레이어  : type-bottom 
+					바텀 레이어  : type-bottom
+					드래그 바텀  : type-bottom + type-drag
 					풀 팝업      : type-full
-
 					ex) layer-popup-wrap type-bottom 멀티 클레스
 				 -->
 				<div class="layer-popup-wrap">
@@ -36,7 +36,8 @@
 			const domWrap = document.querySelector('.layer-popup-wrap');
 			const dom = document.querySelector('.layer-container');
 			const url = '/html/'+pageName[1]+'/'+pageName[2] +'.html';
-			pageName[2] && domWrap.classList.add('type-' + pageName[3]);
+			pageName[3] !== undefined && domWrap.classList.add('type-' + pageName[3]);
+			pageName[4] !== undefined && domWrap.classList.add('type-' + pageName[4]);
 			console.log(pageName);
 			fetch(url).then(response => response.text()).then(data =>{
 				dom.innerHTML = data;

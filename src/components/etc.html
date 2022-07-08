@@ -5,7 +5,7 @@
 <style>
 .contents{padding:20px 40px 20px !important}
 .contents .tmp-guide-box{margin-left:0;margin-right:0}
-h2{margin-bottom:20px;font-size:30px}
+.contents > h2{margin-bottom:20px;font-size:30px}
 </style>
 </head>
 <body>
@@ -122,9 +122,10 @@ h2{margin-bottom:20px;font-size:30px}
 							</div>
 						</div>
 					</div>
-					<button type="button" class="btn primary" onclick="openLayerPopup(tmpLayer01);" style="margin-top:10px">Layer Popup</button>
-					<button type="button" class="btn primary" onclick="openLayerPopup(tmpLayer02);" style="margin-top:10px">Bottom Layer Popup</button>
-					<button type="button" class="btn primary" onclick="openLayerPopup(tmpLayer03);" style="margin-top:10px">Full Popup</button>
+					<button type="button" class="btn primary" onclick="openLayerPopup(tmpLayer01);" style="margin-top:10px">Middle Layer</button>
+					<button type="button" class="btn primary" onclick="openLayerPopup(tmpLayer02);" style="margin-top:10px">Bottom Layer</button>
+					<button type="button" class="btn primary" onclick="openLayerPopup(tmpLayer03);" style="margin-top:10px">Drag + Bottom Layer</button>
+					<button type="button" class="btn primary" onclick="openLayerPopup(tmpLayer04);" style="margin-top:10px">Full Layer</button>
 					
 				</div>
 				<!-- // -->
@@ -146,38 +147,69 @@ h2{margin-bottom:20px;font-size:30px}
 		</section>
 	</div>
 	
+	<!-- middle layer demo -->
 	<div class="layer-popup-wrap" id="tmpLayer01">
 		<div class="layer-container">
-			<div class="layer-header">Layer Popup</div>
-			
-			@@include('@@webRoot/components/middle_popup.html')
-			<button type="button" class="layer-close" onclick="closeLayerPopup(this);">닫기</button>
+			<!-- layer contents in -->
+			@@include('@@webRoot/html/reservation/SCR_GA_RV_0212_M01.html')
+			<!-- //layer contents in -->
 		</div>
 	</div>
+	<!-- //middle layer demo -->
+
+	<!-- bottom layer demo -->
 	<div class="layer-popup-wrap type-bottom" id="tmpLayer02">
 		<div class="layer-container">
-			<div class="layer-header">Bottom Layer Popup</div>
-			@@include('@@webRoot/components/layer_bot_popup.html')
-			<button type="button" class="layer-close" onclick="closeLayerPopup(this);">닫기</button>
+			<!-- layer contents in -->
+			@@include('@@webRoot/html/reservation/SCR_GA_RV_0213_M01.html')
+			<!-- //layer contents in -->
 		</div>
 	</div>
-	<div class="layer-popup-wrap type-full" id="tmpLayer03">
+	<!-- //bottom layer demo -->
+
+	<!-- bottom layer demo -->
+	<div class="layer-popup-wrap type-bottom type-drag" id="tmpLayer03">
 		<div class="layer-container">
-			<div class="layer-header">Full Popup</div>
-			<div class="layer-contents">
-				Content<br>
-				Content<br>
-				Content<br>
-				Content<br>
-				Content<br>
-				Content<br>
-				Content<br>
-				Content<br>
-				Content<br>
+			<!-- layer contents in -->
+			<div class="layer-body">
+				차량예약
 			</div>
-			<button type="button" class="layer-close" onclick="closeLayerPopup(this);">닫기</button>
+			<div class="layer-footer">
+				<div class="btn-wrap">
+					<div class="btn-group">
+						<button type="button" class="btn secondary lg">아니오</button>
+						<button type="button" class="btn primary lg">예약하기</button>
+					</div>
+				</div>
+			</div>
+			</div>
+			<!-- //layer contents in -->
 		</div>
 	</div>
+	<!-- //bottom layer demo -->
+
+	<!-- full layer demo -->
+	<div class="layer-popup-wrap type-full" id="tmpLayer04">
+		<div class="layer-container">
+			<!-- layer contents in -->
+			<div class="layer-header">
+				@@include('@@webRoot/include/header.html', {
+					type: "sub_pop",
+					title: "full layer demo"
+				})
+			</div>
+			<div class="layer-body">
+				프리존 반납 안내<br>
+				프리존 반납 안내<br>
+				프리존 반납 안내<br>
+				프리존 반납 안내<br>
+				프리존 반납 안내<br>
+				프리존 반납 안내
+			</div>
+			<!-- //layer contents in -->
+		</div>
+	</div>
+	<!-- //full layer demo -->
 	
 	<script type="text/javascript">
 
@@ -220,6 +252,10 @@ h2{margin-bottom:20px;font-size:30px}
 			t.closest('.layer-popup-wrap').classList.remove('active');
 			overflowCl(false);
 		};
+
+		Array.from(document.querySelectorAll('.layer-header button')).forEach(t => {
+			t.addEventListener('click', e => closeLayerPopup(e.target));
+		});
 
 		/*
 		* body 스크롤 막기
