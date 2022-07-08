@@ -393,3 +393,23 @@ textarea {
 		@include acdo(100%, 0, .3s, cubic-bezier(0, 0, 0, 1));
 	}
 }
+
+/* no-data */
+.no-data{
+	padding:135px 0;
+	text-align:center;
+
+	.desc{
+		margin-top:29px;
+		font-size:$font-lg;
+		line-height:26px;
+	}
+
+	&:before{
+		display:inline-block;
+		width:96px;
+		height:96px;
+		content:"";
+		background: url(#{$url-common}no-data.svg) no-repeat;
+	}
+}
