@@ -329,3 +329,40 @@ hr.divider {
         font-weight: 700;
     }
 }
+
+
+// 그린카 금연서약
+.layer-body{
+    .wrap{
+        p{
+            color: $navy-040;
+        }
+        .emphasis{
+            color: $green-060;
+            font-size: 14px;
+            font-weight: 500;
+            margin-top: 12px;
+        }
+        .sign{
+            margin-top: 20px;
+            color: $navy-070;
+            font-size: 16px;
+            font-weight: 500;
+            text-align: right;
+            em{
+                margin-left:4px;
+                font-weight: 700;
+
+            }
+        }
+    }
+}
+.layer-footer{
+    .btn-group{
+        &.single{
+            .btn{
+                min-width: 135px;
+            }
+        }
+    }
+}
