@@ -32,9 +32,11 @@
     .wrap {
         padding: 26px 0;
     }
-    .title {
+    .title,
+    .desc-xl {
         margin-bottom: 24px;
         font-size: 20px;
+        font-weight: 700;
         .emphasis {
             color: #fd8484;
         }
@@ -76,13 +78,13 @@
                     color: #8c989e;
                     font-size: 18px;
                     font-weight: 500;
-					&.active {
-						color: #303E47;
-						font-weight: 700;
-						&:before {
-							background-color:#333;
-						}
-					}
+                    &.active {
+                        color: $navy-070;
+                        font-weight: 700;
+                        &:before {
+                            background-color: #333;
+                        }
+                    }
                 }
             }
         }
@@ -96,7 +98,7 @@
                 height: 48px;
                 padding: 0 20px;
                 border: 1px solid #d9d9d9;
-                border-radius: 10px;
+                border-radius: $border-radius;
             }
             .btn {
                 flex: 0 0 auto;
@@ -113,6 +115,10 @@
     .item {
         display: flex;
         align-items: center;
+        label {
+            color: #8c989e;
+            font-size: 16px;
+        }
         .btn.icon {
             margin-left: auto;
         }
@@ -121,9 +127,18 @@
         margin-top: 10px;
     }
     .check-all {
-        border-bottom: 1px solid $gray-060;
+        border-bottom: 1px solid #d9dddf;
         padding-bottom: 10px;
         margin-bottom: 20px;
+        font-size: 18px;
+        font-weight: 500;
+        .gc-checkbox {
+            span {
+                color: #303e47;
+                font-size: 18px;
+                font-weight: 700;
+            }
+        }
     }
 }
 .checkbox {
@@ -167,10 +182,10 @@
         align-items: center;
         font-size: 12px;
         font-weight: 700;
-        color: #303e47;
+        color: $navy-070;
         margin-bottom: 16px;
         .badge-num {
-            color: #20a556;
+            color: $green-060;
             font-size: 16px;
             font-weight: 700;
             margin-left: 4px;
@@ -186,7 +201,7 @@
     height: 34px;
     padding: 0 12px;
     background-color: #fff;
-    border: 1px solid #d9dddf;
+    border: 1px solid $navy-020;
     border-radius: 2rem;
     position: fixed;
     left: 50%;
@@ -196,7 +211,7 @@
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
     @include flex-center();
     .text {
-        color: #40535e;
+        color: $navy-060;
         font-size: 14px;
         margin-left: 4px;
     }
@@ -209,8 +224,8 @@
     }
     .coupon-item {
         padding: 24px;
-        border: 1px solid #d9dddf;
-        border-radius: 10px;
+        border: 1px solid $navy-020;
+        border-radius: $border-radius;
         position: relative;
         background: url(../images/common/g-mark.svg) no-repeat right 18px;
         .discount-type {
@@ -220,7 +235,7 @@
             font-size: 12px;
             height: 22px;
             padding: 0 12px;
-            background-color: #eceeef;
+            background-color: $navy-010;
             border-radius: 2rem;
         }
         .discount-value {
@@ -228,7 +243,7 @@
             @include flex-center();
             span {
                 &:nth-child(1) {
-                    color: #303e47;
+                    color: $navy-030;
                     font-size: 18px;
                     font-weight: 700;
                 }
@@ -242,13 +257,13 @@
         .discount-value + p {
             margin-top: 8px;
             font-size: 12px;
-            color: #303e47;
+            color: $navy-070;
         }
         .effective-date {
             margin-top: 4px;
             @include flex-center();
             .date {
-                color: #8c989e;
+                color: $navy-040;
                 font-size: 14px;
             }
             .date + * {
@@ -265,7 +280,7 @@
                 left: 0;
                 width: 100%;
                 height: 100%;
-                border-radius: 10px;
+                border-radius: $border-radius;
                 border: 1px solid #989b9d;
                 background-color: rgba($color: #40535e, $alpha: 0.4);
                 z-index: 10;
@@ -288,7 +303,7 @@ hr.divider {
     border-radius: 2rem;
     &.normal {
         color: #fff;
-        background-color: #8c989e;
+        background-color: $navy-040;
     }
     &.warning {
         color: #fff;

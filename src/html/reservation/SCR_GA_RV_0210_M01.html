@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('@@webRoot/include/head.html')
+    </head>
+    <body>
+        <div id="wrap">
+            <!-- header -->
+            @@include('@@webRoot/include/header.html', { type: "sub_02", title: "대여예약 약관동의" })
+            <!-- //header -->
+            <!-- container -->
+            <section id="container">
+                <div class="contents">
+                    <div class="reservation">
+                        <div class="wrap">
+                            <p class="desc-xl">약관 동의가 필요해요</p>
+                            <div class="agreement">
+                                <div class="item check-all">
+                                    <label for="tmpCheckbook1" class="gc-checkbox round">
+                                        <input type="checkbox" id="tmpCheckbook1">
+                                        <span>모든 약관에 동의</span>
+                                    </label>
+                                </div>
+                                <div class="item">
+                                    <label>자동차 대여약관 </label>
+                                    <button class="btn icon"><i class="ico next-sm md"></i></button>
+                                </div>
+                                <div class="item">
+                                    <label>위치정보 사업자 이용약관 </label>
+                                    <button class="btn icon"><i class="ico next-sm md"></i></button>
+                                </div>
+                                <div class="item">
+                                    <label>개인정보 처리방침(취급위탁) </label>
+                                    <button class="btn icon"><i class="ico next-sm md"></i></button>
+                                </div>
+                                <div class="item">
+                                    <label>개인정보 처리방침(제3자 제공) </label>
+                                    <button class="btn icon"><i class="ico next-sm md"></i></button>
+                                </div>
+                                <div class="item">
+                                    <label>차량 대여 서비스 제공(개인정보 수집/이용) </label>
+                                    <button class="btn icon"><i class="ico next-sm md"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- //container -->
+        </div>
+    </body>
+</html>

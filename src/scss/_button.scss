@@ -73,6 +73,10 @@ $btn-size: (
         color:#000;
     }
 
+    &.icon{
+        height: initial;
+    }
+
     @each $value, $color in $btn-colors {
         &.#{$value} {
             // 변수순서: border-color, background-color, font-color
