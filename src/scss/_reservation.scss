@@ -113,23 +113,27 @@
         display: block;
     }
     .item {
-        display: flex;
-        align-items: center;
-        label {
-            color: #8c989e;
-            font-size: 16px;
-        }
-        .btn.icon {
-            margin-left: auto;
+        button {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            line-height: 34.17px;
+            .text {
+                color: #8c989e;
+                font-size: 16px;
+            }
+            .ico {
+                margin-left: auto;
+            }
         }
     }
-    .item + .item {
-        margin-top: 10px;
-    }
+    // .item + .item {
+    //     margin-top: 10px;
+    // }
     .check-all {
         border-bottom: 1px solid #d9dddf;
         padding-bottom: 10px;
-        margin-bottom: 20px;
+        margin-bottom: 16px;
         font-size: 18px;
         font-weight: 500;
         .gc-checkbox {
@@ -139,6 +143,9 @@
                 font-weight: 700;
             }
         }
+    }
+    .inner{
+        padding: 0 4px 0 10px;
     }
 }
 .checkbox {
