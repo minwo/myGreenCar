@@ -9,7 +9,7 @@
 	// switch 내부 원형아이콘 top bottom left right 여백
 	$switch-before-margin:3px !default;
 	// switch 내부 원형아이콘 size
-	$switch-before-size:calc($switch-height - $switch-before-margin * 2) !default;
+	$switch-before-size:$switch-height - $switch-before-margin * 2 !default;
 	
 	display:inline-block;
 	vertical-align:top;
@@ -26,7 +26,7 @@
 			& + span {
 				background-color:#0d6efd;
 				&:before {
-					transform: translateX(calc($switch-width - $switch-before-size - $switch-before-margin * 2));
+					transform: translateX($switch-width - $switch-before-size - $switch-before-margin * 2);
 				}
 			}
 			&:disabled {
@@ -47,7 +47,7 @@
 		width:$switch-width;
 		height:$switch-height;
 		background-color:#adb5bd;
-		border-radius:calc($switch-height / 2);
+		border-radius:calc(#{$switch-height} / 2);
 		font-size:0;
 		line-height:0;
 		transition: background-color .3s;

@@ -282,8 +282,8 @@ textarea {
         border: 0;
 
         &[value$=".5"]+label {
-            width: calc($starWidth / 2);
-            margin-right: - calc($starWidth / 2 + $starMargin);
+            width: calc(#{$starWidth} / 2);
+            margin-right: calc(-#{$starWidth} / 2 - #{$starMargin});
         }
 
         &:checked {
@@ -318,7 +318,7 @@ textarea {
         -webkit-tap-highlight-color: transparent;
 
         &:last-child {
-            margin-left: - calc($starWidth + $starMargin);
+            margin-left: calc(-1 * ($starWidth + $starMargin));
         }
 
         &:not(:last-child) {
