@@ -318,7 +318,7 @@ textarea {
         -webkit-tap-highlight-color: transparent;
 
         &:last-child {
-            margin-left: calc(-1 * ($starWidth + $starMargin));
+            margin-left: calc(-1 * (#{$starWidth} + #{$starMargin}));
         }
 
         &:not(:last-child) {
