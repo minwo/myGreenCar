@@ -16,10 +16,27 @@
 		<section id="container">
 			<div class="contents" style="height:3000px">
 				<div>sgsdgsd</div>
+
+
 			</div>
 			@@include('@@webRoot/include/bot_fix.html', {type: "type01"})
 		</section>
 		<!-- //container -->
+
+		<div class="loading-bar">
+			<div class="loading"></div>
+			<div class="loading-svg">
+				<svg class="progress" width="40" height="40">
+					<defs>
+						<linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+						  <stop offset="0%" stop-color="#133D57" />
+						  <stop offset="100%" stop-color="#20A556" />
+						</linearGradient>
+					  </defs>
+					<circle stroke="url(#gradient)" class="circle" cx="20" cy="20" r="17" stroke-width="6" />
+				</svg>
+			</div>
+		</div>
 
 	</div>
 </body>

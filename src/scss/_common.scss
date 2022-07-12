@@ -397,3 +397,50 @@ textarea {
 		background: url(#{$url-common}no-data.svg) no-repeat;
 	}
 }
+
+// loding bar
+.loading-bar{
+	display:flex;
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	justify-content:center;
+	align-items:center;
+
+	.loading {
+		width: 40px;
+		height: 40px;
+		background:url(#{$url-common}loading-bar.png) no-repeat;
+		background-size:100% 100%;
+		animation: spin .8s linear 0s infinite;
+
+			
+	}
+
+	.loading-svg{
+		width:40px;
+		height:40px;
+		animation: spin .8s linear 0s infinite;
+	}
+
+	.circle{
+		width:40px;
+		height:40px;
+		fill:none;
+		// stroke-linecap:round;
+		stroke-dasharray:98;
+		stroke-dashoffset:0;
+		// stroke:#000;
+	}
+}
+
+@keyframes spin {
+	from {
+	  transform: rotate(0);
+	}
+	to{
+	  transform: rotate(359deg);
+	}
+}

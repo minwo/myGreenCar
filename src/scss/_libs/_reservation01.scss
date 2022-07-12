@@ -6,7 +6,7 @@
 		li{
 			border-bottom:1px solid #F3F4F5;
 		}
-		a{
+		a,.item{
 			display:block;
 			padding:17px 0;
 		}
@@ -28,8 +28,23 @@
 			@include ell;
 		}
 
+		.price{
+			position:absolute;
+			bottom:15px;
+			right:0;
+			font-size:$font-xl;
+			color:$navy-100;
+			line-height:28px;
+
+			em{
+				display:inline-block;
+				margin-left:3px;
+				font-size:13px;
+			}
+		}
+
 		&.greenzon{
-			a{
+			a,.item{
 				position:relative;
 				padding:17px 100px 17px 38px;
 			}
@@ -44,20 +59,6 @@
 				left:0;
 				transform:translate(0, -50%)
 			}
-			.price{
-				position:absolute;
-				bottom:15px;
-				right:0;
-				font-size:$font-xl;
-				color:$navy-100;
-				line-height:28px;
-
-				em{
-					display:inline-block;
-					margin-left:3px;
-					font-size:13px;
-				}
-			}
 		}
 	}
 
@@ -70,6 +71,25 @@
 		.agree-wrap{
 			.check-all{
 				border-bottom:1px solid $navy-020;
+			}
+		}
+	}
+}
+
+// 반납 바텀 레이어
+.layer-body{
+	.reservation{
+		.search-result{
+			.item{
+				padding-right:0;
+			}
+			.greenzon a{
+				padding-right:0;
+			}
+			.price{
+				position: static;
+				text-align:right;
+				font-weight:700;
 			}
 		}
 	}

@@ -4,7 +4,7 @@ $btn-color-default:  #fff !default;
 $btn-color-disabled: #333 !default;
 $btn-border-default: #000 !default;
 $btn-bg-default:     #000 !default;
-$btn-bg-disabled:    #CFD4D7 !default;
+$btn-bg-disabled:    $navy-020 !default;
 
 $btn-primary:        $green-060 !default;
 $btn-secondary:      $navy-060 !default;
@@ -34,8 +34,8 @@ $btn-size: (
         "font-size" : 14px
     ),
     "lg" : (
-        "size" : 48px,
-        "font-size" : 16px
+        "size" : 60px,
+        "font-size" : $font-md
     ),
     "xl" : (
         "size" : 74px,

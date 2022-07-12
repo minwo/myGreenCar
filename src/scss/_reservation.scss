@@ -162,7 +162,7 @@
             display: block;
             width: 26px;
             height: 26px;
-            background: url("../images/icon/check_default.svg") left center no-repeat;
+            background: url(#{$url-ico}check_default.svg) left center no-repeat;
             margin-right: 10px;
         }
     }
