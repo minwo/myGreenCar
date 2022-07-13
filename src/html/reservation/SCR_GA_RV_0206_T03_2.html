@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('@@webRoot/include/head.html')
+    </head>
+    <body>
+        <div id="wrap">
+            <!-- header -->
+            @@include('@@webRoot/include/header.html', { type: "sub_02", title: "할인/적립" })
+            <!-- //header -->
+
+            <!-- container -->
+            <section id="container">
+                <div class="contents">
+                    <div class="reservation">
+                        <div class="gc-tab">
+                            <ul>
+                                <li><a href="#">쿠폰</a></li>
+                                <li><a href="#">KT멤버십</a></li>
+                                <li><a href="#" class="active">T멤버십</a></li>
+                            </ul>
+                        </div>
+                        <div class="cont membership">
+                            <div class="btn-area">
+                                <a href="#" class="btn-link">비밀번호 등록/수정</a>
+                            </div>
+                            <div class="card skt">
+                                <div class="logo">
+                                    <div class="logo-img"></div>
+                                    <span>멤버십</span>
+                                </div>
+                                <div class="point-info">
+                                    <div class="item">
+                                        <p class="title">보유 포인트</p>
+                                        <p class="desc">
+                                            <span class="value">1,000,000</span>
+                                            <span class="unit">P</span>
+                                        </p>
+                                    </div>
+                                    <div class="item">
+                                        <p lass="title">최대 사용 가능 포인트</p>
+                                        <p class="desc">
+                                            <span class="value">1,000</span>
+                                            <span class="unit">P</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <section class="section">
+                                <h3 class="section-tit">T+ 포인트 사용</h3>
+                                <div class="section-cont">
+                                    <div class="ip-group">
+                                        <div class="row">
+                                            <input type="text" placeholder="비밀번호 6자리" />
+                                            <button class="btn primary md"><span class="text">조회</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="section">
+                                <h3 class="section-tit">LITE 등급</h3>
+                                <div class="section-cont">
+                                    <h4>할인 및 적립이 불가능하며 , T+포인트 사용만 가능</h4>
+                                    <ul class="list sm">
+                                        <li>최초 T멤버십 사용 시 T멤버십 앱에서 비밀번호를 설정 후 사용 가능합니다.</li>
+                                        <li>비밀번호 불일치 일 5회, 누적 10회일 경우, T멤버십 앱에서 재인증 후 다시 입력해야 합니다.</li>
+                                        <li>T멤버십 (할인 ↔ 적립) 혜택 변경은 T멤버십 앱에서 변경하실 수 있습니다.</li>
+                                    </ul>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                @@include('@@webRoot/include/bot_fix.html', {type: "type01"})
+            </section>
+            <!-- //container -->
+        </div>
+    </body>
+</html>

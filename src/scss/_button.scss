@@ -70,7 +70,7 @@ $btn-size: (
         color:$navy-040;
     }
 
-	&.cancle{
+	&.cancel{
 		@include buttonType ($navy-020, $gray-000, $navy-070);
 	}
 

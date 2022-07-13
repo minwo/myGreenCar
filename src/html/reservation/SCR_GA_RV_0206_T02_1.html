@@ -26,13 +26,25 @@
                                     <div class="logo-img"></div>
                                     <span>멤버십</span>
                                 </div>
-                                <button class="btn-register">
-                                    <i class="ico plus xs"></i>
-                                    <span class="text">등록하기</span>
-                                </button>
+                                <div class="point-info">
+                                    <div class="item">
+                                        <p class="title">보유 포인트</p>
+                                        <p class="desc">
+                                            <span class="value">1,000,000</span>
+                                            <span class="unit">P</span>
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
+                            <section class="section point-use">
+                                <h3 class="section-tit">포인트 사용</h3>
+                                <div class="section-cont">
+                                    <input type="text" class="ip-txt" value="-1,000P" />
+                                    <input type="text" class="ip-txt disabled-point" value="할인불가 (주 4회 초과)" />
+                                </div>
+                            </section>
                             <section class="section membership-info">
-                                <h3 class="section-title">할인</h3>
+                                <h3 class="section-tit">할인</h3>
                                 <div class="section-cont">
                                     <h4>최대 1만원/ 주 1회 할인적용</h4>
                                     <ul class="list sm">
@@ -44,6 +56,7 @@
                         </div>
                     </div>
                 </div>
+                @@include('@@webRoot/include/bot_fix.html', {type: "type01"})
             </section>
             <!-- //container -->
         </div>
