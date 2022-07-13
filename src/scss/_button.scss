@@ -1,13 +1,5 @@
 @charset "UTF-8";
 
-$btn-color-default:  #fff !default;
-$btn-color-disabled: #333 !default;
-$btn-border-default: #000 !default;
-$btn-bg-default:     #000 !default;
-$btn-bg-disabled:    $navy-020 !default;
-
-$btn-primary:        $green-060 !default;
-$btn-secondary:      $navy-060 !default;
 $btn-success:        #6610f2 !default;
 $btn-info:           #0dcaf0 !default;
 $btn-warning:        #ffc107 !default;
@@ -15,8 +7,9 @@ $btn-danger:         #dc3545 !default;
 
 // button color type
 $btn-colors: (
-    "primary":   $gray-dark,
-    "secondary": $btn-secondary,
+    // "primary":   $navy-060,
+    // "secondary": $btn-secondary,
+	"green":	 $green-060,
     "success":   $btn-success,
     "info":      $btn-info,
     "warning":   $btn-warning,
@@ -26,13 +19,17 @@ $btn-colors: (
 // button size
 $btn-size: (
     "xs" : (
-        "size" : 32px,
+        "size" : 34px,
         "font-size" : $font-sm2
     ),
     "sm" : (
-        "size" : 35px,
+        "size" : 40px,
         "font-size" : 14px
     ),
+	"md" : (
+		"size" : 48px,
+        "font-size" : 14px$font-md
+	),
     "lg" : (
         "size" : 60px,
         "font-size" : $font-md
@@ -54,10 +51,10 @@ $btn-size: (
     justify-content:center;
     align-items:center;
     height: map-get($btn-size,"xs","size");
-    padding:0 20px;
-    border:1px solid $btn-border-default;
-    background-color:$btn-bg-default;
-    color:$btn-color-default;
+    padding:0 13px;
+    border:1px solid $navy-020;
+    background-color:$navy-060;
+    color:$gray-000;
     font-size: map-get($btn-size,"xs","font-size");
     font-weight:400;
 
@@ -68,9 +65,9 @@ $btn-size: (
     @include btnDrt();
 
     &.line {
-        border-color:$btn-border-default;
-        background-color:#fff;
-        color:#000;
+        border-color:$navy-020;
+        background-color:$gray-000;
+        color:$navy-040;
     }
 
     &.icon{
@@ -80,10 +77,10 @@ $btn-size: (
     @each $value, $color in $btn-colors {
         &.#{$value} {
             // 변수순서: border-color, background-color, font-color
-            @include buttonType ($color, $color, $btn-color-default);
+            @include buttonType ($color, $color, $gray-000);
             &.line {
                 // 변수순서: border-color, background-color, font-color
-                @include buttonType ($color,#fff, #000);
+                @include buttonType ($color, $gray-000, $navy-040);
             }
         }
     }
@@ -91,9 +88,9 @@ $btn-size: (
     // button disabled
     &.disabled,
     &:disabled {
-        border-color:$btn-bg-disabled;
-        background-color:$btn-bg-disabled;
-        color:$btn-color-disabled;
+        border-color:$navy-020;
+        background-color:$navy-020;
+        color:$gray-000;
         cursor: default;
     }
 

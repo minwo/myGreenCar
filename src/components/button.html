@@ -3,9 +3,31 @@
 <head>
 @@include('@@webRoot/include/head.html')
 <style>
-.contents{padding:20px 40px 20px !important}
-.contents .tmp-guide-box{margin-left:0;margin-right:0}
-h2{margin-bottom:20px;font-size:30px}
+.contents {
+	padding: 20px 40px 20px !important;
+}
+.module{
+	display:flex;
+	flex-wrap: wrap;
+}
+.contents .tmp-guide-box {
+	margin-left: 0;
+	margin-right: 0;
+}
+h2 {
+	margin-bottom: 20px;
+	font-size: 30px;
+}
+
+.tmp-guide-box{
+	flex:1;
+	width:360px;
+	flex-basis: 360px;
+	max-width: 360px;
+	margin-right:40px !important;
+	box-sizing: border-box;
+}
+.btn{display:inline-flex}
 </style>
 </head>
 <body>
@@ -16,40 +38,54 @@ h2{margin-bottom:20px;font-size:30px}
 			<div class="contents">
 				<h2>BUTTON</h2>
 
-				<!-- Button -->
-				<div class="tmp-guide-box guide-btn">
-					<button type="button" class="btn">Button</button>
-					<button type="button" class="btn primary">Button</button>
-					<button type="button" class="btn secondary">Button</button>
-					<button type="button" class="btn success">Button</button>
-					<button type="button" class="btn info">Button</button>
-					<button type="button" class="btn warning">Button</button>
-					<button type="button" class="btn danger">Button</button>
-					<br><br>
-					<button type="button" class="btn line">Button</button>
-					<button type="button" class="btn primary line">Button</button>
-					<button type="button" class="btn secondary line">Button</button>
-					<button type="button" class="btn success line">Button</button>
-					<button type="button" class="btn info line">Button</button>
-					<button type="button" class="btn warning line">Button</button>
-					<button type="button" class="btn danger line">Button</button>
-					<br><br>
-					<button type="button" class="btn primary xs">Button</button>
-					<button type="button" class="btn primary sm">Button</button>
-					<button type="button" class="btn primary">Button</button>
-					<button type="button" class="btn primary lg">Button</button>
-					<button type="button" class="btn primary xl">Button</button>
-					<br><br>
-					<button type="button" class="btn primary full" disabled>disabled Button</button>
-					<button type="button" class="btn primary full">Full Button</button>
+				<div class="module">
+					<!-- Button -->
+					<div class="tmp-guide-box guide-btn">
+						<h2 class="guide-box-tit">Button Color</h2>
+						<button type="button" class="btn">Button</button>
+						<button type="button" class="btn green">Button</button>
+						<button type="button" class="btn success">Button</button>
+						<button type="button" class="btn info">Button</button>
+						<button type="button" class="btn warning">Button</button>
+						<button type="button" class="btn danger">Button</button>
+						
+					</div>
+					<!-- //Button -->
+	
+					<!-- Button -->
+					<div class="tmp-guide-box guide-btn">
+						<h2 class="guide-box-tit">Button Border</h2>
+						<button type="button" class="btn line">Button</button>
+						<button type="button" class="btn success line">Button</button>
+						<button type="button" class="btn info line">Button</button>
+						<button type="button" class="btn warning line">Button</button>
+						<button type="button" class="btn danger line">Button</button>
+					</div>
+
+					<div class="tmp-guide-box guide-btn">
+						<h2 class="guide-box-tit">Button Size</h2>
+						<button type="button" class="btn">Button</button>
+						<button type="button" class="btn green">Button</button>
+						<button type="button" class="btn green lg">Button</button>
+						<button type="button" class="btn xl">Button</button>
+						<br><br>
+						<button type="button" class="btn full" disabled>disabled Button</button>
+						<button type="button" class="btn full">Full Button</button>
+					</div>
+
+					<div class="tmp-guide-box guide-btn">
+						<h2 class="guide-box-tit">Button Icon</h2>
+
+						<button type="button" class="btn line plus">Button</button>
+					</div>
+
 				</div>
-				<!-- //Button -->
 
 				<!-- row -->
 				<div class="btn-wrap">
 					<div class="btn-group">
-						<button type="button" class="btn primary sm">test</button>
-						<button type="button" class="btn primary sm">test</button>
+						<button type="button" class="btn sm">test</button>
+						<button type="button" class="btn sm">test</button>
 					</div>
 				</div>
 				
@@ -58,9 +94,10 @@ h2{margin-bottom:20px;font-size:30px}
 				<!-- col -->
 				<div class="btn-wrap">
 					<div class="btn-group column">
-						<button type="button" class="btn primary sm">test</button>
-						<button type="button" class="btn primary">test</button>
-						<button type="button" class="btn primary">test</button>
+						<button type="button" class="btn sm">test</button>
+						<button type="button" class="btn">test</button>
+						<button type="button" class="btn lg">test</button>
+						<button type="button" class="btn xl">test</button>
 					</div>
 				</div>
 
