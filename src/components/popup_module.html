@@ -43,8 +43,23 @@
 				dom.innerHTML = data;
 				// console.log(data);
 				document.querySelector('.layer-popup-wrap').classList.add('active');
+
+				complete();
 			});
-		})
+		});
+
+		function complete(){
+			// body
+			const allEl = document.querySelectorAll('.tmp-faq-list');
+			// 여러개 일떄
+			[].forEach.call(allEl, (e) => {
+				const accoEl = e.querySelector('button');
+				
+				accoEl.addEventListener('click', () => {
+					event.currentTarget.parentNode.classList.toggle('active');
+				});
+			});
+		}
 	</script>
 </body>
 </html>

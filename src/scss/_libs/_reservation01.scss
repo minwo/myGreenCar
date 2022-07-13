@@ -57,7 +57,12 @@
 				position:absolute;
 				top:50%;
 				left:0;
-				transform:translate(0, -50%)
+				transform:translate(0, -50%);
+
+				&.xl2{
+					width:30px;
+					height:30px;
+				}
 			}
 		}
 	}
@@ -99,6 +104,10 @@
 					font-size:13px
 				}
 			}
+		}
+
+		.tmp-faq-list{
+			margin-top:28px;
 		}
 	}
 }
