@@ -70,6 +70,27 @@ $btn-size: (
         color:$navy-040;
     }
 
+	&.cancle{
+		@include buttonType ($navy-020, $gray-000, $navy-070);
+	}
+
+	&.check{
+		&:before{
+			display:inline-flex;
+			width:10px;
+			height:13px;
+			margin-right:7px;
+			content:"";
+			background:url(#{$url-common}ico-btn-check.svg) no-repeat;
+			background-size:100% 100%;
+		}
+		&.active{
+			color:$gray-000;
+			border-color:$green-060;
+			background-color:$green-060
+		}
+	}
+
     &.icon{
         height: initial;
     }

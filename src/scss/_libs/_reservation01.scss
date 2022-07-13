@@ -8,7 +8,7 @@
 		}
 		a,.item{
 			display:block;
-			padding:17px 0;
+			padding:19px 0;
 		}
 		.keyword{
 			font-size:$font-lg;
@@ -30,16 +30,16 @@
 
 		.price{
 			position:absolute;
-			bottom:15px;
+			bottom:14px;
 			right:0;
-			font-size:$font-xl;
+			font-size:$font-md;
 			color:$navy-100;
 			line-height:28px;
 
 			em{
 				display:inline-block;
-				margin-left:3px;
-				font-size:13px;
+				margin-left:2px;
+				font-size:$font-sm;
 			}
 		}
 
@@ -79,9 +79,12 @@
 // 반납 바텀 레이어
 .layer-body{
 	.reservation{
+		&.free_popup{
+			margin-top:23px;
+		}
 		.search-result{
 			.item{
-				padding-right:0;
+				padding:7px 0 10px 0;
 			}
 			.greenzon a{
 				padding-right:0;
@@ -89,7 +92,12 @@
 			.price{
 				position: static;
 				text-align:right;
+				font-size:$font-xl;
 				font-weight:700;
+
+				em{
+					font-size:13px
+				}
 			}
 		}
 	}

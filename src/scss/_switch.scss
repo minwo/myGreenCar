@@ -3,11 +3,11 @@
 /* switch */
 .gc-switch {
 	// switch width
-	$switch-width:50px !default;
+	$switch-width:40px !default;
 	// switch height
-	$switch-height:25px !default;
+	$switch-height:20px !default;
 	// switch 내부 원형아이콘 top bottom left right 여백
-	$switch-before-margin:3px !default;
+	$switch-before-margin:2px !default;
 	// switch 내부 원형아이콘 size
 	$switch-before-size:$switch-height - $switch-before-margin * 2 !default;
 	
@@ -24,20 +24,20 @@
 		border:0;
 		&:checked {
 			& + span {
-				background-color:#0d6efd;
+				background-color:$navy-060;
 				&:before {
 					transform: translateX($switch-width - $switch-before-size - $switch-before-margin * 2);
 				}
 			}
 			&:disabled {
 				& + span {
-					background-color:#6c757d;
+					background-color:$navy-010;
 				}
 			}
 		}
 		&:disabled {
 			& + span {
-				background-color:#dee2e6;
+				background-color:$navy-010;
 			}
 		}
 	}
@@ -46,7 +46,7 @@
 		display:block;
 		width:$switch-width;
 		height:$switch-height;
-		background-color:#adb5bd;
+		background-color:$navy-020;
 		border-radius:calc(#{$switch-height} / 2);
 		font-size:0;
 		line-height:0;
@@ -62,6 +62,12 @@
 			border-radius:100%;
 			transform:translateX(0);
 			transition:transform .3s;
+		}
+	}
+
+	&.green{
+		input:checked + span {
+			background-color:$green-060;
 		}
 	}
 }

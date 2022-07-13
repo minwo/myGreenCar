@@ -398,6 +398,7 @@ textarea {
 	}
 }
 
+$offset: 187;
 // loding bar
 .loading-bar{
 	display:flex;
@@ -422,25 +423,39 @@ textarea {
 	.loading-svg{
 		width:40px;
 		height:40px;
-		animation: spin .8s linear 0s infinite;
+		animation: spin 1.4s linear 0s infinite;
 	}
 
 	.circle{
 		width:40px;
 		height:40px;
 		fill:none;
-		// stroke-linecap:round;
-		stroke-dasharray:98;
+		stroke-linecap:round;
+		stroke-dasharray:$offset;
 		stroke-dashoffset:0;
 		// stroke:#000;
+		animation: dash 1.4s ease-in-out infinite;
+		transform-origin:center;
+	}
+}
+
+@keyframes dash {
+	0% {
+		stroke-dashoffset: $offset;
+	}
+
+	50% {
+		stroke-dashoffset: 93;
+		transform: rotate(130deg);
+	}
+
+	100% {
+		stroke-dashoffset: $offset;
+		transform: rotate(370deg);
 	}
 }
 
 @keyframes spin {
-	from {
-	  transform: rotate(0);
-	}
-	to{
-	  transform: rotate(359deg);
-	}
+	0% { transform: rotate(0deg); }
+  100% { transform: rotate(359deg); }
 }
