@@ -29,11 +29,41 @@
                                     <div class="logo-img"></div>
                                     <span>멤버십</span>
                                 </div>
-                                <button class="btn-register">
-                                    <i class="ico plus xs"></i>
-                                    <span class="text">등록하기</span>
-                                </button>
+                                <div class="point-info">
+                                    <div class="item">
+                                        <p class="title">보유 포인트</p>
+                                        <p class="desc">
+                                            <span class="value">1,000,000</span>
+                                            <span class="unit">P</span>
+                                        </p>
+                                    </div>
+                                    <div class="item">
+                                        <p lass="title">최대 사용 가능 포인트</p>
+                                        <p class="desc">
+                                            <span class="value">1,000</span>
+                                            <span class="unit">P</span>
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
+                            <section class="section">
+                                <h3 class="section-tit">T+ 포인트 사용</h3>
+                                <div class="section-cont">
+                                    <div class="ip-group">
+                                        <div class="row">
+                                            <input type="text" placeholder="비밀번호 6자리" />
+                                            <button class="btn primary md"><span class="text">조회</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="section point-use">
+                                <h3 class="section-tit">T멤버십 할인</h3>
+                                <div class="section-cont">
+                                    <input type="text" class="ip-txt" value="-1,000P" />
+                                    <!-- <input type="text" class="ip-txt disabled-point" value="할인불가 (주 4회 초과)" /> -->
+                                </div>
+                            </section>
                             <section class="section">
                                 <h3 class="section-tit">할인형</h3>
                                 <div class="section-cont">
@@ -54,7 +84,6 @@
                                         <li>주중 대여요금의 20% 할인</li>
                                         <li>주말/공휴일 대여요금의 10% 할인</li>
                                         <li>Lite 등급의 경우 할인 불가</li>
-                                        <li>대여완료 후 즉시 적립</li>
                                         <li>편도예약/반납연장 시 추가요금은 할인 제외</li>
                                     </ul>
                                 </div>
@@ -62,6 +91,7 @@
                         </div>
                     </div>
                 </div>
+                @@include('@@webRoot/include/bot_fix.html', {type: "type01"})
             </section>
             <!-- //container -->
         </div>

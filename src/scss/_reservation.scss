@@ -46,7 +46,7 @@
     .gc-tab {
         margin: 0 -20px;
         border-bottom: none;
-        &:after{
+        &:after {
             content: " ";
             display: block;
             height: 2px;
@@ -94,31 +94,30 @@
             }
         }
     }
-    section{
+    >section {
         padding: 22px 0 30px;
-        h2{
+        h2 {
             color: $navy-070;
             font-size: 20px;
             font-weight: bold;
             margin-bottom: 20px;
-            + p{
+            + p {
                 font-size: 16px;
                 font-weight: 500;
             }
         }
-        h3{
+        h3 {
             margin-top: 20px;
             color: $navy-070;
             font-size: 16px;
             font-weight: 500;
         }
-        .list{
+        .list {
             margin-top: 10px;
-            li + li{
+            li + li {
                 margin-top: 10px;
             }
         }
-
     }
 }
 
@@ -281,6 +280,146 @@
     }
 }
 
+//멤버십
+.membership {
+    padding: 26px 0 30px;
+    .card {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 160px;
+        padding: 20px 20px 24px;
+        border-radius: $border-radius;
+        .logo {
+            @include flex-center();
+            .logo-img {
+                width: 32px;
+                height: 32px;
+            }
+            span {
+                color: $gray-000;
+                font-size: 20px;
+                font-weight: bold;
+                margin-left: 4px;
+            }
+        }
+        .logo + *{
+            margin-top: auto;
+        }
+        .btn-register {
+            width: 180px;
+            height: 48px;
+            margin: 0 auto;
+            margin-top: 32px;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 500;
+            background-color: rgba($color: $gray-000, $alpha: 0.15);
+            border-radius: $border-radius;
+            justify-content: center;
+            @include flex-center();
+            i + .text {
+                margin-left: 10px;
+            }
+        }
+        &.kt {
+            background-color: #2f2e2e;
+            margin-top: 30px;
+            .logo-img {
+                background: url(#{$url-content}kt_logo.svg) no-repeat;
+            }
+        }
+        &.skt {
+            background-color: #02009e;
+            .logo-img {
+                background: url(#{$url-content}skt_logo.svg) no-repeat;
+            }
+        }
+        &.lpoint {
+            background-color: $blue-050;
+            .logo-img {
+                background: url(#{$url-content}lpoint_logo_w.svg) no-repeat;
+            }
+        }
+    }
+    .section{
+        margin-top: 26px;
+        .section-tit {
+            font-size: 12px;
+            margin-bottom: 12px;
+        }
+        h4 {
+            margin-top: 12px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .list {
+            margin-top: 12px;
+            li {
+                font-size: 14px;
+            }
+            li + li {
+                margin-top: 6px;
+            }
+        }
+        .ip-group{
+            .btn{
+                width: 110px;
+            }
+        }
+    }
+ 
+    .point-info{
+        .item{
+            display: flex;
+            align-items: center;
+            width: 100%;
+            text-align: right;
+            color: $gray-000;
+            p{
+                flex: 1;
+                &.title{
+                    font-size: 14px;
+                    font-weight: normal;
+                    margin-bottom: 0;
+                }
+                .value{
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+                .unit{
+                    font-size: 13px;
+                }
+                
+            }
+        }
+    }
+    .point-use{
+        input[type="text"]{
+            width: 100%;
+            height: 48px;
+            border-radius: $border-radius;
+            background-color: $gray-005;
+            border: 1px solid $gray-020;
+            text-align: center;
+            color: $navy-070;
+            font-size: 16px;
+            font-weight: 500;
+            &.disabled-point{
+                color: $red-060;
+            }
+        }
+    }
+    .btn-area{
+        margin-bottom: 12px;
+        text-align: right;
+        .btn-link{
+            color: $blue-050;
+            font-size: 13px;
+            text-decoration: underline;
+        }
+    }
+}
 // [팝업] 예약결제 안내
 .layer-body {
     .box {
