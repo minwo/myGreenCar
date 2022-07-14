@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('@@webRoot/include/head.html')
+    </head>
+    <body>
+        <div id="wrap">
+            <!-- header -->
+            @@include('@@webRoot/include/header.html', { type: "sub_02", title: "L.POINT" })
+            <!-- //header -->
+
+            <!-- container -->
+            <section id="container">
+                <div class="contents">
+                    <div class="reservation">
+                        <div class="cont membership">
+                            <div class="btn-area both-sides mt60">
+                                <a href="#" class="btn-link">카드 신청</a>
+                                <a href="#" class="btn-link">비밀번호 등록/수정</a>
+                            </div>
+                            <div class="card lpoint">
+                                <div class="logo">
+                                    <div class="logo-img"></div>
+                                </div>
+                                <div class="card-number">
+                                  <label for="card_number">카드번호</label>  
+                                  <!-- <input id="card_number" class="form-control" required="" pattern="(\d{4}\s?){4}" placeholder="•••• •••• •••• ••••" maxlength="19"> -->
+                                  <div class="card-input">
+                                    <input type="text" data-pos="1" placeholder="1234" value="1234">
+                                    <span class="dash active">-</span>
+                                    <input type="text" data-pos="2" placeholder="5678">
+                                    <span class="dash">-</span>
+                                    <input type="text" data-pos="3" placeholder="1234">
+                                    <span class="dash">-</span>
+                                    <input type="text" data-pos="4" placeholder="5678">
+                                </div>
+                                </div>
+                            </div>
+                            <section class="section">
+                                <h3 class="section-tit">비밀번호</h3>
+                                <div class="section-cont">
+                                    <div class="ip-group">
+                                        <div class="row">
+                                            <input type="text" placeholder="비밀번호 6자리" />
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                @@include('@@webRoot/include/bot_fix.html', {type: "type01", title:"L.POINT 카드 인증"})
+            </section>
+            <!-- //container -->
+        </div>
+    </body>
+</html>
