@@ -6,7 +6,7 @@
     display: flex;
     align-items: center;
 }
-.mt60{
+.mt60 {
     margin-top: 60px;
 }
 
@@ -45,8 +45,8 @@
         li + li {
             margin-top: 24px;
         }
-        &.sm{
-            li{
+        &.sm {
+            li {
                 font-size: 14px;
                 padding-left: 12px;
                 &:before {
@@ -108,7 +108,7 @@
             }
         }
     }
-    >section {
+    > section {
         padding: 22px 0 30px;
         h2 {
             color: $navy-070;
@@ -317,7 +317,7 @@
                 margin-left: 4px;
             }
         }
-        .logo + *{
+        .logo + * {
             margin-top: auto;
         }
         .btn-register {
@@ -358,7 +358,7 @@
             }
         }
     }
-    .section{
+    .section {
         margin-top: 26px;
         .section-tit {
             font-size: 12px;
@@ -375,40 +375,41 @@
                 margin-top: 6px;
             }
         }
-        .ip-group{
-            .btn{
+        .ip-group {
+            .btn {
                 width: 110px;
             }
         }
     }
- 
-    .point-info{
-        .item{
+
+    .point-info {
+        .item {
             display: flex;
             align-items: center;
             width: 100%;
+            justify-content: flex-end;
             text-align: right;
             color: $gray-000;
-            p{
-                flex: 1;
-                &.title{
-                    font-size: 14px;
-                    font-weight: normal;
-                    margin-bottom: 0;
-                }
-                .value{
+            .title {
+                font-size: 14px;
+                font-weight: normal;
+                margin-bottom: 0;
+            }
+            .desc {
+                width: 120px;
+                margin-left: 16px;
+                .value {
                     font-size: 20px;
                     font-weight: bold;
                 }
-                .unit{
+                .unit {
                     font-size: 13px;
                 }
-                
             }
         }
     }
-    .point-use{
-        input[type="text"]{
+    .point-use {
+        input[type="text"] {
             width: 100%;
             height: 48px;
             border-radius: $border-radius;
@@ -418,20 +419,20 @@
             color: $navy-070;
             font-size: 16px;
             font-weight: 500;
-            &.disabled-point{
+            &.disabled-point {
                 color: $red-060;
             }
         }
     }
-    .card-number{
-        label{
+    .card-number {
+        label {
             display: block;
             color: $gray-000;
             font-size: 14px;
             font-weight: normal;
             margin-bottom: 8px;
         }
-        .card-input{
+        .card-input {
             width: 100%;
             height: 48px;
             padding: 0 24px;
@@ -439,35 +440,35 @@
             border-radius: $border-radius;
             overflow: hidden;
             @include flex-center();
-            input{
+            input {
                 font-size: 16px;
                 font-weight: 500;
                 padding-right: 0;
                 text-align: center;
-                &::placeholder{
+                &::placeholder {
                     font-size: 16px;
                 }
-                &:focus{
+                &:focus {
                     outline: none;
                 }
             }
-            .dash{
+            .dash {
                 color: $navy-020;
-                &.active{
+                &.active {
                     color: $navy-070;
                 }
             }
         }
     }
-    .btn-area{
+    .btn-area {
         margin-bottom: 12px;
         text-align: right;
-        .btn-link{
+        .btn-link {
             color: $blue-050;
             font-size: 13px;
             text-decoration: underline;
         }
-        &.both-sides{
+        &.both-sides {
             display: flex;
             justify-content: space-between;
         }
