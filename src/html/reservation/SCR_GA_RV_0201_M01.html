@@ -6,15 +6,225 @@
 <body>
 	<div id="wrap">
 		<!-- header -->
-@@include('@@webRoot/include/header.html', {type: "sub_01"})
+@@include('@@webRoot/include/header.html', {
+	type: "sub_02",
+	title: "예약하기"
+})
 		<!-- //header -->
 		
 		<!-- container -->
 		<section id="container">
-			<div class="contents" style="height:3000px">
-				<div>sgsdgsd</div>
+			<div class="contents">
+				
+				<div class="reservation">
+
+					<div class="reservation-module">
+						<section class="section">
+							
+							<div class="car-info">
+								<div class="module">
+									<a href="#">
+										<span class="img"><img src="/images/contents/img_car_dummy01.jpg" alt=""></span>
+										<div class="info">
+											<strong>145허4454</strong>
+											<span class="name">셀토스 1.6(디젤)</span>
+											<span class="option">디젤 170원/km</span>
+										</div>
+									</a>
+								</div>
+								<div class="tag-module">
+									<span class="tag">휘발유76%</span>
+									<span class="tag">세차완료</span>
+									<span class="tag sale">55%할인</span>
+								</div>
+							</div>
+	
+							<div class="title-area grid-flex">
+								<h3 class="title-xs flex col-3">주행요금</h3>
+								<div class="flex col-7">170원 / km</div>
+							</div>
+							<p class="desc-sm">* 주행요금은 반납 후 실주행거리에 따라 별도로 청구됩니다.</p>
+	
+						</section>
+	
+						<section class="section">
+							<div class="title-area">
+								<h3 class="title-xs">대여기간</h3>
+							</div>
+							<div class="grid-flex">
+								<div class="flex"><a href="#">오늘 10:10 ~ 12:10</a></div>
+								<div class="flex">2시간</div>
+							</div>
+						</section>
+	
+						<section class="section">
+							<div class="title-area grid-flex">
+								<h3 class="title-xs flex">대여유형 <span class="tag">왕복</span></h3>
+								<div class="flex"><button class="btn-link" type="button">
+									<span class="under">편도로 변경</span><i class="ico arrow-right-nav050 xs"></i></button></div>
+							</div>
+							<div class="grid-flex">
+								<div class="flex col-3">대여/반납 위치</div>
+								<div class="return flex col-7"><i class="ico badge-g md"></i>한남역 1번 출구</div>
+							</div>
+						</section>
+	
+						<section class="section">
+							<div class="title-area">
+								<h3 class="title-xs">결제정보</h3>
+							</div>
+							<div class="grid-flex">
+								<div class="flex col-2">대여요금</div>
+								<div class="flex col-8">
+									<span class="tag sale">58%할인</span>
+									<span class="price deco-througt">1,730,000원</span>
+									<span class="price">1,800,000원</span>
+								</div>
+							</div>
+							<div class="grid-flex">
+								<div class="flex col-2">할인/적립</div>
+								<div class="flex col-8">
+									<span class="price">-7,195원</span>
+								</div>
+							</div>
+	
+							<div class="point-module">
+								<div class="title-area">
+									<h3 class="title-xs">포인트</h3>
+								</div>
+								<div class="grid-flex">
+									<div class="flex">그린포인트 <span class="point">(보유 포인트 55P)</span></div>
+								</div>
+								<div class="grid-flex ip-group box">
+									<div class="flex col-7">
+										<div class="row">
+											<input type="number" class="ip-txt" title="포인트">
+											<div class="line"></div>
+										</div>
+									</div>
+									<div class="flex col-3">
+										<button type="button" class="btn md full">전액사용</button>
+									</div>
+								</div>
+		
+								<div class="grid-flex">
+									<div class="flex">L.POINT</div>
+									<div class="flex">0원</div>
+								</div>
+							</div>
+						</section>
+	
+						<section class="section">
+							<div class="title-area grid-flex">
+								<h3 class="title-xs flex">포인트</h3>
+								<div class="flex">
+									<button class="btn-link" type="button">자세히<i class="ico arrow-right-nav050 xs"></i></button>
+								</div>
+							</div>
+							<div class="radio-module">
+								<label for="tmpRadio01" class="gc-radio">
+									<input type="radio" name="tmpRadio01" id="tmpRadio01" checked>
+									<span>자차면책보험료 5만원</span>
+									<em class="insur">+5,350원</em>
+								</label>
+								<label for="tmpRadio02" class="gc-radio">
+									<input type="radio" name="tmpRadio01" id="tmpRadio02">
+									<span>자차면책보험료 30만원</span>
+									<em class="insur">+3,560원</em>
+								</label>
+								<label for="tmpRadio03" class="gc-radio">
+									<input type="radio" name="tmpRadio01" id="tmpRadio03">
+									<span>자차면책보험료 70만원</span>
+									<em class="insur">+2,700원</em>
+								</label>
+							</div>
+							<div class="grid-flex">
+								<div class="flex">최종결재금액</div>
+								<div class="flex">
+									<span class="price deco-througt">39,750원</span>
+									<span class="price">12,545원</span>
+								</div>
+							</div>
+						</section>
+	
+						<section class="section">
+							<div class="grid-flex">
+								<div class="flex">결제수단</div>
+								<div class="flex">
+									<button class="btn-link" type="button">국민카드 6306<i class="ico arrow-right-nav050 xs"></i></button>
+								</div>
+							</div>
+						</section>
+	
+						<section class="section">
+							<div class="title-area">
+								<h3 class="title-md">대여예약 약관동의 (필수)</h3>
+							</div>
+							<div class="agreement">
+								<div class="item check-all">
+									<label for="tmpCheckbook4" class="gc-checkbox round">
+										<input type="checkbox" id="tmpCheckbook4">
+										<span>약관 모두 동의</span>
+									</label>
+								</div>
+								<div class="agree-module">
+									<div class="item active">
+										<a href="#">
+											<i class="ico ico-check md"></i>
+											<span class="emp">필수</span>
+											<span class="text">자동차 대여약관에 대한 동의</span>
+											<i class="ico next-sm md"></i>
+										</a href="#">
+									</div>
+									<div class="item">
+										<a href="#">
+											<i class="ico ico-check md"></i>
+											<span class="emp">필수</span>
+											<span class="text">차량대여 서비스를 위한 개인정보 수집/이용 동의</span>
+											<i class="ico next-sm md"></i>
+										</a href="#">
+									</div>
+									<div class="item">
+										<a href="#">
+											<i class="ico ico-check md"></i>
+											<span class="emp">필수</span>
+											<span class="text">고유식별정보 수집에 대한 동의</span>
+											<i class="ico next-sm md"></i>
+										</a href="#">
+									</div>
+									<div class="item">
+										<a href="#">
+											<i class="ico ico-check md"></i>
+											<span class="emp">선택</span>
+											<span class="text">개인정보 제3자 제공에 대한 동의</span>
+											<i class="ico next-sm md"></i>
+										</a href="#">
+									</div>
+								</div>
+							</div>
+	
+							<div class="info-module">
+								<div class="title-area">
+									<h3 class="title-md">예약 전 주의사항</h3>
+								</div>
+								<ul class="txt-list dot">
+									<li>취소 시점에 따라 수수료가 부과될 수 있습니다.</li>
+									<li>주유 시 차량 내 비치된 주유카드를 사용해주세요.</li>
+									<li>자세한 사항은 전체 주의사항을 확인해주세요.</li>
+								</ul>
+		
+								<p class="info-title">계약안내</p>
+								<ul class="txt-list dot">
+									<li>본 차량은 롯데렌탈㈜의 위수탁차량입니다.</li>
+									<li>차량을 예약하시면 고객님과 롯데렌탈㈜ 사이에 계약이 이루어지게 됩니다.</li>
+								</ul>
+							</div>
+						</section>
+					</div>
+
+				</div>
+
 			</div>
-			@@include('@@webRoot/include/bot_fix.html', {type: "type01"})
 		</section>
 		<!-- //container -->
 

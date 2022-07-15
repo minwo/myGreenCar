@@ -1,38 +1,40 @@
-<div class="layer-header">
-	@@include('@@webRoot/include/header.html', {
-		type: "sub_pop",
-		title: false
-	})
-</div>
-
-<div class="layer-body">
-
-	<div class="member"> 
-		
-		<p class="desc-xl">
-			프르모션 코드를 입력해주세요
-		</p>
-
-		<div class="ip-group">
-			<div class="row">
-				<label for="ip01" class="ip-label">프르모션 코드</label>
-				<input id="ip01" type="text" class="ip-txt" placeholder="프르모션 코드 입력">
-				<button type="button" class="icon-group">
-					<span class="icon"><i class="ico delete md"></i></span>
-				</button>
-				<div class="line"></div>
-			</div>
-		</div>
-
+<div class="layer-wrap">
+	<div class="layer-header">
+		@@include('@@webRoot/include/header.html', {
+			type: "sub_pop",
+			title: false
+		})
 	</div>
-
-</div>
-
-<div class="layer-footer bot-btn-fix">
-	<div class="btn-wrap">
-		<!-- column 클레스 적용하면 col 스타일 적용 -->
-		<div class="btn-group">
-			<button type="button" disabled class="btn xl full">등록하기</button>
+	
+	<div class="layer-body">
+	
+		<div class="member"> 
+			
+			<p class="desc-xl">
+				프르모션 코드를 입력해주세요
+			</p>
+	
+			<div class="ip-group">
+				<div class="row">
+					<label for="ip01" class="ip-label">프르모션 코드</label>
+					<input id="ip01" type="text" class="ip-txt" placeholder="프르모션 코드 입력">
+					<button type="button" class="icon-group">
+						<span class="icon"><i class="ico delete md"></i></span>
+					</button>
+					<div class="line"></div>
+				</div>
+			</div>
+	
+		</div>
+	
+	</div>
+	
+	<div class="layer-footer bot-btn-fix">
+		<div class="btn-wrap">
+			<!-- column 클레스 적용하면 col 스타일 적용 -->
+			<div class="btn-group">
+				<button type="button" disabled class="btn xl full">등록하기</button>
+			</div>
 		</div>
 	</div>
 </div>

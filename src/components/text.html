@@ -3,9 +3,31 @@
 <head>
 @@include('@@webRoot/include/head.html')
 <style>
-.contents{padding:20px 40px 20px !important}
-.contents .tmp-guide-box{margin-left:0;margin-right:0}
-h2{margin-bottom:20px;font-size:30px}
+.contents {
+	padding: 20px 40px 20px !important;
+}
+.module{
+	display:flex;
+	flex-wrap: wrap;
+}
+.contents .tmp-guide-box {
+	margin-left: 0;
+	margin-right: 0;
+}
+h2 {
+	margin-bottom: 20px;
+	font-size: 30px;
+}
+
+.tmp-guide-box{
+	flex:1;
+	width:360px;
+	flex-basis: 360px;
+	max-width: 360px;
+	margin-right:40px !important;
+	box-sizing: border-box;
+}
+.btn{display:inline-flex}
 </style>
 </head>
 <body>
@@ -16,57 +38,71 @@ h2{margin-bottom:20px;font-size:30px}
 			<div class="contents">
 				<h2>TEXT</h2>
 
-				<h3>Title</h3>
-				<!-- Title -->
-				<div class="tmp-guide-box guide-btn">
-					<h1 class="title">Title1 24px</h1>
-					<h1 class="title-md">Title2 20px</h1>
-					<h1 class="title-sm">Title3 18px</h1>
-				</div>
-				<!-- //Title -->
+				<div class="module">
 
-				<h3>Description</h3>
-				<!-- Title -->
-				<div class="tmp-guide-box guide-btn">
-					<p class="desc-xs"><b>xs 10px</b> 본문내용 본문내용 본문내용 본문내용 본문내용 본문내용</p>
-					<br>
-					<p class="desc-sm"><b>sm 12px</b> 본문내용 본문내용 본문내용 본문내용 본문내용 본문내용</p>
-					<br>
-					<p class="desc"><b>default 14px</b> 본문내용 본문내용 본문내용 본문내용 본문내용 본문내용</p>
-					<br>
-					<p class="desc-md"><b>md 16px</b>본문내용 본문내용 본문내용 본문내용 본문내용 본문내용</p>
-					<br>
-					<p class="desc-xl"><b>xl 20px</b> 본문내용 본문내용 본문내용 본문내용 본문내용 본문내용</p>
-				</div>
-				<!-- //Title -->
-				
-				<h3>List</h3>
-				<!-- List -->
-				<div class="tmp-guide-box guide-btn">
-					<div class="txt-list">
-						<ul>
-							<li>text list text list text list text list</li>
-							<li>text list text list text list text list</li>
-						</ul>
+					<div class="tmp-guide-box guide-btn">
+						<h2 class="guide-box-tit">Text Etc</h2>
+
+						<span class="tag">세차완료</span>
+						<span class="tag sale">세차완료</span>
+						<span class="deco-througt">본문내용</span>
 					</div>
 
-					<br>
-					<div class="txt-list dot">
-						<ul>
-							<li>dot text list dot text list dot text list dot text list</li>
-							<li>dot text list dot text list dot text list dot text list</li>
-						</ul>
+					<!-- Title -->
+					<div class="tmp-guide-box guide-btn">
+						<h2 class="guide-box-tit">Title</h2>
+						
+						<h1 class="title">Title1 24px</h1>
+						<h1 class="title-md">Title2 20px</h1>
+						<h1 class="title-sm">Title3 18px</h1>
 					</div>
+					<!-- //Title -->
+	
+					<!-- Title -->
+					<div class="tmp-guide-box guide-btn">
+						<h2 class="guide-box-tit">Description</h2>
+						
+						<p class="desc-xs"><b>xs 10px</b> 본문내용 본문내용 본문내용 본문내용 본문내용 본문내용</p>
+						<br>
+						<p class="desc-sm"><b>sm 12px</b> 본문내용 본문내용 본문내용 본문내용 본문내용 본문내용</p>
+						<br>
+						<p class="desc"><b>default 14px</b> 본문내용 본문내용 본문내용 본문내용 본문내용 본문내용</p>
+						<br>
+						<p class="desc-md"><b>md 16px</b>본문내용 본문내용 본문내용 본문내용 본문내용 본문내용</p>
+						<br>
+						<p class="desc-xl"><b>xl 20px</b> 본문내용 본문내용 본문내용 본문내용 본문내용 본문내용</p>
+					</div>
+					<!-- //Title -->
+					
+					<!-- List -->
+					<div class="tmp-guide-box guide-btn">
+						<h2 class="guide-box-tit">List</h2>
 
-					<br>
-					<div class="txt-list bullet">
-						<ul>
-							<li>bullet text list bullet text list bullet text list bullet text list</li>
-							<li>bullet text list bullet text list bullet text list bullet text list</li>
-						</ul>
+						<div class="txt-list">
+							<ul>
+								<li>text list text list text list text list</li>
+								<li>text list text list text list text list</li>
+							</ul>
+						</div>
+	
+						<br>
+						<div class="txt-list dot">
+							<ul>
+								<li>dot text list dot text list dot text list dot text list</li>
+								<li>dot text list dot text list dot text list dot text list</li>
+							</ul>
+						</div>
+	
+						<br>
+						<div class="txt-list bullet">
+							<ul>
+								<li>bullet text list bullet text list bullet text list bullet text list</li>
+								<li>bullet text list bullet text list bullet text list bullet text list</li>
+							</ul>
+						</div>
 					</div>
+					<!-- //List -->
 				</div>
-				<!-- //List -->
 
 			</div>
 		</section>

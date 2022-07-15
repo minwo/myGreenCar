@@ -67,6 +67,10 @@ html.is-open, html.is-open body {
         }
         .layer-footer {
             padding: 20px 20px 30px;
+
+			&.bot-reset{
+				padding-bottom:0;
+			}
         }
     }
     &.active {
@@ -89,8 +93,8 @@ html.is-open, html.is-open body {
         }
         &.active {
             &:before {
-                opacity: 1;
-                transition: opacity 0.3s cubic-bezier(0, 0, 0, 1);
+                opacity: .6;
+                transition: opacity 0.3s cubic-bezier(0, 0, 0, .65);
             }
             .layer-container {
                 transform: none;

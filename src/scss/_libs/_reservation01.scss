@@ -1,6 +1,380 @@
 @charset "UTF-8";
 
+
+.tag{
+	@include vDom();
+
+	height:24px;
+	margin-left:3px;
+	padding:0 7px;
+	font-size:$font-sm;
+	color:#6E7375;
+	line-height:17px;
+	border-radius: 4px;
+	vertical-align:middle;
+	background-color:#F3F4F5;
+
+	&:first-child{
+		margin-left:0;
+	}
+
+	&.sale{
+		color:#4285F4;
+		background-color:#E4F2FF;
+	}
+}
+
+.grid-flex{
+	display:flex;
+	align-items:center;
+
+	.flex{
+		flex:1;
+
+		@for $i from 1 through 10 {
+			&.col-#{$i}{
+				flex-basis: (100% * $i) * .1 !important;
+				width: (100% * $i) * .1 !important;
+			}
+		}
+	}
+}
+
+.btn-link{
+	font-size:$font-sm2;
+	color:$navy-050;
+
+	.ico{
+		vertical-align:-1px;
+	}
+}
+
+.deco-througt{
+	text-decoration:line-through;
+}
+
+.agreement{
+	.agree-module{
+		.item{
+			&:not(:first-child){
+				margin-top:11px;
+			}
+
+			&.active{
+				.ico-check{
+					background-image:url(#{$url-ico}ico_check_on.svg);
+				}
+			}
+		}
+
+		a{
+			display:block;
+			position:relative;
+			padding:0 20px 0 60px;
+		}
+
+		.emp{
+			display:inline-block;
+			position:absolute;
+			top:0;
+			left:25px;
+			font-size:$font-md;
+			color:#333;
+			line-height:23px;
+		}
+
+		.text{
+			font-size:$font-md;
+			color:#8C9496;
+			line-height:23px;
+			word-break:keep-all;
+		}
+
+		.ico{
+			position:absolute;
+			top:2px;
+
+			&.ico-check{
+				left:0;
+			}
+
+			&.next-sm{
+				right:0;
+			}
+		}
+	}
+}
+
+.txt-list{
+	&.dot{
+		li,p{
+			position:relative;
+			padding-left:15px;
+			font-size:$font-md;
+			line-height:23px;
+			color:$navy-040;
+	
+			&:not(:first-child){
+				margin-top:10px;
+			}
+	
+			&:before {
+				display: inline-block;
+				position: absolute;
+				top: 10px;
+				left: 0;
+				width: 4px;
+				height: 4px;
+				content: " ";
+				border-radius: 2rem;
+				background-color: #8c989e;
+			}
+		}
+	}
+}
+
 .reservation{
+	// 예약하기
+	.reservation-module{
+		padding-top:40px;
+
+		.title-xs{
+			line-height:23px;
+			font-weight:500;
+		}
+
+		.section{
+			position:relative;
+
+			&:not(:first-child){
+				padding:41px 0 30px;
+
+				&:before{
+					display:block;
+					position:absolute;
+					top:0;
+					left:-20px;
+					width:calc(100% + 40px);
+					height:11px;
+					content:"";
+					background-color:#F3F4F5;
+				}
+			}
+		}
+
+		.car-info{
+			text-align:center;
+			.module{
+				display:inline-flex;
+				justify-content:center;
+				align-items:center;
+			}
+			.img{
+				display:inline-block;
+				width:93px;
+				height:62px;
+			}
+			.info{
+				display:inline-block;
+				margin-left:10px;
+				text-align:left;
+
+				strong{
+					font-size:$font-xl;
+					line-height:28px;
+					color:#000000;
+				}
+				.name,.option{
+					display:block;
+					font-size:$font-sm;
+					line-height:17px;
+					color:#8C9496
+				}
+				.name{
+					&:after{
+						display:inline-block;
+						width:6px;
+						height:10px;
+						margin-left:5px;
+						content:"";
+						vertical-align:-1px;
+						background:url(#{$url-common}ico_arrow_right_s.svg) no-repeat;
+						background-size:100% 100%;
+					}
+				}
+			}
+
+			.tag-module{
+				margin:18px 0 40px;
+			}
+		}
+		.desc-sm{
+			margin:16px 0 28px;
+		}
+
+		.title-area{
+			margin-bottom:20px;
+
+			.tag{
+				margin-left:5px;
+			}
+
+			.under{
+				display:inline-block;
+				line-height:18px;
+				border-bottom:1px solid #303E47
+			}
+		}
+
+		.radio-module{
+			margin-bottom:30px;
+
+			.gc-radio{
+				display:block;
+				span{
+					font-size:$font-sm2;
+				}
+
+				&:not(:first-child){
+					margin-top:8px;
+				}
+
+				input{
+					&:checked ~ em{
+						color:$navy-070;
+					}
+				}
+	
+				.insur{
+					float:right;
+					margin-top:3px;
+					font-weight:400;
+				}
+			}
+		}
+
+		.ip-group.box{
+			margin:10px 0 15px;
+			
+			.flex:not(:last-child){
+				padding-right:10px;
+			}
+			.ip-txt{
+				height:48px;
+				text-align:right;
+			}
+		}
+		
+		.grid-flex{
+			margin-top:3px;
+
+			.flex{
+				&:not(:nth-child(1)){
+					text-align:right;
+				}
+
+				&:not(.title-area){
+					&:first-child{
+						&:not(.title-xs:first-child){
+							font-size:$font-sm;
+							font-weight:700;
+						}
+					}
+
+					.point{
+						display:inline-block;
+						margin-left:7px;
+						font-size:$font-sm;
+						color:$green-060;
+						font-weight:400;
+					}
+				}
+			}
+		}
+
+		.return{
+			color:#000;
+
+			.ico{
+				margin-right:6px;
+				vertical-align:-4px;
+			}
+		}
+
+		.price{
+			margin-left:7px;
+			color:#000;
+
+			&.deco-througt{
+				font-size:$font-sm2;
+				color:$navy-040;
+			}
+		}
+
+		.point-module{
+			margin-top:30px;
+		}
+
+		.info-module{
+			margin-top:40px;
+
+			.info-title{
+				margin:20px 0 10px;
+				font-size:$font-md;
+				color:$navy-070;
+				font-weight:500;
+			}			
+		}
+
+	}
+
+	// 편도로 변경하기
+	.one-way{
+		padding-top:30px;
+
+		.link-box{
+			margin-top:30px;
+			background-size:100% 100%;
+
+			a{
+				display:block;
+				min-height:270px;
+				padding:30px 20px 0;
+			}
+
+			&.free{
+				background-image: url(#{$url-content}bg_oneway_free.png);
+
+				.emp{
+					color:$pink-060;
+				}
+			}
+
+			&.green{
+				background-image: url(#{$url-content}bg_oneway_green.png);
+
+				.emp{
+					color:$green-060;
+				}
+			}
+		}
+
+		.link-title{
+			font-size:22px;
+			font-weight:700;
+			color:$navy-070;
+		}
+
+		.desc-md{
+			color:$navy-040;
+		}
+
+		.bold{
+			color:$navy-070;
+			font-weight:700;
+		}
+	}
+	
 	// 프리존 반납 & 그린존 반납
 	.search-result{
 		li{
@@ -82,8 +456,8 @@
 }
 
 // 반납 바텀 레이어
-.layer-body{
-	.reservation{
+.layer-wrap{
+	&.reservation{
 		&.free_popup{
 			margin-top:23px;
 		}
@@ -108,6 +482,28 @@
 
 		.tmp-faq-list{
 			margin-top:28px;
+		}
+
+		.one-way{
+			padding-top:0;
+
+			.desc {
+				font-size:14px;
+				line-height:20px;
+				color:#8C989E;
+
+				&-xl{
+					margin-bottom:0;
+				}
+			}
+
+		}
+		.btn{
+			margin-bottom:11px;
+		}
+		
+		.layer-footer{
+			padding:28px 20px 0;
 		}
 	}
 }

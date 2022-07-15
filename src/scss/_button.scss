@@ -28,7 +28,7 @@ $btn-size: (
     ),
 	"md" : (
 		"size" : 48px,
-        "font-size" : 14px$font-md
+        "font-size" : $font-md
 	),
     "lg" : (
         "size" : 60px,
@@ -37,7 +37,7 @@ $btn-size: (
     "xl" : (
         "size" : 74px,
         "font-size" : $font-md
-    )
+	)
 ) !default;
 
 /* button */
@@ -64,6 +64,10 @@ $btn-size: (
 
     @include btnDrt();
 
+	&.full{
+		width:100%
+	}
+
     &.line {
         border-color:$navy-020;
         background-color:$gray-000;
@@ -71,7 +75,14 @@ $btn-size: (
     }
 
 	&.cancel{
+		// 변수순서: border-color, background-color, font-color
 		@include buttonType ($navy-020, $gray-000, $navy-070);
+	}
+
+	&.link{
+		// 변수순서: border-color, background-color, font-color
+		@include buttonType ($gray-000, $gray-000, $navy-050);
+		text-decoration:underline;
 	}
 
 	&.check{

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+<title>layout01</title>
 @@include('@@webRoot/include/head.html')
 </head>
 <body>
@@ -14,12 +15,29 @@
 		
 		<!-- container -->
 		<section id="container">
-			<div class="contents" style="height:3000px">
-				<div>sgsdgsd</div>
+			<div class="contents">
+				
+				<div class="grid-flex">
+					<div class="flex col-3">Col-3 30%</div>
+					<div class="flex col-7">Col-7 70%</div>
+				</div>
+				<div class="grid-flex">
+					<div class="flex">Defualt</div>
+					<div class="flex">Defualt</div>
+				</div>
+				<div class="grid-flex">
+					<div class="flex col-7">Col-7 70%</div>
+					<div class="flex col-3">Col-3 30%</div>
+				</div>
+				<style>
+				.grid-flex{align-items:center;justify-content:center;}
+				.flex{height:50px;background-color:#797979;color:#fff;}
+				.flex:last-child{background-color:#999;}
+				</style>
 
 
+				@@include('@@webRoot/include/bot_fix.html', {type: "type01"})
 			</div>
-			@@include('@@webRoot/include/bot_fix.html', {type: "type01"})
 		</section>
 		<!-- //container -->
 
