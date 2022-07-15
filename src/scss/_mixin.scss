@@ -212,7 +212,7 @@
 
 // popup 가로 세로
 @mixin popupType() {
-	&:not(.type-bottom) {
+	&:not(.type-bottom,.type-full) {
 		.bot-btn-fix{
 			height:auto;
 			.btn-wrap{

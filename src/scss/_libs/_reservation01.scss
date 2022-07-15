@@ -382,9 +382,9 @@
 		}
 		.search-result{
 			.item{
-				padding:7px 0 10px 0;
+				padding:7px 0 10px 38px;
 			}
-			.greenzon a{
+			&.greenzon .item{
 				padding-right:0;
 			}
 			.price{
