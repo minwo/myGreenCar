@@ -398,6 +398,23 @@ textarea {
 	}
 }
 
+// grid
+.grid-flex{
+	display:flex;
+	align-items:center;
+
+	.flex{
+		flex:1;
+
+		@for $i from 1 through 10 {
+			&.col-#{$i}{
+				flex-basis: (100% * $i) * .1 !important;
+				width: (100% * $i) * .1 !important;
+			}
+		}
+	}
+}
+
 $offset: 187;
 // loding bar
 .loading-bar{

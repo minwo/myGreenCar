@@ -1,58 +1,5 @@
 @charset "UTF-8";
 
-
-.tag{
-	@include vDom();
-
-	height:24px;
-	margin-left:3px;
-	padding:0 7px;
-	font-size:$font-sm;
-	color:#6E7375;
-	line-height:17px;
-	border-radius: 4px;
-	vertical-align:middle;
-	background-color:#F3F4F5;
-
-	&:first-child{
-		margin-left:0;
-	}
-
-	&.sale{
-		color:#4285F4;
-		background-color:#E4F2FF;
-	}
-}
-
-.grid-flex{
-	display:flex;
-	align-items:center;
-
-	.flex{
-		flex:1;
-
-		@for $i from 1 through 10 {
-			&.col-#{$i}{
-				flex-basis: (100% * $i) * .1 !important;
-				width: (100% * $i) * .1 !important;
-			}
-		}
-	}
-}
-
-.btn-link{
-	font-size:$font-sm2;
-	color:$navy-050;
-
-	.ico{
-		vertical-align:-1px;
-	}
-}
-
-.deco-througt{
-	text-decoration:line-through;
-}
-
 .agreement{
 	.agree-module{
 		.item{
@@ -100,34 +47,6 @@
 
 			&.next-sm{
 				right:0;
-			}
-		}
-	}
-}
-
-.txt-list{
-	&.dot{
-		li,p{
-			position:relative;
-			padding-left:15px;
-			font-size:$font-md;
-			line-height:23px;
-			color:$navy-040;
-	
-			&:not(:first-child){
-				margin-top:10px;
-			}
-	
-			&:before {
-				display: inline-block;
-				position: absolute;
-				top: 10px;
-				left: 0;
-				width: 4px;
-				height: 4px;
-				content: " ";
-				border-radius: 2rem;
-				background-color: #8c989e;
 			}
 		}
 	}

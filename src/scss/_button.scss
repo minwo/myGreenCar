@@ -176,3 +176,12 @@ $btn-size: (
         justify-content:flex-end;
     }
 }
+
+.btn-link{
+	font-size:$font-sm2;
+	color:$navy-050;
+
+	.ico{
+		vertical-align:-2px;
+	}
+}
