@@ -36,8 +36,29 @@
 }
 
 .txt-list{
-
 	&.dot{
-
+		li,p{
+			position:relative;
+			padding-left:15px;
+			font-size:$font-md;
+			line-height:23px;
+			color:$navy-040;
+	
+			&:not(:first-child){
+				margin-top:10px;
+			}
+	
+			&:before {
+				display: inline-block;
+				position: absolute;
+				top: 10px;
+				left: 0;
+				width: 4px;
+				height: 4px;
+				content: " ";
+				border-radius: 2rem;
+				background-color: #8c989e;
+			}
+		}
 	}
 }
