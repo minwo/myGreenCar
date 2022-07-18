@@ -376,16 +376,16 @@
 
 // 반납 바텀 레이어
 .layer-wrap{
-	&.reservation{
+	.reservation{
 		&.free_popup{
 			margin-top:23px;
 		}
 		.search-result{
 			.item{
-				padding:7px 0 10px 38px;
+				padding:7px 0 10px 0;
 			}
 			&.greenzon .item{
-				padding-right:0;
+				padding:7px 0 10px 38px;
 			}
 			.price{
 				position: static;
@@ -403,6 +403,9 @@
 			margin-top:28px;
 		}
 
+	}
+
+	&.rsv-one-way{
 		.one-way{
 			padding-top:0;
 
@@ -417,10 +420,11 @@
 			}
 
 		}
+		
 		.btn{
 			margin-bottom:11px;
 		}
-		
+
 		.layer-footer{
 			padding:28px 20px 0;
 		}
