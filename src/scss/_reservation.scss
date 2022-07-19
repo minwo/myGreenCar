@@ -60,40 +60,7 @@
             }
         }
     }
-    .gc-tab {
-        margin: 0 -20px;
-        border-bottom: none;
-        &:after {
-            content: " ";
-            display: block;
-            height: 2px;
-            background-color: #d9dddf;
-            position: relative;
-            bottom: 2px;
-        }
-        ul {
-            padding: 0 20px;
-            li {
-                a {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    height: 56px;
-                    vertical-align: middle;
-                    color: #8c989e;
-                    font-size: 18px;
-                    font-weight: 500;
-                    &.active {
-                        color: $navy-070;
-                        font-weight: 700;
-                        &:before {
-                            background-color: #333;
-                        }
-                    }
-                }
-            }
-        }
-    }
+    
     .ip-group {
         .row {
             display: flex;
