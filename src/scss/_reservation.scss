@@ -211,10 +211,11 @@
             .discount-type {
                 display: inline-flex;
                 align-items: center;
-                color: $navy-050;
-                font-size: 12px;
                 height: 22px;
                 padding: 0 12px;
+                color: $navy-050;
+                font-size: 12px;
+                font-weight: normal;
                 background-color: $navy-010;
                 border-radius: 2rem;
             }
@@ -228,16 +229,19 @@
                         font-weight: 700;
                     }
                     &:nth-child(2) {
+                        margin-left: 4px;
                         color: $green-040;
                         font-size: 12px;
-                        margin-left: 4px;
+                        font-weight: 500;
                     }
                 }
             }
             .discount-value + p {
                 margin-top: 8px;
-                font-size: 12px;
                 color: $navy-070;
+                font-size: 12px;
+                font-weight: normal;
+                // @include ell;
             }
             .effective-date {
                 margin-top: 4px;
@@ -245,6 +249,7 @@
                 .date {
                     color: $navy-040;
                     font-size: 14px;
+                    font-weight: normal;
                 }
                 .date + * {
                     margin-left: 4px;
@@ -420,6 +425,7 @@
         }
     }
     .card-number {
+        margin-bottom: 6px;
         label {
             display: block;
             color: $gray-000;
@@ -541,6 +547,7 @@ hr.divider {
 .badge {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     border-radius: 2rem;
     &.normal {
         color: #fff;
@@ -552,9 +559,11 @@ hr.divider {
     }
     &.sm {
         height: 16px;
+        min-width: 40px;
         padding: 0 8px;
         font-size: 10px;
-        font-weight: 700;
+        font-weight: 500;
+        letter-spacing: 0.05rem;
     }
     &.md {
         height: 22px;
