@@ -41,14 +41,14 @@
 			var el, svgEl;
 			var radius, circumference, radiusVal, gauge, offsetVal, circleRatio;
 
-			init = function() {
+			init = function(color) {
 				el = document.querySelector('.ui-svg-chart');
 				svgEl = el.querySelector('.circle');
 				radius = 84;
 				circleRatio = 1 - .75;
 				circumference = 2 * Math.PI * radius;
 				radiusVal = 2 * Math.PI * radius - circumference * circleRatio;
-				console.log(radiusVal);
+				svgEl.style.stroke = color;
 
 				bindEvent();
 			};
@@ -75,9 +75,10 @@
 			};
 		})();
 
-		svgChart.init();
+		// progress 등급 color 값 적용
+		svgChart.init('#fd8484');
 
-		// progress 등급 value 값 인스턴스 적용
+		// progress 등급 value 값 적용
 		setTimeout(function () {
 			svgChart.progress(70);
 		}, 1300);
