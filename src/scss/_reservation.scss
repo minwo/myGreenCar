@@ -65,7 +65,7 @@
         .row {
             display: flex;
             align-items: center;
-            input[type="text"] {
+            input[type="text"], input[type="password"] {
                 flex: 1;
                 height: 48px;
                 padding: 0 20px;
@@ -116,7 +116,7 @@
             display: flex;
             align-items: center;
             width: 100%;
-            line-height: 34.17px;
+            line-height: 34.17px;// Actual Touch Target size 고려하여 line-height로 간격조정
             .text {
                 color: #8c989e;
                 font-size: 16px;
@@ -424,6 +424,11 @@
             }
         }
     }
+    .point-input{
+        color: $navy-070;
+        font-weight: 500;
+        text-align: right;
+    }
     .card-number {
         margin-bottom: 6px;
         label {
@@ -573,34 +578,3 @@ hr.divider {
     }
 }
 
-.checkbox {
-    input[type="checkbox"] {
-        display: none;
-    }
-    label {
-        display: flex;
-        align-items: center;
-        font-size: 18px;
-        font-weight: 500;
-        &:before {
-            content: " ";
-            display: block;
-            width: 26px;
-            height: 26px;
-            background: url(#{$url-ico}check_default.svg) left center no-repeat;
-            margin-right: 10px;
-        }
-    }
-    input[type="checkbox"]:checked {
-        & + label {
-            color: $green-060;
-            &:before {
-                content: " ";
-                display: block;
-                width: 26px;
-                height: 26px;
-                background: url(#{$url-ico}check_green.svg) left center no-repeat;
-            }
-        }
-    }
-}

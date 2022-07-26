@@ -22,26 +22,23 @@
                                 <div class="logo">
                                     <div class="logo-img"></div>
                                 </div>
-                                <div class="card-number">
-                                  <label for="card_number">카드번호</label>  
-                                  <!-- <input id="card_number" class="form-control" required="" pattern="(\d{4}\s?){4}" placeholder="•••• •••• •••• ••••" maxlength="19"> -->
-                                  <div class="card-input">
-                                    <input type="text" data-pos="1" placeholder="1234" value="1234" maxlength='4'>
-                                    <span class="dash active">-</span>
-                                    <input type="text" data-pos="2" placeholder="5678" maxlength='4'>
-                                    <span class="dash">-</span>
-                                    <input type="text" data-pos="3" placeholder="1234" maxlength='4'>
-                                    <span class="dash">-</span>
-                                    <input type="text" data-pos="4" placeholder="5678" maxlength='4'>
-                                </div>
+                                <div class="point-info">
+                                    <div class="item">
+                                        <p class="title">보유 포인트</p>
+                                        <p class="desc">
+                                            <span class="value">1,000,000</span>
+                                            <span class="unit">P</span>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                             <section class="section">
-                                <h3 class="section-tit">비밀번호</h3>
+                                <h3 class="section-tit">L.POINT 사용</h3>
                                 <div class="section-cont">
                                     <div class="ip-group">
                                         <div class="row">
-                                            <input type="text" placeholder="비밀번호 6자리" />
+                                            <input type="text" class="point-input" value="-0P" />
+                                            <button class="btn primary md"><span class="text">전액사용</span></button>
                                         </div>
                                     </div>
                                 </div>
@@ -49,7 +46,7 @@
                         </div>
                     </div>
                 </div>
-                @@include('@@webRoot/include/bot_fix.html', {type: "type01", title:"L.POINT 카드 인증", disabled:"false"})
+                @@include('@@webRoot/include/bot_fix.html', {type: "type01", title:"적용하기", disabled:"false"})
             </section>
             <!-- //container -->
         </div>
