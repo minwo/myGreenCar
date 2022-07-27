@@ -1,3 +1,189 @@
 @charset "UTF-8";
 
 @import "_libs/_benefit01";
+
+.benefit {
+    .cont {
+        padding: 24px 0;
+    }
+    .section{
+        padding: 20px 0;
+    }
+    .section-title{
+        
+        >div{
+            @include flex-center;
+        }
+        .left{
+            h3{
+                font-size: 16px;
+                font-weight: 700;
+            }
+            * + *{
+                margin-left: 4px;
+            }
+        }
+        .right{
+            margin-left: auto;
+        }
+        .btn-link{
+            font-size: 14px;
+            font-weight: 400
+        }
+        @include flex-center;
+    }
+    .section-cont{
+        .ip-group {
+            .row {
+                display: flex;
+                align-items: center;
+                input[type="text"],
+                input[type="password"] {
+                    flex: 1;
+                    height: 48px;
+                    padding: 0 20px;
+                    border: 1px solid #d9d9d9;
+                    border-radius: $border-radius;
+                }
+                .btn {
+                    width: 70px;
+                    flex: 0 0 auto;
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+    .event-list {
+        .event-item {
+            display: flex;
+
+            padding: 20px 0;
+            .img-area {
+                width: 100px;
+                height: 100px;
+                border-radius: $border-radius;
+                background-color: #d9d9d9;
+            }
+            .text-area {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                margin-left: 10px;
+                .tit-txt {
+                    font-size: 18px;
+                    font-weight: 700;
+                }
+                .effective-date {
+                    .date {
+                        font-size: 14px;
+                        color: $navy-040;
+                    }
+                    .badge {
+                        margin-left: 4px;
+                    }
+                }
+            }
+        }
+    }
+    .coupon-list {
+        margin-top: 14px;
+        > * + * {
+            margin-top: 16px;
+        }
+        .coupon-item {
+            padding: 20px;
+            border: 1px solid $navy-020;
+            border-radius: $border-radius;
+            position: relative;
+            .discount-type {
+                display: inline-flex;
+                align-items: center;
+                height: 22px;
+                padding: 0 12px;
+                color: $navy-050;
+                font-size: 12px;
+                font-weight: normal;
+                background-color: $navy-010;
+                border-radius: 2rem;
+            }
+            .discount-value {
+                margin-top: 4px;
+                @include flex-center();
+                span {
+                    &:nth-child(1) {
+                        color: $navy-070;
+                        font-size: 18px;
+                        font-weight: 700;
+                    }
+                    &:nth-child(2) {
+                        margin-left: 4px;
+                        color: $green-040;
+                        font-size: 12px;
+                        font-weight: 500;
+                    }
+                }
+            }
+            .discount-value + p {
+                margin-top: 8px;
+                color: $navy-070;
+                font-size: 12px;
+                font-weight: normal;
+                // @include ell;
+            }
+            .effective-date {
+                margin-top: 4px;
+                @include flex-center();
+                .date {
+                    color: $navy-040;
+                    font-size: 14px;
+                    font-weight: normal;
+                }
+                .date + * {
+                    margin-left: 4px;
+                }
+            }
+            &.expired {
+                border: 0;
+                &:before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: $border-radius;
+                    border: 1px solid #989b9d;
+                    background-color: rgba($color: #40535e, $alpha: 0.4);
+                    z-index: 10;
+                }
+            }
+            .effective-date + .btn {
+                position: absolute;
+                right: 20px;
+                top: calc(50% - 12px);
+            }
+        }
+    }
+    .event-detail{
+        .title-area{
+            padding-bottom: 20px;
+            .title{
+                color: $black-100 ;
+                font-size: 20px;
+            }
+            .effective-date{
+                margin-top: 12px;
+                color: $navy-040;
+            }
+        }
+        .cont-area{
+            padding: 20px 0;
+        }
+        .dummy-content{
+            height: 450px;
+            border-radius: $border-radius;
+            background-color: $navy-020;
+        }
+    }
+}

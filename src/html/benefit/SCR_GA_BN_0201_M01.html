@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('@@webRoot/include/head.html')
+    </head>
+    <body>
+        <div id="wrap">
+            <!-- header -->
+            @@include('@@webRoot/include/header.html', { type: "sub_02", title: "혜택" })
+            <!-- //header -->
+
+            <!-- container -->
+            <section id="container">
+                <div class="contents">
+                    <div class="benefit">
+                        <div class="gc-tab">
+                            <ul>
+                                <li><a href="#">이벤트</a></li>
+                                <li><a href="#" class="active">쿠폰</a></li>
+                            </ul>
+                        </div>
+                        <div class="cont">
+                            <div class="gc-tab-type02">
+								<ul>
+									<li><a href="#" class="active">쿠폰받기</a></li>
+									<li><a href="#">쿠폰몰</a></li>
+								</ul>
+								<span class="tab-indicator"></span>
+							</div>
+                            <section class="section">
+                                <!-- <h3 class="section-title">쿠폰 번호 입력</h3> -->
+                                <div class="section-cont">
+                                    <div class="ip-group">
+                                        <div class="row">
+                                            <input type="text" placeholder="쿠폰 번호 입력" />
+                                            <button class="btn primary md"><span class="text">등록</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <hr class="divider" />
+                            <section class="section">
+                                <div class="section-title">
+                                    <div class="left">
+                                        <h3>쿠폰 사용 유의사항</h3>
+                                        <button class="btn icon md">
+                                            <i class="ico info lg"></i>
+                                        </button>
+                                    </div>
+                                    <div class="right">
+                                       <a href="#" class="btn-link">일괄 다운받기</a>
+                                    </div>
+                                </div>
+                                <div class="section-cont">
+                                    <div class="coupon-list">
+                                        <div class="coupon-item">
+                                            <div class="discount-type">비율할인</div>
+                                            <div class="discount-value">
+                                                <span>50% 할인</span>
+                                            </div>
+                                            <p>[매일]월화수목금토일 언제나 50% 할인<br>
+                                                주중 주말 할인/1시간/차종 제한/지역제한</p>
+                                            <div class="effective-date">
+                                                <span class="date">2022.04.01 ~ 2022.04.30</span>
+                                                <span class="badge warning sm">D-7</span>
+                                            </div>
+                                            <button class="btn icon md">
+                                                <i class="ico download lg"></i>
+                                            </button>
+                                        </div>
+                                        <div class="coupon-item expired">
+                                            <div class="discount-type">정액할인</div>
+                                            <div class="discount-value">
+                                                <span>2,000원 할인</span>
+                                            </div>
+                                            <p>금연 서약한 당신을 위해!<br>
+                                                주중 주말 할인/1시간/차종 제한/지역제한</p>
+                                            <div class="effective-date">
+                                                <span class="date">2022.04.01 ~ 2022.04.30</span>
+                                                <span class="badge normal sm">D-35</span>
+                                            </div>
+                                        </div>
+                                        <div class="coupon-item">
+                                            <div class="discount-type">시간무료</div>
+                                            <div class="discount-value">
+                                                <span>3시간 무료</span>
+                                            </div>
+                                            <p>스파클링 3시간 드라이브!<br>
+                                                주중 주말 사용/차종제한/대여횟수 제한</p>
+                                            <div class="effective-date">
+                                                <span class="date">2022.04.01 ~ 2022.04.30</span>
+                                                <span class="badge warning sm">D-7</span>
+                                            </div>
+                                            <button class="btn icon md">
+                                                <i class="ico download lg"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <button class="btn-filter">
+                                    <i class="ico filter md"></i>
+                                    <span class="text">혜택순</span>
+                                </button> -->
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            <!-- //container -->
+        </div>
+    </body>
+</html>

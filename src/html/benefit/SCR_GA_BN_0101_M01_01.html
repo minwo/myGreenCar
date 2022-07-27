@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('@@webRoot/include/head.html')
+    </head>
+    <body>
+        <div id="wrap">
+            <!-- header -->
+            @@include('@@webRoot/include/header.html', { type: "sub_02", title: "혜택" })
+            <!-- //header -->
+
+            <!-- container -->
+            <section id="container">
+                <div class="contents">
+                    <div class="benefit">
+                        <div class="gc-tab">
+                            <ul>
+                                <li><a href="#" class="active">이벤트</a></li>
+                                <li><a href="#">쿠폰</a></li>
+                            </ul>
+                        </div>
+                        <div class="cont">
+                            <div class="gc-tab-type02">
+								<ul>
+									<li><a href="#" class="active">진행중</a></li>
+									<li><a href="#">종료</a></li>
+									<li><a href="#">당첨자</a></li>
+								</ul>
+								<span class="tab-indicator"></span>
+							</div>
+                            <div class="event-list">
+                                <div class="no-data">
+                                    <p class="desc">표시할 내용이 없습니다</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <!-- //container -->
+        </div>
+    </body>
+</html>
