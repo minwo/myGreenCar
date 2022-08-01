@@ -1,15 +1,26 @@
 @charset "UTF-8";
 
-.agreement{
+.agree-group{
+	.check-all {
+        border-bottom: 1px solid #d9dddf;
+        padding-bottom: 10px;
+        margin-bottom: 16px;
+        font-size: 18px;
+        font-weight: 500;
+	}
+
 	.agree-module{
 		.item{
+			position:relative;
+			padding-left:25px;
+
 			&:not(:first-child){
 				margin-top:11px;
 			}
 
 			&.active{
 				.ico-check{
-					background-image:url(#{$url-ico}ico_check_on.svg);
+					background-image:url(#{$url-ico}icon_check_on.svg);
 				}
 			}
 		}
@@ -17,14 +28,14 @@
 		a{
 			display:block;
 			position:relative;
-			padding:0 20px 0 60px;
+			padding:0 27px 0 35px;
 		}
 
 		.emp{
 			display:inline-block;
 			position:absolute;
 			top:0;
-			left:25px;
+			left:0;
 			font-size:$font-md;
 			color:#333;
 			line-height:23px;
@@ -37,17 +48,15 @@
 			word-break:keep-all;
 		}
 
-		.ico{
+		.btn-check{
 			position:absolute;
 			top:2px;
-
-			&.ico-check{
-				left:0;
-			}
-
-			&.next-sm{
-				right:0;
-			}
+			left:0;
+		}
+		.next-sm{
+			position:absolute;
+			top:2px;
+			right:0;
 		}
 	}
 }
@@ -117,7 +126,7 @@
 						margin-left:5px;
 						content:"";
 						vertical-align:-1px;
-						background:url(#{$url-common}ico_arrow_right_s.svg) no-repeat;
+						background:url(#{$url-common}icon_arrow_right_s.svg) no-repeat;
 						background-size:100% 100%;
 					}
 				}

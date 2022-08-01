@@ -92,7 +92,7 @@ $btn-size: (
 			height:13px;
 			margin-right:7px;
 			content:"";
-			background:url(#{$url-common}ico_btn_check.svg) no-repeat;
+			background:url(#{$url-common}icon_btn_check.svg) no-repeat;
 			background-size:100% 100%;
 		}
 		&.active{
@@ -182,6 +182,6 @@ $btn-size: (
 	color:$navy-050;
 
 	.ico{
-		vertical-align:-2px;
+		vertical-align:-1px;
 	}
 }
