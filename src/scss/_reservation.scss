@@ -6,12 +6,56 @@
     display: flex;
     align-items: center;
 }
+
+
 .mt60 {
     margin-top: 60px;
 }
 .pb0{
     padding-bottom: 0px !important;
 }
+hr.divider {
+    display: block;
+    background-color: $navy-010;
+    height: 10px;
+    border: 0;
+    margin: 0 -20px;
+}
+
+.list {
+    li {
+        font-size: 16px;
+        color: #8c989e;
+        position: relative;
+        padding-left: 16px;
+        &:before {
+            content: " ";
+            display: inline-block;
+            width: 4px;
+            height: 4px;
+            border-radius: 2rem;
+            background-color: #8c989e;
+            position: absolute;
+            top: 10px;
+            left: 0;
+        }
+    }
+    li + li {
+        margin-top: 10px;
+    }
+    &.sm {
+        li {
+            font-size: 14px;
+            padding-left: 12px;
+            &:before {
+                width: 3px;
+                height: 3px;
+                top: 8px;
+            }
+        }
+    }
+}
+
 
 .reservation {
     position: relative;
@@ -27,40 +71,7 @@
             color: #fd8484;
         }
     }
-    .list {
-        li {
-            font-size: 16px;
-            color: #8c989e;
-            position: relative;
-            padding-left: 16px;
-            &:before {
-                content: " ";
-                display: inline-block;
-                width: 4px;
-                height: 4px;
-                border-radius: 2rem;
-                background-color: #8c989e;
-                position: absolute;
-                top: 10px;
-                left: 0;
-            }
-        }
-        li + li {
-            margin-top: 24px;
-        }
-        &.sm {
-            li {
-                font-size: 14px;
-                padding-left: 12px;
-                &:before {
-                    width: 3px;
-                    height: 3px;
-                    top: 8px;
-                }
-            }
-        }
-    }
-    
+   
     .ip-group {
         .row {
             display: flex;
@@ -430,43 +441,7 @@
         font-weight: 500;
         text-align: right;
     }
-    .card-number {
-        margin-bottom: 6px;
-        label {
-            display: block;
-            color: $gray-000;
-            font-size: 14px;
-            font-weight: normal;
-            margin-bottom: 8px;
-        }
-        .card-input {
-            width: 100%;
-            height: 48px;
-            padding: 0 24px;
-            background-color: $gray-000;
-            border-radius: $border-radius;
-            overflow: hidden;
-            @include flex-center();
-            input {
-                font-size: 16px;
-                font-weight: 500;
-                padding-right: 0;
-                text-align: center;
-                &::placeholder {
-                    font-size: 16px;
-                }
-                &:focus {
-                    outline: none;
-                }
-            }
-            .dash {
-                color: $navy-020;
-                &.active {
-                    color: $navy-070;
-                }
-            }
-        }
-    }
+    
     .btn-area {
         margin-bottom: 12px;
         text-align: right;
@@ -478,6 +453,43 @@
         &.both-sides {
             display: flex;
             justify-content: space-between;
+        }
+    }
+}
+.card-number {
+    margin-bottom: 6px;
+    label {
+        display: block;
+        color: $gray-000;
+        font-size: 14px;
+        font-weight: normal;
+        margin-bottom: 8px;
+    }
+    .card-input {
+        width: 100%;
+        height: 48px;
+        padding: 0 24px;
+        background-color: $gray-000;
+        border-radius: $border-radius;
+        overflow: hidden;
+        @include flex-center();
+        input {
+            font-size: 16px;
+            font-weight: 500;
+            padding-right: 0;
+            text-align: center;
+            &::placeholder {
+                font-size: 16px;
+            }
+            &:focus {
+                outline: none;
+            }
+        }
+        .dash {
+            color: $navy-020;
+            &.active {
+                color: $navy-070;
+            }
         }
     }
 }
@@ -542,26 +554,25 @@
     }
 }
 
-hr.divider {
-    display: block;
-    background-color: $navy-010;
-    height: 10px;
-    border: 0;
-    margin: 0 -20px;
-}
+
 
 .badge {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     border-radius: 2rem;
+    color: #fff;
     &.normal {
-        color: #fff;
         background-color: $navy-040;
     }
     &.warning {
-        color: #fff;
         background-color: rgba($color: $red-060, $alpha: 0.5);
+    }
+    &.pink{
+        background-color: #F8679C;
+    }
+    &.green{
+        background-color: $green-060;
     }
     &.sm {
         height: 16px;
@@ -578,4 +589,7 @@ hr.divider {
         font-weight: 700;
     }
 }
+
+
+
 

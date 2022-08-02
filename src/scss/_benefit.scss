@@ -301,16 +301,41 @@
         padding: 0 24px;
         border: 1px solid $navy-020;
         border-radius: $border-radius;
-        .text{
+        .text {
             font-size: 18px;
             font-weight: 700;
             margin-left: 10px;
         }
-        .btn{
+        .btn {
             margin-left: auto;
         }
     }
     .item + .item {
         margin-top: 20px;
+    }
+}
+
+.certi {
+    .guide-text {
+        font-size: 20px;
+        font-weight: 700;
+        color: $navy-070;
+    }
+    .ci-img {
+        text-align: center;
+        margin: 24px 0 30px;
+    }
+    .card-number {
+        label {
+            font-size: 12px;
+            font-weight: 700;
+            color: $navy-070;
+        }
+        .card-input {
+            border: 1px solid $navy-020;
+        }
+    }
+    .card-number + .list{
+        margin-top: 50px;
     }
 }
