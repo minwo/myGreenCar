@@ -295,12 +295,14 @@
 .mall-list {
     margin-top: 20px;
     .item {
-        display: flex;
-        align-items: center;
-        height: 96px;
-        padding: 0 24px;
-        border: 1px solid $navy-020;
-        border-radius: $border-radius;
+        > a {
+            display: flex;
+            align-items: center;
+            height: 96px;
+            padding: 0 24px;
+            border: 1px solid $navy-020;
+            border-radius: $border-radius;
+        }
         .text {
             font-size: 18px;
             font-weight: 700;
@@ -335,7 +337,7 @@
             border: 1px solid $navy-020;
         }
     }
-    .card-number + .list{
+    .card-number + .list {
         margin-top: 50px;
     }
 }
