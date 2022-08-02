@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('@@webRoot/include/head.html')
+    </head>
+    <body>
+        <div id="wrap">
+            <!-- header -->
+            @@include('@@webRoot/include/header.html', { type: "sub_02", title: "혜택" })
+            <!-- //header -->
+
+            <!-- container -->
+            <section id="container">
+                <div class="contents">
+                    <div class="benefit">
+                        <div class="gc-tab">
+                            <ul>
+                                <li><a href="#">이벤트</a></li>
+                                <li><a href="#" class="active">쿠폰</a></li>
+                            </ul>
+                        </div>
+                        <div class="cont">
+                            <div class="gc-tab-type02">
+								<ul>
+									<li><a href="#">쿠폰받기</a></li>
+									<li><a href="#" class="active">쿠폰몰</a></li>
+								</ul>
+								<span class="tab-indicator"></span>
+							</div>
+                            <section class="section">
+                                <h3 class="section-title">환영합니다!
+                                    인증된 회원님들을 위한 전용 쿠폰몰입니다.
+                                </h3>
+                                <div class="section-cont">
+                                    <ul class="mall-list">
+                                        <li class="item">
+                                            <div class="img">
+                                                <img src="/images/contents/lotte_ci.svg" alt="">
+                                            </div>
+                                            <div class="text">롯데 임직원 쿠폰몰</div>
+                                            <button class="btn icon lg">
+                                                <i class="ico arrow-right-nav050 md"></i>
+                                            </button>
+                                        </li>
+                                        <li class="item">
+                                            <div class="img">
+                                                <img src="/images/contents/housing.svg" alt="">
+                                            </div>
+                                            <div class="text">공공주택 입주민 쿠폰몰</div>
+                                            <button class="btn icon lg">
+                                                <i class="ico arrow-right-nav050 md"></i>
+                                            </button>
+                                        </li>
+                                        <li class="item">
+                                            <div class="img">
+                                                <img src="/images/contents/mastercard_ci.svg" alt="">
+                                            </div>
+                                            <div class="text">마스터카드
+                                                쿠폰몰</div>
+                                            <button class="btn icon lg">
+                                                <i class="ico arrow-right-nav050 md"></i>
+                                            </button>
+                                        </li>
+                                        <li class="item">
+                                            <div class="img">
+                                                <img src="/images/contents/mnd_logo.svg" alt="">
+                                            </div>
+                                            <div class="text">국방부 쿠폰몰</div>
+                                            <button class="btn icon lg">
+                                                <i class="ico arrow-right-nav050 md"></i>
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </section>
+                           
+                        </div>
+                    </div>
+                </div>
+            <!-- //container -->
+        </div>
+    </body>
+</html>

@@ -171,6 +171,7 @@
             .title {
                 color: $black-100;
                 font-size: 20px;
+                @include ell($line: 2);
             }
             .effective-date {
                 margin-top: 12px;
@@ -179,13 +180,86 @@
         }
         .cont-area {
             padding: 20px 0;
+            overflow: hidden;
         }
         .dummy-content {
             height: 450px;
             border-radius: $border-radius;
             background-color: $navy-020;
         }
+        .comment {
+            .comment-head {
+                font-size: 12px;
+                font-weight: 700;
+                margin-bottom: 10px;
+                .count {
+                    color: $green-060;
+                }
+            }
+        }
+
+        .comment-write {
+            margin-bottom: 30px;
+            .row {
+                gap: 10px;
+                @include flex-center;
+                > * {
+                    flex: 1;
+                }
+                .btn {
+                    width: 80px;
+                    flex: 0 0 auto;
+                }
+            }
+        }
+        textarea {
+            height: 60px;
+            padding: 10px;
+            border: 1px solid #d9dddf;
+            border-radius: $border-radius;
+            resize: none;
+            overflow: auto;
+            &::placeholder {
+                color: $navy-020;
+            }
+        }
     }
+}
+.comment-item {
+    + .comment-item {
+        &::before {
+            content: " ";
+            display: block;
+            height: 7px;
+            border-top: 1px solid $gray-020;
+            background-color: $gray-010;
+            margin: 0 -20px;
+        }
+    }
+}
+.comment-info {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    border-bottom: 1px solid $gray-020;
+    .right {
+        margin-left: auto;
+    }
+    .left {
+        font-size: 12px;
+        font-weight: 500;
+        .date {
+            color: $navy-040;
+            margin-left: 20px;
+        }
+    }
+}
+.comment-text {
+    color: $navy-070;
+    font-size: 14px;
+    font-weight: 500;
+    padding-bottom: 20px;
 }
 
 // 임시
@@ -203,7 +277,7 @@
             height: calc(100% - 40px);
             background-color: $navy-020;
             border-radius: $border-radius;
-            overflow: hidden;
+            overflow: auto;
         }
     }
     .layer-footer {
@@ -215,5 +289,28 @@
                 margin-left: 10px;
             }
         }
+    }
+}
+
+.mall-list {
+    margin-top: 20px;
+    .item {
+        display: flex;
+        align-items: center;
+        height: 96px;
+        padding: 0 24px;
+        border: 1px solid $navy-020;
+        border-radius: $border-radius;
+        .text{
+            font-size: 18px;
+            font-weight: 700;
+            margin-left: 10px;
+        }
+        .btn{
+            margin-left: auto;
+        }
+    }
+    .item + .item {
+        margin-top: 20px;
     }
 }
