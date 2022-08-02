@@ -6,33 +6,32 @@
     .cont {
         padding: 24px 0;
     }
-    .section{
+    .section {
         padding: 20px 0;
     }
-    .section-title{
-        
-        >div{
+    .section-title {
+        > div {
             @include flex-center;
         }
-        .left{
-            h3{
+        .left {
+            h3 {
                 font-size: 16px;
                 font-weight: 700;
             }
-            * + *{
+            * + * {
                 margin-left: 4px;
             }
         }
-        .right{
+        .right {
             margin-left: auto;
         }
-        .btn-link{
+        .btn-link {
             font-size: 14px;
-            font-weight: 400
+            font-weight: 400;
         }
         @include flex-center;
     }
-    .section-cont{
+    .section-cont {
         .ip-group {
             .row {
                 display: flex;
@@ -166,25 +165,55 @@
             }
         }
     }
-    .event-detail{
-        .title-area{
+    .event-detail {
+        .title-area {
             padding-bottom: 20px;
-            .title{
-                color: $black-100 ;
+            .title {
+                color: $black-100;
                 font-size: 20px;
             }
-            .effective-date{
+            .effective-date {
                 margin-top: 12px;
                 color: $navy-040;
             }
         }
-        .cont-area{
+        .cont-area {
             padding: 20px 0;
         }
-        .dummy-content{
+        .dummy-content {
             height: 450px;
             border-radius: $border-radius;
             background-color: $navy-020;
+        }
+    }
+}
+
+// 임시
+.layer-wrap.history {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    .layer-body {
+        padding: 26px 20px;
+        .title {
+            margin-bottom: 10px;
+        }
+        .pdf-viewer {
+            width: 100%;
+            height: calc(100% - 40px);
+            background-color: $navy-020;
+            border-radius: $border-radius;
+            overflow: hidden;
+        }
+    }
+    .layer-footer {
+        .btn {
+            border-radius: 0;
+        }
+        .btn-group {
+            .ico + .text {
+                margin-left: 10px;
+            }
         }
     }
 }

@@ -1,0 +1,20 @@
+<div class="layer-wrap history">
+    <div class="layer-header">
+        <!-- 프리존 반납이란? -->
+        @@include('@@webRoot/include/header.html', { type: "sub_pop", title: "이용내역서" })
+    </div>
+    <div class="layer-body">
+        <h3 class="title">이용내역서</h3>
+        <div class="pdf-viewer">
+            <iframe width="100%" height="100%" src="">pdf viewer area</iframe>
+        </div>
+    </div>
+    <div class="layer-footer">
+        <div class="btn-group">
+            <button type="button" class="btn xl" false="">
+                <i class="ico file-export lg"></i>
+                <span class="text">PDF 파일 전송</span>
+            </button>
+        </div>
+    </div>
+</div>
