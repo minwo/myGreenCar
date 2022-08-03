@@ -15,8 +15,9 @@
         }
         .left {
             h3 {
+                color:$navy-040;
                 font-size: 16px;
-                font-weight: 700;
+                font-weight: 500;
             }
             * + * {
                 margin-left: 4px;
@@ -123,12 +124,16 @@
                     }
                 }
             }
-            .discount-value + p {
+            .discount-desc {
                 margin-top: 8px;
                 color: $navy-070;
                 font-size: 12px;
                 font-weight: normal;
-                // @include ell;
+                p{
+                    &:nth-child(2){
+                        color: $navy-040;
+                    }
+                }
             }
             .effective-date {
                 margin-top: 4px;
@@ -223,6 +228,12 @@
                 color: $navy-020;
             }
         }
+    }
+    .logo-img{
+        height: 80px;
+        margin: 18px 0;
+        justify-content: center;
+        @include flex-center();
     }
 }
 .comment-item {
