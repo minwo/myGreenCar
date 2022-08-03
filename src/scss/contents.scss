@@ -39,6 +39,7 @@
 	margin:20px 0;
 	@include ell(3);
 }
+
 .tmp-guide-box {
 	margin:20px;
 	padding:20px;
@@ -57,6 +58,7 @@
 		font-weight:700;
 	}
 }
+
 .tmp-faq-list {
 	
 	li {
@@ -90,138 +92,4 @@
 			background-color:skyblue;
 		}
 	}
-}
-
-/* main vw test */
-.main{
-	background-color: #f4f4f4;
-	.contents{
-		padding:0 15px;
-	}
-	img{
-		width:100%;
-		height:100%
-	}
-	.block-module{
-		display:flex;
-		.col{
-			flex:1;
-			flex-basis: 37.5%;
-			margin-left:10px;
-			&:first-child{
-				flex-basis: 62.5%;
-				margin:0;
-			}
-		}
-		.box01{
-			width:vw(200);
-			height:vw(240);
-		}
-		.box02{
-			width:vw(200);
-			height:vw(119);
-			margin-top:vw(10);
-		}
-		.box03{
-			width:vw(120);
-			height:vw(115);
-		}
-		.box04{
-			width:vw(120);
-			height:vw(115);
-			margin-top:vw(10);
-		}
-		.box05{
-			width:vw(120);
-			height:vw(119);
-			margin-top:vw(10);
-		}
-	}
-	.banner{
-		margin-top:vw(10);
-	}
-	.menu-module{
-		margin-top:vw(10);
-		.row{
-			&:first-child{
-				display:flex;
-			}
-			.menu-box{
-				flex:1;
-				margin-left:vw(10);
-				padding:vw(60 0 7 0);
-				text-align:center;
-				font-size:vw(11);
-				border-radius: vw(10);
-				font-weight:500;
-				color:#143c56;
-				background-color: #fff;
-				&:first-child{
-					margin-left:0;
-				}
-			}
-		}
-
-		.menu-group{
-			display:flex;
-			margin-top:vw(10);
-			border-radius: vw(10);
-			background-color: #fff;
-			.quick-menu{
-				flex:1;
-				padding:vw(60 0 7 0);
-				text-align:center;
-				font-size:vw(12);
-				font-weight:500;
-				color:#143c56;
-			}
-		}
-	}
-}
-
-.shimmer{
-.wrap{
-	width:400px;
-	border-radius:20px;
-}
-.sm-title{
-	height:20px;
-	margin-top:20px;
-	background-color: #FFF;
-}
-.sm-card{
-	height:200px;
-	background-color: #FFF;
-}
-
-.animate {
-	// transform: skewX(-45deg);
-	animation-duration: 2.2s;
-	animation-fill-mode: forwards;
-	animation-iteration-count: infinite;
-	animation-name: shimmer;
-	animation-timing-function: linear;
-	background: #E5F0FB;
-	background: linear-gradient(to right, #c1dceb 4%, #a3cbe1 25%, #c1dceb 36%);
-	background-size: 1200px 100%;
-}
-
-
-@-webkit-keyframes shimmer {
-	0% {
-		background-position: -100% 0;
-	}
-	100% {
-		background-position: 100% 0;
-	}
-}
-
-@keyframes shimmer {
-	0% {
-		background-position: -1200px 0;
-	}
-	100% {
-		background-position: 1200px 0;
-	}
-}
 }
