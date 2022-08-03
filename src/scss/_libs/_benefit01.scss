@@ -1,12 +1,69 @@
 @charset "UTF-8";
 
+.detail-page-module{
+	.info-tit{
+		color:$navy-040;
+		font-size:$font-sm;
+		line-height:17px;
+		font-weight:500;
+	}
+
+	dl{
+		margin-top:23px;
+		&:first-child{
+			margin-top:10px;
+		}
+		dt,dd{
+			font-size:$font-md;
+			color:$navy-070;
+			font-weight:500;
+			line-height:24px;
+		}
+		dd{
+			color:$navy-040;
+		}
+	}
+}
+
+.benefit{
+	.coupon{
+		// 쿠폰 상세
+		.title-area{
+			margin-top:10px;
+		}
+		.coupon-badge{
+			@include vDom();
+			height:21px;
+			padding:0 12px;
+			font-size:$font-sm;
+			background-color:$navy-010;
+			border-radius:$border-radius-50;
+		}
+		.desc-md{
+			margin-top:10px;
+			font-weight:500;
+		}
+
+	}
+}
+/**/
 
 .layer-wrap{
 	.layer-body{
 		
 		// 쿠폰 이용안내
-		.benefit{
+		.coupon{
 			padding:20px 0;
+
+		}
+		//
+		.coupon-mall{
+			.desc{
+				color:$navy-040;
+			}
+			.agree-group{
+				margin-top:29px;
+			}
 		}
 	}
 }

@@ -8,3 +8,24 @@
 					</div>
 				</div>
 				}
+
+				@@if (type === "coupon"){
+				<div class="bot-btn-fix">
+					<div class="btn-wrap">
+						<!-- column 클레스 적용하면 col 스타일 적용 -->
+						<div class="btn-group">
+							<button type="button" class="btn xl">
+								<i class="ico download-gray000 lg"></i>
+								쿠폰 다운로드
+							</button>
+							<button type="button" class="btn xl" disabled>
+								<i class="ico download-uncheck lg"></i>
+								다운로드 받은 쿠폰
+							</button>
+							<button type="button" class="btn xl" disabled>
+								선착순 마감되었습니다
+							</button>
+						</div>
+					</div>
+				</div>
+				}

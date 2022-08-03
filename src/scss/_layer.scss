@@ -45,7 +45,7 @@ html.is-open, html.is-open body {
 		border-radius: $border-radius-20;
         .layer-header {
             max-height: 66px;
-            padding: 24px 20px 12px;
+            padding: 20px 20px 12px;
             font-size: 18px;
             font-weight: bold;
 
@@ -56,14 +56,11 @@ html.is-open, html.is-open body {
             }
             .layer-close {
                 position: absolute;
-                right: 0;
-                top: 0;
-                width: 66px;
-                height: 66px;
+                right: 20px;
+                top: 20px;
             }
         }
         .layer-body {
-            overflow-y: auto;
             padding: 0 20px;
         }
         .layer-footer {
