@@ -45,6 +45,40 @@
 		}
 
 	}
+
+	// 롯데 임직원 인증
+	.certi-form{
+		margin-bottom:50px;
+		
+		.ip-group:not(.box){
+			position:relative;
+			padding-right:91px;
+			.line{
+				background-color:$navy-020;
+			}
+		}
+		.ip-group{
+			.line{
+				border-color:$navy-020;
+			}
+			.icon-group{
+				color:$navy-020;
+				right:20px;
+			}
+		}
+		.mail-txt{
+			position:absolute;
+			top:27px;
+			right:0;
+			color:$navy-070;
+			font-size:$font-lg;
+			line-height:26px;
+			font-weight:500;
+		}
+		.btn-group{
+			margin-top:20px;
+		}
+	}
 }
 /**/
 

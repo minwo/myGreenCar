@@ -420,6 +420,52 @@ textarea {
 	}
 }
 
+// 약관 & 단순 문구 화면
+.txt-module-page{
+	padding-top:22px;
+
+	.section{
+		margin-top:24px;
+		padding:0 !important;
+
+		&:first-child{
+			margin-top:0;
+		}
+	}
+	.desc-md{
+		margin-top:11px;
+		color:$navy-040;
+		line-height:24px;
+	}
+	.list{
+		margin-top:11px;
+	}
+}
+
+// 토스트 팝업
+.toast-pop{
+	position:fixed;
+	left:0;
+	bottom:94px;
+	width:100%;
+	padding:0 20px;
+	.module{
+		display:flex;
+		align-items:center;
+		min-height:48px;
+		padding:0 20px;
+		opacity:.4;
+		background:rgba(0,0,0,.8);
+		border-radius:10px;
+	}
+	.message{
+		font-size:$font-sm2;
+		color:$gray-000;
+		font-weight:500;
+		line-height:20px;
+	}
+}
+
 $offset: 187;
 // loding bar
 .loading-bar{
