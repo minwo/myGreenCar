@@ -152,7 +152,7 @@ $btn-size: (
 				display:flex;
                 width:100%;
 				flex-basis: map-get($btn-size,"xs","size");
-                margin:5px 0 0;
+                margin:10px 0 0;
 
                 @include btnDrt('col');
             }
