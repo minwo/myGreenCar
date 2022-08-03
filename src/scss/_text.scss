@@ -1,17 +1,16 @@
 @charset "UTF-8";
 
-// title default 24
+// title default 20
 .title{
-	font-size: $font-xl; //24
+	font-size: $font-xl; //20
 
 	&-md{
-		font-size: $font-xl; //20
-	}
-	&-sm{
 		font-size: $font-lg; //18
 	}
-	&-xs{
+	&-sm{
 		font-size:$font-md; //16
+	}
+	&-xs{
 	}
 }
  
