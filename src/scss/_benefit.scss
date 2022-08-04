@@ -15,7 +15,7 @@
         }
         .left {
             h3 {
-                color:$navy-040;
+                color: $navy-040;
                 font-size: 16px;
                 font-weight: 500;
             }
@@ -55,15 +55,22 @@
     }
     .event-list {
         .event-item {
-            display: flex;
-
-            padding: 20px 0;
+            > a {
+                display: flex;
+                padding: 20px 0;
+            }
             .img-area {
                 width: 100px;
                 height: 100px;
+                flex: 0 0 auto;
                 border-radius: $border-radius;
                 background-color: #d9d9d9;
                 overflow: hidden;
+                position: relative;
+                > img {
+                    width: 100%;
+                    height: 100%;
+                }
             }
             .text-area {
                 display: flex;
@@ -81,6 +88,29 @@
                     }
                     .badge {
                         margin-left: 4px;
+                    }
+                }
+            }
+            &.expired {
+                border: 0;
+                .img-area {
+                    &:before {
+                        content: "종료";
+                        display: block;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        color: $gray-000;
+                        font-size: 14px;
+                        font-weight: 500;
+                        border-radius: $border-radius;
+                        border: 1px solid #989b9d;
+                        background-color: rgba($color: $black, $alpha: 0.8);
+                        z-index: 10;
+                        justify-content: center;
+                        @include flex-center;
                     }
                 }
             }
@@ -129,8 +159,8 @@
                 color: $navy-070;
                 font-size: 12px;
                 font-weight: normal;
-                p{
-                    &:nth-child(2){
+                p {
+                    &:nth-child(2) {
                         color: $navy-040;
                     }
                 }
@@ -229,7 +259,7 @@
             }
         }
     }
-    .logo-img{
+    .logo-img {
         height: 80px;
         margin: 18px 0;
         justify-content: center;
