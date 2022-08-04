@@ -444,11 +444,54 @@ textarea {
 
 // 토스트 팝업
 .toast-pop{
+	display:none;
 	position:fixed;
+	top:0;
 	left:0;
-	bottom:94px;
-	width:100%;
-	padding:0 20px;
+	right:0;
+	bottom:0;
+	z-index:15;
+
+	&.center{
+		&::before{
+			display:block;
+			height:100%;
+			content:"";
+			background-color:rgba(0,0,0,.8);
+		}
+		.toast-container{
+			bottom:50%;
+		}
+		.module{
+			opacity:1;
+			background:rgba(64,83,94,.4);
+		}
+
+		&.active{
+			.toast-container{
+				transform:translate(0, 50%);
+			}
+		}
+	}
+
+	&.active{
+		.toast-container{
+			opacity:1;
+			transform:translate(0);
+		}
+	}
+
+	.toast-container{
+		position:fixed;
+		left:0;
+		bottom:94px;
+		width:100%;
+		padding:0 20px;
+		opacity:0;
+		transform:translate(0, 100%);
+		transition:all .3s ease-in-out;
+	}
+
 	.module{
 		display:flex;
 		align-items:center;
