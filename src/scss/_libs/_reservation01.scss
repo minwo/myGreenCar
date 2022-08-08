@@ -258,8 +258,10 @@
 
 	// 편도로 변경하기
 	.one-way{
-		padding-top:30px;
-
+		padding-top:35px;
+		.title{
+			margin-bottom:0;
+		}
 		.link-box{
 			margin-top:30px;
 			background-size:100% 100%;
@@ -271,6 +273,7 @@
 			}
 
 			&.free{
+				margin-top:25px;
 				background-image: url(#{$url-content}bg_oneway_free.png);
 
 				.emp{
@@ -293,7 +296,7 @@
 			color:$navy-070;
 		}
 
-		.desc-xl{
+		.desc-md{
 			color:$navy-040;
 		}
 
@@ -306,17 +309,16 @@
 	// 프리존 반납 & 그린존 반납
 	.search-result{
 		li{
-			border-bottom:1px solid #F3F4F5;
+			border-bottom:1px solid $gray-020;
 		}
 		a,.item{
 			display:block;
-			padding:19px 0;
+			padding:17px 0;
 		}
 		.keyword{
-			font-size:$font-lg;
-			font-weight:700;
+			font-size:$font-md;
+			font-weight:500;
 			color:$navy-070;
-			line-height:26px;
 			@include ell;
 
 			strong{
@@ -324,9 +326,9 @@
 			}
 		}
 		.address{
+			margin-top:4px;
 			font-size:$font-sm2;
 			color:$navy-040;
-			line-height:20px;
 			@include ell;
 		}
 
@@ -416,15 +418,15 @@
 
 	&.rsv-one-way{
 		.one-way{
-			padding-top:20px;
+			margin-top:6px;
 			.desc {
-				margin-top:18px;
 				font-size:14px;
 				line-height:20px;
 				color:#8C989E;
 
 				&-xl{
 					margin-bottom:0;
+					font-weight:500;
 				}
 			}
 
@@ -435,7 +437,7 @@
 		}
 		
 		.layer-footer{
-			padding:28px 20px 0;
+			padding:18px 20px 0;
 		}
 	}
 }

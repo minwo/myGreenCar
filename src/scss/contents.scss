@@ -58,38 +58,3 @@
 		font-weight:700;
 	}
 }
-
-.tmp-faq-list {
-	
-	li {
-		display:flex;
-		flex-direction:column;
-		border-top:1px solid #f3f4f5;
-		button {
-			position:relative;
-			height:55px;
-			font-size:$font-md;
-			color:$navy-040;
-			text-align:left;
-			@include ell;
-
-			.ico{
-				display:inline-flex;
-				position:absolute;
-				top:50%;
-				right:0;
-				transform:translate(0,-50%);
-				transition: all .3s;
-			}
-		}
-		&.active button {
-			.ico{
-				transform:translate(0,-50%) rotate(180deg);
-			}
-		}
-		[data-box-type="accordion"] div {
-			padding:20px;
-			background-color:skyblue;
-		}
-	}
-}

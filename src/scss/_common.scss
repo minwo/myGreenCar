@@ -196,7 +196,7 @@ textarea {
 			.head{
 				position:relative;
 				display: flex;
-				height:65px;
+				height:56px;
 				justify-content: center;
 				align-items: center;
 				border-bottom:1px solid #D9D9D9;
@@ -372,6 +372,40 @@ textarea {
 }
 
 /* accordion */
+.tmp-faq-list {
+	
+	li {
+		display:flex;
+		flex-direction:column;
+		border-top:1px solid #f3f4f5;
+		button {
+			position:relative;
+			height:55px;
+			font-size:$font-md;
+			color:$navy-040;
+			text-align:left;
+			@include ell;
+
+			.ico{
+				display:inline-flex;
+				position:absolute;
+				top:50%;
+				right:0;
+				transform:translate(0,-50%);
+				transition: all .3s;
+			}
+		}
+		&.active button {
+			.ico{
+				transform:translate(0,-50%) rotate(180deg);
+			}
+		}
+		[data-box-type="accordion"] div {
+			padding:20px;
+			background-color:skyblue;
+		}
+	}
+}
 [data-box-type="accordion"] {
 	overflow:hidden;
 	> div {
@@ -389,7 +423,7 @@ textarea {
 	text-align:center;
 
 	.desc{
-		margin-top:29px;
+		margin-top:25px;
 		font-size:$font-lg;
 		line-height:26px;
 	}

@@ -76,7 +76,7 @@ $btn-size: (
 
 	&.cancel{
 		// 변수순서: border-color, background-color, font-color
-		@include buttonType ($navy-020, $gray-000, $navy-070);
+		@include buttonType ($navy-020, $gray-000, $navy-030);
 	}
 
 	&.link{
@@ -152,7 +152,7 @@ $btn-size: (
 				display:flex;
                 width:100%;
 				flex-basis: map-get($btn-size,"xs","size");
-                margin:10px 0 0;
+                margin:18px 0 0;
 
                 @include btnDrt('col');
             }
