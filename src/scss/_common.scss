@@ -162,7 +162,7 @@ input[type="number"]::-webkit-inner-spin-button {
 html,
 body {
     height: 100%;
-}
+} 
 
 body,
 button,
@@ -170,7 +170,7 @@ input,
 select,
 textarea {
     color:$navy-070;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 400;
     font-family: 'Noto Sans KR', sans-serif;
     letter-spacing: -.5px;
@@ -432,7 +432,7 @@ textarea {
 			margin-top:0;
 		}
 	}
-	.desc-md{
+	.desc-xl{
 		margin-top:11px;
 		color:$navy-040;
 		line-height:24px;

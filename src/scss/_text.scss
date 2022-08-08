@@ -2,12 +2,12 @@
 
 // title default 20
 .title{
-	font-size: $font-xl; //20
-	font-weight:700;
+	font-size: $font-lg; //18
+	font-weight:500;
 
 	&-md{
 		font-size: $font-lg; //18
-		font-weight:700;
+		font-weight:500;
 	}
 	&-sm{
 		font-size:$font-md; //16
@@ -23,17 +23,20 @@
 
 	&-xs{
 		font-size: $font-xs; //10
+		line-height:12px;
 	}
 	&-sm{
 		font-size: $font-sm; //12
+		line-height:16px;
 	}
 
 	&-md{
 		font-size: $font-md; //16
+		line-height:24px;
 	}
 	&-xl{
-		font-size: $font-xl; //20
-		line-height: 32px;
+		font-size: $font-lg; //18
+		line-height: 24px;
 	}
 }
 
