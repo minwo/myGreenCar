@@ -257,6 +257,12 @@
 		z-index:-1;
 		width:100%;
 		border-radius: $border-radius;
+
+		// .row.error{
+		// 	.ip-txt{
+		// 		color: $navy-070;
+		// 	}
+		// }
 	}
 
 	&:not(.box){
@@ -285,6 +291,9 @@
 		}
 
 		& .error{
+			.ip-txt{
+				color: $validation-error;
+			}
 			.ip-txt ~ .line{
 				&:before{
 					width:100%;

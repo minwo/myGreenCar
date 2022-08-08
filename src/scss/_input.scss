@@ -6,8 +6,7 @@ $line-color-active: #5CD79A !default;
 $validation-error: #D7535C !default;
 $line-color-disabled: #989898 !default;
 $animation: all .2s ease;
-
-
+ 
 .ip-group {
 	margin-top:25px;
 	&:first-child{
@@ -50,9 +49,6 @@ $animation: all .2s ease;
 
 	/* error */
 	.row.error{
-		.ip-txt{
-			color: $validation-error;
-		}
 		& + .error-txt{
 			display:block;
 			margin-top:5px;
@@ -69,7 +65,7 @@ input[type="number"],
 input[type="email"] {
 	height:$input-height;
 	padding:0 15px 0 0;
-	color:#000;
+	color:$navy-070;
 
 	@include ell;
 	
