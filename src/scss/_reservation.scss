@@ -571,6 +571,10 @@ hr.divider {
     &.green{
         background-color: $green-060;
     }
+    &.line{
+        color: $navy-070;
+        border: 1px solid $navy-020;
+    }
     &.sm {
         height: 16px;
         min-width: 40px;
@@ -580,10 +584,10 @@ hr.divider {
         letter-spacing: 0.05rem;
     }
     &.md {
-        height: 22px;
-        padding: 0 12px;
+        height: 18px;
+        padding: 0 6px;
         font-size: 10px;
-        font-weight: 700;
+        font-weight: 400;
     }
 }
 
