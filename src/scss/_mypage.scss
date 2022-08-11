@@ -147,8 +147,7 @@
                         border: 0;
                         background-image: url(#{$url-content}ic_car_move.svg);
                         margin: 4px auto;
-                        top: 0
-                        ;
+                        top: 0;
                     }
                     &::after {
                         border-top: 4px solid $green-060;
@@ -201,15 +200,54 @@
     }
 }
 
+.layer-body {
+    .wrap {
+        .img-area {
+            margin: 16px 0;
+            &.al-center {
+                justify-content: center;
+                @include flex-center;
+            }
+        }
+    }
+}
 
-.layer-body{
-    .wrap{
-        .img-area{
-            margin: 16px 0 ;
-           &.al-center{
+.level-up {
+    .level-badge {
+        margin: 16px 0;
+        justify-content: center;
+        @include flex-center;
+        .img-wrap {
+            width: 118px;
+            height: 124px;
+            background-image: url(#{$url-content}flakes.svg);
+            background-repeat: no-repeat;
             justify-content: center;
             @include flex-center;
-           } 
+            > img {
+                width: 88px;
+                height: 88px;
+            }
         }
+    }
+    .box{
+        padding: 20px;
+        background-color: $navy-020;
+        .desc-list{
+            li{
+                display: inline-flex;
+                justify-content: space-between;
+                width: 100%;
+                .name{
+                    width: initial;
+                }
+            }
+            li + li{
+                margin-top:16px
+            }
+        }
+    }
+    .box + p{
+        margin-top: 16px;
     }
 }
