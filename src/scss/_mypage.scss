@@ -2,47 +2,201 @@
 
 @import "_libs/_mypage01";
 
-
 // 등급안내
-.level-guide{
-    li{
-        padding: 16px 0 ;
+.level-guide {
+    li {
+        padding: 16px 0;
         border-bottom: 1px solid $navy-010;
         @include flex-center();
-        .level-desc{
+        .level-desc {
             margin-left: 10px;
-            strong{
+            strong {
                 font-size: 14px;
                 font-weight: 500;
-                .badge{
+                .badge {
                     margin-right: 4px;
                 }
             }
-            .criteria{
+            .criteria {
                 margin-top: 8px;
                 color: $navy-040;
                 font-size: 10px;
             }
-            .benefit{
+            .benefit {
                 margin-top: 4px;
                 color: $navy-040;
                 font-size: 12px;
-                em{
+                em {
                     color: $navy-070;
                     font-weight: 500;
                     margin-right: 4px;
                 }
-                p + p{
+                p + p {
                     margin-top: 4px;
                 }
             }
-            
         }
     }
-  
-    .notice{
+
+    .notice {
         color: $navy-040;
         font-size: 14px;
         margin: 16px 0 60px;
+    }
+}
+
+//내 이동거리
+.my-mileage {
+    .mileage-img {
+        justify-content: center;
+        @include flex-center;
+    }
+    .mileage-desc {
+        text-align: center;
+        p {
+            color: $navy-040;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        .total-mileage {
+            margin-top: 4px;
+            color: $navy-070;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .percent {
+            margin-top: 16px;
+            color: $navy-070;
+            font-size: 16px;
+            font-weight: 500;
+            span {
+                color: $green-060;
+                margin-left: 4px;
+            }
+        }
+    }
+    .navigation {
+        margin-top: 24px;
+        overflow-x: scroll;
+        ol {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: table;
+            table-layout: fixed;
+            width: 100%;
+            color: $navy-020;
+            padding: 40px 0 20px;
+
+            .milestone {
+                position: relative;
+                display: table-cell;
+                width: 72px;
+                color: $navy-070;
+                font-size: 12px;
+                font-weight: 500;
+                text-align: center;
+                .pin {
+                    position: absolute;
+                    top: -40px;
+                    left: 21px;
+                }
+                span {
+                    display: block;
+                    font-size: 12px;
+                    color: $navy-070;
+                    font-weight: 500;
+                }
+
+                .dot {
+                    content: attr(data-step);
+                    display: block;
+                    width: 10px;
+                    height: 10px;
+                    margin: 22px auto;
+                    background: white;
+                    border: 2px solid $navy-020;
+                    text-align: center;
+                    margin-bottom: 0.25em;
+                    line-height: 10px;
+                    border-radius: 100%;
+                    box-sizing: border-box;
+                    position: relative;
+                    top: -10px;
+                    z-index: 1000;
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    width: 100%;
+                    border-top: 4px dotted $navy-020;
+                    top: 30px;
+                    left: 50%;
+                    z-index: -1;
+                }
+
+                &.start {
+                    position: relative;
+                    .dot {
+                        content: " ";
+                        display: block;
+                        width: 24px;
+                        height: 24px;
+                        border: 0;
+                        background-image: url(#{$url-content}ic_car_move.svg);
+                        margin: 4px auto;
+                        top: 0
+                        ;
+                    }
+                    &::after {
+                        border-top: 4px solid $green-060;
+                    }
+                }
+                &.done {
+                    .dot {
+                        background: $green-060;
+                        border: 2px solid $green-060;
+                    }
+                    &::after {
+                        border-top: 4px solid $green-060;
+                    }
+                }
+                &.current {
+                    &:before {
+                        content: " ";
+                        display: block;
+                        width: 30px;
+                        height: 32px;
+                        background-image: url(#{$url-content}gz_pin.svg);
+                        position: absolute;
+                        top: -40px;
+                        left: 22px;
+                    }
+                    .dot {
+                        background: $green-060;
+                        border: 2px solid $green-060;
+                    }
+                    &::after {
+                        border-top: 4px solid $navy-020;
+                    }
+                }
+                &.finish {
+                    .dot {
+                        background: $green-060;
+                        border: 2px solid $green-060;
+                    }
+                    &::after {
+                        border-top: 0;
+                    }
+                }
+                .date-reached {
+                    color: $navy-040;
+                    font-size: 12px;
+                    margin-top: 2px;
+                }
+            }
+        }
     }
 }
