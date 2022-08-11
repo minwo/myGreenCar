@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('@@webRoot/include/head.html')
+    </head>
+    <body>
+        <div id="wrap">
+            <!-- header -->
+            @@include('@@webRoot/include/header.html', { type: "sub_02", title: "내 포인트" })
+            <!-- //header -->
+
+            <!-- container -->
+            <section id="container">
+                <div class="contents">
+                    <section>
+                        <div class="section-title">
+                            <h3>보유 포인트</h3>
+                        </div>
+                        <div class="section-cont"></div>
+                    </section>
+                    <hr class="divider" />
+                    <section>
+                        <div class="btn-tab">
+                            <div class="scroll-area">
+                                <button type="button" class="btn line xs active">전체</button>
+                                <button type="button" class="btn line xs">적립</button>
+                                <button type="button" class="btn line xs">사용</button>
+                                <button type="button" class="btn line xs">만료</button>
+                            </div>
+                        </div>
+                        <div class="point-history">
+                            <ul>
+                                <li class="minus">
+                                    <div class="left">
+                                        <span>사용</span>
+                                        <span>2022.04.23</span>
+                                    </div>
+                                    <div class="right">
+                                        <span>-50P</span>
+                                        <span class="balance" >21P</span>
+                                    </div>
+                                </li>
+                                <li class="plus">
+                                    <div class="left">
+                                        <span>스마트그린(3%) 이용 적립</span>
+                                        <span>2022.03.20</span>
+                                    </div>
+                                    <div class="right">
+                                        <span>+71P</span>
+                                        <span>21P</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+            </section>
+            <!-- //container -->
+        </div>
+    </body>
+</html>
