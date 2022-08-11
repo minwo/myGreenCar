@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('@@webRoot/include/head.html')
+    </head>
+    <body>
+        <div id="wrap">
+            <!-- header -->
+            @@include('@@webRoot/include/header.html', {
+                type: "sub_02",
+                title: "내 쿠폰"
+            })
+            <!-- //header -->
+
+            <!-- container -->
+            <section id="container">
+                <div class="contents">
+                    <div class="cont coupon">
+                        <section class="section">
+                            <div class="section-cont">
+                                <div class="ip-group">
+                                    <div class="row">
+                                        <input type="text" placeholder="쿠폰 번호 입력" />
+                                        <button class="btn primary md"><span class="text">쿠폰등록</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <hr class="divider" />
+                        <section class="section">
+                            <div class="section-title">
+                                <div class="left">
+                                    <button class="btn icon md">
+                                        <i class="ico info lg"></i>
+                                    </button>
+                                    <h3>쿠폰 사용 유의사항</h3>
+                                </div>
+                            </div>
+                            <div class="section-cont">
+                                <div class="coupon-list">
+                                    <div class="coupon-item">
+                                        <div class="discount-type">비율할인</div>
+                                        <div class="discount-value">
+                                            <span>50% 할인</span>
+                                            <span>-6,865원</span>
+                                        </div>
+                                        <p>[매일] 월화수목금토일 언제나 50% 할인</p>
+                                        <div class="effective-date">
+                                            <span class="date">2022.04.01 ~ 2022.04.30</span>
+                                            <span class="badge pink sm">D-7</span>
+                                        </div>
+                                    </div>
+                                    <div class="coupon-item">
+                                        <div class="discount-type">정액할인</div>
+                                        <div class="discount-value">
+                                            <span>2,000원 할인</span>
+                                            <span>-2,000원</span>
+                                        </div>
+                                        <p>금연 서약한 당신을 위해!</p>
+                                        <div class="effective-date">
+                                            <span class="date">2022.04.01 ~ 2022.04.30</span>
+                                            <span class="badge green sm">D-35</span>
+                                        </div>
+                                    </div>
+                                    <div class="coupon-item expired">
+                                        <div class="discount-type">비율할인</div>
+                                        <div class="discount-value">
+                                            <span>50% 할인</span>
+                                            <span>-6,865원</span>
+                                        </div>
+                                        <p>[매일] 월화수목금토일 언제나 50% 할인</p>
+                                        <div class="effective-date">
+                                            <span class="date">2022.04.01 ~ 2022.04.30</span>
+                                            <span class="badge pink sm">D-7</span>
+                                        </div>
+                                    </div>
+                                    <div class="coupon-item">
+                                        <div class="discount-type">비율할인</div>
+                                        <div class="discount-value">
+                                            <span>50% 할인</span>
+                                            <span>-6,865원</span>
+                                        </div>
+                                        <p>[매일] 월화수목금토일 언제나 50% 할인</p>
+                                        <div class="effective-date">
+                                            <span class="date">2022.04.01 ~ 2022.04.30</span>
+                                            <span class="badge green sm">D-365</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <button class="btn-filter">
+                                <i class="ico filter md"></i>
+                                <span class="text">혜택순</span>
+                            </button> -->
+                        </section>
+                    </div>
+                </div>
+            </section>
+            <!-- //container -->
+        </div>
+    </body>
+</html>
