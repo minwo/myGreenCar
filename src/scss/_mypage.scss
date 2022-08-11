@@ -172,7 +172,7 @@
                         background-image: url(#{$url-content}gz_pin.svg);
                         position: absolute;
                         top: -40px;
-                        left: 22px;
+                        left: calc(50% - 15px);
                     }
                     .dot {
                         background: $green-060;
@@ -197,6 +197,19 @@
                     margin-top: 2px;
                 }
             }
+        }
+    }
+}
+
+
+.layer-body{
+    .wrap{
+        .img-area{
+            margin: 16px 0 ;
+           &.al-center{
+            justify-content: center;
+            @include flex-center;
+           } 
         }
     }
 }
