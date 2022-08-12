@@ -259,8 +259,9 @@
         font-size: 12px;
         font-weight: 500;
     }
-    .total-point{
+    .point-summary{
         padding: 24px 0;
+        border-bottom: 1px solid $navy-020;
         .title{
             margin-bottom: 16px;
         }
@@ -272,9 +273,12 @@
 
         }
     }
+    .point-summary + .list{
+        margin: 16px 0;
+    }
     .row{
         padding: 20px 0;
-        border-top: 1px solid $navy-020;
+        
         @include flex-center;
         > div{
             @include flex-center;

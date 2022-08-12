@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('@@webRoot/include/head.html')
+    </head>
+    <body>
+        <div id="wrap">
+            <!-- header -->
+            @@include('@@webRoot/include/header.html', { type: "sub_02", title: "소멸 예정 포인트" })
+            <!-- //header -->
+
+            <!-- container -->
+            <section id="container">
+                <div class="contents">
+                    <div class="point-history">
+                        <section>
+                            <div class="point-summary">
+                                <h3 class="title">이달 소멸 예정 포인트</h3>
+                                <div class="value">
+                                    <span>1,000,000P </span>
+                                </div>
+                            </div>
+                            <ul class="list xs">
+                                <li>이달에 유효기간이 만료되어 소멸 예정인 포인트입니다.</li>
+                                <li>유효기간 내에 사용되지 않은 포인트는 만료 시 소멸됩니다.</li>
+                                <li>적립된 포인트를 사용할 경우, 사용 기간이 가까운 포인트가 먼저 사용됩니다.</li>
+                                <li>사용한 포인트는 익일 소멸 예정 포인트에 반영됩니다.</li>
+                            </ul>
+                        </section>
+                        <hr class="divider" />
+                        <section>
+                            <div class="point-history-list">
+                                <ul>
+                                    <li class="minus">
+                                        <div class="left">
+                                            <span class="desc">결제정보등록 적립</span>
+                                            <span>2022.03.01 ~ 2022.04.01</span>
+                                        </div>
+                                        <div class="right">
+                                            <span class="use">-1,000P</span>
+                                        </div>
+                                    </li>
+                                    <li class="minus">
+                                        <div class="left">
+                                            <span class="desc">면허정보등록 적립</span>
+                                            <span>2022.03.01 ~ 2022.04.01</span>
+                                        </div>
+                                        <div class="right">
+                                            <span class="use">-1,000P</span>
+                                        </div>
+                                    </li>
+                                    <li class="minus">
+                                        <div class="left">
+                                            <span class="desc">마케팅정보등록 적립</span>
+                                            <span>2022.03.01 ~ 2022.04.01</span>
+                                        </div>
+                                        <div class="right">
+                                            <span class="use">-1,000P</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </section>
+            <!-- //container -->
+        </div>
+    </body>
+</html>

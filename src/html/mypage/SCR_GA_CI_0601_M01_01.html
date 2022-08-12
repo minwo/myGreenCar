@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('@@webRoot/include/head.html')
+    </head>
+    <body>
+        <div id="wrap">
+            <!-- header -->
+            @@include('@@webRoot/include/header.html', { type: "sub_02", title: "내 포인트" })
+            <!-- //header -->
+
+            <!-- container -->
+            <section id="container">
+                <div class="contents">
+                    <div class="point-history">
+                        <section>
+                            <div class="point-summary">
+                                <h3 class="title">보유 포인트</h3>
+                                <div class="value">
+                                    <span>1,000,000P </span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="left">
+                                    <h3 class="title">소멸 예정 포인트</h3>
+                                    <button class="btn icon md">
+                                        <i class="ico info lg"></i>
+                                    </button>
+                                </div>
+                                <div class="right">
+                                    <span class="value">-100P</span>
+                                    <span>
+                                        <button class="btn icon sm">
+                                            <i class="ico arrow-right-nav050 xs"></i>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                        </section>
+                        <hr class="divider" />
+                        <section>
+                            <div class="btn-tab">
+                                <div class="scroll-area">
+                                    <button type="button" class="btn line xs active">전체</button>
+                                    <button type="button" class="btn line xs">적립</button>
+                                    <button type="button" class="btn line xs">사용</button>
+                                    <button type="button" class="btn line xs">만료</button>
+                                </div>
+                            </div>
+                            <div class="point-history-list">
+                                <div class="no-data">
+                                    <p class="desc">표시할 내용이 없습니다</p>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </section>
+            <!-- //container -->
+        </div>
+    </body>
+</html>
