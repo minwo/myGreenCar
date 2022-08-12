@@ -252,42 +252,105 @@
     }
 }
 
+// 내 포인트
 .point-history {
-    li {
+    h3{
+        color:$navy-070;
+        font-size: 12px;
+        font-weight: 500;
+    }
+    .total-point{
         padding: 24px 0;
+        .title{
+            margin-bottom: 16px;
+        }
+        .value{
+            color: $green-060;
+            font-size: 22px;
+            font-weight: 600;
+            text-align: right;
+
+        }
+    }
+    .row{
+        padding: 20px 0;
+        border-top: 1px solid $navy-020;
         @include flex-center;
-        >div{
-            span{
-                display: block;
-            }
+        > div{
+            @include flex-center;
         }
         .right{
             margin-left: auto;
-            text-align: right;
-            * + *{
-                margin-top: 8px;
+            .value{
+                font-size: 16px;
+                font-weight: 600;
             }
         }
-        &:before {
-            content: " ";
-            display: block;
-            width: 10px;
-            height: 10px;
-            margin-right: 20px;
-            background-repeat: no-repeat;
-        }
-        &.plus {
-            &:before {
-                background-image: url(#{$url-ico}icon_plus_gray.svg);
-            }
-        }
-        &.minus {
-            &:before {
-                background-image: url(#{$url-ico}icon_minus_gray.svg);
-            }
+        .btn{
+            margin-left: 4px;
         }
     }
-    li + li{
-        border-top: 1px solid $navy-020;
+    .point-history-list {
+        li {
+            padding: 24px 0;
+            @include flex-center;
+            > div {
+                * + * {
+                    margin-top: 8px;
+                }
+                span {
+                    display: block;
+                }
+            }
+            .left {
+                color: $navy-040;
+                font-size: 14px;
+                .desc {
+                    color: $navy-070;
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+            }
+            .right {
+                margin-left: auto;
+                text-align: right;
+
+                .get {
+                    color: $green-060;
+                    font-size: 16px;
+                    font-weight: 600;
+                }
+                .use {
+                    color: $navy-070;
+                    font-size: 16px;
+                    font-weight: 600;
+                }
+                .balance {
+                    color: $navy-040;
+                    font-size: 14px;
+                }
+            }
+            &:before {
+                content: " ";
+                display: block;
+                width: 10px;
+                height: 10px;
+                margin-right: 20px;
+                background-repeat: no-repeat;
+            }
+            &.plus {
+                &:before {
+                    background-image: url(#{$url-ico}icon_plus_gray.svg);
+                }
+            }
+            &.minus {
+                &:before {
+                    background-image: url(#{$url-ico}icon_minus_gray.svg);
+                }
+            }
+        }
+        li + li {
+            border-top: 1px solid $navy-020;
+        }
     }
 }

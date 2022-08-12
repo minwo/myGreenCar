@@ -9,7 +9,15 @@
     .section {
         padding: 20px 0;
     }
-   
+   .section-title{
+    @include flex-center();
+    >div{
+        @include flex-center();
+    }
+    .right{
+        margin-left: auto;
+    }
+   }
     .section-cont {
         .ip-group {
             .row {

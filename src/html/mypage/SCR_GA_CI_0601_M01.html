@@ -12,47 +12,100 @@
             <!-- container -->
             <section id="container">
                 <div class="contents">
-                    <section>
-                        <div class="section-title">
-                            <h3>보유 포인트</h3>
-                        </div>
-                        <div class="section-cont"></div>
-                    </section>
-                    <hr class="divider" />
-                    <section>
-                        <div class="btn-tab">
-                            <div class="scroll-area">
-                                <button type="button" class="btn line xs active">전체</button>
-                                <button type="button" class="btn line xs">적립</button>
-                                <button type="button" class="btn line xs">사용</button>
-                                <button type="button" class="btn line xs">만료</button>
+                    <div class="point-history">
+                        <section>
+                            <div class="total-point">
+                                <h3 class="title">보유 포인트</h3>
+                                <div class="value">
+                                    <span>1,000,000P </span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="point-history">
-                            <ul>
-                                <li class="minus">
-                                    <div class="left">
-                                        <span>사용</span>
-                                        <span>2022.04.23</span>
-                                    </div>
-                                    <div class="right">
-                                        <span>-50P</span>
-                                        <span class="balance" >21P</span>
-                                    </div>
-                                </li>
-                                <li class="plus">
-                                    <div class="left">
-                                        <span>스마트그린(3%) 이용 적립</span>
-                                        <span>2022.03.20</span>
-                                    </div>
-                                    <div class="right">
-                                        <span>+71P</span>
-                                        <span>21P</span>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </section>
+                            <div class="row">
+                                <div class="left">
+                                    <h3 class="title">소멸 예정 포인트</h3>
+                                    <button class="btn icon md">
+                                        <i class="ico info lg"></i>
+                                    </button>
+                                </div>
+                                <div class="right">
+                                    <span class="value">-100P</span>
+                                    <span>
+                                        <button class="btn icon sm">
+                                            <i class="ico arrow-right-nav050 xs"></i>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                        </section>
+                        <hr class="divider" />
+                        <section>
+                            <div class="btn-tab">
+                                <div class="scroll-area">
+                                    <button type="button" class="btn line xs active">전체</button>
+                                    <button type="button" class="btn line xs">적립</button>
+                                    <button type="button" class="btn line xs">사용</button>
+                                    <button type="button" class="btn line xs">만료</button>
+                                </div>
+                            </div>
+                            <div class="point-history-list">
+                                <ul>
+                                    <li class="minus">
+                                        <div class="left">
+                                            <span class="desc">사용</span>
+                                            <span>2022.04.23</span>
+                                        </div>
+                                        <div class="right">
+                                            <span class="use">-50P</span>
+                                            <span class="balance">21P</span>
+                                        </div>
+                                    </li>
+                                    <li class="plus">
+                                        <div class="left">
+                                            <span class="desc">스마트그린(3%) 이용 적립</span>
+                                            <span>2022.03.20</span>
+                                            <span>유효기간 : ~2022.03.20</span>
+                                        </div>
+                                        <div class="right">
+                                            <span class="get">+71P</span>
+                                            <span class="balance">21P</span>
+                                        </div>
+                                    </li>
+                                    <li class="plus">
+                                        <div class="left">
+                                            <span class="desc">차량사진전송 적립</span>
+                                            <span>2022.03.20</span>
+                                            <span>유효기간 : ~2022.03.20</span>
+                                        </div>
+                                        <div class="right">
+                                            <span class="get">+1,000,000P</span>
+                                            <span class="balance">+1,000,000P</span>
+                                        </div>
+                                    </li>
+                                    <li class="minus">
+                                        <div class="left">
+                                            <span class="desc">사용</span>
+                                            <span>2022.04.23</span>
+                                        </div>
+                                        <div class="right">
+                                            <span class="use">-50P</span>
+                                            <span class="balance">21P</span>
+                                        </div>
+                                    </li>
+                                    <li class="plus">
+                                        <div class="left">
+                                            <span class="desc">결제정보등록 적립</span>
+                                            <span>2022.03.20</span>
+                                            <span>유효기간 : ~2022.03.20</span>
+                                        </div>
+                                        <div class="right">
+                                            <span class="get">+1,000P</span>
+                                            <span class="balance">1,000P</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
                 </div>
             </section>
             <!-- //container -->
