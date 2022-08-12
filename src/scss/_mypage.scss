@@ -143,13 +143,11 @@
                         width: 24px;
                         height: 24px;
                         border: 0;
-                        background-image: url(#{$url-content}ic_car_move.svg);
+                        background: url(#{$url-content}ic_car_move.svg) center center no-repeat !important;
                         margin: 4px auto;
                         top: 0;
                     }
-                    &::after {
-                        border-top: 4px solid $green-060;
-                    }
+                    
                 }
                 &.done {
                     .dot {
