@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	@@include('@@webRoot/include/head.html')
+	<script src="/js/swiper.min.js"></script>
+</head>
+
+<body>
+	<div id="wrap">
+		<!-- header -->
+		@@include('@@webRoot/include/header.html', {type: "sub_01", title:"내등급"})
+		<!-- //header -->
+
+		<!-- container -->
+		<section id="container">
+			<div class="contents">
+
+				<div class="mypage">
+
+					<div class="my-lv">
+						<section class="section">
+							<div class="rating">
+								<button class="btn-link" type="button">
+									등급안내
+									<i class="ico arrow-right-nav050 xs"></i>
+								</button>
+								<div class="ui-svg-chart">
+									<div class="circle-progress-wrap">
+										<svg class="circle-progress" width="182" height="182">
+											<circle class="frame" cx="91" cy="91" r="84" stroke-width="14" />
+											<circle class="circle" cx="91" cy="91" r="84" stroke-width="14" />
+										</svg>
+									</div>
+									<span class="rating-badge"><img src="/images/contents/level_0.svg" alt=""></span>
+									<div class="txt-module">
+										<span class="txt-lv">Lv.0</span>
+										<strong class="txt">스타터</strong>
+									</div>
+								</div>
+
+								<div class="lvup-info">
+									<div class="group">
+										<p class="tip-txt">다음 등급UP까지 남은 시간</p>
+										<p class="time-remaining">120시간 23분</p>
+										<p class="rental">누적 대여시간 기준: 72시간 ~ 150시간 </p>
+									</div>
+									<div class="grid-flex">
+										<div class="flex">
+											<p class="dt">총 주행시간</p>
+											<div class="value">1시간 37분</div>
+										</div>
+										<div class="flex">
+											<p class="dt">총 주행거리</p>
+											<div class="value">2km</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+
+						<hr class="divider">
+						<section class="section">
+							<div class="title-area">
+								<a href="#" class="title-sm">
+									내 이동거리 
+									<i class="ico arrow-right-nav040 xs"></i>
+								</a>
+							</div>
+							<div class="distance">
+								<div class="gauge">
+									<!-- 퍼센트 게이지 style width ex 50% -->
+									<div class="per"></div>
+									<div class="point home">
+										<span class="name">우리집</span>
+										<span class="marker"></span>
+									</div>
+									<div class="point center">
+										<span class="name">상해</span>
+										<!-- active 클레스 적용 -->
+										<span class="marker active"></span>
+									</div>
+									<div class="point last">
+										<span class="name">대만</span>
+										<!-- active 클레스 적용 -->
+										<span class="marker"></span>
+									</div>
+								</div>
+
+								<p class="desc-md">
+									지구의 <span class="per">52%</span>를 달리고 있습니다.
+								</p>
+							</div>
+						</section>
+
+						<hr class="divider">
+						<section class="section mission">
+							<p class="desc-md">
+								1개의 미션만 완수하면, 골드1로 등급 UP 되시네요 :)
+							</p>
+							<div class="btn-group">
+								<button type="button" class="btn">미션확인 <i class="ico arrow-right-gray000 xs"></i></button>
+							</div>
+						</section>
+
+						<hr class="divider">
+						<section class="section membership">
+							<div class="title-area">
+								<a href="#" class="title-sm">
+									멤버십 유의사항 
+									<i class="ico arrow-right-nav040 xs"></i>
+								</a>
+							</div>
+						</section>
+
+						<hr class="divider">
+						<div class="benefit">
+							<section class="section">
+								<div class="title-area">
+									<a href="#" class="title-sm">
+										멤버십 혜택 
+										<i class="ico arrow-right-nav040 xs"></i>
+									</a>
+								</div>
+
+								<div class="coupon-list">
+									<div class="coupon-item">
+										<div class="discount-type">비율할인</div>
+										<div class="discount-value">
+											<span>50% 할인</span>
+										</div>
+										<div class="discount-desc">
+											<p>[매일]월화수목금토일 언제나 50% 할인</p>
+											<p> 주중 주말 할인/1시간/차종 제한/지역제한</p>
+										</div>
+										<div class="effective-date">
+											<span class="date">2022.04.01 ~ 2022.04.30</span>
+											<span class="badge pink sm">D-7</span>
+										</div>
+										<button class="btn icon md">
+											<i class="ico download lg"></i>
+										</button>
+									</div>
+									<div class="coupon-item expired">
+										<div class="discount-type">정액할인</div>
+										<div class="discount-value">
+											<span>2,000원 할인</span>
+										</div>
+										<div class="discount-desc">
+											<p>금연 서약한 당신을 위해</p>
+											<p> 주중 주말 할인/1시간/차종 제한/지역제한</p>
+										</div>
+										<div class="effective-date">
+											<span class="date">2022.04.01 ~ 2022.04.30</span>
+											<span class="badge green sm">D-35</span>
+										</div>
+										<button class="btn icon md">
+											<i class="ico download lg"></i>
+										</button>
+									</div>
+									<div class="coupon-item">
+										<div class="discount-type">시간무료</div>
+										<div class="discount-value">
+											<span>3시간 무료</span>
+										</div>
+										<div class="discount-desc">
+											<p>스파클링 3시간 드라이브!</p>
+											<p> 주중 주말 할인/1시간/차종 제한/지역제한</p>
+										</div>
+										<div class="effective-date">
+											<span class="date">2022.04.01 ~ 2022.04.30</span>
+											<span class="badge green sm">D-7</span>
+										</div>
+										<button class="btn icon md">
+											<i class="ico download lg"></i>
+										</button>
+									</div>
+								</div>
+							</section>
+
+							<hr class="divider">
+							<section class="section">
+								<div class="title-area">
+									<a href="#" class="title-sm">
+										제휴처 할인
+										<i class="ico arrow-right-nav040 xs"></i>
+									</a>
+								</div>
+
+								<div class="partner">
+									<div class="partner-visual">
+										<div class="partner-swiper">
+											<div class="swiper">
+												<div class="swiper-wrapper">
+													<div class="swiper-slide">
+														<a href="#">
+															<div class="img"><img src="/images/contents/img_partner01.png" alt=""></div>
+															<div class="txt-module">
+																<p class="tit">
+																	그림같은 방풍림이 펼쳐지는 보사노
+																</p>
+																<p class="desc-md">
+																	소나무 숲을 배경으로 커피를 즐길 수 있는 보사노바 속초점을 방문하세요
+																</p>
+															</div>
+														</a>
+													</div>
+													<div class="swiper-slide">
+														<a href="#">
+															<div class="img"><img src="/images/contents/img_partner01.png" alt=""></div>
+															<div class="txt-module">
+																<p class="tit">
+																	그림같은 방풍림이 펼쳐지는 보사노
+																</p>
+																<p class="desc-md">
+																	소나무 숲을 배경으로 커피를 즐길 수 있는 보사노바 속초점을 방문하세요
+																</p>
+															</div>
+														</a>
+													</div>
+													<div class="swiper-slide">
+														<a href="#">
+															<div class="img"><img src="/images/contents/img_partner01.png" alt=""></div>
+															<div class="txt-module">
+																<p class="tit">
+																	그림같은 방풍림이 펼쳐지는 보사노
+																</p>
+																<p class="desc-md">
+																	소나무 숲을 배경으로 커피를 즐길 수 있는 보사노바 속초점을 방문하세요
+																</p>
+															</div>
+														</a>
+													</div>
+												</div>
+												<div class="swiper-pagination"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</section>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section>
+		<!-- //container -->
+
+	</div>
+
+	<script>
+		var svgChart = (function () {
+			var el, svgEl;
+			var radius, circumference, radiusVal, gauge, offsetVal, circleRatio;
+
+			init = function (color) {
+				el = document.querySelector('.ui-svg-chart');
+				svgEl = el.querySelector('.circle');
+				radius = 84;
+				circleRatio = 1 - .75;
+				circumference = 2 * Math.PI * radius;
+				radiusVal = 2 * Math.PI * radius - circumference * circleRatio;
+				svgEl.style.stroke = color;
+
+				bindEvent();
+			};
+
+			bindEvent = function () {
+				setStyle();
+			};
+
+			setStyle = function () {
+				svgEl.style.opacity = 1;
+				svgEl.style.strokeDasharray = 2 * Math.PI * radius;
+				svgEl.style.strokeDashoffset = circumference;
+			};
+
+			progress = function (per) {
+				gauge = radiusVal * (per / 100);
+				offsetVal = circumference - gauge;
+				svgEl.style.strokeDashoffset = offsetVal;
+			};
+
+			return {
+				init: init,
+				progress: progress
+			};
+		})();
+
+		// progress 등급 color 값 적용
+		svgChart.init('#fd8484');
+
+		// progress 등급 value 값 적용
+		setTimeout(function () {
+			svgChart.progress(70);
+		}, 1300);
+
+
+		const swiper = new Swiper('.swiper', {
+			touchAngle: 40,
+			spaceBetween: 20,
+			// loopAdditionalSlides:10,
+			loopAdditionalSlides : 1,
+			// slideToClickedSlide : true, // 해당 슬라이드 클릭시 슬라이드 위치로 이동
+			loop:true,
+			pagination: {
+				el: ".swiper-pagination",
+			}
+		});
+	</script>
+
+</body>
+
+</html>

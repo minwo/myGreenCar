@@ -90,6 +90,20 @@
 				}
 			}
 		}
+
+		&.scroll{
+			overflow:auto;
+			scroll-behavior: smooth;
+			ul{
+				flex-wrap:nowrap;
+				li{
+					flex:0 0 auto;
+				}
+				a{
+					min-width:80px;
+				}
+			}
+		}
 	}
 
 	&-tab-type02{
@@ -104,7 +118,7 @@
 					justify-content: center;
 					align-items: center;
 					height:44px;
-					font-size:$font-sm2;
+					font-size:$font-md;
 					color:$navy-040;
 					font-weight:500;
 					vertical-align: middle;

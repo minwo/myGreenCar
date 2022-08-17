@@ -36,7 +36,7 @@ $animation: all .2s ease;
 	.icon-group{
 		display:flex;
 		position:absolute;
-		bottom:9px;
+		bottom:10px;
 		right:0;
 
 		.ip-icon{
@@ -73,8 +73,8 @@ input[type="email"] {
 		display:none;
 	}
 	&::placeholder {
-		font-size: $font-lg;
-		color:#CFD4D7;
+		font-size:$font-md;
+		color:$navy-020;
 		font-weight:500;
 	}
 	&[readonly],

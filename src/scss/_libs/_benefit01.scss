@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+// 상세
 .detail-page-module{
 	.info-tit{
 		color:$navy-040;
@@ -64,6 +65,8 @@
 			.icon-group{
 				color:$navy-020;
 				right:20px;
+				bottom:50%;
+				transform:translate(0,50%);
 			}
 		}
 		.mail-txt{
@@ -77,6 +80,89 @@
 		}
 		.btn-group{
 			margin-top:20px;
+		}
+	}
+
+	// 제휴처 할인
+	.partner{
+		padding-top:24px;
+		.section{
+			padding:0;
+		}
+		.partner-visual{
+			margin:0 -20px 0 0;
+		}
+		.partner-swiper{
+			padding-bottom:11px;
+			.swiper{
+				overflow:visible;
+				padding-right:40px;
+			}
+			.txt-module{
+				margin-top:10px;
+			}
+			.tit{
+				font-size:$font-md;
+				font-weight:500;
+			}
+			.desc-md{
+				color:$navy-040;
+			}
+		}
+		.scroll-area{
+			padding:16px 0 0;
+		}
+		.partner-list{
+			.item{
+				border-top:1px solid $gray-020;
+				&:first-child{
+					padding-top:0;
+					border-top:0;
+				}
+			}
+			a{
+				display:block;
+				position:relative;
+				min-height:116px;
+				padding:16px 0 16px 94px;
+			}
+			.img{
+				display:inline-block;
+				position:absolute;
+				top:16px;
+				left:0;
+				width:84px;
+				height:84px;
+				border-radius:10px;
+				overflow:hidden;
+
+				img{
+					width:100%;
+					height:100%;
+				}
+			}
+			.tit{
+				padding-top:2px;
+				font-size:$font-lg;
+				line-height:24px;
+				font-weight:500;
+			}
+			.sale{
+				margin-top:8px;
+				font-size:$font-sm;
+				line-height:16px;
+			}
+			.date{
+				margin-top:6px;
+				color:$navy-040;
+				line-height:14px;
+			}
+			.next-sm{
+				position:absolute;
+				top:50%;
+				right:0;
+				transform:translate(0,-50%);
+			}
 		}
 	}
 }
@@ -97,6 +183,51 @@
 			}
 			.agree-group{
 				margin-top:29px;
+			}
+		}
+
+		// 제휴처 상세보기
+		.partner-detail{
+			.group{
+				margin-top:8px;
+				&:first-child{
+					margin-top:0;
+				}
+			}
+			.more{
+				position:relative;
+				padding-right:60px;
+				.thum-img{
+					position:absolute;
+					bottom:50%;
+					right:0;
+					width:56px;
+					height:56px;
+					transform: translate(0, 50%);
+				}
+				.btn-link{
+					position:absolute;
+					bottom:4px;
+					right:0;
+				}
+			}
+			.category{
+				color:$navy-040;
+				line-height:20px;
+			}
+			.data{
+				font-size:$font-md;
+				font-weight:500;
+			}
+		}
+
+		// 그린카 이용고객 인증
+		.partner-user{
+			.img{
+				text-align:center;
+			}
+			.box{
+				margin-top:11px;
 			}
 		}
 	}

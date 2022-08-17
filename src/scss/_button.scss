@@ -81,7 +81,7 @@ $btn-size: (
 
 	&.link{
 		// 변수순서: border-color, background-color, font-color
-		@include buttonType ($gray-000, $gray-000, $navy-050);
+		@include buttonType ($gray-000, $gray-000, $navy-040);
 		text-decoration:underline;
 	}
 
@@ -179,7 +179,7 @@ $btn-size: (
 
 .btn-link{
 	font-size:$font-sm2;
-	color:$navy-050;
+	color:$navy-040;
 
 	.ico{
 		vertical-align:-1px;

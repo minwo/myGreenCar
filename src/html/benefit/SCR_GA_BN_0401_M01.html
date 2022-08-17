@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('@@webRoot/include/head.html')
+	<script src="/js/swiper.min.js"></script>
+</head>
+<body>
+	<div id="wrap">
+		<!-- header -->
+		@@include('@@webRoot/include/header.html', { type: "sub_02", title: "제휴처 할인" })
+		<!-- //header -->
+
+		<!-- container -->
+		<section id="container">
+			<div class="contents">
+
+				<div class="benefit">
+					<div class="partner">
+						<section class="section partner-visual">
+							<div class="partner-swiper">
+								<div class="swiper">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<a href="#">
+												<div class="img"><img src="/images/contents/img_partner01.png" alt=""></div>
+												<div class="txt-module">
+													<p class="tit">
+														그림같은 방풍림이 펼쳐지는 보사노
+													</p>
+													<p class="desc-md">
+														소나무 숲을 배경으로 커피를 즐길 수 있는 보사노바 속초점을 방문하세요
+													</p>
+												</div>
+											</a>
+										</div>
+										<div class="swiper-slide">
+											<a href="#">
+												<div class="img"><img src="/images/contents/img_partner01.png" alt=""></div>
+												<div class="txt-module">
+													<p class="tit">
+														그림같은 방풍림이 펼쳐지는 보사노
+													</p>
+													<p class="desc-md">
+														소나무 숲을 배경으로 커피를 즐길 수 있는 보사노바 속초점을 방문하세요
+													</p>
+												</div>
+											</a>
+										</div>
+										<div class="swiper-slide">
+											<a href="#">
+												<div class="img"><img src="/images/contents/img_partner01.png" alt=""></div>
+												<div class="txt-module">
+													<p class="tit">
+														그림같은 방풍림이 펼쳐지는 보사노
+													</p>
+													<p class="desc-md">
+														소나무 숲을 배경으로 커피를 즐길 수 있는 보사노바 속초점을 방문하세요
+													</p>
+												</div>
+											</a>
+										</div>
+									</div>
+									<div class="swiper-pagination"></div>
+								</div>
+							</div>
+						</section>
+
+						<hr class="divider">
+						<section class="section">
+							<div class="gc-tab scroll">
+								<ul>
+									<li><a href="#" class="active">전체</a></li>
+									<li><a href="#">수도권</a></li>
+									<li><a href="#">강원도</a></li>
+									<li><a href="#">경상도</a></li>
+									<li><a href="#">충청도</a></li>
+									<li><a href="#">충청도</a></li>
+								</ul>
+								<span class="tab-indicator"></span>
+							</div>
+
+							<div class="btn-tab">
+								<div class="scroll-area">
+									<button type="button" class="btn line xs active">전체</button>
+									<button type="button" class="btn line xs">식음료</button>
+									<button type="button" class="btn line xs">엔터</button>
+									<button type="button" class="btn line xs">생활&amp;기타</button>
+								</div>
+							</div>
+
+							<div class="partner-list">
+								<div class="item">
+									<a href="#">
+										<span class="img"><img src="/images/contents/img_partner_thum01.png" alt=""></span>
+										<p class="tit">더스카이</p>
+										<p class="sale">10% 할인</p>
+										<p class="date">2022.05.01 ~ 2022.05.31</p>
+										<i class="ico next-sm md"></i>
+									</a>
+								</div>
+								<div class="item">
+									<a href="#">
+										<span class="img"><img src="/images/contents/img_partner_thum02.png" alt=""></span>
+										<p class="tit">보사노바 강릉점</p>
+										<p class="sale">1,000원 할인</p>
+										<p class="date">2022.05.01 ~ 2022.05.31</p>
+										<i class="ico next-sm md"></i>
+									</a>
+								</div>
+							</div>
+						</section>
+					</div>
+
+				</div>
+
+			</div>
+		<!-- //container -->
+	</div>
+
+	<script>
+		const swiper = new Swiper('.swiper', {
+			touchAngle: 40,
+			spaceBetween: 20,
+			// loopAdditionalSlides:10,
+			loopAdditionalSlides : 1,
+			// slideToClickedSlide : true, // 해당 슬라이드 클릭시 슬라이드 위치로 이동
+			loop:true,
+			pagination: {
+				el: ".swiper-pagination",
+			}
+		});
+	</script>
+</body>
+</html>

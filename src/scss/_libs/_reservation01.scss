@@ -64,10 +64,10 @@
 .reservation{
 	// 예약하기
 	.reservation-module{
-		padding-top:40px;
 
 		.title-xs{
-			line-height:23px;
+			font-size:$font-md;
+			line-height:1;
 			font-weight:500;
 		}
 
@@ -91,49 +91,87 @@
 		}
 
 		.car-info{
+			margin-top:32px;
 			text-align:center;
 			.module{
+				position:relative;
+				width:264px;
+				margin:0 auto;
+				text-align:left;
+				.ico{
+					position:absolute;
+					top:50%;
+					right:0;
+					transform:translate(0,-50%);
+				}
+			}
+			a{
 				display:inline-flex;
-				justify-content:center;
+				justify-items:center;
 				align-items:center;
 			}
 			.img{
 				display:inline-block;
-				width:93px;
-				height:62px;
+				width:110px;
+				height:110px;
+				img{
+					width:100%;
+					height:100%;
+				}
 			}
 			.info{
 				display:inline-block;
 				margin-left:10px;
 				text-align:left;
 
+				.ev{
+					margin-top:2px;
+					font-size:$font-sm;
+					color:$light-blue-040;
+				}
 				strong{
-					font-size:$font-xl;
-					line-height:28px;
-					color:#000000;
+					display:block;
+					margin-top:8px;
+					font-size:$font-lg;
+					line-height:1;
 				}
 				.name,.option{
 					display:block;
+					margin-top:8px;
 					font-size:$font-sm;
-					line-height:17px;
-					color:#8C9496
+					line-height:1;
+					color:$navy-040
 				}
-				.name{
-					&:after{
-						display:inline-block;
-						width:6px;
-						height:10px;
-						margin-left:5px;
-						content:"";
-						vertical-align:-1px;
-						background:url(#{$url-common}icon_arrow_right_s.svg) no-repeat;
-						background-size:100% 100%;
+				.option{
+					em{
+						&::before{
+							display:inline-block;
+							width:1px;
+							height:12px;
+							margin:0 4px;
+							vertical-align:-1px;
+							content:"";
+							background-color: $navy-020;
+						}
 					}
 				}
 			}
-
-			.tag-module{
-				margin:18px 0 40px;
+			.tag-info-module{
+				margin-top:32px;
+			}
+			.title-area{
+				.title-xs{
+					text-align:left;
+				}
+				.flex:last-child{
+					color:$default;
+				}
+			}
+			.desc-sm{
+				font-size:$font-sm;
+				color:$navy-040;
+				line-height:1;
+				text-align:left;
 			}
 		}
 		.desc-sm{
@@ -195,7 +233,13 @@
 		
 		.grid-flex{
 			margin-top:3px;
-
+			&.title-area{
+				margin-top:32px;
+				padding-top:24px;
+				font-size:$font-md;
+				font-weight:500;
+				border-top:1px solid $navy-020;
+			}
 			.flex{
 				&:not(:nth-child(1)){
 					text-align:right;

@@ -47,23 +47,88 @@
 .tag{
 	@include vDom();
 
-	height:24px;
-	margin-left:3px;
-	padding:0 7px;
-	font-size:$font-sm;
-	color:#6E7375;
-	line-height:17px;
-	border-radius: 4px;
-	vertical-align:middle;
-	background-color:#F3F4F5;
+	margin-left:2px;
+	padding:0 8px;
+	color:$gray-000;
+	border-radius:999px;
 
 	&:first-child{
-		margin-left:0;
+		margin-left:0 !important;
 	}
+	// height:24px;
+	// margin-left:3px;
+	// padding:0 7px;
+	// font-size:$font-sm;
+	// color:#6E7375;
+	// line-height:17px;
+	// border-radius: 4px;
+	// vertical-align:middle;
+	// background-color:#F3F4F5;
 
-	&.sale{
-		color:$gray-000;
-		background-color:$red-060;
+	// &:first-child{
+	// 	margin-left:0;
+	// }
+
+	// &.sale{
+	// 	color:$gray-000;
+	// 	background-color:$red-060;
+	// }
+
+	&.tag {
+		&-car{
+			height:18px;
+			font-size:$font-xs;
+			&.plus{
+				border:2px solid $yellow-060;
+				background-color: #000000;
+			}
+			&.new{
+				background-color: $light-blue-040;
+			}
+		}
+		&-info{
+			height:24px;
+			margin-left:8px;
+			padding:0 10px;
+			font-size:$font-sm;
+			font-weight:700;
+			background-color: $navy-060;
+			&::before{
+				display:inline-block;
+				margin-right:4px;
+				content:"";
+				background-repeat:no-repeat;
+				background-size:100%;
+			}
+			&.ico01{
+				&::before{
+					width:7px;
+					height:12px;
+					background-image:url(#{$url-content}bg_res_ico01.svg);
+				}
+			}
+			&.ico02{
+				&::before{
+					width:18px;
+					height:12px;
+					background-image:url(#{$url-content}bg_res_ico02.svg);
+				}
+			}
+			&.ico03{
+				&::before{
+					width:15px;
+					height:11px;
+					background-image:url(#{$url-content}bg_res_ico03.svg);
+				}
+			}
+			&.ico04{
+				&::before{
+					width:8px;
+					height:12px;
+					background-image:url(#{$url-content}bg_res_ico04.svg);
+				}
+			}
+		}
 	}
 }
 

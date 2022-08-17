@@ -45,7 +45,7 @@
             .header > div div {
                 margin-right: 30px;
             }
-            .header .h-percent {
+            .header .h-percent,.current-p {
                 color: red;
             }
             .button-group {
@@ -179,12 +179,25 @@
                         ),
                         all_sections = this,
                         header = $("div.header");
+					var currentCount = 0;
                     $(settings.stat).each(function () {
                         $(this).text() == "⚫" && settings.completed++;
+                        $(this).text() == "⚪";
+						
+						if($(this).text().indexOf('⚪') == 0 == true){
+							currentCount += 1;
+						}
+						
                     });
+					var througtLt = $('a.througt').length;
+					var aa = $(settings.files).length-througtLt;
+					var currentTotal =  currentCount / ($(settings.files).length-througtLt) * 100;
                     $(".h-completed").text(settings.completed);
-                    $(".h-total").text($(settings.files).length);
+                    $(".h-total").text($(settings.files).length-througtLt);
                     $(".h-percent span").text(Math.round((settings.completed / $(settings.files).length) * 100));
+					$('.current-p').text(Math.ceil(currentTotal)+'%');
+					$('.current-count').text(currentCount);
+
                     settings.openAll && $("h1").addClass("open");
                     return this.each(function () {
                         var self = this,
@@ -235,6 +248,9 @@
             <h1>그린카</h1>
             <div>
                 <div>Total : <strong class="h-completed">0</strong> / <strong class="h-total">0</strong></div>
+				<div>
+                    진행중 : <span class="current-count"></span> / <strong class="current-p"><span>0</span>%</strong>
+                </div>
                 <div>
                     진척율 : <strong class="h-percent"><span>0</span>%</strong>
                 </div>
@@ -726,6 +742,20 @@
                             <td class="date"></td>
                             <td></td>
                         </tr>
+						<tr>
+                            <td></td>
+                            <td></td>
+                            <td>메모</td>
+                            <td></td>
+                            <td></td>
+                            <td>이민우</td>
+                            <td>/history</td>
+                            <td><a target="_blank" href="components/popup_module.html#history#SCR_GA_HS_0201_P02">SCR_GA_HS_0201_P02.html</a></td>
+                            <td class="stat">⚪</td>
+                            <td class="compl"></td>
+                            <td class="date"></td>
+                            <td></td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -1038,10 +1068,10 @@
                             <td></td>
                             <td></td>
                             <td></td>
-                            <td></td>
+                            <td>이민우</td>
                             <td>/benefit</td>
                             <td><a target="_blank" href="html/benefit/SCR_GA_BN_0401_M01.html">SCR_GA_BN_0401_M01.html</a></td>
-                            <td class="stat"></td>
+                            <td class="stat">⚪</td>
                             <td class="compl"></td>
                             <td class="date"></td>
                             <td></td>
@@ -1052,10 +1082,10 @@
                             <td>제휴처 할인 상세</td>
                             <td></td>
                             <td></td>
-                            <td></td>
+                            <td>이민우</td>
                             <td>/benefit</td>
-                            <td><a target="_blank" href="html/benefit/SCR_GA_BN_0401_P01.html">SCR_GA_BN_0401_P01.html</a></td>
-                            <td class="stat"></td>
+							<td><a target="_blank" href="components/popup_module.html#benefit#SCR_GA_BN_0401_P01#bottom">SCR_GA_BN_0401_P01.html</a></td>
+                            <td class="stat">⚪</td>
                             <td class="compl"></td>
                             <td class="date"></td>
                             <td></td>
@@ -1066,10 +1096,10 @@
                             <td>제휴처 할인 이용인증</td>
                             <td></td>
                             <td></td>
-                            <td></td>
+                            <td>이민우</td>
                             <td>/benefit</td>
-                            <td><a target="_blank" href="html/benefit/SCR_GA_BN_0401_P02.html.html">SCR_GA_BN_0401_P02.html</a></td>
-                            <td class="stat"></td>
+							<td><a target="_blank" href="components/popup_module.html#benefit#SCR_GA_BN_0401_P02">SCR_GA_BN_0401_P02.html</a></td>
+                            <td class="stat">⚪</td>
                             <td class="compl"></td>
                             <td class="date"></td>
                             <td></td>
@@ -1102,31 +1132,17 @@
                     <tbody>
                         <tr>
                             <td></td>
-                            <td>프로필</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td>/mypage</td>
-                            <td><a target="_blank" href="html/.html">.html</a></td>
-                            <td class="stat"></td>
-                            <td class="compl"></td>
-                            <td class="date"></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
                             <td>등급</td>
                             <td></td>
                             <td></td>
                             <td></td>
-                            <td></td>
+                            <td>이민우</td>
                             <td>/mypage</td>
-                            <td><a target="_blank" href="html/page/SCR_GA_CI_0401_M01.html">SCR_GA_CI_0401_M01.html</a></td>
-                            <td class="stat"></td>
+                            <td><a target="_blank" href="html/mypage/SCR_GA_CI_0401_M01.html">SCR_GA_CI_0401_M01.html</a></td>
+                            <td class="stat">⚪</td>
                             <td class="compl"></td>
                             <td class="date"></td>
-                            <td></td>
+                            <td>제휴처 디자인 수정 필요</td>
                         </tr>
                         <tr>
                             <td></td>

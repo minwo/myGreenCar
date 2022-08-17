@@ -507,8 +507,8 @@ hr.divider {
 }
 // [팝업] 예약결제 안내
 .layer-body {
-    .box {
-        padding: 16px 40px;
+    .box:not(.ip-group) {
+        padding: 16px 20px;
         margin-top: 20px;
         border-radius: 8px;
         background-color: $navy-010;
@@ -521,10 +521,11 @@ hr.divider {
                 display: inline-block;
                 width: 80px;
                 margin-right: 8px;
-                color: #8c989e;
+                color: $navy-040;
             }
             .value {
-                color: #303e47;
+				float:right;
+                color: $navy-070;
                 font-weight: 500;
             }
         }

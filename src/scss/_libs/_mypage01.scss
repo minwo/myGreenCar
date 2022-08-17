@@ -1,75 +1,261 @@
 @charset "UTF-8";
 
-// 내정보 화면
 .mypage{
-	&.rating{
-		.ui-svg-chart{
+	// 내정보 화면
+	.my-lv{
+		position:relative;
+		padding-top:52px;
+
+		.section{
+			padding:0;
+			&:not(.membership){
+				padding-bottom:25px;
+			}
+		}
+
+		.title-area{
+			.title-sm{
+				display:block;
+				position:relative;
+				padding:16px 0;
+				line-height:24px;
+
+				.ico{
+					position:absolute;
+					top:50%;
+					right:0;
+					transform:translate(0,-50%);
+				}
+			}
+		}
+		.rating{
+			.btn-link{
+				position:absolute;
+				top:16px;
+				right:2px;
+			}
+			.ui-svg-chart{
+				position:relative;
+			}
+			.circle-progress-wrap {
+				position: relative;
+				width: 182px;
+				height: 182px;
+				margin:0 auto;
+				&::before{
+					display:block;
+					position:absolute;
+					bottom:24px;
+					right:22px;
+					z-index:10;
+					width:18px;
+					height:18px;
+					content:"";
+					background:url(#{$url-content}bg_progress_circle.svg) no-repeat;
+					background-size:100%;
+				}
+			}
+			.circle-progress {
+				transform: rotate(135deg);
+			}
+			.frame,
+			.circle {
+				fill: none;
+				stroke-linecap:round
+			}
+			.frame {
+				stroke-dasharray:527.788;
+				stroke-dashoffset:131.947;
+				stroke: #eceeef;
+			}
+			.circle {
+				opacity:0;
+				stroke: #00c88c;
+				transition: opacity .3s 1.3s, stroke-dashoffset 1s .3s;
+			}
+			.rating-badge{
+				display:inline-block;
+				position:absolute;
+				top:50%;
+				left:50%;
+				width:88px;
+				height:88px;
+				transform:translate(-50%, -50%);
+				img{
+					width:100%;
+					height:100%;
+				}
+			}
+			.txt-module{
+				margin-top:-3px;
+				text-align:center;
+			}
+			.txt-lv{
+				@include vDom();
+				height:18px;
+				padding:0 6px;
+				font-size:10px;
+				font-weight:100;
+				border-radius:10px;
+				border:1px solid $navy-020;
+			}
+			.txt{
+				display:inline-block;
+				margin-left:4px;
+				font-size:$font-sm2;
+				font-weight:500
+			}
+
+			.lvup-info{
+				margin-top:16px;
+				text-align:center;
+				.tip-txt{
+					font-size:$font-sm;
+					line-height:1;
+				}
+				.time-remaining{
+					margin-top:8px;
+					font-size:$font-md;
+					font-weight:500;
+					line-height:1;
+				}
+				.rental{
+					margin-top:16px;
+					font-size:$font-sm;
+					color:$navy-030;
+					line-height:1;
+				}
+			}
+
+			.grid-flex{
+				margin-top:16px;
+				.flex:first-child{
+					position:relative;
+					&::before{
+						display:block;
+						position:absolute;
+						top:0;
+						right:0;
+						width:1px;
+						height:36px;
+						content:"";
+						transform:translate(50%,0);
+						background-color: $navy-010;
+					}
+				}
+				.dt{
+					color:$navy-040;
+					font-size:$font-sm;
+					line-height:1;
+				}
+				.value{
+					margin-top:8px;
+					font-size:$font-md;
+					font-weight:500;
+					line-height:1;
+				}
+			}
+		}
+		.distance{
+			padding:28px 11px 0 18px;
+			.desc-md{
+				margin-top:34px;
+				font-weight:500;
+				text-align:center;
+				.per{
+					color:$default;
+				}
+			}
+		}
+		.gauge{
 			position:relative;
+			height:4px;
+			border-top:4px dotted #DBDFE0;
+			.per{
+				position:absolute;
+				top:-4px;
+				left:0;
+				width:0;
+				height:4px;
+				transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 500ms;
+				background-color: $green-060;
+			}
+			.point{
+				.name{
+					display:inline-block;
+					position:absolute;
+					top:-38px;
+					transform:translate(-50%,0);
+				}
+				.marker{
+					display:block;
+					position:absolute;
+					top:calc(50% - 2px);
+					width:10px;
+					height:10px;
+					background-color:$gray-000;
+					border:2px solid $navy-020;
+					border-radius:$border-radius-circle;
+					transform:translate(-50%,-50%);
+					transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 500ms;
+					&.active{
+						border-color:$default;
+						background-color:$default;
+					}
+				}
+				&.home{
+					.marker{
+						width:24px;
+						height:24px;
+						border:0;
+						background:url(#{$url-content}ic_car_move.svg) no-repeat;
+					}
+				}
+				&.center{
+					.name{
+						left:50%;
+					}
+					.marker{
+						left:50%;
+					}
+				}
+				&.last{
+					.name{
+						left:initial;
+						right:0;
+						transform:translate(50%,0);
+					}
+					.marker{
+						left:initial;
+						right:0;
+						transform:translate(50%,-50%);
+					}
+				}
+			}
+			// .home{
+			// 	.marker{
+			// 		display:block;
+			// 		width:24px;
+			// 		height:24px;
+			// 		background:url(#{$url-content}ic_car_move.svg) no-repeat;
+			// 	}
+			// }
 		}
-		.circle_progress_wrap {
-			position: relative;
-			width: 182px;
-			height: 182px;
-			margin:0 auto;
-		}
-		.circle_progress {
-			transform: rotate(135deg);
-		}
-		.frame,
-		.circle {
-			fill: none;
-			stroke-linecap:round
-		}
-		.frame {
-			stroke-dasharray:527.788;
-			stroke-dashoffset:131.947;
-			stroke: #eceeef;
-		}
-		.circle {
-			opacity:0;
-			stroke: #00c88c;
-			transition: opacity .3s 1.3s, stroke-dashoffset 1s .3s;
-		}
-		.value {
-			position: absolute;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			top: 0;
-			text-align: center;
-			color: #888;
-			font-size: 16px;
-			line-height: 120px;
-		}
-		.rating-badge{
-			display:inline-block;
-			position:absolute;
-			top:50%;
-			left:50%;
-			width:88px;
-			height:88px;
-			background:url('#{$url-content}bg_rating01.svg');
-			transform:translate(-50%, -50%);
-		}
-		.txt-module{
-			margin-top:-14px;
-			text-align:center;
-		}
-		.txt-lv{
-			@include vDom();
-			height:18px;
-			padding:0 6px;
-			font-size:10px;
-			color:#8c9496;
-			font-weight:100;
-			border-radius:10px;
-			border:1px solid #dbdfe0;
-		}
-		.txt{
-			display:inline-block;
-			margin-left:4px;
-			font-size:13px;
-			font-weight:700
+
+		.mission{
+			padding-top:16px;
+			.desc-md{
+				font-weight:500;
+				letter-spacing:0;
+			}
+			.btn-group{
+				margin-top:16px;
+				justify-content:center;
+				.btn{
+					flex:0 0 auto;
+					border-radius:17px;
+				}
+			}
 		}
 	}
 }
