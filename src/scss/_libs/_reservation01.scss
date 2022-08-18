@@ -2,14 +2,15 @@
 
 .agree-group{
 	.check-all {
-        border-bottom: 1px solid #d9dddf;
-        padding-bottom: 10px;
-        margin-bottom: 16px;
-        font-size: 18px;
+        border-top: 1px solid #d9dddf;
+        margin-top: 16px;
+        padding-top: 16px;
+        font-size: $font-xl;
         font-weight: 500;
 	}
 
 	.agree-module{
+		margin-top:16px;
 		.item{
 			position:relative;
 			padding-left:25px;
@@ -64,18 +65,33 @@
 .reservation{
 	// 예약하기
 	.reservation-module{
-
+		line-height:1;
 		.title-xs{
 			font-size:$font-md;
 			line-height:1;
 			font-weight:500;
 		}
 
+		.agree-title{
+			font-size:$font-xl;
+			font-weight:700;
+		}
+
+		.btn-link{
+			min-height:24px;
+			line-height:24px;
+			color:$navy-070;
+			.ico{
+				margin-left:8px;
+				vertical-align:top;
+			}
+		}
+
 		.section{
 			position:relative;
 
 			&:not(:first-child){
-				padding:41px 0 30px;
+				padding:32px 0 24px;
 
 				&:before{
 					display:block;
@@ -173,27 +189,42 @@
 				line-height:1;
 				text-align:left;
 			}
+			.grid-flex{
+				&.title-area{
+					margin-top:32px;
+					padding-top:24px;
+					font-size:$font-md;
+					font-weight:500;
+					border-top:1px solid $navy-020;
+				}
+			}
 		}
 		.desc-sm{
 			margin:16px 0 28px;
 		}
 
 		.title-area{
-			margin-bottom:20px;
-
 			.tag{
 				margin-left:5px;
+				vertical-align:top;
 			}
 
+			.flex{
+				font-size:$font-md;
+			}
 			.under{
 				display:inline-block;
+				font-size:$font-md;
 				line-height:18px;
 				border-bottom:1px solid #303E47
+			}
+			.price.deco-througt{
+				font-size:$font-md;
 			}
 		}
 
 		.radio-module{
-			margin-bottom:30px;
+			margin:16px 0 30px;
 
 			.gc-radio{
 				display:block;
@@ -214,12 +245,12 @@
 				.insur{
 					float:right;
 					margin-top:3px;
-					font-weight:400;
+					font-weight:500;
 				}
 			}
 		}
 
-		.ip-group.box{
+		.ip-group{
 			margin:10px 0 15px;
 			
 			.flex:not(:last-child){
@@ -227,18 +258,31 @@
 			}
 			.ip-txt{
 				height:48px;
+				font-size:$font-md;
+				font-weight:700;
 				text-align:right;
+			}
+			.line{
+				background-color:$navy-020;
 			}
 		}
 		
 		.grid-flex{
-			margin-top:3px;
-			&.title-area{
-				margin-top:32px;
-				padding-top:24px;
-				font-size:$font-md;
-				font-weight:500;
-				border-top:1px solid $navy-020;
+			margin-top:16px;
+			&:first-child{
+				margin-top:0;
+			}
+			&.green-point{
+				padding-bottom:16px;
+				border-bottom:1px solid $navy-020;
+				.flex:first-child{
+					color:$default;
+				}
+			}
+			&.l-point{
+				.flex:first-child{
+					color:$blue-050;
+				}
 			}
 			.flex{
 				&:not(:nth-child(1)){
@@ -248,8 +292,7 @@
 				&:not(.title-area){
 					&:first-child{
 						&:not(.title-xs:first-child){
-							font-size:$font-sm;
-							font-weight:700;
+							font-size:$font-sm2;
 						}
 					}
 
@@ -269,13 +312,12 @@
 
 			.ico{
 				margin-right:6px;
-				vertical-align:-4px;
 			}
 		}
 
 		.price{
 			margin-left:7px;
-			color:#000;
+			font-weight:700;
 
 			&.deco-througt{
 				font-size:$font-sm2;
@@ -284,20 +326,62 @@
 		}
 
 		.point-module{
-			margin-top:30px;
+			margin:24px -20px 0;
+			padding:24px 20px 0;
+			border-top:1px solid $navy-020;
 		}
 
 		.info-module{
-			margin-top:40px;
-
+			margin-top:16px;
 			.info-title{
-				margin:20px 0 10px;
-				font-size:$font-md;
-				color:$navy-070;
+				margin:16px 0 10px;
+				font-size:$font-sm;
+				color:$navy-040;
 				font-weight:500;
-			}			
+			}
+			.desc-xs{
+				color:$navy-040;
+				line-height:16px;
+			}		
 		}
 
+		.total{
+			margin:26px -20px 0;
+			padding:24px 20px 0;
+			border-top:1px solid $navy-020;
+			.flex:first-child{
+				font-size:$font-xl !important;
+				font-weight:700;
+			}
+			.price{
+				display:block;
+			}
+			.price{
+				font-size:$font-xl;
+				color:$default;
+				font-weight:700;
+				&:first-child{
+					font-size:$font-md;
+					color:$navy-040;
+				}
+				&:last-child{
+					margin-top:16px;
+				}
+			}
+		}
+
+		.corporation{
+			.txt{
+				display:block;
+				color:$navy-020;
+				font-weight:500;
+			}
+			.desc-cp{
+				font-size:$font-sm;
+				color:$navy-040;
+				line-height:24px;
+			}
+		}
 	}
 
 	// 편도로 변경하기
@@ -366,7 +450,7 @@
 			@include ell;
 
 			strong{
-				color:$pink-060;
+				color:$default;
 			}
 		}
 		.address{
@@ -429,27 +513,29 @@
 	}
 }
 
-// 반납 바텀 레이어
 .layer-wrap{
-	.reservation{
+	&.reservation{
+		// 반납 바텀 레이어
 		&.free_popup{
 			margin-top:23px;
 		}
 		.search-result{
+			padding-top:12px;
 			.item{
-				padding:7px 0 10px 0;
-			}
-			&.greenzon .item{
 				padding:7px 0 10px 38px;
 			}
 			.price{
 				position: static;
-				text-align:right;
+				margin-top:10px;
+				padding-top:25px;
+				text-align:center;
 				font-size:$font-xl;
 				font-weight:700;
+				border-top:1px solid $navy-020;
 
 				em{
-					font-size:13px
+					font-size:$font-xl;
+					font-weight:500;
 				}
 			}
 		}
@@ -457,7 +543,9 @@
 		.tmp-faq-list{
 			margin-top:28px;
 		}
-
+		.layer-footer.full{
+			padding-top:32px;
+		}
 	}
 
 	&.rsv-one-way{

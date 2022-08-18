@@ -14,38 +14,59 @@
                 <div class="contents">
                     <div class="reservation">
                         <div class="cont membership">
-                            <div class="btn-area both-sides mt60">
-                                <a href="#" class="btn-link">카드 신청</a>
-                                <a href="#" class="btn-link">비밀번호 등록/수정</a>
-                            </div>
+							<!-- 20220818 -->
                             <div class="card lpoint">
                                 <div class="logo">
                                     <div class="logo-img"></div>
                                 </div>
-                                <div class="card-number">
-                                  <label for="card_number">카드번호</label>  
-                                  <!-- <input id="card_number" class="form-control" required="" pattern="(\d{4}\s?){4}" placeholder="•••• •••• •••• ••••" maxlength="19"> -->
-                                  <div class="card-input">
-                                    <input type="text" data-pos="1" placeholder="1234" value="1234" maxlength='4'>
-                                    <span class="dash active">-</span>
-                                    <input type="text" data-pos="2" placeholder="5678" maxlength='4'>
-                                    <span class="dash">-</span>
-                                    <input type="text" data-pos="3" placeholder="1234" maxlength='4'>
-                                    <span class="dash">-</span>
-                                    <input type="text" data-pos="4" placeholder="5678" maxlength='4'>
-                                </div>
-                                </div>
                             </div>
                             <section class="section">
-                                <h3 class="section-tit">비밀번호</h3>
-                                <div class="section-cont">
-                                    <div class="ip-group">
-                                        <div class="row">
-                                            <input type="text" placeholder="비밀번호 6자리" />
-                                        </div>
-                                    </div>
-                                </div>
+								<h3 class="section-tit">
+									L.POINT 사용
+									<button type="button" class="btn-link">
+										<span class="under">카드 신청</span>
+										<i class="ico arrow-right-nav060 lg"></i>
+									</button>
+									<button type="button" class="btn-link">
+										<span class="under">비밀번호 등록/수정</span>
+										<i class="ico arrow-right-nav060 lg"></i>
+									</button>
+								</h3>
+								<div class="card-number">
+									<div class="ip-wrap">
+										<div class="ip-group">
+											<div class="row">
+												<label for="card" class="ip-label">비밀번호</label>
+												<div class="ip-card-module">
+													<input id="card" type="text" class="ip-txt" data-pos="1" placeholder="1234" value="1234" maxlength='4'>
+													<input type="text" class="ip-txt" data-pos="2" placeholder="0000" maxlength='4'>
+													<input type="text" class="ip-txt" data-pos="3" placeholder="0000" maxlength='4'>
+													<input type="text" class="ip-txt" data-pos="4" placeholder="0000" maxlength='4'>
+													<div class="line"></div>
+													<button type="button" class="icon-group btn-del">
+														<i class="ico delete md"></i>
+													</button>
+												</div>
+											</div>
+										</div>
+			
+										<div class="ip-group">
+											<div class="row">
+												<label for="fakePassword" class="ip-label">비밀번호</label>
+												<input type="password" id="fakePassword" class="ip-txt" placeholder="비밀번호 6자리">
+												<div class="line"></div>
+												<span class="icon-group">
+													<button id="toggler" type="button" class="ip-icon">
+														<i class="ico eye-on md"></i>
+													</button>
+												</span>
+											</div>
+											<p class="error-txt">비밀번호가 일치하지 않습니다</p>
+										</div>
+									</div>
+								</div>
                             </section>
+							<!-- //20220818 -->
                         </div>
                     </div>
                 </div>

@@ -1,8 +1,8 @@
 @charset "UTF-8";
 
-// title default 20
+// title default 18
 .title{
-	font-size: $font-lg; //18
+	font-size: $font-lg;
 	font-weight:500;
 
 	&-md{
@@ -47,37 +47,25 @@
 .tag{
 	@include vDom();
 
+	height:18px;
 	margin-left:2px;
 	padding:0 8px;
 	color:$gray-000;
+	font-size:$font-xs;
+	font-weight:500;
 	border-radius:999px;
+	background-color: $navy-060;
 
 	&:first-child{
 		margin-left:0 !important;
 	}
-	// height:24px;
-	// margin-left:3px;
-	// padding:0 7px;
-	// font-size:$font-sm;
-	// color:#6E7375;
-	// line-height:17px;
-	// border-radius: 4px;
-	// vertical-align:middle;
-	// background-color:#F3F4F5;
 
-	// &:first-child{
-	// 	margin-left:0;
-	// }
-
-	// &.sale{
-	// 	color:$gray-000;
-	// 	background-color:$red-060;
-	// }
+	&.green{
+		background-color: $default;
+	}
 
 	&.tag {
 		&-car{
-			height:18px;
-			font-size:$font-xs;
 			&.plus{
 				border:2px solid $yellow-060;
 				background-color: #000000;

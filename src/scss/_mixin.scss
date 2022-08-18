@@ -121,7 +121,7 @@
 		&:disabled + span {
 			color:#adb5bd;
 			&:before {
-				border-color:#adb5bd;
+				border-color:$navy-040;
 				box-shadow:inset 0 0 0 $checkradio-size $checkradio-shadow-disabled;
 			}
 		}
@@ -268,7 +268,7 @@
 	&:not(.box){
 		.line{
 			height:1px;
-			background-color: $line-color;
+			background-color: $navy-020;
 			transition: $animation;
 			
 			&:before{

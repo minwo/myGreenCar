@@ -202,24 +202,6 @@ hr.divider {
             }
         }
     }
-    .ip-group {
-        .row {
-            display: flex;
-            align-items: center;
-            input[type="text"], 
-            input[type="password"] {
-                flex: 1;
-                height: 48px;
-                padding: 0 20px;
-                border: 1px solid #d9d9d9;
-                border-radius: $border-radius;
-            }
-            .btn {
-                flex: 0 0 auto;
-                margin-left: 10px;
-            }
-        }
-    }
 
     .coupon-list {
         margin-top: 18px;
@@ -321,12 +303,16 @@ hr.divider {
 //멤버십
 .membership {
     padding: 26px 0 30px;
+	.ip-txt{
+		font-size:$font-md;
+	}
     .card {
         display: flex;
         flex-direction: column;
         width: 100%;
         height: 160px;
-        padding: 20px 20px 24px;
+		margin-bottom:24px;
+        padding: 20px 20px 20px;
         border-radius: $border-radius;
         .logo {
             @include flex-center();
@@ -352,8 +338,8 @@ hr.divider {
             color: #fff;
             font-size: 16px;
             font-weight: 500;
-            background-color: rgba($color: $gray-000, $alpha: 0.15);
-            border-radius: $border-radius;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #000000;
+            border-radius:10px;
             justify-content: center;
             @include flex-center();
             i + .text {
@@ -361,17 +347,19 @@ hr.divider {
             }
         }
         &.kt {
-            background-color: #2f2e2e;
-            margin-top: 30px;
+            background-color: $gray-080;
             .logo-img {
                 background: url(#{$url-content}kt_logo.svg) no-repeat;
             }
         }
         &.skt {
-            background-color: #02009e;
+            background-color: #443085;
             .logo-img {
                 background: url(#{$url-content}skt_logo.svg) no-repeat;
             }
+			.btn-register {
+				background: rgba(0, 0, 0, 0.45);
+			}
         }
         &.lpoint {
             background-color: $blue-050;
@@ -382,11 +370,35 @@ hr.divider {
             }
         }
     }
+	.ip-group.unit{
+		margin-top:24px;
+	}
     .section {
-        margin-top: 26px;
+		&.pd-bot{
+			padding-bottom:24px;
+		}
+        margin-top: 24px;
         .section-tit {
-            font-size: 12px;
+			position:relative;
+            font-size:$font-sm;
             margin-bottom: 12px;
+			.btn-link{
+				line-height:24px;
+				color:$navy-070;
+				font-size:$font-sm;
+				&:last-child{
+					position:absolute;
+					top:50%;
+					right:0;
+					transform:translate(0,-50%);
+				}
+				.under{
+					text-decoration-line: underline;
+				}
+			}
+			.ico{
+				vertical-align:top;
+			}
         }
         h4 {
             margin-top: 12px;
@@ -399,61 +411,53 @@ hr.divider {
                 margin-top: 6px;
             }
         }
-        .ip-group {
-            .btn {
-                width: 110px;
-            }
-        }
     }
 
     .point-info {
         .item {
-            display: flex;
-            align-items: center;
-            width: 100%;
-            justify-content: flex-end;
-            text-align: right;
+			display:flex;
+			align-items:end;
             color: $gray-000;
-            .title {
+            .title{
+				flex:1;
+				flex-basis:45%;
                 font-size: 14px;
                 font-weight: normal;
                 margin-bottom: 0;
             }
             .desc {
-                width: 120px;
-                margin-left: 16px;
-                .value {
-                    font-size: 20px;
-                    font-weight: bold;
-                }
-                .unit {
-                    font-size: 13px;
-                }
+				flex:1;
+				flex-basis:55%;
+				text-align:right;
+				font-size:$font-xl;
+				font-weight:500;
             }
         }
     }
     .point-use {
+		padding-bottom:24px;
         input[type="text"] {
             width: 100%;
-            height: 48px;
+            height: 60px;
             border-radius: $border-radius;
-            background-color: $gray-005;
-            border: 1px solid $gray-020;
+            background-color: $gray-000;
+            border: 1px solid $navy-020;
             text-align: center;
             color: $navy-070;
             font-size: 16px;
             font-weight: 500;
             &.disabled-point {
-                color: $red-060;
+                color: $gray-000;
+				background-color:$navy-020;
             }
         }
     }
     .point-input{
+		padding-right:0;
         color: $navy-070;
-        font-weight: 500;
+        font-weight: 700;
         text-align: right;
     }
-    
     .btn-area {
         margin-bottom: 12px;
         text-align: right;
@@ -468,42 +472,14 @@ hr.divider {
         }
     }
 }
-.card-number {
+.ip-card-module {
+	display:flex;
     margin-bottom: 6px;
-    label {
-        display: block;
-        color: $gray-000;
-        font-size: 14px;
-        font-weight: normal;
-        margin-bottom: 8px;
-    }
-    .card-input {
-        width: 100%;
-        height: 48px;
-        padding: 0 24px;
-        background-color: $gray-000;
-        border-radius: $border-radius;
-        overflow: hidden;
-        @include flex-center();
-        input {
-            font-size: 16px;
-            font-weight: 500;
-            padding-right: 0;
-            text-align: center;
-            &::placeholder {
-                font-size: 16px;
-            }
-            &:focus {
-                outline: none;
-            }
-        }
-        .dash {
-            color: $navy-020;
-            &.active {
-                color: $navy-070;
-            }
-        }
-    }
+    padding-right:56px;
+	.ip-txt{
+		height:48px;
+		font-size:$font-lg;
+	}
 }
 // [팝업] 예약결제 안내
 .layer-body {

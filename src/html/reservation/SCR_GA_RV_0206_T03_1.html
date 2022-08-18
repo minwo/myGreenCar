@@ -21,9 +21,6 @@
                             </ul>
                         </div>
                         <div class="cont membership">
-                            <div class="btn-area">
-                                <a href="#" class="btn-link">비밀번호 등록/수정</a>
-                            </div>
                             <div class="card skt">
                                 <div class="logo">
                                     <div class="logo-img"></div>
@@ -34,26 +31,37 @@
                                         <p class="title">보유 포인트</p>
                                         <p class="desc">
                                             <span class="value">11,000,000</span>
-                                            <span class="unit">P</span>
+											<!-- 20220818 -->
+                                            <span class="unit">Point</span>
                                         </p>
                                     </div>
                                     <div class="item">
                                         <p lass="title">최대 사용 가능 포인트</p>
                                         <p class="desc">
                                             <span class="value">1,000</span>
-                                            <span class="unit">P</span>
+											<!-- 20220818 -->
+                                            <span class="unit">Point</span>
                                         </p>
                                     </div>
                                 </div>
                             </div>
                             <section class="section">
-                                <h3 class="section-tit">T+ 포인트 사용</h3>
+                                <h3 class="section-tit">
+									T+ 포인트 사용
+									<!-- 20220818 -->
+									<button type="button" class="btn-link">
+										<span class="under">비밀번호 등록/수정</span>
+										<i class="ico arrow-right-nav060 lg"></i>
+									</button>
+									<!-- //20220818 -->
+								</h3>
                                 <div class="section-cont">
-                                    <div class="ip-group">
+                                    <div class="ip-group unit">
                                         <div class="row">
-                                            <input type="text" placeholder="비밀번호 6자리" />
-                                            <button class="btn primary md"><span class="text">조회</span></button>
+                                            <input type="text" class="ip-txt" placeholder="비밀번호 6자리">
+											<div class="line"></div>
                                         </div>
+										<button class="btn md"><span class="text">조회</span></button>
                                     </div>
                                 </div>
                             </section>
@@ -64,6 +72,9 @@
                                     <!-- <input type="text" class="ip-txt disabled-point" value="할인불가 (주 4회 초과)" /> -->
                                 </div>
                             </section>
+							<!-- 20220818 -->
+							<hr class="divider">
+							<!-- 20220818 -->
                             <section class="section">
                                 <h3 class="section-tit">할인형</h3>
                                 <div class="section-cont">
@@ -88,6 +99,18 @@
                                     </ul>
                                 </div>
                             </section>
+							<!-- 20220818 -->
+							<section class="section">
+								<div class="section-cont">
+									<h4>이용안내</h4>
+                                    <ul class="list sm">
+										<li>최초 T멤버십 사용 시 T멤버십 앱에서 비밀번호를 설정 후 사용 가능합니다.</li>
+                                        <li>비밀번호 불일치 일 5회, 누적 10회일 경우, T멤버십 앱에서 재인증 후 다시 입력해야 합니다.</li>
+                                        <li>T멤버십 (할인 ↔ 적립) 혜택 변경은 T멤버십 앱에서 변경하실 수 있습니다.</li>
+                                    </ul>
+                                </div>
+                            </section>
+							<!-- //20220818 -->
                         </div>
                     </div>
 					@@include('@@webRoot/include/bot_fix.html', {type: "type01", title:"적용하기", disabled:"false"})

@@ -8,9 +8,25 @@ $line-color-disabled: #989898 !default;
 $animation: all .2s ease;
  
 .ip-group {
-	margin-top:25px;
+	margin-top:24px;
 	&:first-child{
 		margin-top:0;
+	}
+
+	&.unit{
+		position:relative;
+		margin-top:24px;
+		padding-right:100px;
+		.ip-txt{
+			height:48px; 
+		}
+		.btn{
+			position:absolute;
+			top:0;
+			right:0;
+			width:92px;
+			padding:0 !important;
+		}
 	}
 
 	.row{
@@ -30,7 +46,8 @@ $animation: all .2s ease;
 	.ip-label{
 		display:inline-block;
 		font-size: $font-sm;
-		font-weight:700;
+		font-weight:500;
+		line-height:1;
 	}
 
 	.icon-group{
