@@ -416,6 +416,7 @@ hr.divider {
     .point-info {
         .item {
 			display:flex;
+			margin-top:3px;
 			align-items:end;
             color: $gray-000;
             .title{
