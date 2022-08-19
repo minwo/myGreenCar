@@ -1,0 +1,50 @@
+<div class="layer-wrap">
+    <div class="layer-header">
+        <!-- 프리존 반납이란? -->
+        @@include('@@webRoot/include/header.html', { type: "sub_pop", title: "그린댓글 수정" })
+    </div>
+
+    <div class="layer-body">
+        <div class="edit-reply">
+            <section>
+                <div class="car-info">
+                    <div class="img"><img src="/images/contents/img_car_dummy01.png" alt="" /></div>
+                    <div class="info">
+                        <strong>101허2506</strong>
+                        <span class="name">셀토스 1.6</span>
+                        <span class="option">
+                            디젤
+							<hr class="bar">
+                            <i class="ico oil-gun xs"></i>
+                        </span>
+                    </div>
+                </div>
+				<div class="img-area">
+					<img src="/images/dumm/parking.png" alt="" />
+					<button class="btn icon lg"><i class="ico pic-delete xl3"></i></button>
+				</div>
+                <div class="ip-group">
+                    <div class="row">
+                        <input id="ip01" type="text" class="ip-txt" placeholder="메시지를 남겨주세요" />
+                        <!-- <button type="button" class="icon-group btn-del">
+						<i class="ico delete md"></i>
+					</button> -->
+                        <div class="line"></div>
+                    </div>
+                    <p class="error-txt">비밀번호가 일치하지 않습니다</p>
+                </div>
+            </section>
+            <hr class="divider" />
+            <section>
+                <h2 class="title-sm">이용 안내</h2>
+                <p>타임라인은 그린카 이용자들이 차량 이용 팁, 반납 주차 위치, 이용 후기 등을 공유하는 공간입니다. 다음 사항에 유의 바랍니다.</p>
+                <ul class="list sm">
+                    <li>이용자 간의 공격적인 비방은 삼가해주세요.</li>
+                    <li>차량 정비, 청결 문제는 반납 후 차량 상태 평가를 통해 남겨주세요.</li>
+                    <li>서비스 이용 불편, 개선/건의사항은 고객센터 1899-1313 또는 [고객센터>모바일 문의]를 통해 접수해주세요.</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    @@include('@@webRoot/include/bot_fix.html', {type: "type01", title:"저장하기"})
+</div>
