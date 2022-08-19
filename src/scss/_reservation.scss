@@ -174,21 +174,18 @@ hr.divider {
             margin-left: 4px;
         }
         .filter {
-            color: $navy-020;
-            font-size: 12px;
+			height:24px;
+			line-height:24px;
             margin-left: auto;
             @include flex-center();
-            .active {
-                color: $navy-050;
-                font-weight: bold;
-            }
-            .divider-v {
-                display: inline-block;
-                width: 1px;
-                height: 14px;
-                background-color: $navy-020;
-                margin: 0 6px;
-                border: 0;
+            .ctr {
+				font-size:$font-sm;
+                color:$navy-070;
+                font-weight:500;
+				.ico{
+					margin-left:4px;
+					vertical-align:top;
+				}
             }
         }
     }
@@ -512,20 +509,14 @@ hr.divider {
 // [팝업] 그린카 금연서약
 .layer-body {
     .wrap {
-        p {
-            color: $navy-040;
-        }
         .emphasis {
-            color: $green-060;
-            font-size: 14px;
-            font-weight: 500;
+            color:$red-060;
             margin-top: 12px;
         }
         .sign {
-            margin-top: 20px;
+            margin-top: 16px;
             color: $navy-070;
-            font-size: 16px;
-            font-weight: 500;
+            font-size:$font-md;
             text-align: right;
             em {
                 margin-left: 4px;
@@ -533,6 +524,16 @@ hr.divider {
             }
         }
     }
+
+	// 쿠폰 순서선택
+	.coupon-choice{
+		margin:0 -20px;
+		padding:0 20px 18px;
+		border-top:1px solid $navy-020;	
+		.block{
+			padding:12px 0;
+		}
+	}
 }
 .layer-footer {
     .btn-group {

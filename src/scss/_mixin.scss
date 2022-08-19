@@ -81,7 +81,7 @@
 	// $border-radius: if($type == checkbox, 3px, 50%)
 ) {
 	// size
-	$checkradio-size:              26px !default;
+	$checkradio-size:              24px !default;
 	// checked border color
 	$checkradio-border-primary:  #0d6efd  !default;
 	// shadow default color
@@ -112,7 +112,7 @@
 		
 		@if($type == "radio"){
 			&:checked ~ span{
-				&:before{
+				&:after{
 					background-color:$green-060;
 				}
 			}
@@ -135,20 +135,24 @@
 
 		@if($type == "radio"){
 			&{
+				font-size:$font-lg;
+				font-weight:400;
+			}
+			&{
 				&:after{
 					display:inline-block;
 					position:absolute;
-					top:8px;
-					left:8px;
-					width:10px;
-					height:10px;
+					top:6px;
+					left:4px;
+					width:12px;
+					height:12px;
 					content:"";
 					border-radius:$border-radius-circle;
 					background-color:$gray-000;
 				}
 	
 				&:before{
-					background-color:$navy-020;
+					background-color:$gray-000;
 					border-radius:$border-radius-circle;
 				}
 			}
@@ -156,10 +160,11 @@
 
 		&:before {
 			content:'';
-			width:$checkradio-size;
-			height:$checkradio-size;
-			margin-right:5px;
-			
+			width:20px;
+			height:20px;
+			margin-right:6px;
+			border:2px solid $navy-020;
+			box-sizing:border-box;
 		}
 		
 	}

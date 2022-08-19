@@ -17,6 +17,9 @@ $animation: all .2s ease;
 		position:relative;
 		margin-top:24px;
 		padding-right:100px;
+		&:first-child{
+			margin-top:0
+		}
 		.ip-txt{
 			height:48px; 
 		}

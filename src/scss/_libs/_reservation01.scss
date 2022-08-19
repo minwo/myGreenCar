@@ -392,7 +392,10 @@
 		}
 		.link-box{
 			margin-top:30px;
+			border:1px solid $navy-020;
+			border-radius:20px;
 			background-size:100% 100%;
+			background-position:center 271px;
 
 			a{
 				display:block;
@@ -402,7 +405,7 @@
 
 			&.free{
 				margin-top:25px;
-				background-image: url(#{$url-content}bg_oneway_free.png);
+				background-image: url(#{$url-content}bg_oneway_free.svg);
 
 				.emp{
 					color:$pink-060;
@@ -410,7 +413,7 @@
 			}
 
 			&.green{
-				background-image: url(#{$url-content}bg_oneway_green.png);
+				background-image: url(#{$url-content}bg_oneway_green.svg);
 
 				.emp{
 					color:$green-060;
@@ -545,6 +548,32 @@
 		}
 		.layer-footer.full{
 			padding-top:32px;
+		}
+
+	}
+
+	//그린카 플러스
+	.greencar-plus{
+		.dt{
+			margin-top:16px;
+			font-size:$font-xl;
+			font-weight:500;
+		}
+		.dd{
+			font-size:$font-sm2;
+			line-height:20px;
+		}
+
+		.list{
+			margin-top:16px;
+			li{
+				font-size:$font-sm2;
+				line-height:20px;
+
+				&::before{
+					left:5px;
+				}
+			}
 		}
 	}
 
