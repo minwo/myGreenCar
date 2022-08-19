@@ -12,6 +12,7 @@
 		input{
 			& + span{
 				&:before{
+					background-size:100%;
 					background-image: url(#{$url-common}check_round_off.svg);
 				}
 			}

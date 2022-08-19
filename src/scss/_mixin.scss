@@ -156,17 +156,23 @@
 					border-radius:$border-radius-circle;
 				}
 			}
-		}
 
-		&:before {
-			content:'';
-			width:20px;
-			height:20px;
-			margin-right:6px;
-			border:2px solid $navy-020;
-			box-sizing:border-box;
+			&:before {
+				content:'';
+				width:20px;
+				height:20px;
+				margin-right:6px;
+				border:2px solid $navy-020;
+				box-sizing:border-box;
+			}
+		} @else {
+			&:before {
+				content:'';
+				width:$checkradio-size;
+				height:$checkradio-size;
+				margin-right:5px;
+			}
 		}
-		
 	}
 
 	&.no-label {

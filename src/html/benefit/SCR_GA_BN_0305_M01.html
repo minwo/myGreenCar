@@ -18,18 +18,23 @@
                             <div class="ci-img">
                                 <img src="/images/contents/mastercard_big.svg" alt="" />
                             </div>
-                            <div class="card-number">
-                                <label for="card_number">카드번호 입력</label>
-                                <div class="card-input">
-                                    <input type="text" data-pos="1" placeholder="1234" value="1234" maxlength="4" />
-                                    <span class="dash active">-</span>
-                                    <input type="text" data-pos="2" placeholder="5678" maxlength="4" />
-                                    <span class="dash">-</span>
-                                    <input type="text" data-pos="3" placeholder="1234" maxlength="4" />
-                                    <span class="dash">-</span>
-                                    <input type="text" data-pos="4" placeholder="5678" maxlength="4" />
-                                </div>
-                            </div>
+							<!-- 20220819 -->
+                            <div class="ip-group card">
+								<div class="row">
+									<label for="card" class="ip-label">카드번호 입력</label>
+									<div class="ip-card-module">
+										<input id="card" type="text" class="ip-txt" data-pos="1" placeholder="1234" value="1234" maxlength='4'>
+										<input type="text" class="ip-txt" data-pos="2" placeholder="0000" maxlength='4'>
+										<input type="text" class="ip-txt" data-pos="3" placeholder="0000" maxlength='4'>
+										<input type="text" class="ip-txt" data-pos="4" placeholder="0000" maxlength='4'>
+										<div class="line"></div>
+										<button type="button" class="icon-group btn-del">
+											<i class="ico delete md"></i>
+										</button>
+									</div>
+								</div>
+							</div>
+							<!-- 20220819 -->
 
                             <ul class="list">
                                 <li>카드 인증 후 마스터카드 쿠폰몰에 접속하실 수 있습니다.</li>

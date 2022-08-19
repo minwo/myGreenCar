@@ -375,17 +375,8 @@
         text-align: center;
         margin: 24px 0 30px;
     }
-    .card-number {
-        label {
-            font-size: 12px;
-            font-weight: 700;
-            color: $navy-070;
-        }
-        .card-input {
-            border: 1px solid $navy-020;
-        }
-    }
-    .card-number + .list {
-        margin-top: 50px;
+    
+    .ip-group + .list {
+        margin-top: 19px;
     }
 }
