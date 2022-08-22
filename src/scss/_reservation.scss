@@ -424,7 +424,7 @@ hr.divider {
         .item {
 			display:flex;
 			margin-top:3px;
-			align-items:end;
+			align-items:flex-end;
             color: $gray-000;
             .title{
 				flex:1;
@@ -542,6 +542,10 @@ hr.divider {
 		border-top:1px solid $navy-020;	
 		.block{
 			padding:12px 0;
+		}
+		.gc-radio{
+			display:block;
+			line-height:24px;
 		}
 	}
 }

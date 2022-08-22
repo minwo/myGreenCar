@@ -1,0 +1,135 @@
+@charset "UTF-8";
+
+.layer-wrap{
+	// 설문조사
+	.survey-cont{
+		padding:32px 0 0;
+
+		.satisfied{
+			.flex{
+				font-size:$font-sm;
+				color:$navy-040;
+				text-align:center;
+				&::before{
+					display:block;
+					width:35px;
+					height:35px;
+					margin:0 auto 7px;
+					content:"";
+					background-repeat:no-repeat;
+					background-size:100% 100%;
+				}
+				@for $i from 1 through 5 {
+					&.ico0#{$i}::before{
+						background-image:url(#{$url-ico}ico_satisfied0#{$i}_off.svg);
+					}
+					&.active{
+						&.ico0#{$i}::before{
+							background-image:url(#{$url-ico}ico_satisfied0#{$i}_on.svg);
+						}	
+					}
+				}
+			}
+		}
+
+		.range-module{
+			padding:0 12px;
+			.module{
+				position:relative;
+			}
+			.grid-flex{
+				margin:8px -12px 0;
+				font-size:$font-sm;
+				color:$navy-040;
+				.flex:last-child{
+					text-align:right;
+				}
+			}
+			.count-thumb{
+				display:block;
+				position:absolute;
+				top:0;
+				left:0;
+				width:24px;
+				height:24px;
+				font-size:$font-sm;
+				color:$gray-000;
+				text-align:center;
+				line-height:24px;
+				background:$default;
+				border-radius:50%;
+				transform:translate(-50%,0);
+				transition:left .1s linear;
+			}
+		}
+		.range-slide{
+			width:100%;
+			height:4px;
+			background:$navy-020;
+			border-radius:20px;
+			-webkit-appearance: none;
+
+			&::-webkit-slider-thumb {
+				-webkit-appearance: none;
+				appearance: none;
+				position:relative;
+				z-index:10;
+				width:24px;
+				height:24px;
+			  }
+		}
+
+		.block{
+			margin-top:32px;
+			&:first-child{
+				margin-top:0;
+			}
+		}
+		.title,.title-sm{
+			margin-bottom:16px;
+		}
+		.grid-flex{
+			align-items:normal;
+		}
+		.desc{
+			color:$navy-040;
+		}
+		.check-module{
+			.gc-checkbox{
+				display:block;
+				margin-top:12px;
+				&:first-child{
+					margin-top:0;
+				}
+			}
+		}
+		.radio-module{
+			.gc-radio{
+				display:block;
+				margin-top:12px;
+				&:first-child{
+					margin-top:0;
+				}
+			}
+		}
+		.btn-wrap{
+			margin-top:80px;
+		}
+
+		.survey-complete{
+			position:absolute;
+			top:50%;
+			width:calc(100% - 40px);
+			margin-top:-37px;
+			text-align:center;
+			transform:translate(0,-50%);
+
+			.desc{
+				margin-bottom:16px;
+				&:last-child{
+					margin-bottom:0;
+				}
+			}
+		}
+	}
+}

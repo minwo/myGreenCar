@@ -4,23 +4,17 @@
 .gc-checkbox {
 	@include form(checkbox);
 
-	// &:not(.round){
-				
-	// }
-
-	&.round{
-		input{
-			& + span{
-				&:before{
-					background-size:100%;
-					background-image: url(#{$url-common}check_round_off.svg);
-				}
+	input{
+		& + span{
+			&:before{
+				background-size:100%;
+				background-image: url(#{$url-common}check_round_off.svg);
 			}
-			&:checked {
-				& + span {
-					&:before {
-						background-image: url(#{$url-common}check_round_on.svg);
-					}
+		}
+		&:checked {
+			& + span {
+				&:before {
+					background-image: url(#{$url-common}check_round_on.svg);
 				}
 			}
 		}
