@@ -95,6 +95,7 @@
 	vertical-align:top;
 	color:$navy-030;
 	font-weight:500;
+	overflow:hidden;
 
 	input {
 		position:absolute;
@@ -105,6 +106,7 @@
 		overflow:hidden;
 		clip:rect(0,0,0,0);
 		border:0;
+		display:none;
 
 		&:checked ~ span{
 			color:$navy-070;
@@ -112,8 +114,8 @@
 		
 		@if($type == "radio"){
 			&:checked ~ span{
-				&:after{
-					background-color:$green-060;
+				&:before{
+					background-image:url(#{$url-common}radio_on.svg);
 				}
 			}
 		}
@@ -139,18 +141,6 @@
 				font-weight:400;
 			}
 			&{
-				&:after{
-					display:inline-block;
-					position:absolute;
-					top:6px;
-					left:4px;
-					width:12px;
-					height:12px;
-					content:"";
-					border-radius:$border-radius-circle;
-					background-color:$gray-000;
-				}
-	
 				&:before{
 					background-color:$gray-000;
 					border-radius:$border-radius-circle;
@@ -159,11 +149,11 @@
 
 			&:before {
 				content:'';
-				width:20px;
-				height:20px;
+				width:24px;
+				height:24px;
 				margin-right:6px;
-				border:2px solid $navy-020;
-				box-sizing:border-box;
+				background:url(#{$url-common}radio_off.svg) no-repeat;
+				background-size:100% 100%;
 			}
 		} @else {
 			&:before {

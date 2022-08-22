@@ -4,10 +4,321 @@
         @@include('@@webRoot/include/header.html', { type: "sub_pop", title: "이용내역서" })
     </div>
     <div class="layer-body">
-        <h3 class="title">이용내역서</h3>
-        <div class="pdf-viewer">
-            <iframe width="100%" height="100%" frameborder="0" src="http://docs.google.com/gview?embedded=true&url=YOUR_URL_HERE&amp;embedded=true">pdf viewer area</iframe>
-        </div>
+        <div class="usage-statement">
+        	<h3 class="title">이용내역서</h3>
+			<div class="block">
+				<div class="title-sm">이용정보</div>
+				<div class="tb-wrap">
+					<table>
+						<caption>이용정보 : 차량, 대여시간, 대여, 반납에 대한 정보</caption>
+						<colgroup>
+							<col style="width:38%">
+							<col>
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">차량</th>
+								<td>
+									셀토스 1.6 (디젤) (145허4454)
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">대여시간</th>
+								<td>
+									2022.04.23 (토) 10:00 
+									~2022.04.24 (일) 12:30 
+									(1일 2시간 30분)
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">대여</th>
+								<td>
+									한남역 1번 출구
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">반납</th>
+								<td>
+									서울 강남구 대치동 905-19
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<div class="block">
+				<div class="title-sm">대여요금</div>
+				<div class="tb-wrap">
+					<table>
+						<caption>대여요금 : 기본대여요금, 대여시간, 대여에 대한 정보</caption>
+						<colgroup>
+							<col style="width:38%">
+							<col>
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">기본대여요금</th>
+								<td class="al-r">
+									34,440원
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">대여시간</th>
+								<td class="al-r">
+									58%
+								</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr>
+								<th scope="row">대여</th>
+								<td class="al-r">14,390원</td>
+							</tr>
+						</tfoot>
+					</table>
+				</div>
+			</div>
+
+			<div class="block">
+				<div class="title-sm">보험료</div>
+				<div class="tb-wrap">
+					<table>
+						<caption>보험료 : 보험료, 보험료 ②에 대한 정보</caption>
+						<colgroup>
+							<col style="width:38%">
+							<col>
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">보험료</th>
+								<td class="al-r">
+									5,350원
+								</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr>
+								<th scope="row">보험료 ②</th>
+								<td class="al-r">
+									5,350원
+								</td>
+							</tr>
+						</tfoot>
+					</table>
+				</div>
+			</div>
+
+			<div class="block">
+				<div class="title-sm">주행요금</div>
+				<div class="tb-wrap">
+					<table>
+						<caption>주행요금 : 주행거리 ③, 기준주행비 ④, 주행요금 ⑤ (③ × ④)에 대한 정보</caption>
+						<colgroup>
+							<col style="width:38%">
+							<col>
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">주행거리 ③</th>
+								<td class="al-r">
+									5,350원
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">기준주행비 ④</th>
+								<td class="al-r">
+									170원 / km
+								</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr>
+								<th scope="row">주행요금 ⑤ <br>(③ × ④)</th>
+								<td class="al-r">
+									4,165원
+								</td>
+							</tr>
+						</tfoot>
+					</table>
+				</div>
+			</div>
+
+			<div class="block">
+				<div class="title-sm">하이패스 통행료</div>
+				<div class="tb-wrap">
+					<table>
+						<caption>하이패스 통행료 : 이용일시, 기준주행비 ④, 기준주행비 ④에 대한 정보</caption>
+						<colgroup>
+							<col style="width:38%">
+							<col style="width:30%">
+							<col>
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">이용일시</th>
+								<td class="al-c">
+									GATE
+								</td>
+								<td class="al-c">
+									요금
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">기준주행비 ④</th>
+								<td>
+									신갈IC
+								</td>
+								<td class="al-r">
+									1,000원
+								</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr>
+								<th scope="row">주행요금 ⑤ <br>(③ × ④)</th>
+								<td class="al-r">
+									&nbsp;
+								</td>
+								<td class="al-r">
+									1,000원
+								</td>
+							</tr>
+						</tfoot>
+					</table>
+				</div>
+			</div>
+
+			<div class="block">
+				<div class="title-sm">기타</div>
+				<div class="tb-wrap">
+					<table>
+						<caption>기타 : 주차요금, 편도, 오다, 사고/수리, 취소수수료, 초과에 대한 정보</caption>
+						<colgroup>
+							<col style="width:38%">
+							<col>
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">주차요금</th>
+								<td class="al-r">
+									0원
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">편도</th>
+								<td class="al-r">
+									10,000원
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">오다</th>
+								<td class="al-r">
+									0원
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">사고/수리</th>
+								<td class="al-r">
+									0원
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">취소수수료</th>
+								<td class="al-r">
+									0원
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">초과</th>
+								<td class="al-r">
+									0원
+								</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr>
+								<th scope="row">합계 ⑦</th>
+								<td class="al-r">
+									10,000원
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">
+									총결제대상금액<br>
+									(① + ② + ⑤ +
+									⑥ + ⑦)
+								</th>
+								<td class="al-r">
+									0원
+								</td>
+							</tr>
+						</tfoot>
+					</table>
+				</div>
+				<p class="desc-xs">
+					※ 하이패스카드로 주차요금을 결제한 경우, 주차요금으로 비용이 청구됩니다.
+				</p>
+			</div>
+
+			<div class="block">
+				<div class="title-sm">결제 상세 내역</div>
+				<div class="tb-wrap">
+					<table>
+						<caption>결제 상세 내역 : 결제일시, 편도, 오다, 사고/수리, 취소수수료, 초과에 대한 정보</caption>
+						<colgroup>
+							<col style="width:38%">
+							<col style="width:30%">
+							<col>
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">결제일시</th>
+								<th scope="col">결제금액</th>
+								<th scope="col">결제방법</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									2022.04.23
+									<span class="time">09:00</span>
+								</td>
+								<td class="al-r">
+									7,195원
+								</td>
+								<td class="al-r">
+									신용카드
+								</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr>
+								<th scope="row">주행요금 ⑤ <br>(③ × ④)</th>
+								<td class="al-r">
+									27,710원
+								</td>
+								<td class="al-r">
+									&nbsp;
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">
+									주행요금 ⑤ <br>(③ × ④)
+								</th>
+								<td class="al-r">
+									34,905원
+								</td>
+								<td class="al-r">
+									&nbsp;
+								</td>
+							</tr>
+						</tfoot>
+					</table>
+				</div>
+			</div>
+
+		</div>
     </div>
     <div class="layer-footer">
         <div class="btn-group">

@@ -59,6 +59,30 @@
 					event.currentTarget.parentNode.classList.toggle('active');
 				});
 			});
+
+			const rangeEl = document.querySelector('.range-slide');
+			if(rangeEl != null){
+				function rangSlider(){
+					const thumbEl = document.querySelector('.count-thumb');
+					
+					let min = rangeEl.getAttribute('min');
+					let max = rangeEl.getAttribute('max');
+					
+					let rangeValue = rangeEl.value;
+					console.log(rangeValue);
+					let widthValue = rangeValue * (10 / rangeEl.getAttribute('max')) * 10;
+					thumbEl.innerHTML = Number(rangeValue) + 1;
+					thumbEl.style.left = widthValue + '%';
+					console.log(widthValue);
+					
+				}
+	
+				rangSlider();
+				rangeEl.oninput = function(){
+					rangSlider();
+				}
+			}
+			
 		}
 	</script>
 </body>

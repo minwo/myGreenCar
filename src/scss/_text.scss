@@ -2,7 +2,7 @@
 
 // title default 18
 .title{
-	font-size: $font-lg;
+	font-size: $font-xl;
 	font-weight:500;
 
 	&-md{
@@ -20,7 +20,7 @@
 // description default 15
 .desc{
 	font-size:14px;
-	line-height:20px;
+	line-height:20px; 
 
 	&-xs{
 		font-size: $font-xs; //10
