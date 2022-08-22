@@ -69,12 +69,9 @@
 					let max = rangeEl.getAttribute('max');
 					
 					let rangeValue = rangeEl.value;
-					console.log(rangeValue);
 					let widthValue = rangeValue * (10 / rangeEl.getAttribute('max')) * 10;
 					thumbEl.innerHTML = Number(rangeValue) + 1;
 					thumbEl.style.left = widthValue + '%';
-					console.log(widthValue);
-					
 				}
 	
 				rangSlider();
