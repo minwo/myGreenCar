@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('@@webRoot/include/head.html')
+    </head>
+    <body>
+        <div id="wrap">
+            <!-- header -->
+            @@include('@@webRoot/include/header.html', { type: "sub_02", title: "친구초대" })
+            <!-- //header -->
+
+            <!-- container -->
+            <section id="container">
+                <div class="contents">
+                    <div class="invite-friend">
+                        <section class="section">
+                            <div class="invitee">
+                                <h3 class="title-xs">추천인 초대</h3>
+                                <div class="count">
+                                    <span class="value">3</span>
+                                    <span class="unit">명</span>
+                                    <button class="btn icon sm">
+                                        <i class="ico arrow-right-nav050 xs"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="left">
+                                    <h3 class="title-xs">
+                                        누적 리워드
+                                        <span>나/친구 각 1만원 쿠폰</span>
+                                    </h3>
+                                </div>
+                                <div class="right">
+                                    <span class="reward">
+                                        <span class="value"> 20,000</span>
+                                        <span class="unit"> 원</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </section>
+                        <hr class="divider" />
+                        <section class="section">
+                            <div class="section-title">
+                                <h3 class="title-sm">초대방법</h3>
+                            </div>
+                            <div class="section-cont">
+                                <ol class="how-to-invite">
+                                    <li class="step">
+                                        <strong>STEP1</strong>
+                                        <img src="/images/contents/how-to-invite-01.svg" alt="" />
+                                        <span class="desc">친구에게<br />내 ID 알려주기</span>
+                                    </li>
+                                    <li class="arrow"></li>
+                                    <li class="step">
+                                        <strong>STEP2</strong>
+                                        <img src="/images/contents/how-to-invite-02.svg" alt="" />
+                                        <span class="desc">회원가입 시<br />추천인 ID 입력</span>
+                                    </li>
+                                    <li class="arrow"></li>
+                                    <li class="step">
+                                        <strong>STEP3</strong>
+                                        <img src="/images/contents/how-to-invite-03.svg" alt="" />
+                                        <span class="desc">친구도 나도<br />1만원 쿠폰</span>
+                                    </li>
+                                </ol>
+                            </div>
+                        </section>
+                        <hr class="divider" />
+                        <section class="section">
+                            <div class="section-title">
+                                <h3 class="title-sm">이용안내</h3>
+                            </div>
+                            <div class="section-cont">
+                                <ul class="list sm">
+                                    <li>친구 초대 쿠폰은 친구의 가입상태가 정회원(면허/결제정보 등록)일 때 친구와 나에게 발급됩니다.</li>
+                                    <li>쿠폰이 소멸되기 전에 사용 또는 교환해주세요.</li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+                    @@include('@@webRoot/include/bot_fix.html', {type: "type01", title:"내 초대 코드(아이디)로 친구 초대하기"})
+                </div>
+            </section>
+            <!-- //container -->
+        </div>
+    </body>
+</html>

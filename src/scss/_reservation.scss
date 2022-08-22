@@ -74,6 +74,17 @@ hr.divider {
 }
 
 
+.section {
+    padding: 24px 0;
+    .section-title {
+        // color: $navy-070;
+        // font-size: 16px;
+        // font-weight: 500;
+        margin-bottom: 16px;
+    }
+}
+
+
 .reservation {
     position: relative;
     .wrap {
@@ -374,7 +385,6 @@ hr.divider {
 		&.pd-bot{
 			padding-bottom:24px;
 		}
-        margin-top: 24px;
         .section-tit {
 			position:relative;
             font-size:$font-sm;

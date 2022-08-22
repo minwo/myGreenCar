@@ -257,7 +257,7 @@
         font-weight: 500;
     }
     .point-summary {
-        padding: 24px 0;
+        padding-bottom: 24px;
         border-bottom: 1px solid $navy-020;
         .title {
             margin-bottom: 16px;
@@ -347,6 +347,12 @@
                 &:before {
                     background-image: url(#{$url-ico}icon_minus_gray.svg);
                 }
+            }
+            &:first-child{
+                padding-top: 0;
+            }
+            &:last-child{
+                border-bottom: 1px solid $navy-020;
             }
         }
         li + li {
@@ -527,8 +533,93 @@
     }
 }
 
+//친구초대
+.invite-friend {
+    .invitee{
+        padding-bottom: 24px;
+        margin-top: -8px;
+        border-bottom: 1px solid $navy-020;
+        .count{
+            justify-content: flex-end;
+            @include flex-center;
+            .value{
+                color: $green-060;
+                font-size: 22px;
+                font-weight: 600;
+            }
+            .unit{
+                color: $navy-070;
+                font-size: 16px;
+                font-weight: 500;
+                margin: 0 4px;
+            }
+        }
+    }
+    .row{
+        padding-top: 22px;
+        margin-bottom: -2px;
+        @include flex-center;
+        .left{
+            .title-xs{
+                span{
+                    color: $navy-040;
+                    font-size: 12px;
+                    margin-left: 4px;
+                }
+            }
+        }
+        .right{
+            margin-left: auto;
+            .reward{
+                span{
+                    font-size: 16px;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+    .how-to-invite {
+        display: flex;
+        justify-content: center;
+        // justify-content: space-between;
+        padding-top: 16px;
+        .step {
+            width: 72px;
+            flex-direction: column;
+            @include flex-center;
+            strong {
+                color: $navy-070;
+                font-size: 12px;
+            }
+            img {
+                width: 72px;
+                height: 72px;
+                margin: 16px 0 8px;
+            }
+            .desc {
+                color: $navy-040;
+                font-size: 12px;
+                text-align: center;
+            }
+        }
+        .arrow {
+            @include flex-center;
+            margin: 0 8px;
+            &:after {
+                content: " ";
+                display: block;
+                width: 24px;
+                height: 24px;
+                background-image: url(#{$url-ico}icon_arrow_right_navy030.svg);
+                background-size: contain;
+               
+            }
+        }
+    }
+}
+
 // 내가 초대한 친구
-.invited-friend {
+.invited-friends {
     .guide-box {
         color: $navy-040;
         font-size: 12px;
@@ -542,20 +633,20 @@
             padding: 32px 0 24px;
             border-bottom: 1px solid $navy-020;
             @include flex-center;
-            > span{
+            > span {
                 color: $navy-070;
-               font-size: 14px;
-               font-weight: 500;
-               em{
-                color: $green-060;
-                font-size: 16px;
-                font-weight: 700;
-                margin-left: 4px;
-               } 
+                font-size: 14px;
+                font-weight: 500;
+                em {
+                    color: $green-060;
+                    font-size: 16px;
+                    font-weight: 700;
+                    margin-left: 4px;
+                }
             }
             .switch-wrap {
                 margin-left: auto;
-                span + label{
+                span + label {
                     margin-left: 8px;
                 }
             }
@@ -580,11 +671,11 @@
                 .text {
                     margin-left: 16px;
                 }
-                .no-verify{
-                    i{
+                .no-verify {
+                    i {
                         display: none;
                     }
-                    .text{
+                    .text {
                         color: $navy-020;
                     }
                 }
@@ -593,7 +684,7 @@
                 + li {
                     border-top: 1px solid $navy-020;
                 }
-                &:last-child{
+                &:last-child {
                     border-bottom: 1px solid $navy-020;
                 }
             }
@@ -615,3 +706,4 @@
         }
     }
 }
+
