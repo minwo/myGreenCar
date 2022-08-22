@@ -454,6 +454,61 @@ textarea {
 	}
 }
 
+// 테이블
+.tb-wrap{
+	table{
+		text-align:left;
+		.al-c{text-align:center}
+		.al-r{text-align:right}
+
+		th{
+			padding:9px 8px;
+			font-size:$font-sm;
+			color:$navy-070;
+			line-height:16px;
+			font-weight:400;
+		}
+		td{
+			padding:9px 8px;
+			font-size:$font-sm;
+			color:$navy-070;
+			line-height:16px;
+			vertical-align:middle;
+		}
+		thead{
+			th{
+				background-color:$navy-010;
+			}
+		}
+		tbody{
+			th{
+				border:1px solid $navy-010;
+				background-color:$navy-010;
+			}
+			td{
+				border:1px solid $navy-010;
+			}
+			tr:last-child{
+				th,td{
+					border-bottom:none;
+				}
+			}
+		}
+		tfoot{
+			th{
+				color:$gray-000;
+				font-weight:700;
+				background-color:$navy-060;
+				border:1px solid $navy-060;
+			}
+			td{
+				font-weight:700;
+				border:1px solid $navy-060;
+			}
+		}
+	}
+}
+
 // 약관 & 단순 문구 화면
 .txt-module-page{
 	padding-top:22px;

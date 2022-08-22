@@ -87,6 +87,10 @@
 		}
 		.title,.title-sm{
 			margin-bottom:16px;
+			.tip{
+				font-weight:500;
+				color:$navy-040;
+			}
 		}
 		.grid-flex{
 			align-items:normal;

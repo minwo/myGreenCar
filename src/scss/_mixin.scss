@@ -93,11 +93,10 @@
 
 	display:inline-block;
 	vertical-align:top;
-	color:$navy-030;
-	font-weight:500;
-	overflow:hidden;
+	color:$navy-040;
 
 	input {
+		display:none;
 		position:absolute;
 		width:1px;
 		height:1px;
@@ -106,10 +105,10 @@
 		overflow:hidden;
 		clip:rect(0,0,0,0);
 		border:0;
-		display:none;
 
 		&:checked ~ span{
 			color:$navy-070;
+			font-weight:700;
 		}
 		
 		@if($type == "radio"){
@@ -134,10 +133,10 @@
 		display:inline-flex;
 		align-items:center;
 		vertical-align:top;
+		font-size:$font-sm2;
 
 		@if($type == "radio"){
 			&{
-				font-size:$font-lg;
 				font-weight:400;
 			}
 			&{
