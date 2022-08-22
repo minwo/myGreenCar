@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('@@webRoot/include/head.html')
+    </head>
+    <body>
+        <div id="wrap">
+            <!-- header -->
+            @@include('@@webRoot/include/header.html', { type: "sub_02", title: "내가 초대한 친구" })
+            <!-- //header -->
+
+            <!-- container -->
+            <section id="container">
+                <div class="contents">
+                    <div class="invited-friend">
+                        <div class="guide-box">친구 초대 쿠폰은 친구의 가입상태가 정회원(면허/결제정보 등록)<br />일 때 친구와 나에게 발급됩니다.</div>
+                        <div class="friend-list-wrap">
+                            <div class="no-data">
+                                <p class="desc">표시할 내용이 없습니다</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- //container -->
+        </div>
+    </body>
+</html>

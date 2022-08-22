@@ -513,7 +513,7 @@
         img {
             width: 100%;
         }
-        .btn{
+        .btn {
             position: absolute;
             top: 16px;
             right: 16px;
@@ -524,5 +524,94 @@
         color: $navy-040;
         font-size: 14px;
         margin: 16px 0 8px;
+    }
+}
+
+// 내가 초대한 친구
+.invited-friend {
+    .guide-box {
+        color: $navy-040;
+        font-size: 12px;
+        margin: 0 -20px;
+        padding: 16px 20px;
+        background-color: $gray-020;
+        text-align: center;
+    }
+    .friend-list-wrap {
+        .list-head {
+            padding: 32px 0 24px;
+            border-bottom: 1px solid $navy-020;
+            @include flex-center;
+            > span{
+                color: $navy-070;
+               font-size: 14px;
+               font-weight: 500;
+               em{
+                color: $green-060;
+                font-size: 16px;
+                font-weight: 700;
+                margin-left: 4px;
+               } 
+            }
+            .switch-wrap {
+                margin-left: auto;
+                span + label{
+                    margin-left: 8px;
+                }
+            }
+        }
+        .list-body {
+            .list-item {
+                height: 86px;
+                @include flex-center;
+                &:before {
+                    content: " ";
+                    display: block;
+                    width: 38px;
+                    height: 38px;
+                    background-image: url(#{$url-content}img_partner_logo.svg);
+                    background-size: contain;
+                }
+                &.lpoint {
+                    &:before {
+                        background-image: url(#{$url-content}lpoint.svg);
+                    }
+                }
+                .text {
+                    margin-left: 16px;
+                }
+                .no-verify{
+                    i{
+                        display: none;
+                    }
+                    .text{
+                        color: $navy-02 0;
+                    }
+                }
+            }
+            li {
+                + li {
+                    border-top: 1px solid $navy-020;
+                }
+                &:last-child{
+                    border-bottom: 1px solid $navy-020;
+                }
+            }
+        }
+        .left {
+            .text {
+                color: $navy-040;
+            }
+        }
+        .right {
+            margin-left: auto;
+            .text {
+                color: $green-060;
+                font-size: 16px;
+                font-weight: 700;
+                margin-left: 8px;
+            }
+            @include flex-center;
+        }
     }
 }
