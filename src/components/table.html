@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>Table</title>
+@@include('@@webRoot/include/head.html')
+</head>
+<body>
+	<div id="wrap">
+		<!-- header -->
+		@@include('@@webRoot/include/header.html', {
+			type: "sub_01",
+			title: "Table"
+		})
+		<!-- //header -->
+		
+		<!-- container -->
+		<section id="container">
+			<div class="contents">
+
+				<br><br>
+				
+				<div class="tb-wrap">
+					<table>
+						<caption>이용정보 : 차량, 대여시간, 대여, 반납에 대한 정보</caption>
+						<colgroup>
+							<col style="width:38%">
+							<col>
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">차량</th>
+								<td>
+									셀토스 1.6 (디젤) (145허4454)
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">대여시간</th>
+								<td>
+									2022.04.23 (토) 10:00 
+									~2022.04.24 (일) 12:30 
+									(1일 2시간 30분)
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">대여</th>
+								<td>
+									한남역 1번 출구
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">반납</th>
+								<td>
+									서울 강남구 대치동 905-19
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<br><br>
+
+				<div class="tb-wrap">
+					<table>
+						<caption>대여요금 : 기본대여요금, 대여시간, 대여에 대한 정보</caption>
+						<colgroup>
+							<col style="width:38%">
+							<col>
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">기본대여요금</th>
+								<td class="al-r">
+									34,440원
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">대여시간</th>
+								<td class="al-r">
+									58%
+								</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr>
+								<th scope="row">대여</th>
+								<td class="al-r">14,390원</td>
+							</tr>
+						</tfoot>
+					</table>
+				</div>
+
+				@@include('@@webRoot/include/bot_fix.html', {type: "type01", title:"false", disabled:"false"})
+			</div>
+		</section>
+		<!-- //container -->
+
+	</div>
+</body>
+</html>

@@ -187,53 +187,51 @@
 									</a>
 								</div>
 
-								<div class="partner">
-									<div class="partner-visual">
-										<div class="partner-swiper">
-											<div class="swiper">
-												<div class="swiper-wrapper">
-													<div class="swiper-slide">
-														<a href="#">
-															<div class="img"><img src="/images/contents/img_partner01.png" alt=""></div>
-															<div class="txt-module">
-																<p class="tit">
-																	그림같은 방풍림이 펼쳐지는 보사노
-																</p>
-																<p class="desc-md">
-																	소나무 숲을 배경으로 커피를 즐길 수 있는 보사노바 속초점을 방문하세요
-																</p>
-															</div>
-														</a>
-													</div>
-													<div class="swiper-slide">
-														<a href="#">
-															<div class="img"><img src="/images/contents/img_partner01.png" alt=""></div>
-															<div class="txt-module">
-																<p class="tit">
-																	그림같은 방풍림이 펼쳐지는 보사노
-																</p>
-																<p class="desc-md">
-																	소나무 숲을 배경으로 커피를 즐길 수 있는 보사노바 속초점을 방문하세요
-																</p>
-															</div>
-														</a>
-													</div>
-													<div class="swiper-slide">
-														<a href="#">
-															<div class="img"><img src="/images/contents/img_partner01.png" alt=""></div>
-															<div class="txt-module">
-																<p class="tit">
-																	그림같은 방풍림이 펼쳐지는 보사노
-																</p>
-																<p class="desc-md">
-																	소나무 숲을 배경으로 커피를 즐길 수 있는 보사노바 속초점을 방문하세요
-																</p>
-															</div>
-														</a>
-													</div>
+								<div class="partner-visual">
+									<div class="partner-swiper">
+										<div class="swiper">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide">
+													<a href="#">
+														<div class="img"><img src="/images/contents/img_partner01.png" alt=""></div>
+														<div class="txt-module">
+															<p class="tit">
+																그림같은 방풍림이 펼쳐지는 보사노
+															</p>
+															<p class="desc-md">
+																소나무 숲을 배경으로 커피를 즐길 수 있는 보사노바 속초점을 방문하세요
+															</p>
+														</div>
+													</a>
 												</div>
-												<div class="swiper-pagination"></div>
+												<div class="swiper-slide">
+													<a href="#">
+														<div class="img"><img src="/images/contents/img_partner01.png" alt=""></div>
+														<div class="txt-module">
+															<p class="tit">
+																그림같은 방풍림이 펼쳐지는 보사노
+															</p>
+															<p class="desc-md">
+																소나무 숲을 배경으로 커피를 즐길 수 있는 보사노바 속초점을 방문하세요
+															</p>
+														</div>
+													</a>
+												</div>
+												<div class="swiper-slide">
+													<a href="#">
+														<div class="img"><img src="/images/contents/img_partner01.png" alt=""></div>
+														<div class="txt-module">
+															<p class="tit">
+																그림같은 방풍림이 펼쳐지는 보사노
+															</p>
+															<p class="desc-md">
+																소나무 숲을 배경으로 커피를 즐길 수 있는 보사노바 속초점을 방문하세요
+															</p>
+														</div>
+													</a>
+												</div>
 											</div>
+											<div class="swiper-pagination"></div>
 										</div>
 									</div>
 								</div>
@@ -258,7 +256,7 @@
 				el = document.querySelector('.ui-svg-chart');
 				svgEl = el.querySelector('.circle');
 				radius = 84;
-				circleRatio = 1 - .75;
+				circleRatio = 1 - .66;
 				circumference = 2 * Math.PI * radius;
 				radiusVal = 2 * Math.PI * radius - circumference * circleRatio;
 				svgEl.style.stroke = color;
@@ -289,12 +287,12 @@
 		})();
 
 		// progress 등급 color 값 적용
-		svgChart.init('#fd8484');
+		svgChart.init('#$green-040');
 
 		// progress 등급 value 값 적용
 		setTimeout(function () {
-			svgChart.progress(70);
-		}, 1300);
+			svgChart.progress(50);
+		}, 1400);
 
 
 		const swiper = new Swiper('.swiper', {

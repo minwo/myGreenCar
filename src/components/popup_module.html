@@ -38,7 +38,7 @@
 			const url = '/html/'+pageName[1]+'/'+pageName[2] +'.html';
 			pageName[3] !== undefined && domWrap.classList.add('type-' + pageName[3]);
 			pageName[4] !== undefined && domWrap.classList.add('type-' + pageName[4]);
-			console.log(pageName);
+			
 			fetch(url).then(response => response.text()).then(data =>{
 				dom.innerHTML = data;
 				// console.log(data);
