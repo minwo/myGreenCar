@@ -89,6 +89,7 @@
 
 		.section{
 			position:relative;
+			padding:0;
 
 			&:not(:first-child){
 				padding:32px 0 24px;
@@ -110,6 +111,8 @@
 			margin-top:32px;
 			text-align:center;
 			.module{
+				display:inline-flex;
+				align-items:center;
 				position:relative;
 				width:264px;
 				margin:0 auto;
@@ -140,8 +143,13 @@
 				margin-left:10px;
 				text-align:left;
 
+				.tag-module{
+					position:absolute;
+					top:0;
+					left:0;
+				}
+
 				.ev{
-					margin-top:2px;
 					font-size:$font-sm;
 					color:$light-blue-040;
 				}
