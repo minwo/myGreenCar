@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('@@webRoot/include/head.html')
+    </head>
+    <body>
+        <div id="wrap">
+            <!-- header -->
+            @@include('@@webRoot/include/header.html', { type: "sub_02", title: "가입/탈퇴" })
+            <!-- //header -->
+
+            <!-- container -->
+            <section id="container">
+                <div class="contents">
+                    <div class="information">
+                        <div class="join-withdraw">
+                            <h3 class="intro-text">자동차운전면허 번호를 통해<br /><em>그린카 가입여부를 조회해보세요</em></h3>
+                            <div class="gc-tab-type02">
+                                <ul>
+                                    <li><a href="#">카메라</a></li>
+                                    <li><a href="#">번호입력</a></li>
+                                    <li><a href="#" class="active">지역입력</a></li>
+                                </ul>
+                                <span class="tab-indicator"></span>
+                            </div>
+                            <div class="ip-textarea">
+                                <textarea name="" id="" cols="30" rows="10" placeholder="예시"></textarea>
+                            </div>
+                            <div class="ip-group">
+                                <div class="select">
+                                    <select name="" id="">
+                                        <option value="1">지역선택</option>
+                                        <option value="2">서울</option>
+                                    </select>
+                                </div>
+                                <div class="row">
+                                    <input id="ip01" type="text" class="ip-txt" placeholder="" />
+                                    <!-- <button type="button" class="icon-group btn-del">
+                                <i class="ico delete md"></i>
+                            </button> -->
+                                    <div class="line"></div>
+                                </div>
+                                <p class="error-txt">비밀번호가 일치하지 않습니다</p>
+                            </div>
+                            <div class="btn-group">
+                                <button type="button" class="btn green lg">조회</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="toast-pop active">
+                        <div class="toast-container">
+                            <div class="module">
+                                <p class="message">
+                                    가입정보가 없습니다.<br />
+                                    그린카 회원이 되어보세요.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- //container -->
+        </div>
+    </body>
+</html>

@@ -7,11 +7,19 @@
     align-items: center;
 }
 
+// Common style
+
+.mt24 {
+    margin-top: 24px !important;
+}
 .mt60 {
-    margin-top: 60px;
+    margin-top: 60px !important;
 }
 .pt0{
     padding-top: 0 !important;
+}
+.pt4 {
+    padding-top: 4px !important;
 }
 .pb0{
     padding-bottom: 0px !important;
@@ -73,14 +81,25 @@ hr.divider {
     }
 }
 
+.guide-box {
+    color: $navy-040;
+    font-size: 12px;
+    margin: 0 -20px;
+    padding: 16px 20px;
+    background-color: $gray-020;
+    text-align: center;
+    &.align-left{
+        text-align: left;
+    }
+}
 
 .section {
-    padding: 24px 0;
+    padding: 32px 0;
     .section-title {
-        // color: $navy-070;
-        // font-size: 16px;
-        // font-weight: 500;
-        margin-bottom: 16px;
+        @include flex-center();
+        .right{
+            margin-left: auto;
+        }
     }
 }
 
