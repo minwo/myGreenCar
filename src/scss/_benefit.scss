@@ -9,27 +9,27 @@
     .section {
         padding: 20px 0;
     }
-   .section-title{
-    @include flex-center();
-    >div{
+    .section-title {
         @include flex-center();
-    }
-    .left{
-        h3{
-            margin-left: 8px;
-            color: $navy-040;
-            font-size: 16px;
-            font-weight: 500;
+        > div {
+            @include flex-center();
+        }
+        .left {
+            h3 {
+                margin-left: 8px;
+                color: $navy-040;
+                font-size: 16px;
+                font-weight: 500;
+            }
+        }
+        .right {
+            margin-left: auto;
+            .btn {
+                border-radius: 2rem;
+                height: 24px;
+            }
         }
     }
-    .right{
-        margin-left: auto;
-        .btn{
-            border-radius: 2rem;
-            height: 24px;
-        }
-    }
-   }
     .section-cont {
         .ip-group {
             .row {
@@ -125,10 +125,10 @@
             position: relative;
             background-image: none;
             @include flex-center;
-            .coupon-desc{
+            .coupon-desc {
                 flex: 1;
             }
-            .coupon-desc + .btn{
+            .coupon-desc + .btn {
                 flex: 0 0 auto;
             }
             .discount-type {
@@ -198,7 +198,17 @@
                     z-index: 10;
                 }
             }
-           
+        }
+        &.type-2 {
+            .coupon-item {
+            display: block;
+            .effective-date + .btn{
+                position: absolute;
+                right: 24px;
+                top: calc(50% - 12px);
+            }
+            }
+            
         }
     }
     .event-detail {
@@ -268,8 +278,7 @@
     }
 }
 
-
-.coupon{
+.coupon {
     .section-title {
         > div {
             @include flex-center;
@@ -391,7 +400,7 @@
         text-align: center;
         margin: 24px 0 30px;
     }
-    
+
     .ip-group + .list {
         margin-top: 19px;
     }
