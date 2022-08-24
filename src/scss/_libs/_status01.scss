@@ -281,6 +281,14 @@
 			}
 		}
 	}
+
+	.payment{
+		.flex{
+			&:last-child{
+				text-align:right;
+			}
+		}
+	}
 }
 
 .layer-wrap{

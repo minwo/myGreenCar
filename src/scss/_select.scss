@@ -4,15 +4,16 @@
 select {
 	height:40px;
 	padding:0 40px 0 15px;
-	border:1px solid red;
+	// border:1px solid red;
 	background-color:#fff;
 	background-repeat:no-repeat;
-	background-position:right 20px center;
-	// background-image:url(''+$url-common+'icon_select03.png');
+	background-position:right center;
+	background-image:url(''+$url-ico+'icon_arrow_bot_navy060.svg');
 	-webkit-appearance:none;
 	-moz-appearance:none;
 	appearance:none;
 	cursor: pointer;
+	font-size:$font-sm2;
 	@include ell;
 
 	&::-ms-expand {
