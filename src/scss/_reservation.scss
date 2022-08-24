@@ -12,6 +12,9 @@
 .mt24 {
     margin-top: 24px !important;
 }
+.mt32 {
+    margin-top: 32px !important;
+}
 .mt60 {
     margin-top: 60px !important;
 }
@@ -618,6 +621,15 @@ hr.divider {
         padding: 0 6px;
         font-size: 10px;
         font-weight: 400;
+    }
+    &.lg {
+        height: 24px;
+        padding: 0 12px;
+        font-size: 14px;
+        font-weight: 400;
+    }
+    &.square{
+        border-radius: 6px;
     }
 }
 
