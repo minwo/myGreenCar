@@ -15,6 +15,7 @@
         }
     }
     section {
+        padding-bottom: 32px;
         h3 {
             color: $navy-070;
             font-size: 20px;
@@ -27,13 +28,26 @@
             font-weight: 500;
             margin: 24px 0 16px;
             @include flex-center;
-            .ico{
+            .ico {
                 margin-right: 6px;
             }
         }
-        h4 + p{
+        h4 ~ p,
+        h4 ~ ol {
             color: $navy-040;
             font-size: 14px;
+        }
+        p + p {
+            margin-top: 16px;
+        }
+        li + li {
+            margin-top: 8px;
+        }
+        .text-green{
+            color: $green-060;
+        }
+        em{
+            font-weight: bold;
         }
     }
 }
@@ -84,13 +98,18 @@
         margin-top: 16px;
     }
 }
-.use-product-info {
+.info-list {
     margin-top: 16px;
     .item {
         padding: 16px 0;
         @include flex-center;
         .img {
+            img {
+                width: 56px;
+                height: 56px;
+            }
         }
+
         .text {
             margin-left: 16px;
             strong {
@@ -102,8 +121,50 @@
                 color: $navy-040;
                 font-size: 14px;
             }
+            p + p {
+                margin-top: 4px;
+            }
         }
     }
+}
+.join-step {
+    margin-top: 20px;
+    .item {
+        padding: 2px;
+        border: 1px solid $navy-020;
+        border-radius: 2rem;
+        .num {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            color: $gray-000;
+            font-size: 16px;
+            background-color: $green-060;
+            justify-content: center;
+            @include flex-center;
+        }
+        .text {
+            font-size: 16px;
+            font-weight: 500;
+            margin-left: 8px;
+        }
+        @include flex-center;
+    }
+    .arrow {
+        width: 24px;
+        height: 24px;
+        background-image: url(#{$url-ico}icon_step_arrow.svg);
+        margin: 0 auto;
+    }
+    li + li {
+        margin-top: 4px !important;
+    }
+}
+.img-biz {
+    border: 1px solid $navy-020;
+    border-radius: $border-radius;
+    background-color: #ddd;
+    margin-top: 16px;
 }
 .quick-menu {
     display: flex;
