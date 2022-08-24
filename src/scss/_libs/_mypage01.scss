@@ -294,4 +294,55 @@
 			}
 		}
 	}
+
+	// 결제수단
+	.payment{
+		padding:32px 0 0;
+		.count{
+			display:inline-block;
+			margin-left:5px;
+			font-size:$font-sm2;
+			font-weight:700;
+			color:$default;
+			vertical-align:top;
+		}
+
+		.paymnet-list{
+			.item{
+				position:relative;
+				margin-top:16px;
+				padding:24px 20px;
+				border:1px solid $navy-020;
+				border-radius:10px;
+				line-height:1;
+
+				.name{
+					font-size:$font-md;
+					font-weight:700;
+					color:$navy-070;
+				}
+				.info{
+					margin-top:9px;
+				}
+				.btn{
+					position:absolute;
+					top:20px;
+					right:10px;
+				}
+			}
+			.tag{
+				margin-left:5px;
+				vertical-align:top;
+			}
+			.btn-wrap{
+				margin-top:16px;
+				.btn{
+					height:86px;
+				}
+				.ico{
+					margin-right:5px;
+				}
+			}
+		}
+	}
 }

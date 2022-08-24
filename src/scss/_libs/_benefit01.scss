@@ -51,9 +51,12 @@
 	.certi-form{
 		margin-bottom:50px;
 		
-		.ip-group:not(.box){
+		.ip-group.certy{
 			position:relative;
 			padding-right:91px;
+			.ip-txt{
+				padding-right:70px;
+			}
 			.line{
 				background-color:$navy-020;
 			}
@@ -64,14 +67,29 @@
 			}
 			.icon-group{
 				color:$navy-020;
-				right:20px;
+				right:4px;
 				bottom:50%;
 				transform:translate(0,50%);
+
+				.btn-del{
+					display:flex;
+					margin-right:4px;
+				}
+				.time{
+					height:24px;
+					line-height:24px;
+					font-size:$font-lg;
+				}
+			}
+			.error{
+				.time{
+					color:$red-060;
+				}
 			}
 		}
 		.mail-txt{
 			position:absolute;
-			top:27px;
+			top:31px;
 			right:0;
 			color:$navy-070;
 			font-size:$font-lg;

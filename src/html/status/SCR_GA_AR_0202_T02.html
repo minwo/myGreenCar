@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('@@webRoot/include/head.html')
+		<script src="/js/swiper.min.js"></script>
+    </head>
+    <body>
+        <div id="wrap">
+            <!-- header -->
+            @@include('@@webRoot/include/header.html', { type: "sub_02", title: "사고번호 112585" })
+            <!-- //header -->
+
+            <!-- container -->
+            <section id="container">
+                <div class="contents">
+                    
+					<div class="status">
+						<div class="accident-status">
+							<div class="module">
+								<div class="info-module">
+									<a href="#">
+										<div class="img"><img src="/images/contents/img_car_dummy02.png" alt=""></div>
+										<div class="info">
+											<p class="car">셀토스 1.6 (디젤)</p>
+											<p class="number">145허4454</p>
+											<div class="subway"><i class="ico badge-g"></i>한남역 1번 출구</div>
+											<p class="date">2022.04.23 10:00 ~ 2022.04.23 12:00</p>
+											<p class="receipt">접수일시: 2022.04.23 11:30</p>
+											<i class="ico arrow-right-nav060 lg"></i>
+										</div>
+									</a>
+									<p class="desc">
+										원활히 <span class="point">사고비용이 납부될 수 있도록 협조</span>해주세요.
+									</p>
+								</div>
+								<div class="accident-step">
+									<div class="module">
+										<div class="line">
+											<div class="point point01 active"><span class="step">접수</span></div>
+											<div class="point point02 active"><span class="step">수리중</span></div>
+											<div class="point point03"><span class="step">수리완료</span></div>
+											<div class="point point04"><span class="step">결제대기</span></div>
+											<div class="point point05"><span class="step">종료</span></div>
+											<!-- width 퍼센트 적용 -->
+											<div class="line-active" style="width:25%"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>			
+
+						<hr class="divider">
+						<div class="gc-tab">
+							<ul>
+								<li><a href="#" >사고정보</a></li>
+								<li><a href="#" class="active">청구/결제</a></li>
+							</ul>
+						</div>
+
+						<div class="payment-infomation">
+							<h3 class="title-sm">최종청구</h3>
+							<div class="grid-flex">
+								<div class="flex">면책금 <span class="tip">(실수리비 포함)</span></div>
+								<div class="flex">
+									<span class="value">300,000</span> 원
+								</div>
+							</div>
+							<div class="grid-flex">
+								<div class="flex">휴차보상료</div>
+								<div class="flex">
+									<span class="value">300,000</span> 원
+								</div>
+							</div>
+							<div class="total">
+								<div class="grid-flex">
+									<div class="flex">총 고객부담금</div>
+									<div class="flex">
+										<span class="value">386,100</span> 원
+									</div>
+								</div>
+								<div class="btn-group">
+									<button type="button" class="btn cancel lg">수리비용청구서</button>
+									<button type="button" class="btn cancel lg">수리견적서</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="payment">
+							<h3 class="title-sm">결제수단</h3>
+
+							<div class="block grid-flex">
+								<div class="flex">
+									<label for="tmpRadio01" class="gc-radio">
+										<input type="radio" name="tmpRadio01" id="tmpRadio01" checked="">
+										<span>신용카드/간편결제 </span>
+									</label>
+								</div>
+								<div class="flex">
+									<button class="btn-link" type="button">국민카드 6306<i class="ico arrow-right-nav060 lg"></i></button>
+								</div>
+							</div>
+							<div class="block grid-flex">
+								<div class="flex">
+									<label for="tmpRadio02" class="gc-radio">
+										<input type="radio" name="tmpRadio01" id="tmpRadio02">
+										<span>가상계좌</span>
+									</label>
+								</div>
+								<div class="flex">
+									<select name="" id="">
+										<option>은행 선택</option>
+										<option>국민카드</option>
+									</select>
+								</div>
+							</div>
+							<div class="block grid-flex">
+								<div class="flex">
+									<label for="tmpRadio03" class="gc-radio">
+										<input type="radio" name="tmpRadio01" id="tmpRadio03">
+										<span>다른 카드 결제</span>
+									</label>
+								</div>
+							</div>
+						</div>
+
+						<div class="agree-group">
+							<div class="item check-all">
+								<label for="tmpCheckbook4" class="gc-checkbox round">
+									<input type="checkbox" id="tmpCheckbook4">
+									<span>약관 모두 동의</span>
+								</label>
+							</div>
+							<div class="agree-module">
+								<div class="item active">
+									<button type="button" class="btn-check">
+										<i class="ico ico-check md"></i>
+									</button>
+									<a href="#">
+										<span class="emp">필수</span>
+										<span class="text">전자금융거래 이용약관</span>
+										<i class="ico next-sm md"></i>
+									</a>
+								</div>
+								<div class="item">
+									<button type="button" class="btn-check">
+										<i class="ico ico-check md"></i>
+									</button>
+									<a href="#">
+										<span class="emp">필수</span>
+										<span class="text">개인정보의 수집 및 이용에 대한 동의</span>
+										<i class="ico next-sm md"></i>
+									</a>
+								</div>
+								<div class="item">
+									<button type="button" class="btn-check">
+										<i class="ico ico-check md"></i>
+									</button>
+									<a href="#">
+										<span class="emp">필수</span>
+										<span class="text">개인정보의 제공 및 위탁동의</span>
+										<i class="ico next-sm md"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="notice-txt">
+							<p class="tit">
+								유의사항
+							</p>
+							
+							<ul class="list">
+								<li>
+									사고 견적은 등록하신 사진을 기준으로 산출됩니다. 추가 견적이 발생하지 않도록 사진을 정확히 촬영해주세요.
+								</li>
+								<li>
+									사고와 관계없는 사진은 처리되지 않습니다.
+								</li>
+								<li>
+									등록한 사진은 삭제되지 않으며, 최대 10장까지 등록 가능합니다.
+								</li>
+							</ul>
+						</div>
+
+					</div>
+
+					@@include('@@webRoot/include/bot_fix.html', {type: "type01", title:"사고사진 등록하기", disabled:"disabled"})
+                </div>
+            </section>
+            <!-- //container -->
+        </div>
+
+		<script>
+			const swiper = new Swiper('.swiper', {
+				touchAngle: 40,
+				spaceBetween: 10,
+				slidesPerView: 2,
+				slidesPerGroup: 2,
+				// loopAdditionalSlides:10,
+				loopAdditionalSlides : 1,
+				// slideToClickedSlide : true, // 해당 슬라이드 클릭시 슬라이드 위치로 이동
+				loop:true,
+			});
+		</script>
+    </body>
+</html>

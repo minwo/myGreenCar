@@ -1,1 +1,314 @@
 @charset "UTF-8";
+
+.status{
+	padding-bottom:80px;
+	//사고접수안내
+	.status-guide{
+		margin:0 -20px;
+	}
+	.status-step{
+		margin-top:32px;
+		.flex{
+			text-align:center;
+			&::before{
+				display:block;
+				width:44px;
+				height:44px;
+				margin:0 auto 8px;
+				content:"";
+				background-repeat:no-repeat;
+				background-size:100% 100%;
+			}
+			@for $i from 1 through 4 {
+				&.step0#{$i}::before{
+					background-image:url(#{$url-ico}icon_status_step0#{$i}_on.svg);
+				}
+			}
+		}
+	}
+	.status-guide,.btn-wrap{
+		margin-top:32px;
+	}
+
+	//사고처리현황
+	.accident-status{
+		& > .module{
+			padding-bottom:27px;
+			border-top:1px solid $navy-020;
+			&:first-child{
+				margin-top:0;
+				border-top:0;
+			}
+		}
+		.info-module{
+			margin-top:24px;
+			padding-top:24px;
+			&:first-child{
+				margin-top:0;
+			}
+			a{
+				display:block;
+				position:relative;
+				padding-left:100px;
+				.ico:not(.badge-g){
+					position:absolute;
+					top:50%;
+					right:0;
+					transform:translateY(-50%);
+				}
+			}
+			.img{
+				position:absolute;
+				top:0;
+				left:0;
+				width:100px;
+				height:100px;
+			}
+			.car{
+				font-size:$font-md;
+				font-weight:500;
+			}
+			.number{
+				font-size:$font-md;
+			}
+			.subway{
+				height:20px;
+				margin-top:3px;
+				font-size:$font-sm2;
+				.badge-g{
+					width:20px;
+					height:20px;
+					margin-right:4px;
+					vertical-align:top;
+				}
+			}
+			.date,.receipt{
+				font-size:$font-sm;
+				color:$navy-040;
+				&:not(.receipt){
+					margin-top:14px;
+				}
+			}
+			.desc{
+				margin-top:22px;
+				font-weight:500;
+				text-align:center;
+				.point{
+					color:$default;
+				}
+			}
+		}
+
+	}
+
+	//사고정보
+	.accident-infomation{
+		.grid-flex{
+			padding:17px 0;
+			border-bottom:1px solid $navy-020;
+		}
+		.flex{
+			&:first-child{
+				font-size:$font-md;
+				font-weight:500;
+			}
+			&:last-child{
+				font-size:$font-sm2;
+				text-align:right;
+			}
+		}
+	}
+
+	.notice-txt{
+		margin-top:24px;
+		.tit{
+			font-size:$font-sm2;
+			font-weight:500;
+		}
+		li{
+			padding-left:14px;
+			font-size:$font-sm;
+			line-height:20px;
+			&::before{
+				left:5px;
+				width:2px;
+				height:2px;
+			}
+			&:first-child{
+				margin-top:8px;
+			}
+		}
+	}
+
+	.accident-photo{
+		margin-top:24px;
+		.swiper-module{
+			margin:24px -20px 0 0;
+			padding-right:20px;
+			overflow:hidden;
+		}
+		.swiper{
+			overflow:visible;
+		}
+	}
+
+	.accident-step{
+		padding:44px 0 4px;
+		.line {
+			position:relative;
+			height:4px;
+			background:$navy-020;
+			&-active{
+				position:absolute;
+				top:0;
+				height:4px;
+				background:$default;
+			}
+			.point{
+				position:absolute;
+				top:-3px;
+				left:0;
+				z-index:5;
+				width:10px;
+				height:10px;
+				border:2px solid $navy-020;
+				border-radius:50%;
+				background:$gray-000;
+				.step{
+					display:block;
+					position:absolute;
+					top:-25px;
+					left:-2px;
+					min-width:55px;
+					font-size:$font-sm;
+					color:$navy-040;
+				}
+				&.point02{
+					left:25%;
+					transform:translate(-50%,0);
+				}
+				&.point03{
+					left:50%;
+					transform:translate(-50%,0);
+				}
+				&.point04{
+					left:75%;
+					transform:translate(-50%,0);
+				}
+				&.point05{
+					left:100%;
+					transform:translate(-50%,0);
+					.step{
+						left:unset;
+						right:0;
+						text-align:right;
+					}
+				}
+				&.point02,&.point03,&.point04{
+					.step{
+						left:2px;
+						text-align:center;
+						transform:translate(-50%,0);
+					}
+				}
+				&.active{
+					border-color:$default;
+					background-color:$default;
+					.step{
+						color:$navy-070;
+						font-weight:500;
+					}
+				}
+			}
+		}
+		.tip{
+			position:relative;
+			margin-top:12px;
+			&::before{
+				display:inline-block;
+				position:absolute;
+				top:-2px;
+				left:0px;
+				width:24px;
+				height:4px;
+				content:"";
+				background:url(#{$url-ico}icon_tag_top_arrow.svg) no-repeat;
+				background-size:100% 100%;
+			}
+			.tag{
+				background-color:$red-060;
+			}
+		}
+	}
+
+	//청구/결제
+	.payment-infomation{
+		margin:24px 0 4px;
+		.grid-flex{
+			padding:6px 0;
+			.flex{
+				font-size:$font-sm2;
+				&:last-child{
+					text-align:right;
+				}
+				.tip{ 
+					color:$navy-040;
+				}
+				.value{
+					font-weight:700;
+				}
+			}
+		}
+		.total{
+			margin-top:15px;
+			padding-bottom:24px;
+			border-top:1px solid $navy-010;
+			border-bottom:1px solid $navy-010;
+			.grid-flex{
+				padding:19px 0;
+				.flex{
+					font-size:$font-md;
+					font-weight:500;
+					&:first-child{
+					}
+					&:last-child{
+						color:$default;
+					}
+					.value{
+						font-weight:700;
+					}
+				}
+			}
+		}
+	}
+}
+
+.layer-wrap{
+	&.status{
+		.insur{
+			padding-top:32px;
+		}
+		.list{
+			li{
+				margin-top:0;
+				padding-left:8px;
+				font-size:$font-sm;
+				line-height:16px;
+				color:$navy-070;
+				&::before{
+					top:8px;
+					width:1px;
+					height:1px;
+					background:$navy-070;
+				}
+			}
+		}
+		.txt-module{
+			margin-top:24px;
+			.desc{
+				margin-top:8px;
+				color:$navy-040;
+			}
+		}
+	}
+}

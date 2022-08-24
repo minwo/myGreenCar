@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('@@webRoot/include/head.html')
+		<script src="/js/swiper.min.js"></script>
+    </head>
+    <body>
+        <div id="wrap">
+            <!-- header -->
+            @@include('@@webRoot/include/header.html', { type: "sub_02", title: "사고접수&amp;현황" })
+            <!-- //header -->
+
+            <!-- container -->
+            <section id="container">
+                <div class="contents">
+                    
+					<div class="status">
+						
+						<div class="notice-txt">
+							<p class="tit">
+								유의사항
+							</p>
+							
+							<ul class="list">
+								<li>
+									사고 견적은 등록하신 사진을 기준으로 산출됩니다. 추가 견적이 발생하지 않도록 사진을 정확히 촬영해주세요.
+								</li>
+								<li>
+									사고와 관계없는 사진은 처리되지 않습니다.
+								</li>
+								<li>
+									등록한 사진은 삭제되지 않으며, 최대 10장까지 등록 가능합니다.
+								</li>
+							</ul>
+						</div>
+
+					</div>
+
+					@@include('@@webRoot/include/bot_fix.html', {type: "type01", title:"사고사진 등록하기"})
+                </div>
+            </section>
+            <!-- //container -->
+        </div>
+
+		<script>
+			const swiper = new Swiper('.swiper', {
+				touchAngle: 40,
+				spaceBetween: 10,
+				slidesPerView: 2,
+				slidesPerGroup: 2,
+				// loopAdditionalSlides:10,
+				loopAdditionalSlides : 1,
+				// slideToClickedSlide : true, // 해당 슬라이드 클릭시 슬라이드 위치로 이동
+				loop:true,
+			});
+		</script>
+    </body>
+</html>

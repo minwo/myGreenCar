@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('@@webRoot/include/head.html')
+    </head>
+    <body>
+        <div id="wrap">
+            <!-- header -->
+            @@include('@@webRoot/include/header.html', { type: "sub_02", title: "사고접수&amp;현황" })
+            <!-- //header -->
+
+            <!-- container -->
+            <section id="container">
+                <div class="contents">
+                    
+					<div class="status">
+						<div class="gc-tab">
+							<ul>
+								<li><a href="#">사고접수안내</a></li>
+								<li><a href="#" class="active">사고처리현황</a></li>
+							</ul>
+						</div>
+
+						<div class="accident-status">
+							<div class="module">
+								<div class="info-module">
+									<a href="#">
+										<div class="img"><img src="/images/contents/img_car_dummy02.png" alt=""></div>
+										<div class="info">
+											<p class="car">셀토스 1.6 (디젤)</p>
+											<p class="number">145허4454</p>
+											<div class="subway"><i class="ico badge-g"></i>한남역 1번 출구</div>
+											<p class="date">2022.04.23 10:00 ~ 2022.04.23 12:00</p>
+											<p class="receipt">접수일시: 2022.04.23 11:30</p>
+											<i class="ico arrow-right-nav060 lg"></i>
+										</div>
+									</a>
+								</div>
+								<div class="accident-step">
+									<div class="module">
+										<div class="line">
+											<div class="point point01 active"><span class="step">접수</span></div>
+											<div class="point point02 active"><span class="step">수리중</span></div>
+											<div class="point point03"><span class="step">수리완료</span></div>
+											<div class="point point04"><span class="step">결제대기</span></div>
+											<div class="point point05"><span class="step">종료</span></div>
+											<!-- width 퍼센트 적용 -->
+											<div class="line-active" style="width:25%"></div>
+										</div>
+									</div>
+									<div class="tip">
+										<span class="tag">! 사진미등록</span>
+									</div>
+								</div>
+							</div>
+
+							<div class="module">
+								<div class="info-module">
+									<a href="#">
+										<div class="img"><img src="/images/contents/img_car_dummy02.png" alt=""></div>
+										<div class="info">
+											<p class="car">셀토스 1.6 (디젤)</p>
+											<p class="number">145허4454</p>
+											<div class="subway"><i class="ico badge-g"></i>한남역 1번 출구</div>
+											<p class="date">2022.04.23 10:00 ~ 2022.04.23 12:00</p>
+											<p class="receipt">접수일시: 2022.04.23 11:30</p>
+											<i class="ico arrow-right-nav060 lg"></i>
+										</div>
+									</a>
+								</div>
+								<div class="accident-step">
+									<div class="module">
+										<div class="line">
+											<div class="point point01 active"><span class="step">접수</span></div>
+											<div class="point point05 active"><span class="step">종료</span></div>
+											<!-- width 퍼센트 적용 -->
+											<div class="line-active" style="width:100%"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>				
+
+
+					</div>
+
+                </div>
+            </section>
+            <!-- //container -->
+        </div>
+    </body>
+</html>
