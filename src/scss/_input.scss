@@ -108,3 +108,26 @@ input[type="email"] {
 		background-color:#dee2e6;
 	}
 }
+
+.photo-add{
+	display:flex;
+	align-items:center;
+	width:100%;
+	height:100%;
+	text-align:center;
+	background:$navy-060;
+	.module{
+		flex:1;
+	}
+	.label{
+		font-size:$font-sm2;
+		color:$gray-000;
+	}
+	.desc-xs{
+		color:$navy-040;
+	}
+
+	input[type="file"]{
+		appearance:none;
+	}
+}

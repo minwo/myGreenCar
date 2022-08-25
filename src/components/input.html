@@ -11,6 +11,9 @@
 			display:flex;
 			flex-wrap: wrap;
 		}
+		.photo-add .module{
+			display:unset;
+		}
 		.contents .tmp-guide-box {
 			margin-left: 0;
 			margin-right: 0;
@@ -138,8 +141,25 @@
 							<option value="옵션2">옵션2</option>
 							<option value="옵션3">옵션3</option>
 						</select>
+						<br><br>
+						
+						<div style="height:180px">
+							<label for="photoAdd" class="photo-add">
+								<div class="module">
+									<i class="ico camera lg"></i>
+									<p class="label">
+										사진 추가하기
+									</p>
+									<p class="desc-xs">
+										사고사진 촬영 가이드를 참고하여 등록해주세요.
+									</p>
+									<input type="file" id="photoAdd" class="hide-txt" accept="image/*">
+								</div>
+							</label>
+						</div>
 					</div>
 					<!-- Select -->
+
 
 					<!-- input file -->
 					<div class="tmp-guide-box">
