@@ -58,6 +58,10 @@ $btn-size: (
     font-size: map-get($btn-size,"xs","font-size");
     font-weight:400;
 
+    .ico + .text{
+        margin-left: 8px;
+    }
+
 	@include border-radius(10px);
     // -webkit-transition: all 1s cubic-bezier(.17, .07, .32, .76);
     // -moz-transition: all 1s cubic-bezier(.17, .07, .32, .76);
