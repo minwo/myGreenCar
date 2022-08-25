@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('@@webRoot/include/head.html')
+    </head>
+    <body>
+        <div id="wrap">
+            <!-- header -->
+            @@include('@@webRoot/include/header.html', { type: "sub_02", title: "자주 묻는 질문" })
+            <!-- //header -->
+
+            <!-- container -->
+            <section id="container">
+                <div class="contents">
+                    <div class="customer">
+                        <h3 class="intro-text">
+                            무엇을 도와드릴까요?<br />
+                            도움을 드리겠습니다.
+                        </h3>
+                        <div class="search-wrap">
+                            <div class="ip-group">
+                                <div class="row">
+                                    <i class="ico search lg"></i>
+                                    <input id="ip01" type="text" class="ip-txt" placeholder="검색어 입력" value="차량구매" />
+                                    <div class="line"></div>
+                                </div>
+                                <p class="error-txt">비밀번호가 일치하지 않습니다</p>
+                            </div>
+                        </div>
+                        <!-- <div class="btn-tab">
+                            <div class="scroll-area">
+                                <button type="button" class="btn line xs active">반납</button>
+                                <button type="button" class="btn line xs">사고</button>
+                                <button type="button" class="btn line xs">전기차</button>
+                                <button type="button" class="btn line xs">주유</button>
+                                <button type="button" class="btn line xs">쿠폰</button>
+                                <button type="button" class="btn line xs">면허</button>
+                            </div>
+                        </div> -->
+                        <div class="qna-list type-3 mt16">
+                            <div class="qna-list-head">
+                                <p><span class="text-green">‘차량구매’</span> 관련 <span class="text-green">0</span>건의 FAQ가 검색되었습니다.</p>
+                            </div>
+                            <div class="qna-list-body">
+                               <div class="no-data">
+                                <p>검색 결과가 없습니다. 
+                                    검색어를 다시 한 번 확인해주세요.</p>
+                               </div>
+                            </div>
+                        </div>
+                        <div class="btn-group mt16">
+                            <button type="button" class="btn line lg btn-more"><span class="text">검색결과 더보기</span><i class="ico more lg"></i></button>
+                        </div>
+                        <p class="mt40">원하시는 답변을 찾지 못하셨나요? 채팅 또는 전화상담을 통해 원하시는 답변을 찾아보세요.</p>
+                    </div>
+                </div>
+            </section>
+            <!-- //container -->
+        </div>
+    </body>
+</html>

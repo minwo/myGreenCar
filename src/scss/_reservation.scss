@@ -36,9 +36,7 @@
 .pb0{
     padding-bottom: 0px !important;
 }
-.flex{
-    @include flex-center();
-}
+
 hr.divider {
     display: block;
     background-color: $navy-010;
@@ -73,6 +71,13 @@ hr.divider {
     }
 }
 
+
+.btn-more{
+    .text{
+        font-size: 14px;
+        color: $navy-070;
+    }
+}
 
 .reservation {
     position: relative;
