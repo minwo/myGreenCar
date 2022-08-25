@@ -3,7 +3,7 @@
 // tmp
 @import "_libs/_customer01";
 
-.information {
+.customer {
     position: relative;
     z-index: 1;
     .intro-text {
@@ -37,17 +37,40 @@
             color: $navy-040;
             font-size: 14px;
         }
-        p + p {
-            margin-top: 16px;
-        }
+        // p + p {
+        //     margin-top: 16px;
+        // }
         // li + li {
         //     margin-top: 8px;
         // }
-        .text-green{
-            color: $green-060;
+        .text-green {
+            color: $green-060 !important;
         }
-        em{
+        em {
             font-weight: bold;
+        }
+    }
+    .ip-group {
+        .ip-inner {
+            @include flex-center;
+            .row {
+                flex: 1;
+            }
+        }
+        .btn {
+            width: 92px;
+            flex: 0 0 auto;
+            margin-left: 8px;
+        }
+        .input-desc {
+            margin-top: 16px;
+            p {
+                color: $navy-040;
+                font-size: 14px;
+                + p {
+                    margin-top: 8px;
+                }
+            }
         }
     }
 }
@@ -194,6 +217,24 @@
         .text {
             margin-top: 2px;
         }
+    }
+}
+
+.sel-pay-method {
+    input[type="radio"] + span {
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .gc-radio {
+        color: $navy-070;
+        + .desc {
+            margin: 4px 0 0 28px;
+            color: $navy-040;
+            font-size: 14px;
+        }
+    }
+    .item + .item {
+        margin-top: 16px;
     }
 }
 .gc-cs {

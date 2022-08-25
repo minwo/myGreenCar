@@ -12,6 +12,9 @@
 .mt8 {
     margin-top: 8px !important;
 }
+.mt16 {
+    margin-top: 16px !important;
+}
 .mt24 {
     margin-top: 24px !important;
 }
@@ -33,6 +36,9 @@
 .pb0{
     padding-bottom: 0px !important;
 }
+.flex{
+    @include flex-center();
+}
 hr.divider {
     display: block;
     background-color: $navy-010;
@@ -49,6 +55,9 @@ hr.divider {
     padding: 16px 20px;
     background-color: $gray-020;
     text-align: center;
+    p + p{
+        margin-top: 8px;
+    }
     &.align-left{
         text-align: left;
     }
