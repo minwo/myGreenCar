@@ -302,20 +302,6 @@
 			}
 		}
 
-		// .ip-txt{
-		// 	&:invalid:not(:focus):not(:placeholder-shown)  ~ .line,
-		// 	&:invalid:focus:not(:placeholder-shown)  ~ .line{
-		// 		&:before{
-		// 			width:100%;
-		// 			background-color: $validation-error;
-		// 		}
-		// 	}
-
-		// 	&:before{
-		// 		width:100%;
-		// 		background-color: $validation-error;
-		// 	}
-		// }
 	}
 	
 	&.box{
@@ -344,4 +330,9 @@
 		}
 		
 	}
+}
+
+// border-top
+@mixin bdt(){
+	border-top:1px solid $navy-020;
 }

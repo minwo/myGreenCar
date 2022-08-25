@@ -283,9 +283,45 @@
 	}
 
 	.payment{
+		.block{
+			margin-top:8px;
+		}
 		.flex{
 			&:last-child{
 				text-align:right;
+			}
+			.btn-link{
+				min-height:24px;
+				line-height:24px;
+				color:$navy-070;
+			}
+			.ico{
+				margin-left:8px;
+				vertical-align:top;
+			}
+		}
+		&.corp{
+			.flex{
+				&:last-child{
+					font-size:$font-md;
+					color:$navy-020;
+				}
+			}
+			.desc-cp{
+				margin-top:9px;
+				font-size:$font-sm;
+				color:$navy-040;
+				line-height:24px;
+			}
+		}
+
+	}
+	.agree-group{
+		.check-all{
+			margin-top:20px;
+			padding-top:24px;
+			span{
+				font-size:$font-xl;
 			}
 		}
 	}
