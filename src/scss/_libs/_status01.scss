@@ -283,6 +283,15 @@
 	}
 
 	.payment{
+		margin-top:24px;
+		.btn-copy{
+			width:18px;
+			height:18px;
+			margin-left:8px;
+			vertical-align:top;
+			background:url(#{$url-ico}icon_copy.svg) no-repeat;
+			background-size:100% 100%;
+		}
 		.block{
 			margin-top:8px;
 		}
@@ -314,7 +323,9 @@
 				line-height:24px;
 			}
 		}
-
+		.btn-group{
+			margin-top:24px;
+		}
 	}
 	.agree-group{
 		.check-all{
@@ -325,25 +336,107 @@
 			}
 		}
 	}
+
+	//사고사진 등록
+	.photo-guide{
+		margin-top:32px;
+		text-align:right;
+		.btn-tip{
+			display:inline-flex;
+			align-items:center;
+			color:$default;
+		}
+		.under{
+			margin-left:4px;
+			border-color:$default;
+		}
+	}
+	.add{  
+		height:180px;
+		margin-top:8px;
+	}
+	.photo-list{
+		margin-top:8px;
+		.grid-flex{
+			flex-wrap:wrap;
+		}
+		.flex{
+			position:relative;
+			width:50%;
+			// flex:0 0 auto;
+			flex-basis:50%;
+			padding-left:10px;
+			&:nth-child(odd){
+				padding-left:0px;
+				padding-right:10px;
+				.btn-del{
+					left:0px;
+				}
+			}
+			.btn-del{
+				position:absolute;
+				top:0;
+				left:10px;
+			}
+		}
+	}
+	.title-area{
+		.flex{
+			.btn-link{
+				height:auto;
+				line-height:1.1;
+				font-size:$font-md;
+			}
+		}
+	}
+}
+
+.under{
+	display:inline-block;
+	border-bottom:1px solid $navy-070;
+}
+.photo-add{
+	display:flex;
+	align-items:center;
+	width:100%;
+	height:100%;
+	text-align:center;
+	background:$navy-060;
+	.module{
+		flex:1;
+	}
+	.label{
+		font-size:$font-sm2;
+		color:$gray-000;
+	}
+	.desc-xs{
+		color:$navy-040;
+	}
+
+	input[type="file"]{
+		appearance:none;
+	}
 }
 
 .layer-wrap{
 	&.status{
 		.insur{
 			padding-top:32px;
-		}
-		.list{
-			li{
-				margin-top:0;
-				padding-left:8px;
-				font-size:$font-sm;
-				line-height:16px;
-				color:$navy-070;
-				&::before{
-					top:8px;
-					width:1px;
-					height:1px;
-					background:$navy-070;
+			.tb-wrap{
+				.list{
+					li{
+						margin-top:0;
+						padding-left:8px;
+						font-size:$font-sm;
+						line-height:16px;
+						color:$navy-070;
+						&::before{
+							top:8px;
+							width:1px;
+							height:1px;
+							background:$navy-070;
+						}
+					}
 				}
 			}
 		}
@@ -352,6 +445,39 @@
 			.desc{
 				margin-top:8px;
 				color:$navy-040;
+			}
+		}
+		//수리비용청구서
+		.customer-burden{
+			padding-top:24px;
+			.block{
+				margin-top:24px;
+			}
+			.tb-wrap{
+				margin-top:16px;
+			}
+			.desc{
+				margin-top:24px;
+				color:$navy-040;
+			}
+			.desc-xs{
+				margin-top:8px;
+				font-size:$font-sm;
+				line-height:16px;
+				color:$navy-040;
+				&:first-child{
+					margin-top:0;
+				}
+			}
+			.list-number{
+				margin-top:8px;
+			}
+		}
+
+		//수리견적서
+		.repair{
+			.desc{
+				margin-top:24px;
 			}
 		}
 	}

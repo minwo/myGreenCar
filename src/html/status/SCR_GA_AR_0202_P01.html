@@ -7,7 +7,7 @@
     <body>
         <div id="wrap">
             <!-- header -->
-            @@include('@@webRoot/include/header.html', { type: "sub_02", title: "사고접수&amp;현황" })
+            @@include('@@webRoot/include/header.html', { type: "sub_02", title: "사고사진 등록" })
             <!-- //header -->
 
             <!-- container -->
@@ -34,9 +34,62 @@
 							</ul>
 						</div>
 
+						<div class="photo-guide">
+							<button class="btn-tip" type="button">
+								<i class="ico icon-tip-green060 md"></i>
+								<span class="under">
+									사고사진 촬영 가이드
+								</span>
+							</button>
+						</div>
+
+						<div class="add">
+							<label for="photoAdd" class="photo-add">
+								<div class="module">
+									<i class="ico camera lg"></i>
+									<p class="label">
+										사진 추가하기
+									</p>
+									<p class="desc-xs">
+										사고사진 촬영 가이드를 참고하여 등록해주세요.
+									</p>
+									<input type="file" id="photoAdd" class="hide-txt" accept="image/*">
+								</div>
+							</label>
+						</div>
+
+						<div class="photo-list">
+							<div class="grid-flex">
+								<div class="flex">
+									<button type="button" class="btn-del">
+										<i class="ico delete-black lg"></i>
+									</button>
+									<img src="/images/contents/img_car_dummy04.png" alt="">
+								</div>
+								<div class="flex">
+									<button type="button" class="btn-del">
+										<i class="ico delete-black lg"></i>
+									</button>
+									<img src="/images/contents/img_car_dummy04.png" alt="">
+								</div>
+								<div class="flex">
+									<button type="button" class="btn-del">
+										<i class="ico delete-black lg"></i>
+									</button>
+									<img src="/images/contents/img_car_dummy04.png" alt="">
+								</div>
+								<div class="flex">
+									<button type="button" class="btn-del">
+										<i class="ico delete-black lg"></i>
+									</button>
+									<img src="/images/contents/img_car_dummy04.png" alt="">
+								</div>
+							</div>
+						</div>
+
 					</div>
 
-					@@include('@@webRoot/include/bot_fix.html', {type: "type01", title:"사고사진 등록하기"})
+					@@include('@@webRoot/include/bot_fix.html', {type: "type01", title:"사진 전송하기", disabled:"disabled"})
                 </div>
             </section>
             <!-- //container -->

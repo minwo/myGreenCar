@@ -1,0 +1,194 @@
+<div class="layer-wrap status">
+	<div class="layer-header">
+		@@include('@@webRoot/include/header.html', {
+			type: "sub_pop",
+			title: "수리비용청구서"
+		})
+	</div>
+	
+	<div class="layer-body">
+
+		<div class="customer-burden">
+			
+			<h3 class="title">
+				고객부담금 안내서
+			</h3>
+
+			<div class="block">
+				<h4 class="title-sm">
+					발신
+				</h4>
+	
+				<ul class="list sm">
+					<li>
+						㈜그린카<br>서울시 강남구 테헤란로 70길 16 통산빌딩 6층
+					</li>
+					<li>
+						롯데렌탈㈜<br>경기도 안양시 동안구 호계동 898 신원비젼타워 8층
+					</li>
+				</ul>
+			</div>
+	
+			<div class="block">
+				<h4 class="title-sm">
+					수신
+				</h4>
+				<ul class="list sm">
+					<li>
+						성함: 홍길동
+					</li>
+					<li>
+						생년월일: 19900101
+					</li>
+				</ul>
+			</div>
+
+			<div class="block">
+				<h4 class="title-sm">
+					1. 이용내역
+				</h4>
+				<div class="tb-wrap">
+					<table>
+						<caption>이용내역 : 차량, 대여시간, 차고지, 고객 선택 면책금, 사고일시, 과실비율에 대한 정보</caption>
+						<colgroup>
+							<col style="width:38%">
+							<col>
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">차량</th>
+								<td>
+									셀토스 1.6 (디젤) (145허4454)
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">대여시간</th>
+								<td>
+									2022.04.23 (토) 10:00~2022.04.24 (일) 12:30
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">차고지</th>
+								<td>
+									한남역 1번 출구
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">고객 선택 면책금</th>
+								<td>
+									50,000원
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">사고일시</th>
+								<td>
+									2022.06.18 15:00
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">과실비율</th>
+								<td>
+									자차 100%
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<div class="block">
+				<h4 class="title-sm">
+					2. 비용안내
+				</h4>
+				<div class="tb-wrap">
+					<table>
+						<caption>비용안내 : 청구일시, 납부기한, 면책금(실수리비용 포함), 휴차보상료, 총 고객부담금에 대한 정보</caption>
+						<colgroup>
+							<col style="width:38%">
+							<col>
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">청구일시</th>
+								<td class="al-r">
+									2022.05.01
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">납부기한</th>
+								<td class="al-r">
+									2022.07.31
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">면책금<br>(실수리비용 포함)</th>
+								<td class="al-r">
+									50,000원
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">휴차보상료</th>
+								<td class="al-r">
+									180,000원<br>(180,000원 x 50% x 2일)
+								</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr>
+								<th scope="row">
+									총 고객부담금
+								</th>
+								<td class="al-r">
+									386,100원
+								</td>
+							</tr>
+						</tfoot>
+					</table>
+				</div>
+				<p class="desc-xs">
+					※ 면책금 적용구분<br>자차손해면책 (5만원 or 30만원 or 70만원 or 실수리비)
+				</p>
+				<p class="desc-xs">
+					※ 휴차 보상료 계산식<br>이용차량의 일일 표준대여요금의 50% x 실수리일수
+				</p>
+			</div>
+
+
+			<div class="block">
+				<h4 class="title-sm">
+					전달사항
+				</h4>
+	
+				<ol class="list-number">
+					<li>
+						1. 사고발생으로 인한 이용정지는 총 청구금액 입금이 확인 될 때까지 이용 정지됩니다. (단, 금지 행위로 인한 사고의 경우 이용이 불가능할 수 있습니다.)
+					</li>
+					<li>
+						2. 본 안내서 발송일로부터 1주일 이상 미 입금시 신용정보사 이관 및 신용상의 불이익을 받을 수 있습니다.
+					</li>
+					<li>
+						3. 수리비용 (면책금) 및 휴차보상료는 세법상 세금계산서 또는 현금영수증 발행이 불가 하오니 이점 양지바랍니다. (부가가치세법 기본통칙 1-0-2)
+					</li>
+					<li>
+						4. ㈜그린카는 롯데렌탈㈜로부터 본 안내 업무를 위탁 받아 실행합니다.<br>(결제 관련 문의 : 02-528-7794 / 7799)
+					</li>
+				</ol>
+			</div>
+			
+		</div>
+
+	</div>
+
+	<div class="layer-footer">
+		<div class="bot-btn-fix">
+			<div class="btn-wrap">
+				<div class="btn-group">
+					<button type="button" class="btn xl">
+						<i class="ico file-send lg"></i>
+						PDF 파일 전송
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
