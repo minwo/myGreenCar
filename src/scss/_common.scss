@@ -458,6 +458,7 @@ textarea {
 .tb-wrap{
 	table{
 		text-align:left;
+		border-bottom:1px solid $navy-010;
 		.al-c{text-align:center}
 		.al-r{text-align:right}
 
@@ -487,7 +488,7 @@ textarea {
 			}
 			td{
 				border:1px solid $navy-010;
-			}
+			} 
 			tr:last-child{
 				th,td{
 					border-bottom:none;
