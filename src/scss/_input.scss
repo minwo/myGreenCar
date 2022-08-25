@@ -64,6 +64,19 @@ $animation: all .2s ease;
 			margin-left:10px;
 		}		
 	}
+
+	&.certi{
+		.btn-del{
+			margin-right:8px;
+		}
+		.time{
+			height:24px;
+			line-height:24px;
+			font-size:$font-lg;
+			color:$navy-020;
+		}
+	}
+
 	.error-txt{
 		display:none
 	}
