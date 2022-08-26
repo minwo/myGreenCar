@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('@@webRoot/include/head.html')
+    </head>
+    <body>
+        <div id="wrap">
+            <!-- header -->
+            @@include('@@webRoot/include/header.html', { type: "sub_02", title: "멤버십" })
+            <!-- //header -->
+
+            <!-- container -->
+            <section id="container">
+                <div class="contents">
+                    <div class="mypage">
+                        <div class="gc-tab">
+                            <ul>
+                                <li><a href="#" class="active">KT멤버십</a></li>
+                                <li><a href="#">T멤버십</a></li>
+                            </ul>
+                        </div>
+
+						<div class="my-membership">
+							<div class="cont membership">
+								<div class="card skt">
+									<div class="logo">
+										<div class="logo-img"></div>
+										<span>멤버십</span>
+									</div>
+									<div class="point-info">
+										<div class="item card-bind">
+											<div class="num">2472</div>
+											<div class="bullet">-</div>
+											<div class="num">7138</div>
+											<div class="bullet">-</div>
+											<div class="num">●●●●</div>
+											<div class="bullet">-</div>
+											<div class="num">●●●●</div>
+										</div>
+										<div class="item">
+											<p class="title">보유 포인트</p>
+											<p class="desc">
+												<span class="value">1,000,000</span>
+												<span class="unit">Point</span>
+											</p>
+										</div>
+									</div>
+								</div>
+	
+								<div class="ip-wrap">
+									<div class="ip-group card">
+										<div class="row">
+											<label for="card" class="ip-label">카드번호 입력</label>
+											<div class="ip-card-module">
+												<input id="card" type="text" class="ip-txt" data-pos="1" placeholder="1234" value="1234" maxlength="4">
+												<input type="text" class="ip-txt" data-pos="2" placeholder="0000" maxlength="4">
+												<input type="text" class="ip-txt" data-pos="3" placeholder="0000" maxlength="4">
+												<input type="text" class="ip-txt" data-pos="4" placeholder="0000" maxlength="4">
+												<div class="line"></div>
+												<button type="button" class="icon-group btn-del">
+													<i class="ico delete md"></i>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="ip-group">
+										<div class="row">
+											<label for="fakePassword" class="ip-label">비밀번호</label>
+											<input type="password" id="fakePassword" class="ip-txt" placeholder="비밀번호 6자리">
+											<div class="line"></div>
+											<span class="icon-group">
+												<button id="toggler" type="button" class="ip-icon active">
+													<i class="ico eye-on lg"></i>
+												</button>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+	
+							<hr class="divider">
+							<section class="membership-sale-info">
+								<h3 class="section-tit">할인형</h3>
+								<div class="section-cont">
+									<p class="desc-xl">
+										최대 월 4회(1일~말일 기준), 회당 최대 1만원 할인
+									</p>
+									<ul class="list sm">
+										<li>최대 월 4회(1일~말일 기준), 회당 최대 1만원 할인</li>
+										<li>주말/공휴일 대여요금의 10% 할인</li>
+										<li>Lite 등급의 경우 할인 불가</li>
+										<li>편도예약/반납연장 시 추가요금은 할인 제외</li>
+									</ul>
+								</div>
+							</section>
+	
+							<section class="membership-sale-info">
+								<h3 class="section-tit">적립형</h3>
+								<div class="section-cont">
+									<p class="desc-xl">
+										최대 월 4회(1일~말일 기준), 회당 최대 1만원 적립
+									</p>
+									<ul class="list sm">
+										<li>주중 대여요금의 20% 할인</li>
+										<li>주말/공휴일 대여요금의 10% 적립</li>
+										<li>Lite 등급의 경우 적립 불가</li>
+										<li>대여완료 후 즉시 적립</li>
+										<li>편도예약/반납연장 시 추가요금은 적립 제외  </li>
+									</ul>
+								</div>
+							</section>
+	
+							<div class="agree-group">
+								<div class="agree-module">
+									<div class="item active">
+										<button type="button" class="btn-check">
+											<i class="ico ico-check md"></i>
+										</button>
+										<a href="#">
+											<span class="emp">필수</span>
+											<span class="text">전자금융거래 이용약관</span>
+											<i class="ico next-sm md"></i>
+										</a>
+									</div>
+								</div>
+							</div>
+	
+							<section class="membership-sale-info">
+								<div class="section-cont">
+									<p class="desc-xl">
+										최대 월 4회(1일~말일 기준), 회당 최대 1만원 적립
+									</p>
+									<ul class="list sm">
+										<li>최초 T멤버십 사용 시 T멤버십 앱에서 비밀번호를 설정 후 사용 가능합니다.</li>
+										<li>비밀번호 불일치 일 5회, 누적 10회일 경우, T멤버십 앱에서 재인증 후 다시 입력해야 합니다.</li>
+										<li>T멤버십 (할인 ↔ 적립) 혜택 변경은 T멤버십 앱에서 변경하실 수 있습니다.</li>
+									</ul>
+								</div>
+							</section>
+						</div>
+
+                    </div>
+					@@include('@@webRoot/include/bot_fix.html', {type: "type01", title:"삭제하기"})
+                </div>
+            </section>
+            <!-- //container -->
+        </div>
+    </body>
+</html>

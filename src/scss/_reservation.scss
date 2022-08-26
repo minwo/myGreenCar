@@ -307,16 +307,15 @@ hr.divider {
 
 //멤버십
 .membership {
-    padding: 26px 0 30px;
+    padding: 24px 0;
 	.ip-txt{
 		font-size:$font-md;
 	}
-    .card {
+    .card:not(.ip-group) {
         display: flex;
         flex-direction: column;
         width: 100%;
         height: 160px;
-		margin-bottom:24px;
         padding: 20px 20px 20px;
         border-radius: $border-radius;
         .logo {
@@ -375,7 +374,8 @@ hr.divider {
             }
         }
     }
-	.ip-group.unit{
+
+	.ip-wrap,.ip-group.unit{
 		margin-top:24px;
 	}
     .section {
@@ -420,7 +420,7 @@ hr.divider {
     .point-info {
         .item {
 			display:flex;
-			margin-top:3px;
+			margin-top:16px;
 			align-items:flex-end;
             color: $gray-000;
             .title{
@@ -429,6 +429,7 @@ hr.divider {
                 font-size: 14px;
                 font-weight: normal;
                 margin-bottom: 0;
+				line-height:1;
             }
             .desc {
 				flex:1;
@@ -437,6 +438,17 @@ hr.divider {
 				font-size:$font-xl;
 				font-weight:500;
             }
+			&.card-bind{
+				display:flex;
+				font-size:$font-xl;
+				justify-items:center;
+				.num{
+					flex:0 0 auto;
+				}
+				.bullet{
+					padding:0 3px;
+				}
+			}
         }
     }
     .point-use {

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('@@webRoot/include/head.html')
+    </head>
+    <body>
+        <div id="wrap">
+            <!-- header -->
+            @@include('@@webRoot/include/header.html', { type: "sub_02", title: "멤버십" })
+            <!-- //header -->
+
+            <!-- container -->
+            <section id="container">
+                <div class="contents">
+                    <div class="mypage">
+                        <div class="gc-tab">
+                            <ul>
+                                <li><a href="#" class="active">KT멤버십</a></li>
+                                <li><a href="#">T멤버십</a></li>
+                            </ul>
+                        </div>
+
+						<div class="my-membership">
+							<div class="cont membership">
+								<div class="card kt">
+									<div class="logo">
+										<div class="logo-img"></div>
+										<span>멤버십</span>
+									</div>
+									<div class="point-info">
+										<div class="item card-bind">
+											<div class="num">2472</div>
+											<div class="bullet">-</div>
+											<div class="num">7138</div>
+											<div class="bullet">-</div>
+											<div class="num">●●●●</div>
+											<div class="bullet">-</div>
+											<div class="num">●●●●</div>
+										</div>
+										<div class="item">
+											<p class="title">보유 포인트</p>
+											<p class="desc">
+												<span class="value">1,000,000</span>
+												<span class="unit">Point</span>
+											</p>
+										</div>
+									</div>
+								</div>
+	
+								<div class="ip-group card">
+									<div class="row">
+										<label for="card" class="ip-label">카드번호 입력</label>
+										<div class="ip-card-module">
+											<input id="card" type="text" class="ip-txt" data-pos="1" placeholder="1234" value="1234" maxlength="4">
+											<input type="text" class="ip-txt" data-pos="2" placeholder="0000" maxlength="4">
+											<input type="text" class="ip-txt" data-pos="3" placeholder="0000" maxlength="4">
+											<input type="text" class="ip-txt" data-pos="4" placeholder="0000" maxlength="4">
+											<div class="line"></div>
+											<button type="button" class="icon-group btn-del">
+												<i class="ico delete md"></i>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+	
+							<hr class="divider">
+							<section class="membership-sale-info">
+								<h3 class="section-tit">할인</h3>
+								<div class="section-cont">
+									<p class="desc-xl">최대 1만원 / 주 1회 할인적용</p>
+									<ul class="list sm">
+										<li>주중 대여요금의 20% 할인</li>
+										<li>주말/공휴일 대여요금의 10% 할인</li>
+									</ul>
+								</div>
+							</section>
+	
+							<div class="agree-group">
+								<div class="agree-module">
+									<div class="item active">
+										<button type="button" class="btn-check">
+											<i class="ico ico-check md"></i>
+										</button>
+										<a href="#">
+											<span class="emp">필수</span>
+											<span class="text">전자금융거래 이용약관</span>
+											<i class="ico next-sm md"></i>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+                    </div>
+					@@include('@@webRoot/include/bot_fix.html', {type: "type01", title:"삭제하기"})
+                </div>
+            </section>
+            <!-- //container -->
+        </div>
+    </body>
+</html>

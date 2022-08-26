@@ -2,11 +2,14 @@
 
 .agree-group{
 	.check-all {
-        border-top: 1px solid #d9dddf;
-        margin-top: 16px;
-        padding-top: 16px;
-        font-size: $font-xl;
-        font-weight: 500;
+        border-bottom: 1px solid #d9dddf;
+        margin-bottom: 16px;
+        padding-bottom: 16px;
+		span{
+			@include fontSize(20);
+			color:$navy-070;
+			font-weight: 500;
+		}
 	}
 
 	.agree-module{
@@ -91,6 +94,9 @@
 			position:relative;
 			padding:0;
 
+			.agree-group{
+				margin-top:24px;
+			}
 			&:not(:first-child){
 				padding:32px 0 24px;
 

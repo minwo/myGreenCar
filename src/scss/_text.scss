@@ -2,23 +2,20 @@
 
 // title default 20
 .title{
-	font-size: $font-xl;
+	@include fontSize(20);
 	font-weight:500;
-	line-height:20px;
 
 	&-md{
-		font-size: $font-lg; //18
+		@include fontSize(18);
 		font-weight:500;
 	}
 	&-sm{
-		font-size:$font-md; //16
+		@include fontSize(16);
 		font-weight:500;
-		line-height:24px;
 	}
 	&-xs{
-		font-size:$font-sm; //12
+		@include fontSize(12);
 		font-weight:500;
-		line-height:16px;
 	}
 }
  

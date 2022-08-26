@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('@@webRoot/include/head.html')
+    </head>
+    <body>
+        <div id="wrap">
+            <!-- header -->
+            @@include('@@webRoot/include/header.html', { type: "sub_02", title: "카드등록" })
+            <!-- //header -->
+
+            <!-- container -->
+            <section id="container">
+                <div class="contents">
+                    
+					<div class="mypage">
+						<div class="card-registration">
+
+							<div class="ip-module">
+								<div class="ip-wrap">
+									<div class="ip-group card">
+										<div class="row">
+											<label for="card" class="ip-label">카드번호</label>
+											<div class="ip-card-module">
+												<input id="card" type="number" class="ip-txt" data-pos="1" placeholder="0000" maxlength="4">
+												<input type="number" class="ip-txt" data-pos="2" placeholder="0000" maxlength="4">
+												<input type="number" class="ip-txt" data-pos="3" placeholder="0000" maxlength="4">
+												<input type="number" class="ip-txt" data-pos="4" placeholder="0000" maxlength="4">
+												<div class="line"></div>
+												<button type="button" class="icon-group btn-del">
+													<i class="ico delete md"></i>
+												</button>
+											</div>
+										</div>
+									</div>
+
+									<div class="ip-group">
+										<div class="row">
+											<label for="ip02" class="ip-label">유효기간</label>
+											<div class="expiration">
+												<input type="number" class="ip-txt" placeholder="MM">
+												<span class="txt">/</span>
+												<input type="number" class="ip-txt" placeholder="YY">
+												<div class="line"></div>
+											</div>
+											<button type="button" class="icon-group btn-del">
+												<i class="ico delete md"></i>
+											</button>
+										</div>
+									</div>
+		
+									<div class="ip-group">
+										<div class="row">
+											<label for="ip03" class="ip-label">CVC</label>
+											<input type="text" id="ip03" class="ip-txt" placeholder="카드 뒷면 3자리 숫자">
+											<div class="line"></div>
+											<span class="icon-group">
+												<button type="button" class="ip-icon">
+													<i class="ico delete lg"></i>
+												</button>
+											</span>
+										</div> 
+									</div>
+
+									<div class="ip-group">
+										<div class="row">
+											<label for="ip04" class="ip-label">카드 비밀번호</label>
+											<input type="password" id="ip04" class="ip-txt" placeholder="앞 2자리 숫자">
+											<div class="line"></div>
+											<span class="icon-group">
+												<button type="button" class="ip-icon">
+													<i class="ico delete lg"></i>
+												</button>
+											</span>
+										</div> 
+									</div>
+
+									<div class="ip-group">
+										<div class="row">
+											<label for="ip05" class="ip-label">카드 별칭 (선택)</label>
+											<input type="password" id="ip05" class="ip-txt" placeholder="6자 이내">
+											<div class="line"></div>
+											<span class="icon-group">
+												<button type="button" class="ip-icon">
+													<i class="ico delete lg"></i>
+												</button>
+											</span>
+										</div> 
+									</div>
+		
+								</div>
+
+								<div class="btn-group center">
+									<button type="button" class="btn xs">
+										<i class="ico camera02 sm"></i>
+										카드 스캔
+									</button>
+								</div>
+							</div>
+
+							<ul class="list sm ">
+								<li>
+									결제카드 정보는 롯데멤버스㈜에 안전하게 등록되며, 그린카 시스템에는 저장되지 않습니다.
+								</li>
+							</ul>
+
+							<div class="agree-group">
+								<div class="item check-all">
+									<label for="tmpCheckbook4" class="gc-checkbox round">
+										<input type="checkbox" id="tmpCheckbook4">
+										<span>약관 모두 동의</span>
+									</label>
+								</div>
+								<div class="agree-module">
+									<div class="item active">
+										<button type="button" class="btn-check">
+											<i class="ico ico-check md"></i>
+										</button>
+										<a href="#">
+											<span class="emp">필수</span>
+											<span class="text">전자금융거래 이용약관</span>
+											<i class="ico next-sm md"></i>
+										</a>
+									</div>
+									<div class="item">
+										<button type="button" class="btn-check">
+											<i class="ico ico-check md"></i>
+										</button>
+										<a href="#">
+											<span class="emp">필수</span>
+											<span class="text">개인정보의 수집 및 이용에 대한 동의</span>
+											<i class="ico next-sm md"></i>
+										</a>
+									</div>
+									<div class="item">
+										<button type="button" class="btn-check">
+											<i class="ico ico-check md"></i>
+										</button>
+										<a href="#">
+											<span class="emp">필수</span>
+											<span class="text">개인정보의 제공 및 위탁동의</span>
+											<i class="ico next-sm md"></i>
+										</a>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+					@@include('@@webRoot/include/bot_fix.html', {type: "type01", title:"등록하기", disabled:"disabled"})
+                </div>
+            </section>
+            <!-- //container -->
+        </div>
+    </body>
+</html>

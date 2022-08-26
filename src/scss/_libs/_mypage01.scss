@@ -345,4 +345,127 @@
 			}
 		}
 	}
+
+	// 카드등록
+	.card-registration{
+		padding:32px 0 80px;
+
+		.btn-group{
+			margin-top:24px;
+			.ico{
+				margin-right:8px;
+			}
+			@include fontSize(14);
+		}
+		.list{
+			margin-top:24px;
+		}
+		.agree-group{
+			margin-top:24px;
+		}
+	}
+
+	//KT멤버십
+	.membership-sale-info{
+		margin-top:24px;
+		.desc-xl{
+			margin-top:16px;
+			font-weight:500;
+		}
+		.list.sm{
+			margin-top:16px;
+		}
+	}
+	.agree-group{
+		margin-top:32px;
+	}
+	.my-membership{
+		padding-bottom:80px;
+	}
+
+	// 고지사항 목록
+	.notice{
+		.notice-list,.notice-detail{
+			a{
+				display:block;
+				position:relative;
+				padding:16px 20px 16px 0;
+				border-bottom:1px solid $navy-020;
+			}
+			.cate{
+				@include fontSize(12);
+				.tag{
+					margin-left:6px;
+				}
+			}
+			.tit{
+				margin-top:10px;
+				@include fontSize(16);
+				font-weight:500;
+				@include ell();
+			}
+			.desc-md{
+				font-weight:500;
+				@include ell();
+			}
+			.date{
+				margin-top:6px;
+				@include fontSize(14);
+				color:$navy-040;
+			}
+			.ico{
+				position:absolute;
+				top:50%;
+				right:0;
+				transform:translate(0,-50%);
+			}
+			.head{
+				padding:32px 0 24px;
+				.tit{
+					margin:0;
+					@include fontSize(20);
+					font-weight:700;
+				}
+			}
+			.cont{
+				padding:24px 0;
+			}
+		}
+	}
+}
+
+
+.layer-wrap{
+	&.mypage{
+		.layer-body{
+			// 개인정보 수입/이용 동의
+			.terms{
+				margin-top:32px;
+				padding-bottom:80px;
+				.title-sm{
+					margin-top:24px;
+				}
+				.list{
+					margin-top:16px;
+				}
+			}
+			.terms-module{
+				margin-top:32px;
+				padding-bottom:24px;
+
+				&.notice{
+					.title-sm{
+						margin-top:16px;
+					}
+					.desc{
+						margin-top:16px;
+						color:$navy-040;
+					}
+				}
+			}
+			.notice-txt{
+				margin-top:24px;
+			}
+		}
+	}
 }
