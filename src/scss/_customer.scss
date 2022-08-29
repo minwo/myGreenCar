@@ -18,7 +18,7 @@
         padding-bottom: 32px;
         h3 {
             color: $navy-070;
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 500;
             margin-bottom: 16px;
         }
@@ -73,8 +73,8 @@
     &.type-1 {
         padding-top: 12px;
         li {
-            padding: 12px 0;
             a {
+                padding: 8px 0;
                 @include flex-center;
                 .text {
                     font-size: 16px;
@@ -82,6 +82,11 @@
                 }
                 .btn {
                     margin-left: auto;
+                }
+            }
+            &:first-child {
+                a {
+                    padding-top: 0;
                 }
             }
         }
@@ -130,9 +135,9 @@
         li + li {
             border-top: 1px solid $navy-020;
         }
-        &.narrow{
-            li{
-                a{
+        &.narrow {
+            li {
+                a {
                     padding: 8px 0;
                 }
             }
@@ -145,17 +150,18 @@
     }
 }
 
-.qna-detail{
-    p + p, li + li{
+.qna-detail {
+    p + p,
+    li + li {
         margin-top: 16px;
     }
-    ol + p{
+    ol + p {
         margin-top: 8px;
     }
 }
 
-.btn-more-view{
-    .text{
+.btn-more-view {
+    .text {
         color: $navy-040;
     }
 }
@@ -322,7 +328,7 @@
     &::before {
         content: "";
         display: block;
-        background-image: url(#{$url-ico}icon_cs.svg);
+        background-image: url(#{$url-ico}icon_chat.svg);
         width: 32px;
         height: 32px;
     }
@@ -338,23 +344,23 @@
             color: $navy-040;
             font-size: 14px;
         }
-        &:focus{
+        &:focus {
             outline: none;
         }
     }
 }
 
-.gc-select{
-    &.full{
-        select{
+.gc-select {
+    &.full {
+        select {
             width: 100%;
             font-size: 16px;
-            &:focus{
-                outline: none
+            &:focus {
+                outline: none;
             }
-            background-image:url(''+$url-ico+'icon_list_open_arrow.svg');
+            background-image: url("" + $url-ico + "icon_list_open_arrow.svg");
         }
-        &::after{
+        &::after {
             content: " ";
             display: block;
             width: 100%;
@@ -362,18 +368,17 @@
             background-color: $navy-020;
             margin-top: 16px;
         }
-       
     }
 }
 
-.terms{
-    .item{
+.terms {
+    .item {
         @include flex-center;
-        .text{
+        .text {
             font-size: 16px;
             font-weight: 500;
         }
-        .ico{
+        .ico {
             margin-left: auto;
         }
     }
@@ -427,6 +432,7 @@
                 }
             }
         }
+       
     }
     &.type-3 {
         th > em {
@@ -446,6 +452,21 @@
                     border-bottom: 1px solid $navy-020;
                 }
             }
+        }
+    }
+}
+
+
+// 라디오 셀렉트 리스트
+.radio-select-list{
+    ul{
+        margin-bottom:24px
+    }
+    li{
+        padding: 16px 0;
+        input[type="radio"] + span{
+            font-size: 18px;
+            font-weight: 400;
         }
     }
 }
