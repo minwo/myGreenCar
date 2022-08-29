@@ -61,10 +61,9 @@ $animation: all .2s ease;
 	}
 
 	.icon-group{
-		display:flex;
-		// position:absolute;
-		// bottom:10px;
-		// right:0;
+		display:inline-flex;
+		align-items:end;
+		padding:0 4px 11px 0;
 
 		.ip-icon{
 			display:inline-flex;
