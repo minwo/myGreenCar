@@ -490,9 +490,15 @@ hr.divider {
     }
 }
 .ip-card-module {
+	position:relative;
 	display:flex;
     margin-bottom: 6px;
     padding-right:56px;
+	.icon-group {
+		position:absolute;
+		right:0;
+		bottom:10px;
+	}
 	.ip-txt{
 		height:48px;
 		font-size:$font-lg;
