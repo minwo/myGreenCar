@@ -130,6 +130,11 @@
                 box-shadow: inset 0 0 10px 0 #ccc;
                 z-index: 1;
             }
+			table td .pop{
+				display:inline-block;
+				margin-left:5px;
+				color:red;
+			}
             .section {
                 margin: 0;
             }
@@ -197,7 +202,21 @@
                     $(".h-percent span").text(Math.round((settings.completed / $(settings.files).length) * 100));
 					$('.current-p').text(Math.ceil(currentTotal)+'%');
 					$('.current-count').text(currentCount);
+					
+					var tt = [];
+					$('a').each(function(idx,obj){
+						tt[idx] = $(obj).attr('href');
 
+						if(tt[idx].indexOf('#bottom') > -1){
+							console.log($(obj).closest('tr'),1);
+							$(obj).closest('tr').find('td:nth-child(5)').append('<span class="pop">Bottom</span>');
+						} else if(tt[idx].indexOf('#full') > -1){
+							$(obj).closest('tr').find('td:nth-child(5)').append('<span class="pop">Full</span>');
+						} else if(tt[idx].indexOf('#Drag') > -1){
+							$(obj).closest('tr').find('td:nth-child(5)').append('<span class="pop">Drag</span>');
+						}
+						
+					});
                     settings.openAll && $("h1").addClass("open");
                     return this.each(function () {
                         var self = this,
@@ -1508,7 +1527,7 @@
                             <td>이민우</td>
                             <td>/mypage</td>
 							<td><a target="_blank" href="components/popup_module.html#mypage#SCR_GA_CI_1201_P01">SCR_GA_CI_1201_P01.html</a></td>
-                            <td class="stat"></td>
+                            <td class="stat">⚪</td>
                             <td class="compl"></td>
                             <td class="date"></td>
                             <td></td>
@@ -1522,7 +1541,7 @@
                             <td>이민우</td>
                             <td>/mypage</td>
                             <td><a target="_blank" href="html/mypage/SCR_GA_CI_1202_M01.html">SCR_GA_CI_1202_M01.html</a></td>
-                            <td class="stat"></td>
+                            <td class="stat">⚪</td>
                             <td class="compl"></td>
                             <td class="date"></td>
                             <td></td>
@@ -1536,7 +1555,7 @@
                             <td>이민우</td>
                             <td>/mypage</td>
                             <td><a target="_blank" href="html/mypage/SCR_GA_CI_1301_T01.html">SCR_GA_CI_1301_T01.html</a></td>
-                            <td class="stat"></td>
+                            <td class="stat">⚪</td>
                             <td class="compl"></td>
                             <td class="date"></td>
                             <td></td>
@@ -1550,7 +1569,7 @@
                             <td>이민우</td>
                             <td>/mypage</td>
 							<td><a target="_blank" href="components/popup_module.html#mypage#SCR_GA_CI_1301_P01#full">SCR_GA_CI_1301_P01.html</a></td>
-                            <td class="stat"></td>
+                            <td class="stat">⚪</td>
                             <td class="compl"></td>
                             <td class="date"></td>
                             <td></td>
@@ -1564,7 +1583,7 @@
                             <td>이민우</td>
                             <td>/mypage</td>
                             <td><a target="_blank" href="html/mypage/SCR_GA_CI_1302_T02.html">SCR_GA_CI_1302_T02.html</a></td>
-                            <td class="stat"></td>
+                            <td class="stat">⚪</td>
                             <td class="compl"></td>
                             <td class="date"></td>
                             <td></td>
@@ -1578,7 +1597,7 @@
                             <td>이민우</td>
                             <td>/mypage</td>
                             <td><a target="_blank" href="components/popup_module.html#mypage#SCR_GA_CI_1302_P01#full">SCR_GA_CI_1302_P01.html</a></td>
-                            <td class="stat"></td>
+                            <td class="stat">⚪</td>
                             <td class="compl"></td>
                             <td class="date"></td>
                             <td></td>
@@ -1592,7 +1611,7 @@
                             <td>이민우 </td>
                             <td>/mypage</td>
                             <td><a target="_blank" href="html/mypage/SCR_GA_CI_1401_M01.html">SCR_GA_CI_1401_M01.html</a></td>
-                            <td class="stat"></td>
+                            <td class="stat">⚪</td>
                             <td class="compl"></td>
                             <td class="date"></td>
                             <td></td>
@@ -1606,7 +1625,7 @@
                             <td>이민우</td>
                             <td>/mypage</td>
                             <td><a target="_blank" href="html/mypage/SCR_GA_CI_1402_M01.html">SCR_GA_CI_1402_M01.html</a></td>
-                            <td class="stat"></td>
+                            <td class="stat">⚪</td>
                             <td class="compl"></td>
                             <td class="date"></td>
                             <td></td>
@@ -1620,7 +1639,7 @@
                             <td>이민우</td>
                             <td>/mypage</td>
                             <td><a target="_blank" href="html/mypage/SCR_GA_CS_0101_M01.html">SCR_GA_CS_0101_M01.html</a></td>
-                            <td class="stat"></td>
+                            <td class="stat">⚪</td>
                             <td class="compl"></td>
                             <td class="date"></td>
                             <td></td>
@@ -1634,7 +1653,7 @@
                             <td>이민우</td>
                             <td>/mypage</td>
 							<td><a target="_blank" href="components/popup_module.html#mypage#SCR_GA_CS_0101_M01_P01#full">SCR_GA_CS_0101_M01_P01.html</a></td>
-                            <td class="stat"></td>
+                            <td class="stat">⚪</td>
                             <td class="compl"></td>
                             <td class="date"></td>
                             <td></td>
