@@ -3,6 +3,10 @@
 // tmp
 @import "_libs/_customer01";
 
+.text-green {
+    color: $green-060 !important;
+}
+
 .customer {
     position: relative;
     z-index: 1;
@@ -41,9 +45,7 @@
             font-weight: bold;
         }
     }
-    .text-green {
-        color: $green-060 !important;
-    }
+
     .ip-group {
         .ip-inner {
             @include flex-center;
@@ -469,6 +471,26 @@
     }
 }
 
+// 유형선택
+.type-select {
+    .item {
+        padding-bottom: 16px;
+        @include flex-center;
+        .text {
+            font-size: 16px;
+        }
+        .ico {
+            margin-left: auto;
+        }
+    }
+    &::after {
+        content: " ";
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: $navy-020;
+    }
+}
 // 예약정보 내역
 .reservation-info {
     .item {
@@ -483,12 +505,34 @@
             li {
                 color: $navy-040;
             }
-            li + li{
+            li + li {
                 margin-top: 4px;
             }
         }
     }
     .item + .item {
         border-top: 1px solid $navy-020;
+    }
+}
+
+// 면허발급(기관)지역선택
+.select-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    .btn {
+        flex: 0 0 auto;
+        color: $navy-070;
+        border-radius: $border-radius-50;
+
+        &.active {
+            color: $gray-000;
+            border-color: $green-060;
+            background-color: $green-060;
+        }
+
+        &:first-child {
+            margin-left: 0;
+        }
     }
 }
