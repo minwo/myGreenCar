@@ -67,13 +67,6 @@
 			}
 			.icon-group{
 				color:$navy-020;
-				right:4px;
-				bottom:50%;
-				transform:translate(0,50%);
-
-				.btn-del{
-					display:flex;
-				}
 			}
 			.error{
 				.time{
@@ -182,7 +175,9 @@
 
 .layer-wrap{
 	.layer-body{
-		
+		.coupon{
+			margin-top:24px;
+		}
 		// 쿠폰 이용안내
 		.benefit-info{
 			padding:20px 0;

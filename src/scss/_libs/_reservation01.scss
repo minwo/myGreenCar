@@ -535,11 +535,13 @@
 }
 
 .layer-wrap{
+	.reservation{
+		&.free_popup{
+			margin-top:24px;
+		}
+	}
 	&.reservation{
 		// 반납 바텀 레이어
-		&.free_popup{
-			margin-top:23px;
-		}
 		.search-result{
 			padding-top:12px;
 			.item{

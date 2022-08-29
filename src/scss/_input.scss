@@ -62,9 +62,11 @@ $animation: all .2s ease;
 
 	.icon-group{
 		display:inline-flex;
-		align-items:end;
-		padding:0 4px 11px 0;
+		align-items:center;
 
+		.btn-del{
+			display:inline-flex;
+		}
 		.ip-icon{
 			display:inline-flex;
 			margin-left:10px;
@@ -78,6 +80,7 @@ $animation: all .2s ease;
 
 	&.certi{
 		.btn-del{
+			display:inline-flex;
 			margin-right:8px;
 		}
 		.time{
@@ -105,12 +108,14 @@ $animation: all .2s ease;
 
 	.expiration{
 		display:flex;
+		width:100%;
 		.ip-txt{
 			padding:0;
 			overflow:visible;
 			text-overflow:unset;
 			@include fontSize(18);
 			&:last-child{
+				flex:unset;
 				padding-left:5px;
 			}
 			&:first-child{

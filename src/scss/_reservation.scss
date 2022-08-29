@@ -492,6 +492,7 @@ hr.divider {
 .ip-card-module {
 	position:relative;
 	display:flex;
+	width:100%;
     margin-bottom: 6px;
 	.ip-txt{
 		height:48px;
@@ -548,7 +549,6 @@ hr.divider {
 	.coupon-choice{
 		margin:0 -20px;
 		padding:0 20px 18px;
-		border-top:1px solid $navy-020;	
 		.block{
 			padding:12px 0;
 		}
