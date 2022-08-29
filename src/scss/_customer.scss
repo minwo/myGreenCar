@@ -432,7 +432,6 @@
                 }
             }
         }
-       
     }
     &.type-3 {
         th > em {
@@ -456,17 +455,40 @@
     }
 }
 
-
 // 라디오 셀렉트 리스트
-.radio-select-list{
-    ul{
-        margin-bottom:24px
+.radio-select-list {
+    ul {
+        margin-bottom: 24px;
     }
-    li{
+    li {
         padding: 16px 0;
-        input[type="radio"] + span{
+        input[type="radio"] + span {
             font-size: 18px;
             font-weight: 400;
         }
+    }
+}
+
+// 예약정보 내역
+.reservation-info {
+    .item {
+        padding: 16px 0;
+        strong {
+            display: block;
+            font-size: 16px;
+            font-weight: 500;
+            margin: 8px 0;
+        }
+        .history-list {
+            li {
+                color: $navy-040;
+            }
+            li + li{
+                margin-top: 4px;
+            }
+        }
+    }
+    .item + .item {
+        border-top: 1px solid $navy-020;
     }
 }
