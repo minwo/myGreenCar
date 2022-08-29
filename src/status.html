@@ -208,12 +208,15 @@
 						tt[idx] = $(obj).attr('href');
 
 						if(tt[idx].indexOf('#bottom') > -1){
-							console.log($(obj).closest('tr'),1);
 							$(obj).closest('tr').find('td:nth-child(5)').append('<span class="pop">Bottom</span>');
 						} else if(tt[idx].indexOf('#full') > -1){
 							$(obj).closest('tr').find('td:nth-child(5)').append('<span class="pop">Full</span>');
 						} else if(tt[idx].indexOf('#Drag') > -1){
 							$(obj).closest('tr').find('td:nth-child(5)').append('<span class="pop">Drag</span>');
+						} else{
+							if(tt[idx].indexOf('popup_module') > -1){
+								$(obj).closest('tr').find('td:nth-child(5)').append('<span class="pop">Middle</span>');
+							}
 						}
 						
 					});

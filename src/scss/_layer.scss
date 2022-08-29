@@ -55,9 +55,10 @@ html.is-open, html.is-open body {
                 font-weight: 500;
             }
             .layer-close {
+				display:inline-flex;
                 position: absolute;
-                top: 20px;
-                left: 16px;
+                top: 16px;
+                right: 16px;
             }
         }
         .layer-body {
@@ -100,6 +101,10 @@ html.is-open, html.is-open body {
             font-weight: bold;
 			text-align:center;
 			border-bottom:1px solid $navy-020;
+		}
+		.layer-close {
+			right:unset;
+			left:20px;
 		}
         &:before {
             opacity: 0;
