@@ -45,9 +45,12 @@ html.is-open, html.is-open body {
 		border-radius: $border-radius-20;
         .layer-header {
             max-height: 66px;
-            padding: 14px 20px 12px;
+            padding: 16px 20px 16px 50px;
+			text-indent:-30px;
             font-size: 18px;
             font-weight: bold;
+			text-align:center;
+			border-bottom:1px solid $navy-020;
 
             .title{
                 color: $navy-070;
@@ -55,9 +58,10 @@ html.is-open, html.is-open body {
                 font-weight: 500;
             }
             .layer-close {
+				display:inline-flex;
                 position: absolute;
-                right: 20px;
-                top: 20px;
+                top: 16px;
+                left: 20px;
             }
         }
         .layer-body {
