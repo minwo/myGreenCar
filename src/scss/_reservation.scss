@@ -27,13 +27,13 @@
 .mt60 {
     margin-top: 60px !important;
 }
-.pt0{
+.pt0 {
     padding-top: 0 !important;
 }
 .pt4 {
     padding-top: 4px !important;
 }
-.pb0{
+.pb0 {
     padding-bottom: 0px !important;
 }
 
@@ -53,10 +53,10 @@ hr.divider {
     padding: 16px 20px;
     background-color: $gray-020;
     text-align: center;
-    p + p{
+    p + p {
         margin-top: 8px;
     }
-    &.align-left{
+    &.align-left {
         text-align: left;
     }
 }
@@ -65,15 +65,14 @@ hr.divider {
     padding: 32px 0;
     .section-title {
         @include flex-center();
-        .right{
+        .right {
             margin-left: auto;
         }
     }
 }
 
-
-.btn-more{
-    .text{
+.btn-more {
+    .text {
         font-size: 14px;
         color: $navy-070;
     }
@@ -93,7 +92,7 @@ hr.divider {
             color: #fd8484;
         }
     }
-   
+
     > section {
         padding: 22px 0 30px;
         h2 {
@@ -126,7 +125,7 @@ hr.divider {
             display: flex;
             align-items: center;
             width: 100%;
-            line-height: 34.17px;// Actual Touch Target size 고려하여 line-height로 간격조정
+            line-height: 34.17px; // Actual Touch Target size 고려하여 line-height로 간격조정
             .text {
                 color: #8c989e;
                 font-size: 16px;
@@ -179,27 +178,27 @@ hr.divider {
             margin-left: 4px;
         }
         .filter {
-			height:24px;
-			line-height:24px;
+            height: 24px;
+            line-height: 24px;
             margin-left: auto;
             @include flex-center();
             .ctr {
-				font-size:$font-sm;
-                color:$navy-070;
-                font-weight:500;
-				.ico{
-					margin-left:4px;
-					vertical-align:top;
-				}
+                font-size: $font-sm;
+                color: $navy-070;
+                font-weight: 500;
+                .ico {
+                    margin-left: 4px;
+                    vertical-align: top;
+                }
             }
         }
     }
-    
+
     .section-cont {
         font-size: 16px;
         font-weight: 700;
-        .ip-group{
-            .btn{
+        .ip-group {
+            .btn {
                 padding: 0 20px;
             }
         }
@@ -279,7 +278,7 @@ hr.divider {
                     z-index: 10;
                 }
             }
-            &.active{
+            &.active {
                 border: 2px solid $green-060;
             }
         }
@@ -308,9 +307,9 @@ hr.divider {
 //멤버십
 .membership {
     padding: 24px 0;
-	.ip-txt{
-		font-size:$font-md;
-	}
+    .ip-txt {
+        font-size: $font-md;
+    }
     .card:not(.ip-group) {
         display: flex;
         flex-direction: column;
@@ -343,7 +342,7 @@ hr.divider {
             font-size: 16px;
             font-weight: 500;
             background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #000000;
-            border-radius:10px;
+            border-radius: 10px;
             justify-content: center;
             @include flex-center();
             i + .text {
@@ -361,9 +360,9 @@ hr.divider {
             .logo-img {
                 background: url(#{$url-content}skt_logo.svg) no-repeat;
             }
-			.btn-register {
-				background: rgba(0, 0, 0, 0.45);
-			}
+            .btn-register {
+                background: rgba(0, 0, 0, 0.45);
+            }
         }
         &.lpoint {
             background-color: $blue-050;
@@ -375,34 +374,35 @@ hr.divider {
         }
     }
 
-	.ip-wrap,.ip-group.unit{
-		margin-top:24px;
-	}
+    .ip-wrap,
+    .ip-group.unit {
+        margin-top: 24px;
+    }
     .section {
-		&.pd-bot{
-			padding-bottom:24px;
-		}
+        &.pd-bot {
+            padding-bottom: 24px;
+        }
         .section-tit {
-			position:relative;
-            font-size:$font-sm;
+            position: relative;
+            font-size: $font-sm;
             margin-bottom: 12px;
-			.btn-link{
-				line-height:24px;
-				color:$navy-070;
-				font-size:$font-sm;
-				&:last-child{
-					position:absolute;
-					top:50%;
-					right:0;
-					transform:translate(0,-50%);
-				}
-				.under{
-					text-decoration-line: underline;
-				}
-			}
-			.ico{
-				vertical-align:top;
-			}
+            .btn-link {
+                line-height: 24px;
+                color: $navy-070;
+                font-size: $font-sm;
+                &:last-child {
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    transform: translate(0, -50%);
+                }
+                .under {
+                    text-decoration-line: underline;
+                }
+            }
+            .ico {
+                vertical-align: top;
+            }
         }
         h4 {
             margin-top: 12px;
@@ -419,40 +419,40 @@ hr.divider {
 
     .point-info {
         .item {
-			display:flex;
-			margin-top:16px;
-			align-items:flex-end;
+            display: flex;
+            margin-top: 16px;
+            align-items: flex-end;
             color: $gray-000;
-            .title{
-				flex:1;
-				flex-basis:45%;
+            .title {
+                flex: 1;
+                flex-basis: 45%;
                 font-size: 14px;
                 font-weight: normal;
                 margin-bottom: 0;
-				line-height:1;
+                line-height: 1;
             }
             .desc {
-				flex:1;
-				flex-basis:55%;
-				text-align:right;
-				font-size:$font-xl;
-				font-weight:500;
+                flex: 1;
+                flex-basis: 55%;
+                text-align: right;
+                font-size: $font-xl;
+                font-weight: 500;
             }
-			&.card-bind{
-				display:flex;
-				font-size:$font-xl;
-				justify-items:center;
-				.num{
-					flex:0 0 auto;
-				}
-				.bullet{
-					padding:0 3px;
-				}
-			}
+            &.card-bind {
+                display: flex;
+                font-size: $font-xl;
+                justify-items: center;
+                .num {
+                    flex: 0 0 auto;
+                }
+                .bullet {
+                    padding: 0 3px;
+                }
+            }
         }
     }
     .point-use {
-		padding-bottom:24px;
+        padding-bottom: 24px;
         input[type="text"] {
             width: 100%;
             height: 60px;
@@ -465,12 +465,12 @@ hr.divider {
             font-weight: 500;
             &.disabled-point {
                 color: $gray-000;
-				background-color:$navy-020;
+                background-color: $navy-020;
             }
         }
     }
-    .point-input{
-		padding-right:0;
+    .point-input {
+        padding-right: 0;
         color: $navy-070;
         font-weight: 700;
         text-align: right;
@@ -490,14 +490,14 @@ hr.divider {
     }
 }
 .ip-card-module {
-	position:relative;
-	display:flex;
-	width:100%;
+    position: relative;
+    display: flex;
+    width: 100%;
     margin-bottom: 6px;
-	.ip-txt{
-		height:48px;
-		font-size:$font-lg;
-	}
+    .ip-txt {
+        height: 48px;
+        font-size: $font-lg;
+    }
 }
 // [팝업] 예약결제 안내
 .layer-body {
@@ -518,7 +518,7 @@ hr.divider {
                 color: $navy-040;
             }
             .value {
-				float:right;
+                float: right;
                 color: $navy-070;
                 font-weight: 500;
             }
@@ -530,13 +530,13 @@ hr.divider {
 .layer-body {
     .wrap {
         .emphasis {
-            color:$red-060;
+            color: $red-060;
             margin-top: 12px;
         }
         .sign {
             margin-top: 16px;
             color: $navy-070;
-            font-size:$font-md;
+            font-size: $font-md;
             text-align: right;
             em {
                 margin-left: 4px;
@@ -545,18 +545,18 @@ hr.divider {
         }
     }
 
-	// 쿠폰 순서선택
-	.coupon-choice{
-		margin:0 -20px;
-		padding:0 20px 18px;
-		.block{
-			padding:12px 0;
-		}
-		.gc-radio{
-			display:block;
-			line-height:24px;
-		}
-	}
+    // 쿠폰 순서선택
+    .coupon-choice {
+        margin: 0 -20px;
+        padding: 0 20px 18px;
+        .block {
+            padding: 12px 0;
+        }
+        .gc-radio {
+            display: block;
+            line-height: 24px;
+        }
+    }
 }
 .layer-footer {
     .btn-group {
@@ -568,27 +568,26 @@ hr.divider {
     }
 }
 
-
-
 .badge {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     border-radius: 2rem;
     color: #fff;
-    &.normal {
-        background-color: $navy-040;
+    background-color: $navy-040;
+    .ico + .text{
+        margin-left: 2px;
     }
-    &.warning {
+\    &.warning {
         background-color: rgba($color: $red-060, $alpha: 0.5);
     }
-    &.pink{
-        background-color: #F8679C;
+    &.pink {
+        background-color: #f8679c;
     }
-    &.green{
+    &.green {
         background-color: $green-060;
     }
-    &.line{
+    &.line {
         color: $navy-070;
         border: 1px solid $navy-020;
     }
@@ -608,15 +607,11 @@ hr.divider {
     }
     &.lg {
         height: 24px;
-        padding: 0 12px;
+        padding: 0 8px;
         font-size: 14px;
-        font-weight: 400;
     }
-    &.square{
+    &.square {
         border-radius: 6px;
+        padding: 12px;
     }
 }
-
-
-
-
