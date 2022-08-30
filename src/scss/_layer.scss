@@ -34,6 +34,9 @@ html.is-open, html.is-open body {
         left: 0;
         background: rgba(#000, 0.8);
     }
+	&:not(.type-bottom) .layer-container {
+		background:#fff;
+	}
     .layer-container {
         position: relative;
         overflow: hidden;
