@@ -251,6 +251,7 @@ html.is-open, html.is-open body {
 			height:100%;
             transform: translateY(100%);
             transition: transform 0.8s;
+			background:#fff;
         }
 		.layer-wrap{
 			overflow-y:auto;

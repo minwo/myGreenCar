@@ -130,7 +130,10 @@
 
 		function complete(){
 			// body
-			uiAccodion.init();
+			console.log(document.querySelector('.ui-accodion'));
+			if(document.querySelector('.ui-accodion') != null){
+				uiAccodion.init();
+			}
 
 			const rangeEl = document.querySelector('.range-slide');
 			if(rangeEl != null){
