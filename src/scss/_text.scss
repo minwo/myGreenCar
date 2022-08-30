@@ -207,6 +207,7 @@
     &.numeric {
 		counter-reset: section;
         li {
+            display: flex;
 			list-style: none;
             &:before {
 				counter-increment: section;
