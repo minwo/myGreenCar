@@ -1,147 +1,147 @@
 @charset "UTF-8";
 
 // title default 20
-.title{
-	@include fontSize(20);
-	font-weight:500;
+.title {
+    @include fontSize(20);
+    font-weight: 500;
 
-	&-md{
-		@include fontSize(18);
-		font-weight:500;
-	}
-	&-sm{
-		@include fontSize(16);
-		font-weight:500;
-	}
-	&-xs{
-		@include fontSize(12);
-		font-weight:500;
-	}
+    &-md {
+        @include fontSize(18);
+        font-weight: 500;
+    }
+    &-sm {
+        @include fontSize(16);
+        font-weight: 500;
+    }
+    &-xs {
+        @include fontSize(12);
+        font-weight: 500;
+    }
 }
- 
+
 // description default 15
-.desc{
-	@include fontSize(14);
+.desc {
+    @include fontSize(14);
 
-	&-xs{
-		@include fontSize(10);
-	}
-	&-sm{
-		@include fontSize(12);
-	}
+    &-xs {
+        @include fontSize(10);
+    }
+    &-sm {
+        @include fontSize(12);
+    }
 
-	&-md{
-		@include fontSize(16);
-	}
-	&-xl{
-		@include fontSize(18);
-	}
+    &-md {
+        @include fontSize(16);
+    }
+    &-xl {
+        @include fontSize(18);
+    }
 }
 
-.deco-througt{
-	text-decoration:line-through;
+.deco-througt {
+    text-decoration: line-through;
 }
 
-.tag{
-	@include vDom();
+.tag {
+    @include vDom();
 
-	height:18px;
-	margin-left:2px;
-	padding:0 8px;
-	color:$gray-000;
-	font-size:$font-xs;
-	font-weight:500;
-	border-radius:999px;
-	background-color: $navy-060;
+    height: 18px;
+    margin-left: 2px;
+    padding: 0 8px;
+    color: $gray-000;
+    font-size: $font-xs;
+    font-weight: 500;
+    border-radius: 999px;
+    background-color: $navy-060;
 
-	&.green{
-		background-color: $default;
-	}
+    &.green {
+        background-color: $default;
+    }
 
-	&.tag {
-		&-car{
-			&.plus{
-				border:2px solid $yellow-060;
-				background-color: #000000;
-			}
-			&.new{
-				background-color: $light-blue-040;
-			}
-		}
-		&-info{
-			height:24px;
-			margin-left:8px;
-			padding:0 10px;
-			font-size:$font-sm;
-			font-weight:700;
-			background-color: $navy-060;
-			&::before{
-				display:inline-block;
-				margin-right:4px;
-				content:"";
-				background-repeat:no-repeat;
-				background-size:100%;
-			}
-			&.ico01{
-				&::before{
-					width:7px;
-					height:12px;
-					background-image:url(#{$url-content}bg_res_ico01.svg);
-				}
-			}
-			&.ico02{
-				&::before{
-					width:18px;
-					height:12px;
-					background-image:url(#{$url-content}bg_res_ico02.svg);
-				}
-			}
-			&.ico03{
-				&::before{
-					width:15px;
-					height:11px;
-					background-image:url(#{$url-content}bg_res_ico03.svg);
-				}
-			}
-			&.ico04{
-				&::before{
-					width:8px;
-					height:12px;
-					background-image:url(#{$url-content}bg_res_ico04.svg);
-				}
-			}
-		}
-	}
+    &.tag {
+        &-car {
+            &.plus {
+                border: 2px solid $yellow-060;
+                background-color: #000000;
+            }
+            &.new {
+                background-color: $light-blue-040;
+            }
+        }
+        &-info {
+            height: 24px;
+            margin-left: 8px;
+            padding: 0 10px;
+            font-size: $font-sm;
+            font-weight: 700;
+            background-color: $navy-060;
+            &::before {
+                display: inline-block;
+                margin-right: 4px;
+                content: "";
+                background-repeat: no-repeat;
+                background-size: 100%;
+            }
+            &.ico01 {
+                &::before {
+                    width: 7px;
+                    height: 12px;
+                    background-image: url(#{$url-content}bg_res_ico01.svg);
+                }
+            }
+            &.ico02 {
+                &::before {
+                    width: 18px;
+                    height: 12px;
+                    background-image: url(#{$url-content}bg_res_ico02.svg);
+                }
+            }
+            &.ico03 {
+                &::before {
+                    width: 15px;
+                    height: 11px;
+                    background-image: url(#{$url-content}bg_res_ico03.svg);
+                }
+            }
+            &.ico04 {
+                &::before {
+                    width: 8px;
+                    height: 12px;
+                    background-image: url(#{$url-content}bg_res_ico04.svg);
+                }
+            }
+        }
+    }
 }
 
-.txt-list{
-	&.dot{
-		li,p{
-			position:relative;
-			padding-left:15px;
-			font-size:$font-md;
-			line-height:23px;
-			color:$navy-040;
-	
-			&:not(:first-child){
-				margin-top:10px;
-			}
-	
-			&:before {
-				display: inline-block;
-				position: absolute;
-				top: 10px;
-				left: 0;
-				width: 4px;
-				height: 4px;
-				content: " ";
-				border-radius: 2rem;
-				background-color: #8c989e;
-			}
-		}
-	}
-}
+.txt-list {
+    &.dot {
+        li,
+        p {
+            position: relative;
+            padding-left: 15px;
+            font-size: $font-md;
+            line-height: 23px;
+            color: $navy-040;
 
+            &:not(:first-child) {
+                margin-top: 10px;
+            }
+
+            &:before {
+                display: inline-block;
+                position: absolute;
+                top: 10px;
+                left: 0;
+                width: 4px;
+                height: 4px;
+                content: " ";
+                border-radius: 2rem;
+                background-color: #8c989e;
+            }
+        }
+    }
+}
 
 .list {
     li {
@@ -174,14 +174,14 @@
                 top: 8px;
             }
         }
-        li + li{
-            margin-top:4px;
+        li + li {
+            margin-top: 4px;
         }
     }
     &.sm {
         li {
             font-size: 14px;
-			line-height:20px;
+            line-height: 20px;
             padding-left: 12px;
             &:before {
                 width: 3px;
@@ -190,18 +190,37 @@
             }
         }
     }
-	&-number{
-		li{
-			position:relative;
-			margin-top:8px;
-			padding-left:16px;
-			text-indent:-14px;
-			font-size:$font-sm2;
-			line-height:20px;
-			color:$navy-040;
-			&:first-child{
-				margin-top:0;
-			}
-		}
-	}
+    &-number {
+        li {
+            position: relative;
+            margin-top: 8px;
+            padding-left: 16px;
+            text-indent: -14px;
+            font-size: $font-sm2;
+            line-height: 20px;
+            color: $navy-040;
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+    &.numeric {
+		counter-reset: section;
+        li {
+			list-style: none;
+            &:before {
+				counter-increment: section;
+                content: counter(section) ".";
+				display: inline-block;
+				width: initial;
+				height: initial;
+				margin-right: 4px;
+				border-radius: initial;
+				background-color: initial;
+				position: static;
+				top: initial;
+				left: initial;
+            }
+        }
+    }
 }
