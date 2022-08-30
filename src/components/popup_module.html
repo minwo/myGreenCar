@@ -30,6 +30,86 @@
 	</div>
 
 	<script>
+		const getElIndex = (element, range) => {
+			if (!!range) return [].indexOf.call(element, range);
+			return [].indexOf.call(element.parentNode.children, element);
+		};
+		const uiAccodion = (() => {
+			let el, btnEl, layerEl, prevEl, liEl;
+			let idx, layerLgt, duration, layerHeight, elCheck;
+			let isclick;
+			
+			const init = () => {
+				el = document.querySelector('.ui-accodion');
+				btnEl = el.querySelectorAll(".btn-acco");
+				layerEl = el.querySelectorAll(".layer");
+				liEl = el.querySelectorAll('li');
+
+				layerLgt = layerEl.length;
+				duration = 300;
+				isclick = true;
+				
+				bindEvent();
+			};
+
+			const bindEvent = () => {
+				clickEvent();
+			};
+
+			const clickEvent = () => {
+				[].forEach.call(btnEl, (e) => {
+					e.addEventListener("click", (event) => {
+						prevEl = layerEl[idx];
+						event.preventDefault();
+						idx = getElIndex(btnEl, e);
+						elCheck = prevEl !== layerEl[idx] && prevEl !== undefined;
+						if(isclick){
+							isclick= false;
+							if(!e.closest('li').classList.contains('active')){
+								for(let i = 0; liEl.length > i; i++){
+									liEl[i].classList.remove('active');
+								}
+								e.closest('li').classList.add('active');
+							} else {
+								e.closest('li').classList.remove('active');
+							}
+							
+
+							if (!layerEl[idx].style.height) {
+								if (elCheck) remove(prevEl);
+
+								layerEl[idx].style.display = "block";
+								layerHeight = layerEl[idx].clientHeight;
+								layerEl[idx].style.height = "0";
+								
+								setTimeout(() => {
+									layerEl[idx].style.height = layerHeight + "px";
+								});
+							} else {
+								remove(layerEl[idx]);
+							}
+
+							setTimeout(function(){ 
+								isclick = true;
+							}, duration);
+						}
+					});
+				});
+
+				const remove = (el) => {
+					el.style.height = "0";
+					setTimeout(() => {
+						el.style = null;
+					}, duration);
+				};
+			};
+
+			return {
+				init: init,
+			};
+		})();
+
+
 		document.addEventListener('DOMContentLoaded', function(){
 			const page = location.href;
 			const pageName = page.split('#');
@@ -50,15 +130,7 @@
 
 		function complete(){
 			// body
-			const allEl = document.querySelectorAll('.tmp-faq-list');
-			// 여러개 일떄
-			[].forEach.call(allEl, (e) => {
-				const accoEl = e.querySelector('button');
-				
-				accoEl.addEventListener('click', () => {
-					event.currentTarget.parentNode.classList.toggle('active');
-				});
-			});
+			uiAccodion.init();
 
 			const rangeEl = document.querySelector('.range-slide');
 			if(rangeEl != null){

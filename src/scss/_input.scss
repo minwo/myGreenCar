@@ -78,18 +78,18 @@ $animation: all .2s ease;
 		}		
 	}
 
-	&.certi{
-		.btn-del{
-			display:inline-flex;
-			margin-right:8px;
-		}
-		.time{
-			height:24px; 
-			line-height:24px;
-			font-size:$font-lg;
-			color:$navy-020;
-		}
-	}
+	// &.certi{
+	// 	.btn-del{
+	// 		display:inline-flex;
+	// 		margin-right:8px;
+	// 	}
+	// 	.time{
+	// 		height:24px; 
+	// 		line-height:24px;
+	// 		font-size:$font-lg;
+	// 		color:$navy-020;
+	// 	}
+	// }
 
 	.error-txt{
 		display:none
@@ -130,6 +130,10 @@ $animation: all .2s ease;
 			@include fontSize(18);
 			color:$navy-020;
 		}
+	}
+
+	&.reset{
+		margin-top:0;
 	}
 }
 /* input */

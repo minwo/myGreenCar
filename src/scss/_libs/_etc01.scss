@@ -1,1 +1,46 @@
 @charset "UTF-8";
+
+.etc{
+	//장애신고 접수
+	.etc-module{
+		padding:16px 0 24px;
+		.desc-md{
+			font-weight:500;
+		}
+		.ip-wrap{
+			margin-top:24px;
+		}
+		.check-module{
+			width:100%;
+			margin-top:16px;
+			.block{
+				display:flex;
+				&:not(:first-child){
+					margin-top:8px;
+				}
+			}
+			.gc-checkbox{
+				flex:1;
+			}
+		}
+		.agree-faq{
+			.ico-check{
+				margin-right:9px;
+			}
+			.emp{
+				margin-right:5px;
+			}
+			.layer-cont{
+				padding-top:8px;
+			}
+			.agree-cont{
+				.title-xs{
+					margin-top:16px;
+				}
+				.desc-sm{
+					margin-top:8px;
+				}
+			}
+		}
+	}
+}

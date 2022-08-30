@@ -21,25 +21,20 @@
  
 // description default 15
 .desc{
-	font-size:14px;
-	line-height:20px; 
+	@include fontSize(14);
 
 	&-xs{
-		font-size: $font-xs; //10
-		line-height:12px;
+		@include fontSize(10);
 	}
 	&-sm{
-		font-size: $font-sm; //12
-		line-height:16px;
+		@include fontSize(12);
 	}
 
 	&-md{
-		font-size: $font-md; //16
-		line-height:24px;
+		@include fontSize(16);
 	}
 	&-xl{
-		font-size: $font-lg; //18
-		line-height: 24px;
+		@include fontSize(18);
 	}
 }
 

@@ -72,6 +72,49 @@
 				<!--  -->
 				<div class="tmp-guide-box">
 					<h2 class="guide-box-tit">Etc</h2>
+					
+					<br>
+					
+					<div class="ui-accodion">
+						<ul>
+							<li>
+								<div class="ctr">
+									<button type="button" class="btn-acco">
+										<span class="emp">필수</span> 
+										<p>개인정보 수집/이용 동의</p>
+										<i class="ico arrow-bot-nav030 lg"></i>
+									</button>
+								</div>
+								<div class="layer">
+									<div class="layer-cont">
+										<div class="agree-cont">
+											<p class="title-xs">
+												이용목적
+											</p>
+											<p class="desc-sm">
+												장애 신고 접수 및 조치를 위한 개인정보 수집
+											</p>
+	
+											<p class="title-xs">
+												수집항목
+											</p>
+											<p class="desc-sm">
+												이름, 휴대폰번호 , 신고 사유
+											</p>
+	
+											<p class="title-xs">
+												보유기간
+											</p>
+											<p class="desc-sm">
+												접수 처리 후 3 개월간 별도 보관 후 파기
+											</p>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+
 					<ul class="tmp-faq-list">
 						<li>
 							<button type="button"><strong class="hide-txt">질문</strong>(1)질문 제목이 출력됩니다.</button>
@@ -205,6 +248,90 @@
 	<!-- //full layer demo -->
 	
 	<script type="text/javascript">
+
+		/* 아코디언 */
+		const getElIndex = (element, range) => {
+			if (!!range) return [].indexOf.call(element, range);
+			return [].indexOf.call(element.parentNode.children, element);
+		};
+		const uiAccodion = (() => {
+			let el, btnEl, layerEl, prevEl, liEl;
+			let idx, layerLgt, duration, layerHeight, elCheck;
+			let isclick;
+			
+			const init = () => {
+				el = document.querySelector('.ui-accodion');
+				btnEl = el.querySelectorAll(".btn-acco");
+				layerEl = el.querySelectorAll(".layer");
+				liEl = el.querySelectorAll('li');
+
+				layerLgt = layerEl.length;
+				duration = 300;
+				isclick = true;
+				
+				bindEvent();
+			};
+
+			const bindEvent = () => {
+				clickEvent();
+			};
+
+			const clickEvent = () => {
+				[].forEach.call(btnEl, (e) => {
+					e.addEventListener("click", (event) => {
+						prevEl = layerEl[idx];
+						event.preventDefault();
+						idx = getElIndex(btnEl, e);
+						elCheck = prevEl !== layerEl[idx] && prevEl !== undefined;
+						if(isclick){
+							isclick= false;
+							if(!e.closest('li').classList.contains('active')){
+								for(let i = 0; liEl.length > i; i++){
+									liEl[i].classList.remove('active');
+								}
+								e.closest('li').classList.add('active');
+							} else {
+								e.closest('li').classList.remove('active');
+							}
+							
+
+							if (!layerEl[idx].style.height) {
+								if (elCheck) remove(prevEl);
+
+								layerEl[idx].style.display = "block";
+								layerHeight = layerEl[idx].clientHeight;
+								layerEl[idx].style.height = "0";
+								
+								setTimeout(() => {
+									layerEl[idx].style.height = layerHeight + "px";
+								});
+							} else {
+								remove(layerEl[idx]);
+							}
+
+							setTimeout(function(){ 
+								isclick = true;
+							}, duration);
+						}
+					});
+				});
+
+				const remove = (el) => {
+					el.style.height = "0";
+					setTimeout(() => {
+						el.style = null;
+					}, duration);
+				};
+			};
+
+			return {
+				init: init,
+			};
+		})();
+
+		uiAccodion.init();
+
+		/* 아코디언 여기까지 */
 
 		/* 
 		* accordion box

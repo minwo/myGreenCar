@@ -53,14 +53,22 @@
 		}
 
 		.btn-check{
+			display:inline-block;
 			position:absolute;
 			top:2px;
 			left:0;
 		}
-		.next-sm{
-			position:absolute;
-			top:2px;
-			right:0;
+		a{
+			.ico{
+				position:absolute;
+				right:0;
+				&.next-sm{
+					top:2px;
+				}
+				&.arrow-bot-nav030{
+					top:0px;
+				}
+			}
 		}
 	}
 }
