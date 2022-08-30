@@ -290,18 +290,18 @@
 		& .ip-txt:focus ~ .line{
 			&:before{
 				width:100%;
-				background-color: $line-color-active;
+				background-color:$default;
 			}
 		}
 
 		& .error{
 			.ip-txt{
-				color: $validation-error;
+				color: $red-060;
 			}
 			.ip-txt ~ .line{
 				&:before{
 					width:100%;
-					background-color: $validation-error;
+					background-color: $red-060;
 				}
 			}
 		}
@@ -319,7 +319,7 @@
 			padding:0 20px 0 20px;
 
 			&:focus ~ .line{
-				border-color: $line-color-active;
+				border-color:$default;
 			}
 		}
 
@@ -329,7 +329,7 @@
 
 		& .error{
 			.ip-txt ~ .line{
-				border-color: $validation-error;
+				border-color: $red-060;
 			}
 		}
 		
