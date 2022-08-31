@@ -544,14 +544,10 @@
 
 .layer-wrap{
 	.reservation{
-		&.free_popup{
-			margin-top:24px;
-		}
 	}
 	&.reservation{
 		// 반납 바텀 레이어
 		.search-result{
-			padding-top:12px;
 			.item{
 				padding:7px 0 10px 38px;
 			}
@@ -574,10 +570,6 @@
 		.tmp-faq-list{
 			margin-top:28px;
 		}
-		.layer-footer.full{
-			padding-top:32px;
-		}
-
 	}
 
 	//그린카 플러스
@@ -607,7 +599,6 @@
 
 	&.rsv-one-way{
 		.one-way{
-			margin-top:6px;
 			.desc {
 				font-size:14px;
 				line-height:20px;
@@ -618,15 +609,9 @@
 					font-weight:500;
 				}
 			}
-
-		}
-
-		.btn-wrap{
-			margin-bottom:11px;
-		}
-		
-		.layer-footer{
-			padding:18px 20px 0;
+			.btn-wrap{
+				margin-top:16px;
+			}
 		}
 	}
 }

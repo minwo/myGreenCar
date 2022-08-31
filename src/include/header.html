@@ -83,14 +83,18 @@
 
 			@@if (type === "sub_pop"){
 			<div class="head popup">
-				<div class="left">
+				<!-- <div class="left">
 					<button type="button" class="btn-head">
 						<i class="ico close md"></i>
 					</button>
-				</div>
+				</div> -->
 				@@if (title !== false){
 					<h2 class="title">@@title</h2>
 				}
+				<button type="button" class="layer-close">
+					<i class="ico close lg"></i>
+					<span class="hide-txt">닫기</span>
+				</button>
 			</div>
 			}
 
