@@ -197,11 +197,6 @@ hr.divider {
     .section-cont {
         font-size: 16px;
         font-weight: 700;
-        .ip-group {
-            .btn {
-                padding: 0 20px;
-            }
-        }
     }
 
     .coupon-list {
@@ -310,7 +305,7 @@ hr.divider {
     .ip-txt {
         font-size: $font-md;
     }
-    .card:not(.ip-group) {
+    .card:not(.ip-group,.row) {
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -452,7 +447,7 @@ hr.divider {
         }
     }
     .point-use {
-        padding-bottom: 24px;
+        padding:0 0 24px 0;
         input[type="text"] {
             width: 100%;
             height: 60px;

@@ -47,17 +47,6 @@
     }
 
     .ip-group {
-        .ip-inner {
-            @include flex-center;
-            .row {
-                flex: 1;
-            }
-        }
-        .btn {
-            width: 92px;
-            flex: 0 0 auto;
-            margin-left: 8px;
-        }
         .input-desc {
             margin-top: 16px;
             p {

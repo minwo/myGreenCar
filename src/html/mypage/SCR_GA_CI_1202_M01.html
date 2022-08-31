@@ -17,17 +17,20 @@
 						<div class="card-registration">
 
 							<div class="ip-module">
+								<!-- 20220831 -->
 								<div class="ip-wrap">
-									<div class="ip-group card">
-										<div class="row">
-											<label for="card" class="ip-label">카드번호</label>
-											<div class="ip-card-module">
+									<div class="ip-group">
+										<label for="card" class="ip-label">카드번호</label>
+										<div class="row card">
+											<div class="module-ip">
 												<input id="card" type="number" class="ip-txt" data-pos="1" placeholder="0000" maxlength="4">
 												<input type="number" class="ip-txt" data-pos="2" placeholder="0000" maxlength="4">
 												<input type="number" class="ip-txt" data-pos="3" placeholder="0000" maxlength="4">
 												<input type="number" class="ip-txt" data-pos="4" placeholder="0000" maxlength="4">
 												<div class="line"></div>
-												<button type="button" class="icon-group btn-del">
+											</div>
+											<div class="module-btn">
+												<button type="button" class="btn-del">
 													<i class="ico delete lg"></i>
 												</button>
 											</div>
@@ -35,14 +38,16 @@
 									</div>
 
 									<div class="ip-group">
-										<div class="row">
-											<label for="ip02" class="ip-label">유효기간</label>
-											<div class="expiration">
+										<label for="ip02" class="ip-label">유효기간</label>
+										<div class="row expiration">
+											<div class="module-ip">
 												<input type="number" class="ip-txt" placeholder="MM">
 												<span class="txt">/</span>
 												<input type="number" class="ip-txt" placeholder="YY">
 												<div class="line"></div>
-												<button type="button" class="icon-group btn-del">
+											</div>
+											<div class="module-ico">
+												<button type="button" class="btn-del">
 													<i class="ico delete lg"></i>
 												</button>
 											</div>
@@ -50,45 +55,52 @@
 									</div>
 		
 									<div class="ip-group">
+										<label for="ip03" class="ip-label">CVC</label>
 										<div class="row">
-											<label for="ip03" class="ip-label">CVC</label>
-											<input type="text" id="ip03" class="ip-txt" placeholder="카드 뒷면 3자리 숫자">
-											<div class="line"></div>
-											<span class="icon-group">
+											<div class="module-ip">
+												<input type="text" id="ip03" class="ip-txt" placeholder="카드 뒷면 3자리 숫자">
+												<div class="line"></div>
+											</div>
+											<div class="module-ico">
 												<button type="button" class="ip-icon">
 													<i class="ico delete lg"></i>
 												</button>
-											</span>
+											</div>
 										</div> 
 									</div>
 
 									<div class="ip-group">
+										<label for="ip04" class="ip-label">카드 비밀번호</label>
 										<div class="row">
-											<label for="ip04" class="ip-label">카드 비밀번호</label>
-											<input type="password" id="ip04" class="ip-txt" placeholder="앞 2자리 숫자">
-											<div class="line"></div>
-											<span class="icon-group">
+											<div class="module-ip">
+												<input type="password" id="ip04" class="ip-txt" placeholder="앞 2자리 숫자">
+												<div class="line"></div>
+											</div>
+											<div class="module-ico">
 												<button type="button" class="ip-icon">
 													<i class="ico delete lg"></i>
 												</button>
-											</span>
+											</div>
 										</div> 
 									</div>
 
 									<div class="ip-group">
+										<label for="ip05" class="ip-label">카드 별칭 (선택)</label>
 										<div class="row">
-											<label for="ip05" class="ip-label">카드 별칭 (선택)</label>
-											<input type="password" id="ip05" class="ip-txt" placeholder="6자 이내">
-											<div class="line"></div>
-											<span class="icon-group">
+											<div class="module-ip">
+												<input type="password" id="ip05" class="ip-txt" placeholder="6자 이내">
+												<div class="line"></div>
+											</div>
+											<div class="module-ico">
 												<button type="button" class="ip-icon">
 													<i class="ico delete lg"></i>
 												</button>
-											</span>
+											</div>
 										</div> 
 									</div>
 		
 								</div>
+								<!-- //20220831 -->
 
 								<div class="btn-group center">
 									<button type="button" class="btn xs">

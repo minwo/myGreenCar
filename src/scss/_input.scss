@@ -87,6 +87,12 @@ input[type="email"] {
 		&-ico{
 			display:inline-flex;
 			align-items:center;
+			&:first-child{
+				margin-right:8px;
+			}
+			&:not(:first-child){
+				margin-left:8px;
+			}
 			button{
 				display:inline-flex;
 				margin-left:10px;
@@ -101,12 +107,17 @@ input[type="email"] {
 					margin-left:8px;
 				}
 			}
+			.active{
+				.eye-on{
+					background:url(#{$url-ico}icon_eye_on.svg);
+				}
+			}
 		}
 		&-btn{
-			flex-basis:92px;
 			padding-left:8px;
 			.btn{
-				width:100%;
+				width:92px;
+				padding:0;
 			}
 		}
 	}

@@ -51,38 +51,6 @@
 	.certi-form{
 		margin-bottom:50px;
 		
-		.ip-group.certy{
-			position:relative;
-			padding-right:91px;
-			.ip-txt{
-				padding-right:70px;
-			}
-			.line{
-				background-color:$navy-020;
-			}
-		}
-		.ip-group{
-			.line{
-				border-color:$navy-020;
-			}
-			.icon-group{
-				color:$navy-020;
-			}
-			.error{
-				.time{
-					color:$red-060;
-				}
-			}
-		}
-		.mail-txt{
-			position:absolute;
-			top:31px;
-			right:0;
-			color:$navy-070;
-			font-size:$font-lg;
-			line-height:26px;
-			font-weight:500;
-		}
 		.btn-group{
 			margin-top:20px;
 		}
