@@ -305,7 +305,7 @@ hr.divider {
     .ip-txt {
         font-size: $font-md;
     }
-    .card:not(.ip-group,.row) {
+    .card:not(.ip-group, .row) {
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -572,14 +572,14 @@ hr.divider {
         margin-left: 2px;
     }
     &.solid {
-    color: #fff;
-    background-color: $navy-040;
+        color: #fff;
+        background-color: $navy-040;
         &.green {
             background-color: $green-060;
-    }
-    &.pink {
-        background-color: #f8679c;
-    }
+        }
+        &.pink {
+            background-color: $fuchsia-050;
+        }
         &.red {
             background-color: $red-060;
         }
@@ -599,6 +599,7 @@ hr.divider {
             border-color: $green-060;
         }
     }
+    // Badge Size
     &.sm {
         height: 16px;
         min-width: 40px;
@@ -618,6 +619,7 @@ hr.divider {
         padding: 0 8px;
         font-size: 14px;
     }
+    // Badge Shape(Default == Round )
     &.square {
         border-radius: 6px;
         padding: 12px;
