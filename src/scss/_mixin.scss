@@ -77,27 +77,12 @@
 }
 
 // checkbook && radio
-@mixin form(
-	$type
-	// ,
-	// $before-shadow: if($type == checkbox, 0, 3px),
-	// $border-radius: if($type == checkbox, 3px, 50%)
-) {
+@mixin form($type) {
 	// size
-	$checkradio-size:              24px !default;
-	// checked border color
-	$checkradio-border-primary:  #0d6efd  !default;
-	// shadow default color
-	$checkradio-shadow-default:  #fff  !default;
-	// checked shadow color
-	$checkradio-shadow-primary:    $checkradio-border-primary  !default;
-	// disabled shadow color
-	$checkradio-shadow-disabled: #dee2e6  !default;
-
+	$checkradio-size:24px;
 	display:inline-block;
 	vertical-align:top;
 	color:$navy-040;
-
 	input {
 		display:none;
 		position:absolute;
@@ -111,68 +96,34 @@
 
 		&:checked ~ span{
 			color:$navy-070;
-			font-weight:700;
-		}
-		
-		@if($type == "radio"){
-			&:checked ~ span{
-				&:before{
-					background-image:url(#{$url-common}radio_on.svg);
-				}
-			}
-		}
-
-		&:disabled + span {
-			color:#adb5bd;
+			font-weight:500;
 			&:before {
-				border-color:$navy-040;
-				box-shadow:inset 0 0 0 $checkradio-size $checkradio-shadow-disabled;
+				background-color:$default;
 			}
 		}
 	}
-
-	span {
+	> span {
 		position:relative;
 		display:inline-flex;
 		align-items:center;
 		vertical-align:top;
 		font-size:$font-sm2;
-
-		@if($type == "radio"){
-			&{
-				font-weight:400;
-			}
-			&{
-				&:before{
-					background-color:$gray-000;
-					border-radius:$border-radius-circle;
-				}
-			}
-
-			&:before {
-				content:'';
-				width:24px;
-				height:24px;
-				margin-right:6px;
-				background:url(#{$url-common}radio_off.svg) no-repeat;
-				background-size:100% 100%;
-			}
-		} @else {
-			&:before {
-				content:'';
+		&:before {
+			content:'';
+			margin-right:8px;
+			border-radius:$border-radius-circle;
+			box-sizing:border-box;
+			@if($type == "radio"){
+				width:$checkradio-size - 4px;
+				height:$checkradio-size - 4px;
+				border:2px solid $navy-020;
+				box-shadow:inset 0 0 0 2px $gray-000;
+			} @else {
 				width:$checkradio-size;
 				height:$checkradio-size;
-				margin-right:5px;
-			}
-		}
-	}
-
-	&.no-label {
-		span {
-			font-size:0;
-			line-height:0;
-			&:before {
-				margin: 0;
+				background-color:$navy-020;
+				background-size:100% 100%;
+				background-image:url(#{$url-common}check.svg);
 			}
 		}
 	}
