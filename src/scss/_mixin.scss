@@ -309,8 +309,11 @@
 }
 
 // font-style-guide
-@mixin fontSize($size){
+@mixin fontSize($size, $weight:null){
 	font-size:#{$size}px;
+	@if not($weight == null or $weight =='') {
+		font-weight:$weight;
+	}
 	@if($size == 10){
 		line-height:12px;
 	} @else if($size == 12){
