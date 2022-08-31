@@ -8,7 +8,7 @@ select {
 	background-color:#fff;
 	background-repeat:no-repeat;
 	background-position:right center;
-	background-image:url(''+$url-ico+'icon_arrow_bot_navy060.svg');
+	background-image:url(#{$url-ico}icon_arrow_bot_navy060.svg);
 	-webkit-appearance:none;
 	-moz-appearance:none;
 	appearance:none;

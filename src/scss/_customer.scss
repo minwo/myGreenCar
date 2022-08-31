@@ -349,7 +349,7 @@
             &:focus {
                 outline: none;
             }
-            background-image: url("" + $url-ico + "icon_list_open_arrow.svg");
+            background-image: url(#{$url-ico}icon_list_open_arrow.svg);
         }
         &::after {
             content: " ";
