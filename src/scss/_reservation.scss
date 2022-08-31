@@ -48,7 +48,7 @@ hr.divider {
 
 .guide-box {
     color: $navy-040;
-    font-size: 12px;
+    @include fontSize(12);
     margin: 0 -20px;
     padding: 16px 20px;
     background-color: $gray-020;
@@ -73,8 +73,8 @@ hr.divider {
 
 .btn-more {
     .text {
-        font-size: 14px;
         color: $navy-070;
+        @include fontSize(14);
     }
 }
 
@@ -86,8 +86,7 @@ hr.divider {
     .title,
     .desc-xl {
         margin-bottom: 24px;
-        font-size: 20px;
-        font-weight: 700;
+        @include fontSize(20,700);
         .emphasis {
             color: #fd8484;
         }
@@ -99,8 +98,8 @@ hr.divider {
             margin-bottom: 20px;
             + p {
                 color: $navy-070;
-                font-size: 16px;
-                font-weight: 500;
+                @include fontSize(16,500);
+                
             }
         }
         h3 {
@@ -128,7 +127,7 @@ hr.divider {
             line-height: 34.17px; // Actual Touch Target size 고려하여 line-height로 간격조정
             .text {
                 color: #8c989e;
-                font-size: 16px;
+                @include fontSize(16);
             }
             .ico {
                 margin-left: auto;
@@ -142,13 +141,11 @@ hr.divider {
         border-bottom: 1px solid #d9dddf;
         padding-bottom: 10px;
         margin-bottom: 16px;
-        font-size: 18px;
-        font-weight: 500;
+        @include fontSize(18,500);
         .gc-checkbox {
             span {
                 color: #303e47;
-                font-size: 18px;
-                font-weight: 700;
+                @include fontSize(18,700);
             }
         }
     }
@@ -163,8 +160,7 @@ hr.divider {
         padding: 26px 0 30px;
     }
     .section-title {
-        font-size: 12px;
-        font-weight: bold;
+        @include fontSize(12,700);
         color: $navy-070;
         margin-bottom: 14px;
         @include flex-center();
@@ -173,8 +169,7 @@ hr.divider {
         }
         .badge-num {
             color: $green-060;
-            font-size: 16px;
-            font-weight: 700;
+            @include fontSize(16,700);
             margin-left: 4px;
         }
         .filter {
@@ -183,9 +178,8 @@ hr.divider {
             margin-left: auto;
             @include flex-center();
             .ctr {
-                font-size: $font-sm;
                 color: $navy-070;
-                font-weight: 500;
+                @include fontSize(12,500);
                 .ico {
                     margin-left: 4px;
                     vertical-align: top;
@@ -216,8 +210,7 @@ hr.divider {
                 height: 22px;
                 padding: 0 12px;
                 color: $navy-050;
-                font-size: 12px;
-                font-weight: normal;
+                @include fontSize(12);
                 background-color: $navy-010;
                 border-radius: 2rem;
             }
@@ -227,22 +220,19 @@ hr.divider {
                 span {
                     &:nth-child(1) {
                         color: $navy-070;
-                        font-size: 18px;
-                        font-weight: 700;
+                        @include fontSize(18,700);
                     }
                     &:nth-child(2) {
                         margin-left: 4px;
                         color: $green-040;
-                        font-size: 12px;
-                        font-weight: 500;
+                        @include fontSize(12,500);
                     }
                 }
             }
             .discount-value + p {
                 margin-top: 8px;
                 color: $navy-070;
-                font-size: 12px;
-                font-weight: normal;
+                @include fontSize(12);
                 // @include ell;
             }
             .effective-date {
@@ -250,8 +240,7 @@ hr.divider {
                 @include flex-center();
                 .date {
                     color: $navy-040;
-                    font-size: 14px;
-                    font-weight: normal;
+                    @include fontSize(14);
                 }
                 .date + * {
                     margin-left: 4px;
@@ -279,31 +268,13 @@ hr.divider {
         }
     }
 }
-// .btn-filter {
-//     height: 34px;
-//     padding: 0 12px;
-//     background-color: #fff;
-//     border: 1px solid $navy-020;
-//     border-radius: 2rem;
-//     position: fixed;
-//     left: 50%;
-//     bottom: 40px;
-//     transform: translateX(-50%);
-//     z-index: 100;
-//     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
-//     @include flex-center();
-//     .text {
-//         color: $navy-060;
-//         font-size: 14px;
-//         margin-left: 4px;
-//     }
-// }
+
 
 //멤버십
 .membership {
     padding: 24px 0;
     .ip-txt {
-        font-size: $font-md;
+        @include fontSize(16);
     }
     .card:not(.ip-group, .row) {
         display: flex;
@@ -319,10 +290,9 @@ hr.divider {
                 height: 32px;
             }
             span {
-                color: $gray-000;
-                font-size: 20px;
-                font-weight: bold;
                 margin-left: 4px;
+                color: $gray-000;
+                @include fontSize(20,700);
             }
         }
         .logo + * {
@@ -334,8 +304,7 @@ hr.divider {
             margin: 0 auto;
             margin-top: 32px;
             color: #fff;
-            font-size: 16px;
-            font-weight: 500;
+            @include fontSize(16,500);
             background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #000000;
             border-radius: 10px;
             justify-content: center;
@@ -379,12 +348,12 @@ hr.divider {
         }
         .section-tit {
             position: relative;
-            font-size: $font-sm;
             margin-bottom: 12px;
+            @include fontSize(12);
             .btn-link {
                 line-height: 24px;
                 color: $navy-070;
-                font-size: $font-sm;
+                @include fontSize(12);
                 &:last-child {
                     position: absolute;
                     top: 50%;
@@ -401,8 +370,7 @@ hr.divider {
         }
         h4 {
             margin-top: 12px;
-            font-size: 18px;
-            font-weight: bold;
+            @include fontSize(18,700);
         }
         .list {
             margin-top: 12px;
@@ -421,21 +389,18 @@ hr.divider {
             .title {
                 flex: 1;
                 flex-basis: 45%;
-                font-size: 14px;
-                font-weight: normal;
                 margin-bottom: 0;
-                line-height: 1;
+                @include fontSize(14);
             }
             .desc {
                 flex: 1;
                 flex-basis: 55%;
                 text-align: right;
-                font-size: $font-xl;
-                font-weight: 500;
+                @include fontSize(20,500);
             }
             &.card-bind {
                 display: flex;
-                font-size: $font-xl;
+                @include fontSize(20);
                 justify-items: center;
                 .num {
                     flex: 0 0 auto;
@@ -456,8 +421,7 @@ hr.divider {
             border: 1px solid $navy-020;
             text-align: center;
             color: $navy-070;
-            font-size: 16px;
-            font-weight: 500;
+            @include fontSize(16,500);
             &.disabled-point {
                 color: $gray-000;
                 background-color: $navy-020;
@@ -491,7 +455,7 @@ hr.divider {
     margin-bottom: 6px;
     .ip-txt {
         height: 48px;
-        font-size: $font-lg;
+        @include fontSize(18);
     }
 }
 // [팝업] 예약결제 안내
@@ -502,7 +466,7 @@ hr.divider {
         border-radius: 8px;
         background-color: $navy-010;
         .desc-list {
-            font-size: 14px;
+            @include fontSize(14);
             li + li {
                 margin-top: 4px;
             }
@@ -531,7 +495,7 @@ hr.divider {
         .sign {
             margin-top: 16px;
             color: $navy-070;
-            font-size: $font-md;
+            @include fontSize(16);
             text-align: right;
             em {
                 margin-left: 4px;
@@ -604,15 +568,13 @@ hr.divider {
         height: 16px;
         min-width: 40px;
         padding: 0 8px;
-        font-size: 10px;
-        font-weight: 500;
+        @include fontSize(10,500);
         letter-spacing: 0.05rem;
     }
     &.md {
         height: 18px;
         padding: 0 6px;
-        font-size: 10px;
-        font-weight: 400;
+        @include fontSize(10);
     }
     &.lg {
         height: 24px;
