@@ -258,7 +258,7 @@
         }
         .value {
             color: $green-060;
-            @include fontSize(22, 600);
+            @include fontSize(22, 700);
             text-align: right;
         }
     }
@@ -275,7 +275,7 @@
         .right {
             margin-left: auto;
             .value {
-                @include fontSize(16, 600);
+                @include fontSize(16, 700);
             }
         }
         .btn {
@@ -308,13 +308,13 @@
 
                 .get {
                     color: $green-060;
-                    @include fontSize(16, 600);
+                    @include fontSize(16, 700);
                 }
                 .use {
                     color: $navy-070;
                     font-size: 16px;
                     font-weight: 600;
-                    @include fontSize(16, 600);
+                    @include fontSize(16, 700);
                 }
                 .balance {
                     color: $navy-040;
@@ -533,7 +533,7 @@
             @include flex-center;
             .value {
                 color: $green-060;
-                @include fontSize(22, 600);
+                @include fontSize(22, 700);
             }
             .unit {
                 color: $navy-070;
@@ -560,7 +560,7 @@
             margin-left: auto;
             .reward {
                 span {
-                    @include fontSize(16, 600);
+                    @include fontSize(16, 700);
                 }
             }
         }
