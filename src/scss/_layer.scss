@@ -131,6 +131,7 @@ html.is-open, html.is-open body {
 			padding: 14px 20px 14px 50px;
 			text-align:center;
 			.title{
+				text-indent:-30px;
 				@include ell();
 			}
 		}

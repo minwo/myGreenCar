@@ -336,7 +336,7 @@
 			}
 			.btn-wrap{
 				margin-top:16px;
-				.btn{
+				.btn:not(.link){
 					height:86px;
 				}
 				.ico{

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('@@webRoot/include/head.html')
+    </head>
+    <body>
+        <div id="wrap">
+            <!-- header -->
+            @@include('@@webRoot/include/header.html', { type: "sub_02", title: "결제수단" })
+            <!-- //header -->
+
+            <!-- container -->
+            <section id="container">
+                <div class="contents">
+                    
+					<div class="mypage">
+						<div class="payment">
+
+							<p class="desc-xs">
+								나의 결제수단 <span class="count">5</span>
+							</p>
+
+							<div class="paymnet-list">
+								<div class="item">
+									<p class="name">국민카드 5272 <span class="tag">기본</span></p>
+									<p class="info">국민체크</p>
+									<button class="btn icon">
+                                        <i class="ico dots-v lg"></i>
+                                    </button>
+								</div>
+								<div class="item">
+									<p class="name">카카오페이</p>
+									<p class="info">간편결제</p>
+								</div>
+
+								<div class="btn-wrap">
+									<div class="btn-group">
+										<button type="button" class="btn link">결제수단 등록</button>
+									</div>
+								</div>
+							</div>
+
+
+						</div>
+					</div>
+
+                </div>
+            </section>
+            <!-- //container -->
+        </div>
+    </body>
+</html>
