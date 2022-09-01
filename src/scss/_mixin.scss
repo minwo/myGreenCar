@@ -288,24 +288,14 @@
 }
 
 // border-top
-@mixin bdt(){
-	border-top:1px solid $navy-020;
-}
-
-
-@mixin icType(){
-    @each $key, $value in $icon-size {
-        &.#{$key}{
-            width: map-get($value, "width");
-            height: map-get($value, "height");
-        }
-    }
-
-    @each $key, $file in map-get($icon-size, "file") {
-        &.#{$key} {
-            background-image: url($url-ico+$file);
-        }
-    }
+@mixin border($direction:null){
+	@if($direction == 't'){
+		border-top:1px solid $navy-020;
+	} @else if($direction == 'b'){
+		border-bottom:1px solid $navy-020;
+	} @else{
+		border:1px solid  $navy-020;
+	}
 }
 
 // font-style-guide
@@ -325,7 +315,7 @@
 	} @else if($size == 18){
 		line-height:24px;
 	} @else if($size == 20){
-		line-height:24px;
+		line-height:28px;
 	}
 }
 

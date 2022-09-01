@@ -540,6 +540,31 @@
 			}
 		}
 	}
+
+	// 무료편도 예약하기
+	&.fo{
+		.reservation-module .car-info .title-area{
+			margin-top:24px;
+			padding-top:24px;
+			@include border('t');
+			.flex:first-child{
+				color:$navy-070;
+			}
+		}
+		.car-info{
+			padding-bottom:24px;
+			.flex:first-child{
+				text-align:left;
+			}
+		}
+		.reservation-module .total{
+			.price{
+				margin-top:0;
+				color:$default;
+				@include fontSize(20,700);
+			}
+		}
+	}
 }
 
 .layer-wrap{
