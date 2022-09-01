@@ -288,13 +288,21 @@
 }
 
 // border-top
-@mixin border($direction:null){
+/*
+	ex
+	@include border('t');
+	@include border('t',4);
+	방향,픽셀
+*/
+@mixin border($direction:null,$size:null){
+	$size:if($size == null,1,$size);
+
 	@if($direction == 't'){
-		border-top:1px solid $navy-020;
+		border-top:#{$size}px solid $navy-020;
 	} @else if($direction == 'b'){
-		border-bottom:1px solid $navy-020;
+		border-bottom:#{$size}px solid $navy-020;
 	} @else{
-		border:1px solid  $navy-020;
+		border:#{$size}px solid  $navy-020;
 	}
 }
 
