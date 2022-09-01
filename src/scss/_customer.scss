@@ -11,9 +11,8 @@
     position: relative;
     z-index: 1;
     .intro-text {
-        font-size: 20px;
-        font-weight: 500;
         margin: 32px 0 8px;
+        @include fontSize(20,500);
         span {
             font-weight: 400;
         }
@@ -22,16 +21,14 @@
         padding-bottom: 24px;
         position: relative;
         h3 {
-            color: $navy-070;
-            font-size: 18px;
-            font-weight: 500;
             margin-bottom: 16px;
+            color: $navy-070;
+            @include fontSize(18,500);
         }
         h4 {
-            color: $navy-070;
-            font-size: 16px;
-            font-weight: 500;
             margin: 24px 0 16px;
+            color: $navy-070;
+            @include fontSize(16,500);
             @include flex-center;
             .ico {
                 margin-right: 6px;
@@ -40,7 +37,7 @@
         h4 ~ p,
         h4 ~ ol {
             color: $navy-040;
-            font-size: 14px;
+            @include fontSize(14);
         }
         em {
             font-weight: bold;
@@ -52,7 +49,7 @@
             margin-top: 16px;
             p {
                 color: $navy-040;
-                font-size: 14px;
+                @include fontSize(14);
                 + p {
                     margin-top: 8px;
                 }
@@ -69,8 +66,7 @@
                 padding: 8px 0;
                 @include flex-center;
                 .text {
-                    font-size: 16px;
-                    font-weight: 500;
+                    @include fontSize(16,500);
                 }
                 .btn {
                     margin-left: auto;
@@ -92,8 +88,7 @@
                 padding: 16px;
                 @include flex-center;
                 .text {
-                    font-size: 16px;
-                    font-weight: 500;
+                    @include fontSize(16,500);
                 }
                 .btn {
                     margin-left: auto;
@@ -111,8 +106,7 @@
                 @include flex-center;
                 .text {
                     width: calc(100% - 48px);
-                    font-size: 16px;
-                    font-weight: 500;
+                    @include fontSize(16,500);
                 }
                 .btn {
                     margin-left: auto;
@@ -136,9 +130,8 @@
         }
     }
     .qna-list-head {
-        font-size: 16px;
-        font-weight: 500;
         margin-bottom: 24px;
+        @include fontSize(16,500);
     }
 }
 
@@ -181,13 +174,12 @@
         .text {
             margin-left: 16px;
             strong {
-                font-size: 16px;
-                font-weight: 500;
+                @include fontSize(16,500);
             }
             p {
                 margin-top: 8px;
                 color: $navy-040;
-                font-size: 14px;
+                @include fontSize(14);
             }
             p + p {
                 margin-top: 4px;
@@ -206,15 +198,14 @@
             height: 50px;
             border-radius: 50%;
             color: $gray-000;
-            font-size: 16px;
+            @include fontSize(16);
             background-color: $green-060;
             justify-content: center;
             @include flex-center;
         }
         .text {
-            font-size: 16px;
-            font-weight: 500;
             margin-left: 8px;
+            @include fontSize(16,500);
         }
         @include flex-center;
     }
@@ -253,9 +244,7 @@
         .text {
             margin-top: 8px;
             color: $navy-070;
-            font-size: 14px;
-            font-weight: 500;
-            line-height: 18px;
+            @include fontSize(14,500);
         }
     }
     &:last-child {
@@ -267,15 +256,14 @@
 
 .sel-pay-method {
     input[type="radio"] + span {
-        font-size: 16px;
-        font-weight: 500;
+        @include fontSize(16,500);
     }
     .gc-radio {
         color: $navy-070;
         + .desc {
             margin: 4px 0 0 28px;
             color: $navy-040;
-            font-size: 14px;
+            @include fontSize(14);
         }
     }
     .item + .item {
@@ -285,8 +273,7 @@
 .agree-group {
     .gc-radio {
         span {
-            font-size: 20px;
-            font-weight: 500 !important;
+            @include fontSize(20,500);
         }
     }
 }
@@ -295,14 +282,12 @@
     @include flex-center;
     dt {
         color: $navy-070;
-        font-size: 18px;
-        font-weight: 500;
+        @include fontSize(18,500);
     }
     dd {
-        color: $green-060;
-        font-size: 16px;
-        font-weight: 500;
         margin-left: 16px;
+        color: $green-060;
+        @include fontSize(16,500);
     }
 }
 .float-btn {
@@ -334,7 +319,7 @@
         padding: 8px;
         &::placeholder {
             color: $navy-040;
-            font-size: 14px;
+            @include fontSize(14);
         }
         &:focus {
             outline: none;
@@ -346,7 +331,7 @@
     &.full {
         select {
             width: 100%;
-            font-size: 16px;
+            @include fontSize(16);
             &:focus {
                 outline: none;
             }
@@ -370,7 +355,7 @@
             margin-left: 8px;
         }
         input[type="text"] {
-            font-size: 18px;
+            @include fontSize(18);
         }
     }
 }
@@ -380,7 +365,7 @@
     }
     p {
         color: $navy-040;
-        font-size: 16px;
+        @include fontSize(16);
     }
 }
 // 테이블
@@ -443,8 +428,7 @@
     li {
         padding: 16px 0;
         input[type="radio"] + span {
-            font-size: 18px;
-            font-weight: 400;
+            @include fontSize(18,400);
         }
     }
 }
@@ -455,7 +439,7 @@
         padding-bottom: 16px;
         @include flex-center;
         .text {
-            font-size: 16px;
+            @include fontSize(16);
         }
         .ico {
             margin-left: auto;
@@ -475,9 +459,8 @@
         padding: 16px 0;
         strong {
             display: block;
-            font-size: 16px;
-            font-weight: 500;
             margin: 8px 0;
+            @include fontSize(16,500);
         }
         .history-list {
             li {
@@ -552,11 +535,10 @@
                 }
             }
             .item-info {
-                color: $navy-040;
-                font-size: 12px;
-                line-height: 16px;
-                text-align: center;
                 margin-top: 8px;
+                color: $navy-040;
+                text-align: center;
+                @include fontSize(12);
             }
         }
         .item-counter {
@@ -564,13 +546,13 @@
             top: 0px;
             right: 0;
             color: $navy-040;
-            font-size: 16px;
+            @include fontSize(16);
         }
     }
     .desc {
-        font-size: 16px;
         color: $navy-040;
         margin-top: 8px;
+        @include fontSize(16);
     }
 }
 
@@ -580,7 +562,7 @@
         padding: 16px 0;
         .date {
             color: $navy-070;
-            font-size: 14px;
+            @include fontSize(14);
         }
         .title {
             margin-top: 8px;
@@ -591,7 +573,7 @@
             .left {
                 gap: 8px;
                 strong {
-                    font-size: 16px;
+                    @include fontSize(16, 500);
                 }
             }
             .right {
