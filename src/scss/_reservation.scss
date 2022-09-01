@@ -7,35 +7,44 @@
     align-items: center;
 }
 
-// Common style
+/* Common style */
 
-.mt8 {
-    margin-top: 8px !important;
+
+// start :: margin, padding generator
+@function size($start, $end) {
+    $size : ();
+    @for $i from $start through $end {
+        $value : $i + 0;
+        $size : append($size, $value);
+    }
+    @return $size;
 }
-.mt16 {
-    margin-top: 16px !important;
+@function getPx($value) {
+    @if $value == 0 {
+        @return $value;
+    } @else {
+        @return $value + 0px;
+    }
 }
-.mt24 {
-    margin-top: 24px !important;
+$size : size(0, 60);
+$position : ('l':'left', 'r':'right', 't':'top', 'b':'bottom');
+$nameMap : ('m':'margin', 'p':'padding');
+@mixin generate($nameMap : (), $position : (), $size : ()) {
+    @each $preKey, $preValue in $nameMap {
+        @each $px in $size {
+            .#{$preKey}#{$px} {
+                #{$preValue} : getPx($px);
+            }
+            @each $sufKey, $sufValue in $position {
+                .#{$preKey}#{$sufKey}#{$px} {
+                    #{$preValue}-#{$sufValue} : getPx($px) !important;
+                }
+            }
+        }
+    }
 }
-.mt32 {
-    margin-top: 32px !important;
-}
-.mt40 {
-    margin-top: 40px !important;
-}
-.mt60 {
-    margin-top: 60px !important;
-}
-.pt0 {
-    padding-top: 0 !important;
-}
-.pt4 {
-    padding-top: 4px !important;
-}
-.pb0 {
-    padding-bottom: 0px !important;
-}
+@include generate($nameMap, $position, $size);
+// end:: margin, padding generator
 
 hr.divider {
     display: block;
@@ -86,7 +95,7 @@ hr.divider {
     .title,
     .desc-xl {
         margin-bottom: 24px;
-        @include fontSize(20,700);
+        @include fontSize(20, 700);
         .emphasis {
             color: #fd8484;
         }
@@ -98,8 +107,7 @@ hr.divider {
             margin-bottom: 20px;
             + p {
                 color: $navy-070;
-                @include fontSize(16,500);
-                
+                @include fontSize(16, 500);
             }
         }
         h3 {
@@ -141,11 +149,11 @@ hr.divider {
         border-bottom: 1px solid #d9dddf;
         padding-bottom: 10px;
         margin-bottom: 16px;
-        @include fontSize(18,500);
+        @include fontSize(18, 500);
         .gc-checkbox {
             span {
                 color: #303e47;
-                @include fontSize(18,700);
+                @include fontSize(18, 700);
             }
         }
     }
@@ -160,7 +168,7 @@ hr.divider {
         padding: 26px 0 30px;
     }
     .section-title {
-        @include fontSize(12,700);
+        @include fontSize(12, 700);
         color: $navy-070;
         margin-bottom: 14px;
         @include flex-center();
@@ -169,7 +177,7 @@ hr.divider {
         }
         .badge-num {
             color: $green-060;
-            @include fontSize(16,700);
+            @include fontSize(16, 700);
             margin-left: 4px;
         }
         .filter {
@@ -179,7 +187,7 @@ hr.divider {
             @include flex-center();
             .ctr {
                 color: $navy-070;
-                @include fontSize(12,500);
+                @include fontSize(12, 500);
                 .ico {
                     margin-left: 4px;
                     vertical-align: top;
@@ -189,8 +197,7 @@ hr.divider {
     }
 
     .section-cont {
-        font-size: 16px;
-        font-weight: 700;
+        @include fontSize(16,700);
     }
 
     .coupon-list {
@@ -220,12 +227,12 @@ hr.divider {
                 span {
                     &:nth-child(1) {
                         color: $navy-070;
-                        @include fontSize(18,700);
+                        @include fontSize(18, 700);
                     }
                     &:nth-child(2) {
                         margin-left: 4px;
                         color: $green-040;
-                        @include fontSize(12,500);
+                        @include fontSize(12, 500);
                     }
                 }
             }
@@ -269,7 +276,6 @@ hr.divider {
     }
 }
 
-
 //멤버십
 .membership {
     padding: 24px 0;
@@ -292,7 +298,7 @@ hr.divider {
             span {
                 margin-left: 4px;
                 color: $gray-000;
-                @include fontSize(20,700);
+                @include fontSize(20, 700);
             }
         }
         .logo + * {
@@ -304,7 +310,7 @@ hr.divider {
             margin: 0 auto;
             margin-top: 32px;
             color: #fff;
-            @include fontSize(16,500);
+            @include fontSize(16, 500);
             background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #000000;
             border-radius: 10px;
             justify-content: center;
@@ -370,7 +376,7 @@ hr.divider {
         }
         h4 {
             margin-top: 12px;
-            @include fontSize(18,700);
+            @include fontSize(18, 700);
         }
         .list {
             margin-top: 12px;
@@ -396,7 +402,7 @@ hr.divider {
                 flex: 1;
                 flex-basis: 55%;
                 text-align: right;
-                @include fontSize(20,500);
+                @include fontSize(20, 500);
             }
             &.card-bind {
                 display: flex;
@@ -421,7 +427,7 @@ hr.divider {
             border: 1px solid $navy-020;
             text-align: center;
             color: $navy-070;
-            @include fontSize(16,500);
+            @include fontSize(16, 500);
             &.disabled-point {
                 color: $gray-000;
                 background-color: $navy-020;
@@ -439,7 +445,7 @@ hr.divider {
         text-align: right;
         .btn-link {
             color: $blue-050;
-            font-size: 13px;
+            @include fontSize(12);
             text-decoration: underline;
         }
         &.both-sides {
@@ -568,7 +574,7 @@ hr.divider {
         height: 16px;
         min-width: 40px;
         padding: 0 8px;
-        @include fontSize(10,500);
+        @include fontSize(10, 500);
         letter-spacing: 0.05rem;
     }
     &.md {
@@ -579,7 +585,7 @@ hr.divider {
     &.lg {
         height: 24px;
         padding: 0 8px;
-        font-size: 14px;
+        @include fontSize(14);
     }
     // Badge Shape(Default == Round )
     &.square {

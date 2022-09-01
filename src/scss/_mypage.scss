@@ -127,7 +127,7 @@
                     border-top: 4px dotted $navy-020;
                     top: 31px;
                     left: 50%;
-                    z-index: -1;
+                    z-index: 1;
                 }
 
                 &.start {
@@ -312,13 +312,10 @@
                 }
                 .use {
                     color: $navy-070;
-                    font-size: 16px;
-                    font-weight: 600;
                     @include fontSize(16, 700);
                 }
                 .balance {
                     color: $navy-040;
-                    font-size: 14px;
                     @include fontSize(14);
                 }
             }
@@ -390,7 +387,6 @@
             }
             .car-num {
                 color: $navy-040;
-                font-size: 12px;
                 @include fontSize(12);
             }
         }
@@ -549,10 +545,9 @@
         .left {
             .title-xs {
                 span {
-                    color: $navy-040;
-                    font-size: 12px;
-                    @include fontSize(12);
                     margin-left: 4px;
+                    color: $navy-040;
+                    @include fontSize(12);
                 }
             }
         }
