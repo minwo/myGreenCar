@@ -18,8 +18,7 @@
             h3 {
                 margin-left: 8px;
                 color: $navy-040;
-                font-size: 16px;
-                font-weight: 500;
+                @include fontSize(16,500);
             }
         }
         .right {
@@ -75,12 +74,11 @@
                 justify-content: space-between;
                 margin-left: 10px;
                 .tit-txt {
-                    font-size: 18px;
-                    font-weight: 700;
+                    @include fontSize(18,700);
                 }
                 .effective-date {
                     .date {
-                        font-size: 14px;
+                        @include fontSize(14);
                         color: $navy-040;
                     }
                     .badge {
@@ -100,8 +98,7 @@
                         width: 100%;
                         height: 100%;
                         color: $gray-000;
-                        font-size: 14px;
-                        font-weight: 500;
+                        @include fontSize(14,500);
                         border-radius: $border-radius;
                         border: 1px solid #989b9d;
                         background-color: rgba($color: $black, $alpha: 0.8);
@@ -137,8 +134,7 @@
                 height: 22px;
                 padding: 0 12px;
                 color: $navy-050;
-                font-size: 12px;
-                font-weight: normal;
+                @include fontSize(12);
                 background-color: $navy-010;
                 border-radius: 2rem;
             }
@@ -148,22 +144,19 @@
                 span {
                     &:nth-child(1) {
                         color: $navy-070;
-                        font-size: 18px;
-                        font-weight: 700;
+                        @include fontSize(18,700);
                     }
                     &:nth-child(2) {
                         margin-left: 4px;
                         color: $green-040;
-                        font-size: 12px;
-                        font-weight: 500;
+                        @include fontSize(12,500);
                     }
                 }
             }
             .discount-desc {
                 margin-top: 8px;
                 color: $navy-070;
-                font-size: 12px;
-                font-weight: normal;
+                @include fontSize(12);
                 p {
                     &:nth-child(2) {
                         color: $navy-040;
@@ -175,8 +168,7 @@
                 @include flex-center();
                 .date {
                     color: $navy-040;
-                    font-size: 14px;
-                    font-weight: normal;
+                    @include fontSize(14);
                 }
                 .date + * {
                     margin-left: 4px;
@@ -216,7 +208,7 @@
             padding-bottom: 20px;
             .title {
                 color: $black-100;
-                font-size: 20px;
+                @include fontSize(20);
                 @include ell($line: 2);
             }
             .effective-date {
@@ -235,9 +227,8 @@
         }
         .comment {
             .comment-head {
-                font-size: 12px;
-                font-weight: 700;
                 margin-bottom: 10px;
+                @include fontSize(12,700);
                 .count {
                     color: $green-060;
                 }
@@ -286,8 +277,7 @@
         .left {
             h3 {
                 color: $navy-040;
-                font-size: 16px;
-                font-weight: 500;
+                @include fontSize(16,500);
             }
             * + * {
                 margin-left: 4px;
@@ -297,8 +287,7 @@
             margin-left: auto;
         }
         .btn-link {
-            font-size: 14px;
-            font-weight: 400;
+            @include fontSize(14);
         }
         @include flex-center;
     }
@@ -325,8 +314,7 @@
         margin-left: auto;
     }
     .left {
-        font-size: 12px;
-        font-weight: 500;
+        @include fontSize(12,500);
         .date {
             color: $navy-040;
             margin-left: 20px;
@@ -334,10 +322,9 @@
     }
 }
 .comment-text {
-    color: $navy-070;
-    font-size: 14px;
-    font-weight: 500;
     padding-bottom: 20px;
+    color: $navy-070;
+    @include fontSize(14,500);
 }
 
 // 임시
@@ -382,9 +369,8 @@
             border-radius: $border-radius;
         }
         .text {
-            font-size: 18px;
-            font-weight: 700;
             margin-left: 10px;
+            @include fontSize(18,700);
         }
         .btn {
             margin-left: auto;

@@ -11,8 +11,7 @@
         .level-desc {
             margin-left: 10px;
             strong {
-                font-size: 14px;
-                font-weight: 500;
+                @include fontSize(14, 500);
                 .badge {
                     margin-right: 4px;
                 }
@@ -20,12 +19,12 @@
             .criteria {
                 margin-top: 8px;
                 color: $navy-040;
-                font-size: 10px;
+                @include fontSize(10);
             }
             .benefit {
                 margin-top: 4px;
                 color: $navy-040;
-                font-size: 12px;
+                @include fontSize(12);
                 em {
                     color: $navy-070;
                     font-weight: 500;
@@ -40,7 +39,7 @@
 
     .notice {
         color: $navy-040;
-        font-size: 14px;
+        @include fontSize(14);
         margin: 16px 0 60px;
     }
 }
@@ -55,20 +54,17 @@
         text-align: center;
         p {
             color: $navy-040;
-            font-size: 12px;
-            font-weight: 500;
+            @include fontSize(12, 500);
         }
         .total-mileage {
             margin-top: 4px;
             color: $navy-070;
-            font-size: 16px;
-            font-weight: 500;
+            @include fontSize(16, 500);
         }
         .percent {
             margin-top: 16px;
             color: $navy-070;
-            font-size: 16px;
-            font-weight: 500;
+            @include fontSize(16, 500);
             span {
                 color: $green-060;
                 margin-left: 4px;
@@ -93,12 +89,11 @@
                 display: table-cell;
                 width: 72px;
                 color: $navy-070;
-                font-size: 12px;
-                font-weight: 500;
+                @include fontSize(12, 500);
                 text-align: center;
                 span {
                     display: block;
-                    font-size: 12px;
+                    @include fontSize(12);
                     color: $navy-070;
                     font-weight: 500;
                 }
@@ -188,9 +183,9 @@
                     }
                 }
                 .date-reached {
-                    color: $navy-040;
-                    font-size: 12px;
                     margin-top: 2px;
+                    color: $navy-040;
+                    @include fontSize(12);
                 }
             }
         }
@@ -253,8 +248,7 @@
 .point-history {
     h3 {
         color: $navy-070;
-        font-size: 12px;
-        font-weight: 500;
+        @include fontSize(12, 500);
     }
     .point-summary {
         padding-bottom: 24px;
@@ -264,8 +258,7 @@
         }
         .value {
             color: $green-060;
-            font-size: 22px;
-            font-weight: 600;
+            @include fontSize(22, 700);
             text-align: right;
         }
     }
@@ -282,8 +275,7 @@
         .right {
             margin-left: auto;
             .value {
-                font-size: 16px;
-                font-weight: 600;
+                @include fontSize(16, 700);
             }
         }
         .btn {
@@ -304,11 +296,10 @@
             }
             .left {
                 color: $navy-040;
-                font-size: 14px;
+                @include fontSize(14);
                 .desc {
                     color: $navy-070;
-                    font-size: 16px;
-                    font-weight: 500;
+                    @include fontSize(16, 500);
                 }
             }
             .right {
@@ -317,17 +308,18 @@
 
                 .get {
                     color: $green-060;
-                    font-size: 16px;
-                    font-weight: 600;
+                    @include fontSize(16, 700);
                 }
                 .use {
                     color: $navy-070;
                     font-size: 16px;
                     font-weight: 600;
+                    @include fontSize(16, 700);
                 }
                 .balance {
                     color: $navy-040;
                     font-size: 14px;
+                    @include fontSize(14);
                 }
             }
             &:before {
@@ -348,10 +340,10 @@
                     background-image: url(#{$url-ico}icon_minus_gray.svg);
                 }
             }
-            &:first-child{
+            &:first-child {
                 padding-top: 0;
             }
-            &:last-child{
+            &:last-child {
                 border-bottom: 1px solid $navy-020;
             }
         }
@@ -376,8 +368,7 @@
     .my-reply-top {
         height: 48px;
         background-color: $gray-005;
-        font-size: 12px;
-        font-weight: 500;
+        @include fontSize(12, 500);
         @include flex-center;
         .count {
             margin-left: 2px;
@@ -400,12 +391,12 @@
             .car-num {
                 color: $navy-040;
                 font-size: 12px;
+                @include fontSize(12);
             }
         }
         .write-date {
             color: $navy-040;
-            font-size: 12px;
-            font-weight: 500;
+            @include fontSize(12, 500);
         }
         .btn {
             margin-left: auto;
@@ -443,8 +434,7 @@
             padding: 16px 0;
             background-color: $gray-010;
             .comment-head {
-                font-size: 12px;
-                font-weight: 500;
+                @include fontSize(12, 500);
                 padding-bottom: 8px;
                 @include flex-center;
                 .profile {
@@ -468,8 +458,7 @@
             }
             .comment-body {
                 color: $navy-070;
-                font-size: 14px;
-                font-family: 500;
+                @include fontSize(14, 500);
             }
         }
     }
@@ -491,11 +480,11 @@
         .info {
             margin-left: 16px;
             strong {
-                font-size: 18px;
+                @include fontSize(18, 500);
             }
             span {
                 color: $navy-040;
-                font-size: 12px;
+                @include fontSize(12);
                 display: block;
             }
             .option {
@@ -528,52 +517,50 @@
     }
     .title-sm + p {
         color: $navy-040;
-        font-size: 14px;
+        @include fontSize(14);
         margin: 16px 0 8px;
     }
 }
 
 //친구초대
 .invite-friend {
-    .invitee{
+    .invitee {
         padding-bottom: 24px;
         margin-top: -8px;
         border-bottom: 1px solid $navy-020;
-        .count{
+        .count {
             justify-content: flex-end;
             @include flex-center;
-            .value{
+            .value {
                 color: $green-060;
-                font-size: 22px;
-                font-weight: 600;
+                @include fontSize(22, 700);
             }
-            .unit{
+            .unit {
                 color: $navy-070;
-                font-size: 16px;
-                font-weight: 500;
+                @include fontSize(16, 500);
                 margin: 0 4px;
             }
         }
     }
-    .row{
+    .row {
         padding-top: 22px;
         margin-bottom: -2px;
         @include flex-center;
-        .left{
-            .title-xs{
-                span{
+        .left {
+            .title-xs {
+                span {
                     color: $navy-040;
                     font-size: 12px;
+                    @include fontSize(12);
                     margin-left: 4px;
                 }
             }
         }
-        .right{
+        .right {
             margin-left: auto;
-            .reward{
-                span{
-                    font-size: 16px;
-                    font-weight: 600;
+            .reward {
+                span {
+                    @include fontSize(16, 700);
                 }
             }
         }
@@ -589,7 +576,7 @@
             @include flex-center;
             strong {
                 color: $navy-070;
-                font-size: 12px;
+                @include fontSize(12);
             }
             img {
                 width: 72px;
@@ -598,7 +585,7 @@
             }
             .desc {
                 color: $navy-040;
-                font-size: 12px;
+                @include fontSize(12);
                 text-align: center;
             }
         }
@@ -612,7 +599,6 @@
                 height: 24px;
                 background-image: url(#{$url-ico}icon_arrow_right_navy030.svg);
                 background-size: contain;
-               
             }
         }
     }
@@ -620,7 +606,6 @@
 
 // 내가 초대한 친구
 .invited-friends {
-   
     .friend-list-wrap {
         .list-head {
             padding: 32px 0 24px;
@@ -628,12 +613,10 @@
             @include flex-center;
             > span {
                 color: $navy-070;
-                font-size: 14px;
-                font-weight: 500;
+                @include fontSize(14, 500);
                 em {
                     color: $green-060;
-                    font-size: 16px;
-                    font-weight: 700;
+                    @include fontSize(16, 700);
                     margin-left: 4px;
                 }
             }
@@ -691,12 +674,10 @@
             margin-left: auto;
             .text {
                 color: $green-060;
-                font-size: 16px;
-                font-weight: 700;
+                @include fontSize(16, 700);
                 margin-left: 8px;
             }
             @include flex-center;
         }
     }
 }
-
