@@ -476,8 +476,10 @@
 .select-wrap {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 16px 12px;
+    margin-top: 16px;
     .btn {
+        width:calc((100% - 36px)/4);
         flex: 0 0 auto;
         color: $navy-070;
         border-radius: $border-radius-50;
@@ -557,8 +559,8 @@
 
 // 모바일 문의
 .inquiry-step {
-   display: flex;
-   margin-top: 24px;
+    display: flex;
+    margin-top: 24px;
     .step {
         flex: 0 0 auto;
         flex-direction: column;
@@ -574,9 +576,9 @@
             background-position: center;
             @include flex-center;
             justify-content: center;
-            span{
+            span {
                 color: $navy-020;
-                @include fontSize(16,700)
+                @include fontSize(16, 700);
             }
         }
         &:first-child {
@@ -591,25 +593,24 @@
             @include fontSize(12, 500);
             margin-top: 8px;
         }
-        &.done{
-            .step-icon{
+        &.done {
+            .step-icon {
                 border-color: $green-060;
-                span{
-                    color:$navy-070;
+                span {
+                    color: $navy-070;
                 }
             }
         }
     }
-    .step-line{
-        flex:1;
+    .step-line {
+        flex: 1;
         height: 2px;
         margin: 14px -5px 0;
         background-color: $navy-020;
-        &.done{
+        &.done {
             background-color: $green-060;
         }
     }
-
 }
 .inquiry-list {
     .item {
@@ -668,5 +669,68 @@
         margin-top: 16px;
         color: $navy-040;
         @include fontSize(12);
+    }
+}
+
+// 사고/고장 접수 전화연결
+.contact-wrap {
+    p {
+        @include fontSize(20, 500);
+    }
+}
+
+// 권한허용
+.alert-area {
+    .img {
+        display: flex;
+        justify-content: center;
+    }
+    .text {
+        @include fontSize(16, 500);
+    }
+}
+
+// 사진 선택
+.select-item {
+    gap: 32px;
+    justify-content: center;
+    @include flex-center;
+    .item {
+        width: 96px;
+        height: 112px;
+        padding: 16px;
+        text-align: center;
+        border-radius: $border-radius;
+        border: 1px solid $navy-020;
+        .img {
+            width: 48px;
+            height: 48px;
+            img {
+                width: 32px;
+                height: 32px;
+            }
+        }
+        p {
+            color: $navy-070;
+            @include fontSize(14, 500);
+        }
+    }
+}
+
+.no-data {
+    &.list {
+        &:before {
+            content: " ";
+            display: block;
+            width: 72px;
+            height: 72px;
+            margin: 0 auto;
+            background-image: url(#{$url-ico}icon_mark.svg);
+            background-size: cover;
+        }
+        > p {
+            margin-top: 16px;
+            @include fontSize(20, 500);
+        }
     }
 }
