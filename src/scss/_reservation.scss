@@ -2,20 +2,24 @@
 
 @import "_libs/_reservation01";
 
-@mixin flex-center {
-    display: flex;
-    align-items: center;
-}
-
 /* Common style */
 
+/****************************************
+* Padding, Margin 정의
+* p는 padding, m은 margin을 나타냄.
+* t는 상단 b는 하단 l은 왼쪽 r은 오른쪽의 방향
+* ex :
+* pt10 => padding-top:10px
+* mb22 => margin-bottom: 24px
 
-// start :: margin, padding generator
+*<div class="pt10 mb24"/>
+*****************************************/
+
 @function size($start, $end) {
-    $size : ();
+    $size: ();
     @for $i from $start through $end {
-        $value : $i + 0;
-        $size : append($size, $value);
+        $value: $i + 0;
+        $size: append($size, $value);
     }
     @return $size;
 }
@@ -26,30 +30,43 @@
         @return $value + 0px;
     }
 }
-$size : size(0, 60);
-$position : ('l':'left', 'r':'right', 't':'top', 'b':'bottom');
-$nameMap : ('m':'margin', 'p':'padding');
-@mixin generate($nameMap : (), $position : (), $size : ()) {
+$size: size(0, 100);
+$position: (
+    "l": "left",
+    "r": "right",
+    "t": "top",
+    "b": "bottom",
+);
+$nameMap: (
+    "m": "margin",
+    "p": "padding",
+);
+@mixin generate($nameMap: (), $position: (), $size: ()) {
     @each $preKey, $preValue in $nameMap {
         @each $px in $size {
             .#{$preKey}#{$px} {
-                #{$preValue} : getPx($px);
+                #{$preValue}: getPx($px);
             }
             @each $sufKey, $sufValue in $position {
                 .#{$preKey}#{$sufKey}#{$px} {
-                    #{$preValue}-#{$sufValue} : getPx($px) !important;
+                    #{$preValue}-#{$sufValue}: getPx($px) !important;
                 }
             }
         }
     }
 }
 @include generate($nameMap, $position, $size);
-// end:: margin, padding generator
 
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+}
+
+// section 구분선
 hr.divider {
     display: block;
-    background-color: $navy-010;
     height: 7px;
+    background-color: $navy-010;
     border: 0;
     border-top: 1px solid $gray-020;
     margin: 0 -20px;
@@ -70,13 +87,22 @@ hr.divider {
     }
 }
 
+/****************************************
+* div 내부 요소 좌우로 정렬 시
+<div>
+    <div class="left"/>
+    <div class="right"/>
+</div>
+****************************************/
+.left + .right {
+    margin-left: auto;
+}
+/****************************************/
+
 .section {
     padding: 32px 0;
     .section-title {
         @include flex-center();
-        .right {
-            margin-left: auto;
-        }
     }
 }
 
@@ -197,7 +223,7 @@ hr.divider {
     }
 
     .section-cont {
-        @include fontSize(16,700);
+        @include fontSize(16, 700);
     }
 
     .coupon-list {
@@ -448,7 +474,7 @@ hr.divider {
             @include fontSize(12);
             text-decoration: underline;
         }
-        &.both-sides {
+        &.justify {
             display: flex;
             justify-content: space-between;
         }
@@ -512,6 +538,8 @@ hr.divider {
 
     // 쿠폰 순서선택
     .coupon-choice {
+        margin: 0 -20px;
+        padding: 0 20px 18px;
         .block {
             padding: 12px 0;
         }
@@ -553,8 +581,8 @@ hr.divider {
         }
     }
     &.line {
-        color: $navy-070;
-        border: 1px solid $navy-020;
+        color: $navy-040;
+        border: 1px solid $navy-040;
         background-color: transparent !important;
         &.pink {
             color: $fuchsia-050;
@@ -578,10 +606,10 @@ hr.divider {
     &.md {
         height: 18px;
         padding: 0 6px;
-        @include fontSize(10);
+        @include fontSize(12);
     }
     &.lg {
-        height: 24px;
+        height: 20px;
         padding: 0 8px;
         @include fontSize(14);
     }
