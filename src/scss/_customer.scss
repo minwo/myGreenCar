@@ -12,7 +12,7 @@
     z-index: 1;
     .intro-text {
         margin: 32px 0 8px;
-        @include fontSize(20,500);
+        @include fontSize(20, 500);
         span {
             font-weight: 400;
         }
@@ -23,12 +23,12 @@
         h3 {
             margin-bottom: 16px;
             color: $navy-070;
-            @include fontSize(18,500);
+            @include fontSize(18, 500);
         }
         h4 {
             margin: 24px 0 16px;
             color: $navy-070;
-            @include fontSize(16,500);
+            @include fontSize(16, 500);
             @include flex-center;
             .ico {
                 margin-right: 6px;
@@ -66,7 +66,7 @@
                 padding: 8px 0;
                 @include flex-center;
                 .text {
-                    @include fontSize(16,500);
+                    @include fontSize(16, 500);
                 }
                 .btn {
                     margin-left: auto;
@@ -88,7 +88,7 @@
                 padding: 16px;
                 @include flex-center;
                 .text {
-                    @include fontSize(16,500);
+                    @include fontSize(16, 500);
                 }
                 .btn {
                     margin-left: auto;
@@ -106,7 +106,7 @@
                 @include flex-center;
                 .text {
                     width: calc(100% - 48px);
-                    @include fontSize(16,500);
+                    @include fontSize(16, 500);
                 }
                 .btn {
                     margin-left: auto;
@@ -131,7 +131,7 @@
     }
     .qna-list-head {
         margin-bottom: 24px;
-        @include fontSize(16,500);
+        @include fontSize(16, 500);
     }
 }
 
@@ -174,7 +174,7 @@
         .text {
             margin-left: 16px;
             strong {
-                @include fontSize(16,500);
+                @include fontSize(16, 500);
             }
             p {
                 margin-top: 8px;
@@ -205,7 +205,7 @@
         }
         .text {
             margin-left: 8px;
-            @include fontSize(16,500);
+            @include fontSize(16, 500);
         }
         @include flex-center;
     }
@@ -244,7 +244,7 @@
         .text {
             margin-top: 8px;
             color: $navy-070;
-            @include fontSize(14,500);
+            @include fontSize(14, 500);
         }
     }
     &:last-child {
@@ -256,7 +256,7 @@
 
 .sel-pay-method {
     input[type="radio"] + span {
-        @include fontSize(16,500);
+        @include fontSize(16, 500);
     }
     .gc-radio {
         color: $navy-070;
@@ -273,7 +273,7 @@
 .agree-group {
     .gc-radio {
         span {
-            @include fontSize(20,500);
+            @include fontSize(20, 500);
         }
     }
 }
@@ -282,12 +282,12 @@
     @include flex-center;
     dt {
         color: $navy-070;
-        @include fontSize(18,500);
+        @include fontSize(18, 500);
     }
     dd {
         margin-left: 16px;
         color: $green-060;
-        @include fontSize(16,500);
+        @include fontSize(16, 500);
     }
 }
 .float-btn {
@@ -425,7 +425,7 @@
     li {
         padding: 16px 0;
         input[type="radio"] + span {
-            @include fontSize(18,400);
+            @include fontSize(18, 400);
         }
     }
 }
@@ -457,7 +457,7 @@
         strong {
             display: block;
             margin: 8px 0;
-            @include fontSize(16,500);
+            @include fontSize(16, 500);
         }
         .history-list {
             li {
@@ -498,6 +498,9 @@
 // 파일첨부
 .file-attach {
     position: relative;
+    > h4 {
+        margin-top: 16px !important;
+    }
     .file-wrap {
         display: flex;
         justify-content: space-between;
@@ -554,6 +557,61 @@
 }
 
 // 모바일 문의
+.inquiry-step {
+   display: flex;
+   margin-top: 24px;
+    .step {
+        flex: 0 0 auto;
+        flex-direction: column;
+        justify-content: center;
+        @include flex-center;
+        .step-icon {
+            width: 32px;
+            height: 32px;
+            overflow: hidden;
+            background-color: transparent;
+            border: 2px solid $navy-020;
+            border-radius: 50%;
+            background-position: center;
+            @include flex-center;
+            justify-content: center;
+            span{
+                color: $navy-020;
+                @include fontSize(16,700)
+            }
+        }
+        &:first-child {
+            .step-icon {
+                background-color: $green-060;
+                background-image: url(#{$url-ico}icon_register.svg);
+                border-color: transparent;
+            }
+        }
+        .step-icon + p {
+            color: $navy-070;
+            @include fontSize(12, 500);
+            margin-top: 8px;
+        }
+        &.done{
+            .step-icon{
+                border-color: $green-060;
+                span{
+                    color:$navy-070;
+                }
+            }
+        }
+    }
+    .step-line{
+        flex:1;
+        height: 2px;
+        margin: 14px -5px 0;
+        background-color: $navy-020;
+        &.done{
+            background-color: $green-060;
+        }
+    }
+
+}
 .inquiry-list {
     .item {
         padding: 16px 0;
@@ -584,5 +642,32 @@
     }
     .item + .item {
         border-top: 1px solid $navy-020;
+    }
+}
+
+// 문의내역 상세
+.inquiry-area {
+    padding-top: 32px;
+    .title-area {
+        margin-top: 8px;
+        @include flex-center;
+        strong {
+            @include fontSize(16, 500);
+        }
+    }
+    .cont-area {
+        margin-top: 4px;
+        padding-bottom: 16px;
+        @include border("b", 1);
+        p {
+            @include fontSize(14);
+        }
+    }
+}
+.answer-area {
+    .date {
+        margin-top: 16px;
+        color: $navy-040;
+        @include fontSize(12);
     }
 }

@@ -62,6 +62,19 @@ $nameMap: (
     align-items: center;
 }
 
+
+
+/****************************************
+* div 내부 요소 좌우로 정렬 시
+<div>
+    <div class="left"/>
+    <div class="right"/>
+</div>
+****************************************/
+.left + .right {
+    margin-left: auto;
+}
+
 // section 구분선
 hr.divider {
     display: block;
@@ -70,6 +83,14 @@ hr.divider {
     border: 0;
     border-top: 1px solid $gray-020;
     margin: 0 -20px;
+}
+
+
+.section {
+    padding: 32px 0;
+    .section-title {
+        @include flex-center();
+    }
 }
 
 .guide-box {
@@ -86,26 +107,6 @@ hr.divider {
         text-align: left;
     }
 }
-
-/****************************************
-* div 내부 요소 좌우로 정렬 시
-<div>
-    <div class="left"/>
-    <div class="right"/>
-</div>
-****************************************/
-.left + .right {
-    margin-left: auto;
-}
-/****************************************/
-
-.section {
-    padding: 32px 0;
-    .section-title {
-        @include flex-center();
-    }
-}
-
 .btn-more {
     .text {
         color: $navy-070;
@@ -490,6 +491,7 @@ hr.divider {
         @include fontSize(18);
     }
 }
+
 // [팝업] 예약결제 안내
 .layer-body {
     .box:not(.ip-group) {
@@ -559,6 +561,15 @@ hr.divider {
     }
 }
 
+
+
+/****************************************
+* Badge
+* solid는 배경이 채워진, line은 외곽선만 
+  있는 형태 나타냄
+*<span class="badge solid red sm"/>
+*<span class="badge line green md"/>
+****************************************/
 .badge {
     display: inline-flex;
     align-items: center;
