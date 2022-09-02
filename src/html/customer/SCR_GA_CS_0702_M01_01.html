@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('@@webRoot/include/head.html')
+    </head>
+    <body>
+        <div id="wrap">
+            <!-- header -->
+            @@include('@@webRoot/include/header.html', { type: "sub_02", title: "모바일 문의" })
+            <!-- //header -->
+
+            <!-- container -->
+            <section id="container">
+                <div class="contents">
+                    <div class="customer">
+                        <div class="gc-tab">
+                            <ul>
+                                <li><a href="#" class="active">문의하기</a></li>
+                                <li><a href="#">문의내역</a></li>
+                            </ul>
+                            <span class="tab-indicator"></span>
+                        </div>
+                        <hr class="divider" />
+                        <section>
+                            <div class="inquiry-step">
+                                <div class="step">
+                                    <div class="step-icon"></div>
+                                    <p>문의등록</p>
+                                </div>
+                                <div class="step-line"></div>
+                                <div class="step">
+                                    <div class="step-icon">
+                                        <span>0</span>
+                                    </div>
+                                    <p>답변대기</p>
+                                </div>
+                                <div class="step-line"></div>
+                                <div class="step">
+                                    <div class="step-icon">
+                                        <span>0</span>
+                                    </div>
+                                    <p>답변완료</p>
+                                </div>
+                            </div>
+                        </section>
+                        <hr class="divider" />
+                        <section>
+                            <div class="inquiry-list">
+                                <div class="no-data list">
+                                    <p class="desc">문의내역이 없습니다.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </section>
+            <!-- //container -->
+        </div>
+    </body>
+</html>

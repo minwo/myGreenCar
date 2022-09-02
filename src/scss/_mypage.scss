@@ -14,6 +14,8 @@
                 @include fontSize(14, 500);
                 .badge {
                     margin-right: 4px;
+                    color: $navy-070 !important;
+                    border-color: $navy-020 !important;
                 }
             }
             .criteria {
@@ -273,7 +275,7 @@
             @include flex-center;
         }
         .right {
-            margin-left: auto;
+            // margin-left: auto;
             .value {
                 @include fontSize(16, 700);
             }
@@ -303,7 +305,6 @@
                 }
             }
             .right {
-                margin-left: auto;
                 text-align: right;
 
                 .get {
@@ -552,7 +553,6 @@
             }
         }
         .right {
-            margin-left: auto;
             .reward {
                 span {
                     @include fontSize(16, 700);
@@ -666,7 +666,6 @@
             }
         }
         .right {
-            margin-left: auto;
             .text {
                 color: $green-060;
                 @include fontSize(16, 700);
