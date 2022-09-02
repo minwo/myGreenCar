@@ -121,15 +121,8 @@
 		.btn-wrap{
 			margin-top:80px;
 		}
-
 		.survey-complete{
-			position:absolute;
-			top:50%;
-			width:calc(100% - 40px);
-			margin-top:-37px;
-			text-align:center;
-			transform:translate(0,-50%);
-
+			padding-top:123px;
 			.desc{
 				margin-bottom:16px;
 				&:last-child{

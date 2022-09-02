@@ -439,9 +439,8 @@
 		.layer-body{
 			// 개인정보 수입/이용 동의
 			.terms{
-				margin-top:32px;
 				padding-bottom:80px;
-				.title-sm{
+				.title-sm:not(:first-child){
 					margin-top:24px;
 				}
 				.list{
@@ -449,7 +448,6 @@
 				}
 			}
 			.terms-module{
-				margin-top:32px;
 				padding-bottom:24px;
 
 				&.notice{
