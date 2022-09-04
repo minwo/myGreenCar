@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 @@include('@@webRoot/include/head.html')
-
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 <body>
 	<div id="wrap">
@@ -130,7 +130,6 @@
 
 		function complete(){
 			// body
-			console.log(document.querySelector('.ui-accodion'));
 			if(document.querySelector('.ui-accodion') != null){
 				uiAccodion.init();
 			}
