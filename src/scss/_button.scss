@@ -194,7 +194,7 @@ $btn-size: (
 }
 
 .btn-link{
-	font-size:$font-sm2;
+	@include fontSize(14);
 	color:$navy-040;
 
 	.ico{

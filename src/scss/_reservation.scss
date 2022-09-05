@@ -574,12 +574,16 @@ hr.divider {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+	height:18px;
+	padding:0 8px;
     border-radius: 2rem;
+	font-size:$font-xs;
+	line-height:18xp;
+	color:$gray-000;
     .ico + .text {
         margin-left: 2px;
     }
     &.solid {
-        color: #fff;
         background-color: $navy-040;
         &.green {
             background-color: $green-060;
@@ -629,4 +633,37 @@ hr.divider {
         border-radius: 6px;
         padding: 12px;
     }
+
+	&.plus{
+		@include border('',2);
+		border-color:$yellow-060;
+		background-color: #000000;
+	}
+	&.event{
+		background-color: $fuchsia-050;
+	}
+	&.special{
+		background-color:$pink-040;
+	}
+	&.new-zone{
+		background-color:$orange-050;
+	}
+	&.new-car{
+		background-color:$light-blue-040;
+	}
+	&.electric-car{
+		background-color:$puple-040;
+	}
+	&.free-zone{
+		background-color:$navy-020;
+	}
+	&.round{
+		background-color:$default;
+	}
+	&.one-way{
+		background-color:$navy-060;
+	}
+	&.emergency{
+		background-color:$red-060;
+	}
 }
