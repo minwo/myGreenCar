@@ -35,7 +35,7 @@
 				height:48px;
 				padding:0 18px;
 				line-height:44px;
-				font-size: $font-md;
+				@include fontSize(16);
 				box-sizing: border-box;
 
 				.lpoint{
@@ -54,7 +54,7 @@
 	/* 약관동의 */
 	.corporation{
 		color: $black;
-		font-size: $font-sm;
+		@include fontSize(12);
 		text-align:right;
 
 		span{

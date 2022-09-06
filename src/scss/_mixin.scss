@@ -107,7 +107,7 @@
 		display:inline-flex;
 		align-items:center;
 		vertical-align:top;
-		font-size:$font-sm2;
+		@include fontSize(14);
 		&:before {
 			content:'';
 			margin-right:8px;
@@ -307,8 +307,8 @@
 }
 
 // font-style-guide
-@mixin fontSize($size, $weight:null){
-	font-size:#{$size}px;
+@mixin fontSize($size, $weight:null, $priority:null){
+	font-size:#{$size}px $priority;
 	@if not($weight == null or $weight =='') {
 		font-weight:$weight;
 	}

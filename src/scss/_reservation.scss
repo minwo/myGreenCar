@@ -509,11 +509,12 @@ hr.divider {
                 width: 80px;
                 margin-right: 8px;
                 color: $navy-040;
+				@include fontSize(14);
             }
             .value {
                 float: right;
                 color: $navy-070;
-                font-weight: 500;
+                @include fontSize(14,500);
             }
         }
     }
@@ -577,7 +578,7 @@ hr.divider {
 	height:18px;
 	padding:0 8px;
     border-radius: 2rem;
-	font-size:$font-xs;
+	@include fontSize(10);
 	line-height:18xp;
 	color:$gray-000;
     .ico + .text {

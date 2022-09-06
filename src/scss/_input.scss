@@ -17,9 +17,8 @@ input[type="email"] {
 		display:none;
 	}
 	&::placeholder {
-		font-size:$font-md;
+		@include fontSize(16,500);
 		color:$navy-020;
-		font-weight:500;
 	}
 	&[readonly],
 	&:disabled {
@@ -161,9 +160,7 @@ input[type="email"] {
 	.ip-label{
 		display:inline-block;
 		width:100%;
-		font-size: $font-sm;
-		font-weight:500;
-		line-height:1;
+		@include fontSize(12,500);
 	}
 	
 	@include ipLine();
@@ -209,9 +206,8 @@ input[type="email"] {
 		& + .error-txt{
 			display:block;
 			margin-top:5px;
-			font-size: $font-sm;
+			@include fontSize(12);
 			color: $red-060;
-			line-height:17px;
 		}
 		.time{
 			color: $red-060;
@@ -260,7 +256,7 @@ input[type="email"] {
 		flex:1;
 	}
 	.label{
-		font-size:$font-sm2;
+		@include fontSize(14);
 		color:$gray-000;
 	}
 	.desc-xs{

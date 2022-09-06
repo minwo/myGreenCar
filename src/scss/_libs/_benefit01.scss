@@ -4,9 +4,7 @@
 .detail-page-module{
 	.info-tit{
 		color:$navy-040;
-		font-size:$font-sm;
-		line-height:17px;
-		font-weight:500;
+		@include fontSize(12,500);
 	}
 
 	dl{
@@ -15,10 +13,8 @@
 			margin-top:10px;
 		}
 		dt,dd{
-			font-size:$font-md;
+			@include fontSize(16,500);
 			color:$navy-070;
-			font-weight:500;
-			line-height:24px;
 		}
 		dd{
 			color:$navy-040;
@@ -36,7 +32,7 @@
 			@include vDom();
 			height:21px;
 			padding:0 12px;
-			font-size:$font-sm;
+			@include fontSize(12);
 			background-color:$navy-010;
 			border-radius:$border-radius-50;
 		}
@@ -75,8 +71,7 @@
 				margin-top:10px;
 			}
 			.tit{
-				font-size:$font-md;
-				font-weight:500;
+				@include fontSize(16,500);
 			}
 			.desc-md{
 				color:$navy-040;
@@ -116,14 +111,11 @@
 			}
 			.tit{
 				padding-top:2px;
-				font-size:$font-lg;
-				line-height:24px;
-				font-weight:500;
+				@include fontSize(18,500);
 			}
 			.sale{
 				margin-top:8px;
-				font-size:$font-sm;
-				line-height:16px;
+				@include fontSize(12);
 			}
 			.date{
 				margin-top:6px;
@@ -181,8 +173,7 @@
 				line-height:20px;
 			}
 			.data{
-				font-size:$font-md;
-				font-weight:500;
+				@include fontSize(16,500);
 			}
 		}
 

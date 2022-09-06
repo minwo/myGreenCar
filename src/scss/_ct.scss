@@ -7,7 +7,7 @@
 
 		.satisfied{
 			.flex{
-				font-size:$font-sm;
+				@include fontSize(12);
 				color:$navy-040;
 				text-align:center;
 				&::before{
@@ -39,7 +39,7 @@
 			}
 			.grid-flex{
 				margin:21px -12px 0;
-				font-size:$font-sm;
+				@include fontSize(12);
 				color:$navy-040;
 				.flex:last-child{
 					text-align:right;
@@ -52,8 +52,7 @@
 				left:0;
 				width:32px;
 				height:32px;
-				font-size:$font-sm2;
-				font-weight:700;
+				@include fontSize(14,700);
 				color:$default;
 				text-align:center;
 				line-height:24px;

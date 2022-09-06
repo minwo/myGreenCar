@@ -215,9 +215,9 @@ textarea {
 					}
 					input{
 						width:100%;
-						font-size:$font-xl;
 						color:$navy-070;
-						font-weight:500;
+						// font-size:$font-xl;
+						// font-weight:500;
 						@include ell;
 					}
 				}
@@ -346,8 +346,7 @@ textarea {
             bottom: 0;
             left: 0;
             width: 100%;
-            font-size: 18px;
-            font-weight: 500;
+            @include fontSize(18,500);
             text-align: center;
         }
     }
@@ -355,19 +354,22 @@ textarea {
 
 /* button bottom fixed */
 .bot-btn-fix{
-	height:74px;
+	height:99px;
 	.btn-wrap{
 		position:fixed;
 		left:0;
 		bottom:0;
-		z-index:5;
+		z-index:100;
 		width:100%;
-		height:74px;
+		height:99px;
 		box-sizing: border-box;
+		background-color:$gray-000;
+		box-shadow: 0 -4px 4px 0 rgba(0, 0, 0, 0.05);
+	}
+	.btn-group{
+		padding:16px 20px 23px;
 	}
 	.btn{
-		border-radius: 0;
-
 		.ico{
 			margin-right:15px;
 		}
@@ -477,8 +479,7 @@ textarea {
 
 	.desc{
 		margin-top:25px;
-		font-size:$font-lg;
-		line-height:26px;
+		@include fontSize(18);
 	}
 
 	&:before{
@@ -517,14 +518,13 @@ textarea {
 
 		th{
 			padding:9px 8px;
-			font-size:$font-sm;
+			@include fontSize(12);
 			color:$navy-070;
 			line-height:16px;
-			font-weight:400;
 		}
 		td{
 			padding:9px 8px;
-			font-size:$font-sm;
+			@include fontSize(12);
 			color:$navy-070;
 			line-height:16px;
 			vertical-align:middle;
@@ -635,10 +635,8 @@ textarea {
 		border-radius:8px;
 	}
 	.message{
-		font-size:$font-md;
+		@include fontSize(16,500);
 		color:$gray-000;
-		font-weight:500;
-		line-height:24px;
 	}
 }
 

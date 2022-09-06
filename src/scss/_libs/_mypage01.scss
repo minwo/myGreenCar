@@ -24,16 +24,14 @@
 				}
 				.tit{
 					padding-top:15px;
-					font-size:$font-sm;
-					font-weight:500;
+					@include fontSize(12,500);
 					color:$navy-070;
 					@include ell(1);
 				}
 				.desc-md{
 					margin-top:13px;
-					font-size:$font-sm;
+					@include fontSize(12);
 					color:$navy-040;
-					line-height:20px;
 					@include ell(2);
 				}
 			}
@@ -54,7 +52,6 @@
 				display:block;
 				position:relative;
 				padding:16px 0;
-				line-height:24px;
 
 				.ico{
 					position:absolute;
@@ -67,7 +64,7 @@
 		.rating{
 			.btn-link{
 				position:absolute;
-				top:16px;
+				top:28px;
 				right:2px;
 			}
 			.ui-svg-chart{
@@ -106,7 +103,7 @@
 			}
 			.circle {
 				opacity:0;
-				stroke: #00c88c;
+				stroke: $green-040;
 				transition: opacity .3s 1.3s, stroke-dashoffset 1s .3s;
 			}
 			.rating-badge{
@@ -123,43 +120,37 @@
 				}
 			}
 			.txt-module{
-				margin-top:-20px;
+				margin-top:-22px;
 				text-align:center;
 			}
 			.txt-lv{
 				@include vDom();
 				height:18px;
 				padding:0 6px;
-				font-size:10px;
-				font-weight:100;
+				@include fontSize(10);
 				border-radius:10px;
 				border:1px solid $navy-020;
 			}
 			.txt{
 				display:inline-block;
-				margin-left:4px;
-				font-size:$font-sm2;
-				font-weight:500
+				margin-left:5px;
+				@include fontSize(14,500);
 			}
 
 			.lvup-info{
-				margin-top:16px;
+				margin-top:14px;
 				text-align:center;
 				.tip-txt{
-					font-size:$font-sm;
-					line-height:1;
+					@include fontSize(12);
 				}
 				.time-remaining{
-					margin-top:8px;
-					font-size:$font-md;
-					font-weight:500;
-					line-height:1;
+					margin-top:2px;
+					@include fontSize(16,500);
 				}
 				.rental{
 					margin-top:16px;
-					font-size:$font-sm;
 					color:$navy-030;
-					line-height:1;
+					@include fontSize(12);
 				}
 			}
 
@@ -181,22 +172,19 @@
 				}
 				.dt{
 					color:$navy-040;
-					font-size:$font-sm;
-					line-height:1;
+					@include fontSize(12,500);
 				}
 				.value{
-					margin-top:8px;
-					font-size:$font-md;
-					font-weight:500;
-					line-height:1;
+					margin-top:2px;
+					@include fontSize(16,500);
 				}
 			}
 		}
 		.distance{
-			padding:28px 11px 0 18px;
+			padding:34px 11px 0 18px;
 			.desc-md{
-				margin-top:34px;
-				font-weight:500;
+				margin-top:24px;
+				@include fontSize(16,500);
 				text-align:center;
 				.per{
 					color:$default;
@@ -220,7 +208,8 @@
 				.name{
 					display:inline-block;
 					position:absolute;
-					top:-38px;
+					top:-36px;
+					@include fontSize(12,500);
 					transform:translate(-50%,0);
 				}
 				.marker{
@@ -277,7 +266,6 @@
 			// 	}
 			// }
 		}
-
 		.mission{
 			padding-top:16px;
 			.desc-md{
@@ -293,6 +281,9 @@
 				}
 			}
 		}
+		.coupon-list,.partner-visual{
+			margin-top:8px;
+		}
 	}
 
 	// 결제수단
@@ -301,8 +292,7 @@
 		.count{
 			display:inline-block;
 			margin-left:5px;
-			font-size:$font-sm2;
-			font-weight:700;
+			@include fontSize(14,700);
 			color:$default;
 			vertical-align:top;
 		}
@@ -317,8 +307,7 @@
 				line-height:1;
 
 				.name{
-					font-size:$font-md;
-					font-weight:700;
+					@include fontSize(16,700);
 					color:$navy-070;
 				}
 				.info{
@@ -462,6 +451,14 @@
 			}
 			.notice-txt{
 				margin-top:24px;
+			}
+		}
+	}
+	.layer-body{
+		.level-up{
+			.desc:not(.emp){
+				margin-top:16px;
+				color:$navy-040;
 			}
 		}
 	}

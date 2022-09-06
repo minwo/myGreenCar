@@ -4,6 +4,7 @@
 
 // 등급안내
 .level-guide {
+	margin-top:-32px;
     li {
         padding: 16px 0;
         border-bottom: 1px solid $navy-010;
@@ -208,7 +209,7 @@
 
 .level-up {
     .level-badge {
-        margin: 16px 0;
+        margin: 0 0 16px;
         justify-content: center;
         @include flex-center;
         .img-wrap {

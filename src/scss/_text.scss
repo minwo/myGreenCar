@@ -145,8 +145,8 @@
 
 .list {
     li {
-        font-size: 16px;
-        color: #8c989e;
+        @include fontSize(16);
+        color: $navy-040;
         position: relative;
         padding-left: 16px;
         &:before {
@@ -166,7 +166,7 @@
     }
     &.xs {
         li {
-            font-size: 12px;
+            @include fontSize(12);
             padding-left: 12px;
             &:before {
                 width: 3px;
@@ -180,8 +180,7 @@
     }
     &.sm {
         li {
-            font-size: 14px;
-            line-height: 20px;
+            @include fontSize(14);
             padding-left: 12px;
             &:before {
                 width: 3px;

@@ -13,7 +13,7 @@ select {
 	-moz-appearance:none;
 	appearance:none;
 	cursor: pointer;
-	font-size:$font-sm2;
+	@include fontSize(14);
 	@include ell;
 
 	&::-ms-expand {

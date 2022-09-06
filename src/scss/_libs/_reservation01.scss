@@ -40,13 +40,13 @@
 			position:absolute;
 			top:0;
 			left:0;
-			font-size:$font-md;
+			@include fontSize(16);
 			color:#333;
 			line-height:23px;
 		}
 
 		.text{
-			font-size:$font-md;
+			@include fontSize(16);
 			color:#8C9496;
 			line-height:23px;
 			word-break:keep-all;
@@ -78,14 +78,11 @@
 	.reservation-module{
 		line-height:1;
 		.title-xs{
-			font-size:$font-md;
-			line-height:1;
-			font-weight:500;
+			@include fontSize(16,500);
 		}
 
 		.agree-title{
-			font-size:$font-xl;
-			font-weight:700;
+			@include fontSize(20,700);
 		}
 
 		.btn-link{
@@ -167,20 +164,18 @@
 				}
 
 				.ev{
-					font-size:$font-sm;
+					@include fontSize(12);
 					color:$light-blue-040;
 				}
 				strong{
 					display:block;
 					margin-top:8px;
-					font-size:$font-lg;
-					line-height:1;
+					@include fontSize(18);
 				}
 				.name,.option{
 					display:block;
 					margin-top:8px;
-					font-size:$font-sm;
-					line-height:1;
+					@include fontSize(12);
 					color:$navy-040
 				}
 				.option{
@@ -209,17 +204,15 @@
 				}
 			}
 			.desc-sm{
-				font-size:$font-sm;
+				@include fontSize(12);
 				color:$navy-040;
-				line-height:1;
 				text-align:left;
 			}
 			.grid-flex{
 				&.title-area{
 					margin-top:32px;
 					padding-top:24px;
-					font-size:$font-md;
-					font-weight:500;
+					@include fontSize(16,500);
 					border-top:1px solid $navy-020;
 				}
 			}
@@ -235,16 +228,16 @@
 			}
 
 			.flex{
-				font-size:$font-md;
+				@include fontSize(16);
 			}
 			.under{
 				display:inline-block;
-				font-size:$font-md;
+				@include fontSize(16);
 				line-height:18px;
 				border-bottom:1px solid #303E47
 			}
 			.price.deco-througt{
-				font-size:$font-md;
+				@include fontSize(16);
 			}
 		}
 
@@ -254,7 +247,7 @@
 			.gc-radio{
 				display:block;
 				span{
-					font-size:$font-sm2;
+					@include fontSize(14);
 				}
 
 				&:not(:first-child){
@@ -283,8 +276,7 @@
 			}
 			.ip-txt{
 				height:48px;
-				font-size:$font-md;
-				font-weight:700;
+				@include fontSize(16,700);
 				text-align:right;
 			}
 			.line{
@@ -317,16 +309,15 @@
 				&:not(.title-area){
 					&:first-child{
 						&:not(.title-xs:first-child){
-							font-size:$font-sm2;
+							@include fontSize(14);
 						}
 					}
 
 					.point{
 						display:inline-block;
 						margin-left:7px;
-						font-size:$font-sm;
+						@include fontSize(12);
 						color:$green-060;
-						font-weight:400;
 					}
 				}
 			}
@@ -345,7 +336,7 @@
 			font-weight:700;
 
 			&.deco-througt{
-				font-size:$font-sm2;
+				@include fontSize(14);
 				color:$navy-040;
 			}
 		}
@@ -360,9 +351,8 @@
 			margin-top:16px;
 			.info-title{
 				margin:16px 0 10px;
-				font-size:$font-sm;
+				@include fontSize(12,500);
 				color:$navy-040;
-				font-weight:500;
 			}
 			.desc-xs{
 				color:$navy-040;
@@ -375,18 +365,16 @@
 			padding:24px 20px 0;
 			border-top:1px solid $navy-020;
 			.flex:first-child{
-				font-size:$font-xl !important;
-				font-weight:700;
+				@include fontSize(20,700,'!important');
 			}
 			.price{
 				display:block;
 			}
 			.price{
-				font-size:$font-xl;
+				@include fontSize(20,700);
 				color:$default;
-				font-weight:700;
 				&:first-child{
-					font-size:$font-md;
+					@include fontSize(16);
 					color:$navy-040;
 				}
 				&:last-child{
@@ -403,9 +391,8 @@
 			}
 			.desc-cp{
 				margin-top:9px;
-				font-size:$font-sm;
+				@include fontSize(12);
 				color:$navy-040;
-				line-height:24px;
 			}
 		}
 	}
@@ -448,8 +435,7 @@
 		}
 
 		.link-title{
-			font-size:22px;
-			font-weight:700;
+			@include fontSize(22,700);
 			color:$navy-070;
 		}
 
@@ -473,8 +459,7 @@
 			padding:17px 0;
 		}
 		.keyword{
-			font-size:$font-md;
-			font-weight:500;
+			@include fontSize(16,500);
 			color:$navy-070;
 			@include ell;
 
@@ -484,7 +469,7 @@
 		}
 		.address{
 			margin-top:4px;
-			font-size:$font-sm2;
+			@include fontSize(14);
 			color:$navy-040;
 			@include ell;
 		}
@@ -493,14 +478,13 @@
 			position:absolute;
 			bottom:14px;
 			right:0;
-			font-size:$font-md;
+			@include fontSize(16);
 			color:$navy-100;
-			line-height:28px;
 
 			em{
 				display:inline-block;
 				margin-left:2px;
-				font-size:$font-sm;
+				@include fontSize(12);
 			}
 		}
 
@@ -581,13 +565,11 @@
 				margin-top:10px;
 				padding-top:25px;
 				text-align:center;
-				font-size:$font-xl;
-				font-weight:700;
+				@include fontSize(20,700);
 				border-top:1px solid $navy-020;
 
 				em{
-					font-size:$font-xl;
-					font-weight:500;
+					@include fontSize(20,500);
 				}
 			}
 		}
@@ -601,19 +583,16 @@
 	.greencar-plus{
 		.dt{
 			margin-top:16px;
-			font-size:$font-xl;
-			font-weight:500;
+			@include fontSize(20,500);
 		}
 		.dd{
-			font-size:$font-sm2;
-			line-height:20px;
+			@include fontSize(14);
 		}
 
 		.list{
 			margin-top:16px;
 			li{
-				font-size:$font-sm2;
-				line-height:20px;
+				@include fontSize(14);
 
 				&::before{
 					left:5px;
@@ -625,8 +604,7 @@
 	&.rsv-one-way{
 		.one-way{
 			.desc {
-				font-size:14px;
-				line-height:20px;
+				@include fontSize();
 				color:#8C989E;
 
 				&-xl{

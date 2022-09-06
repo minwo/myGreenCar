@@ -60,13 +60,12 @@ html.is-open, html.is-open body {
         .layer-header {
             max-height: 66px;
             padding: 24px 20px 0;
-            font-size: 18px;
+            @include fontSize(18);
             font-weight: bold;
 
             .title{
                 color: $navy-070;
-                font-size:$font-xl;
-                font-weight: 500;
+                @include fontSize(20,500);
             }
         }
         .layer-body {
@@ -126,8 +125,7 @@ html.is-open, html.is-open body {
         padding: 0;
 		.layer-header{
 			max-height: 66px;
-			font-size:$font-lg;
-			font-weight:700;
+			@include fontSize(18,700);
 			border-bottom:1px solid $navy-020;
 			padding: 14px 20px 14px 50px;
 			text-align:center;
@@ -139,12 +137,12 @@ html.is-open, html.is-open body {
 		.layer-body{
 			padding:24px 20px 24px;
 		}
-		.layer-footer{
-			padding:0 20px 24px;
-			&.full{
-				padding:0 !important;
-			}
-		}
+		// .layer-footer{
+		// 	padding:0 20px 24px;
+		// 	&.full{
+		// 		padding:0 !important;
+		// 	}
+		// }
 		.layer-body + .layer-footer{
 			padding:0 20px 24px;
 		}
