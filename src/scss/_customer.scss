@@ -791,3 +791,14 @@
         margin-top: 16px;
     }
 }
+
+.btn-area{
+    &.center{
+        .btn{
+            margin: 0 auto;
+            .text{
+                color: $navy-070;
+            }
+        }
+    }
+}
