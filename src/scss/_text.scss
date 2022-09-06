@@ -13,7 +13,11 @@
         @include fontSize(16);
         font-weight: 500;
     }
-    &-xs {
+	&-xs {
+        @include fontSize(14);
+        font-weight: 500;
+    }
+    &-xxs {
         @include fontSize(12);
         font-weight: 500;
     }

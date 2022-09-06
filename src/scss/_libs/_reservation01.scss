@@ -77,7 +77,7 @@
 	// 예약하기
 	.reservation-module{
 		line-height:1;
-		.title-xs{
+		.title-xxs{
 			@include fontSize(16,500);
 		}
 
@@ -196,7 +196,7 @@
 				margin-top:32px;
 			}
 			.title-area{
-				.title-xs{
+				.title-xxs{
 					text-align:left;
 				}
 				.flex:last-child{
@@ -308,7 +308,7 @@
 
 				&:not(.title-area){
 					&:first-child{
-						&:not(.title-xs:first-child){
+						&:not(.title-xxs:first-child){
 							@include fontSize(14);
 						}
 					}
