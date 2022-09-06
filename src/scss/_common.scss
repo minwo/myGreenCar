@@ -478,14 +478,15 @@ textarea {
 	text-align:center;
 
 	.desc{
-		margin-top:25px;
-		@include fontSize(18);
+		margin-top:24px;
+		@include fontSize(16);
+		color:$navy-020;
 	}
 
 	&:before{
 		display:inline-block;
-		width:96px;
-		height:96px;
+		width:80px;
+		height:80px;
 		content:"";
 		background: url(#{$url-common}bg_nodata.svg) no-repeat;
 	}

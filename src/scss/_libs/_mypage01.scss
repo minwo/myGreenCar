@@ -289,6 +289,10 @@
 	// 결제수단
 	.payment{
 		padding:32px 0 0;
+		.desc-sm{
+			display:flex;
+			align-items:center;
+		}
 		.count{
 			display:inline-block;
 			margin-left:5px;

@@ -253,6 +253,45 @@
         color: $navy-070;
         @include fontSize(12, 500);
     }
+	.section{
+		padding:0;
+		&:first-child{
+			padding-top:32px;
+		}
+	}
+	.tip-layer-module{
+		position:absolute;
+		bottom:-66px;
+		left:0;
+		width:calc(100% + 32px);
+		margin:0 -16px;
+		padding:8px 40px 8px 30px;
+		background-color:rgba(64,83,94,.8);
+		border-radius:999px;
+
+		.list{
+			li{
+				margin:0;
+				@include fontSize(14,400);
+				color:$gray-000;
+				&::before{
+					top:9px;
+					left:8px;
+					background-color:$gray-000;
+				}
+			}
+		}
+		.btn-close{
+			position:absolute;
+			top:50%;
+			right:16px;
+			width:24px;
+			height:24px;
+			background:url(#{$url-ico}icon_tip_layer_close.svg) no-repeat;
+			background-size:100% 100%;
+			transform:translate(0,-50%);
+		}
+	}
     .point-summary {
         padding-bottom: 24px;
         border-bottom: 1px solid $navy-020;
@@ -269,7 +308,8 @@
         margin: 16px 0;
     }
     .row {
-        padding: 20px 0;
+		position:relative;
+        padding: 20px 0 16px;
 
         @include flex-center;
         > div {
@@ -286,13 +326,14 @@
         }
     }
     .point-history-list {
+		padding-top:24px;
         li {
             padding: 24px 0;
             @include flex-center;
             > div {
-                * + * {
-                    margin-top: 8px;
-                }
+                // * + * {
+                //     margin-top: 8px;
+                // }
                 span {
                     display: block;
                 }
@@ -366,6 +407,8 @@
     }
     .my-reply-top {
         height: 48px;
+		margin:0 -20px;
+		padding:0 20px;
         background-color: $gray-005;
         @include fontSize(12, 500);
         @include flex-center;
@@ -393,6 +436,8 @@
             }
         }
         .write-date {
+			display: block;
+			margin-top:8px;
             color: $navy-040;
             @include fontSize(12, 500);
         }
@@ -429,8 +474,16 @@
     }
     .comment-wrap {
         .comment-item {
-            padding: 16px 0;
+			position:relative;
+			margin:0 -20px;
+            padding: 16px 20px;
             background-color: $gray-010;
+			&::before{
+				position:absolute;
+				top:0;
+				left:0;
+				width:100%;
+			}
             .comment-head {
                 @include fontSize(12, 500);
                 padding-bottom: 8px;
@@ -464,8 +517,8 @@
 
 // 그린댓글 수정
 .edit-reply {
-    section {
-        padding: 32px 0;
+    section:not(:last-child) {
+        padding:0 0 32px;
     }
     .car-info {
         margin-bottom: 24px;
@@ -524,9 +577,9 @@
 .invite-friend {
     .invitee {
         padding-bottom: 24px;
-        margin-top: -8px;
         border-bottom: 1px solid $navy-020;
         .count {
+			margin-top:16px;
             justify-content: flex-end;
             @include flex-center;
             .value {
@@ -602,6 +655,9 @@
 
 // 내가 초대한 친구
 .invited-friends {
+	.guide-box {
+		text-align:left;
+	}
     .friend-list-wrap {
         .list-head {
             padding: 32px 0 24px;

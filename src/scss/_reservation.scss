@@ -306,9 +306,6 @@ hr.divider {
 //멤버십
 .membership {
     padding: 24px 0;
-    .ip-txt {
-        @include fontSize(16);
-    }
     .card:not(.ip-group, .row) {
         display: flex;
         flex-direction: column;
