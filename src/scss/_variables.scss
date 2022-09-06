@@ -19,6 +19,16 @@ $font-xl2: 24px !default;
 $font-xl3: 28px !default;
 $font-xl4: 32px !default;
 
+// line-height
+$lineHeight: (
+	"10" : ("line-height" : 12px),
+	"12" : ("line-height" : 16px),
+	"14" : ("line-height" : 20px),
+	"16" : ("line-height" : 24px),
+	"18" : ("line-height" : 24px),
+	"20" : ("line-height" : 28px)
+) !default;
+
 $black         		: #000 !default;
 $black-100     		: #333 !default;
 
