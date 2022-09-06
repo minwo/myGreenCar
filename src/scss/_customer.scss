@@ -802,3 +802,13 @@
         }
     }
 }
+.desc-gray{
+    color: $navy-040;
+    @include fontSize(14);
+}
+
+.agree-terms{
+    strong{
+        @include fontSize(16,500)
+    }
+}
