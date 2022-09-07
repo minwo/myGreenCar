@@ -845,3 +845,37 @@
         @include fontSize(16,500)
     }
 }
+
+
+
+
+
+
+
+.cm{
+    hr.divider-thin{
+        height: 1px;
+        background-color: $navy-020;
+        border: 0;
+        margin: 24px 0;
+    }
+
+    .way-to{
+        margin: 0 -20px;
+        .item{
+            .img{
+                height: 180px;
+                overflow: hidden;
+                img{
+                    width: 100%;
+                }
+            }
+
+            .desc{
+                padding: 24px 16px;
+                background-color: $gray-000;
+                @include fontSize(16,500)
+            }
+        }
+    }
+}
