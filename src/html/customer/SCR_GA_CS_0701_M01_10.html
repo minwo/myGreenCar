@@ -56,15 +56,22 @@
                             <div class="type-select">
                                 <a href="#" class="item"> <span class="text">환불접수</span><i class="ico next-sm md"></i> </a>
                             </div>
-                            <h4 class="mt32">문의유형</h4>
-                            <div class="type-select">
-                                <a href="#" class="item"> <span class="text">더 뉴 K3 1.6/휘발유(100호1000)</span><i class="ico next-sm md"></i> </a>
+                            <h4 class="mt32">환불 계좌정보</h4>
+                            <div class="ip-box-input">
+                                <dl>
+                                    <dt>환불은행 :</dt>
+                                    <dd><input type="text" /></dd>
+                                </dl>
                             </div>
-                            <h4 class="mt32">차량고장 접수</h4>
-                            <div class="ip-textarea">
+                            <div class="ip-box-input mt8">
+                                <dl>
+                                    <dt>환불계좌 :</dt>
+                                    <dd><input type="text" placeholder="본인명의의 계좌를 기재해주세요" /></dd>
+                                </dl>
+                            </div>
+                            <div class="ip-textarea mt12">
                                 <textarea name="" id="" cols="30" rows="4" placeholder=" "></textarea>
                             </div>
-                          
                         </section>
                         <hr class="divider" />
                         <section>
@@ -89,13 +96,12 @@
                                         </div>
                                         <div class="layer">
                                             <div class="layer-cont">
-                                                <ul class="list sm numeric">
-                                                    <li>흡연사진을 촬영하여 등록해주시면 이전 사용자의 페널티 적용이 원활하게 진행됩니다.</li>
-                                                    <li>
-                                                        접수 내용이 누락되거나 촬영 · 접수된 흡연 사진이 접수된 사진이 불분명한 경우 페널티 부과 및 신고 보상 포인트 지급이 어려운 점 양해 부탁드립니다.
-                                                    </li>
-                                                    <li>사진 촬영 시 유의사항 (흡연장면, 그린카 차량표시, 차량번호)</li>
-                                                </ul>
+                                                <p class="desc-gray">
+                                                    임차인의 본인 계좌 정보를 등록해주세요.<br />
+                                                    타인명의 계좌 등록 시 환불이 불가합니다.
+                                                </p>
+                                                <p class="desc-gray mt8">※ 접수 시, 영업일 기준 5일 이내 환불
+                                                </p>
                                             </div>
                                         </div>
                                     </li>
@@ -111,4 +117,87 @@
             <!-- //container -->
         </div>
     </body>
+    <script type="text/javascript">
+        /* 아코디언 */
+        const getElIndex = (element, range) => {
+            if (!!range) return [].indexOf.call(element, range);
+            return [].indexOf.call(element.parentNode.children, element);
+        };
+        const uiAccodion = (() => {
+            let el, btnEl, layerEl, prevEl, liEl;
+            let idx, layerLgt, duration, layerHeight, elCheck;
+            let isclick;
+
+            const init = () => {
+                el = document.querySelector(".ui-accodion");
+                btnEl = el.querySelectorAll(".btn-acco");
+                layerEl = el.querySelectorAll(".layer");
+                liEl = el.querySelectorAll("li");
+
+                layerLgt = layerEl.length;
+                duration = 300;
+                isclick = true;
+
+                bindEvent();
+            };
+
+            const bindEvent = () => {
+                clickEvent();
+            };
+
+            const clickEvent = () => {
+                [].forEach.call(btnEl, (e) => {
+                    e.addEventListener("click", (event) => {
+                        prevEl = layerEl[idx];
+                        event.preventDefault();
+                        idx = getElIndex(btnEl, e);
+                        elCheck = prevEl !== layerEl[idx] && prevEl !== undefined;
+                        if (isclick) {
+                            isclick = false;
+                            if (!e.closest("li").classList.contains("active")) {
+                                for (let i = 0; liEl.length > i; i++) {
+                                    liEl[i].classList.remove("active");
+                                }
+                                e.closest("li").classList.add("active");
+                            } else {
+                                e.closest("li").classList.remove("active");
+                            }
+
+                            if (!layerEl[idx].style.height) {
+                                if (elCheck) remove(prevEl);
+
+                                layerEl[idx].style.display = "block";
+                                layerHeight = layerEl[idx].clientHeight;
+                                layerEl[idx].style.height = "0";
+
+                                setTimeout(() => {
+                                    layerEl[idx].style.height = layerHeight + "px";
+                                });
+                            } else {
+                                remove(layerEl[idx]);
+                            }
+
+                            setTimeout(function () {
+                                isclick = true;
+                            }, duration);
+                        }
+                    });
+                });
+
+                const remove = (el) => {
+                    el.style.height = "0";
+                    setTimeout(() => {
+                        el.style = null;
+                    }, duration);
+                };
+            };
+
+            return {
+                init: init,
+            };
+        })();
+
+        uiAccodion.init();
+        /* 아코디언 여기까지 */
+    </script>
 </html>
