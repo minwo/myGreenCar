@@ -169,12 +169,11 @@
 				}
 				strong{
 					display:block;
-					margin-top:8px;
 					@include fontSize(18);
 				}
 				.name,.option{
 					display:block;
-					margin-top:8px;
+					margin-top:4px;
 					@include fontSize(12);
 					color:$navy-040
 				}
