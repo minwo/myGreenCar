@@ -49,6 +49,7 @@
 
 //내 이동거리
 .my-mileage {
+	overflow:hidden;
     .mileage-img {
         justify-content: center;
         @include flex-center;
@@ -74,125 +75,233 @@
             }
         }
     }
-    .navigation {
-        margin-top: 24px;
-        overflow-x: scroll;
-        ol {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: table;
-            table-layout: fixed;
-            width: 100%;
-            color: $navy-020;
-            padding: 40px 0 20px;
+	.navigation{
+		height:128px;
+		margin-top:24px;
+		padding:0 20px;
+		overflow-x:auto;
+		.current-badge{
+			position:absolute;
+			top:0;
+			left:0;
+			width:30px;
+			height:30px;
+			background: url(#{$url-content}gz_pin.svg) center center no-repeat;
+			background-size:100% 100%;
+			transform:translate(-50%,0);
+		}
+		.module{
+			position:relative;
+		}
+		.dotted{
+			position:absolute;
+			top:70px;
+			width:2325px;
+			border-bottom:4px dotted #dbdfe0;
+		}
+		ol{
+			display:flex;
+			width:2325px;
+		}
+		.milestone{
+			position:relative;
+			flex:1;
+			height:128px;
+			&:last-child{
+				flex:0 0 auto;
+				width:0;
+				.name{
+					position:absolute;
+					top:37px;
+					left:50%;
+					min-width:50px;
+					@include fontSize(12,500);
+					transform:translate(-50%,0);
+					text-align:center;
+				}
+			}
+			&.start{
+				&::before{
+					display:block;
+					position:absolute;
+					top:67px;
+					z-index:5;
+					width:24px;
+					height:24px;
+					background: url(#{$url-content}ic_car_move.svg) center center no-repeat;
+					border:0;
+					transform:translate(-50%,-8px);
+					content:"";
+				}
+			}
+			&:not(:last-child)::after{
+				display:block;
+				position:absolute;
+				top:67px;
+				right:0;
+				z-index:5;
+				width:10px;
+				height:10px;
+				@include border('',2);
+				border-radius:50%;
+				content:"";
+				box-sizing:border-box;
+				transform:translate(50%,0);
+				background-color:$gray-000;
+			}
+			&.active::after{
+				border-color:$default;
+				background:$default;
+			}
+			.gauge{
+				display:block;
+				position:absolute;
+				top:70px;
+				height:4px;
+				background-color:$default;
+			}
+			&:not(:last-child) .name{
+				position:absolute;
+				top:37px;
+				left:0;
+				@include fontSize(12,500);
+				transform:translate(-50%,0);
+				
+			}
+			.distance{
+				position:absolute;
+				bottom:22px;
+				@include fontSize(12,500);
+				transform:translate(-50%,0);
+			}
+			.date-reached{
+				position:absolute;
+				bottom:5px;
+				@include fontSize(12);
+				color:$navy-040;
+				transform:translate(-50%,0);
+			}
+		}
+	}
+    // .navigation {
+    //     margin-top: 24px;
+    //     overflow-x: scroll;
+    //     ol {
+    //         list-style: none;
+    //         margin: 0;
+    //         padding: 0;
+    //         display: table;
+    //         table-layout: fixed;
+    //         width: 100%;
+    //         color: $navy-020;
+    //         padding: 40px 0 20px;
 
-            .milestone {
-                position: relative;
-                display: table-cell;
-                width: 72px;
-                color: $navy-070;
-                @include fontSize(12, 500);
-                text-align: center;
-                span {
-                    display: block;
-                    @include fontSize(12);
-                    color: $navy-070;
-                    font-weight: 500;
-                }
-                .pin {
-                    position: absolute;
-                    top: -40px;
-                    left: 21px;
-                }
-                .dot {
-                    content: attr(data-step);
-                    display: block;
-                    width: 10px;
-                    height: 10px;
-                    margin: 22px auto;
-                    background: white;
-                    border: 2px solid $navy-020;
-                    text-align: center;
-                    margin-bottom: 0.25em;
-                    line-height: 10px;
-                    border-radius: 100%;
-                    box-sizing: border-box;
-                    position: relative;
-                    top: -10px;
-                    z-index: 1000;
-                }
-                &::after {
-                    content: "";
-                    position: absolute;
-                    display: block;
-                    width: 100%;
-                    border-top: 4px dotted $navy-020;
-                    top: 31px;
-                    left: 50%;
-                    z-index: 1;
-                }
+    //         .milestone {
+    //             position: relative;
+    //             display: table-cell;
+    //             width: 72px;
+    //             color: $navy-070;
+    //             @include fontSize(12, 500);
+    //             text-align: center;
+    //             span {
+    //                 display: block;
+    //                 @include fontSize(12);
+    //                 color: $navy-070;
+    //                 font-weight: 500;
+    //             }
+    //             .pin {
+    //                 position: absolute;
+    //                 top: -40px;
+    //                 left: 21px;
+    //             }
+    //             .dot {
+    //                 content: attr(data-step);
+    //                 display: block;
+    //                 width: 10px;
+    //                 height: 10px;
+    //                 margin: 22px auto;
+    //                 background: white;
+    //                 border: 2px solid $navy-020;
+    //                 text-align: center;
+    //                 margin-bottom: 0.25em;
+    //                 line-height: 10px;
+    //                 border-radius: 100%;
+    //                 box-sizing: border-box;
+    //                 position: relative;
+    //                 top: -10px;
+    //                 z-index: 1000;
+    //             }
+    //             &::after {
+    //                 content: "";
+    //                 position: absolute;
+    //                 display: block;
+    //                 width: 100%;
+    //                 border-top: 4px dotted $navy-020;
+    //                 top: 31px;
+    //                 left: 50%;
+    //                 z-index: 1;
+    //             }
 
-                &.start {
-                    position: relative;
-                    .dot {
-                        content: " ";
-                        display: block;
-                        width: 24px;
-                        height: 24px;
-                        border: 0;
-                        background: url(#{$url-content}ic_car_move.svg) center center no-repeat !important;
-                        margin: 4px auto;
-                        top: 0;
-                    }
-                }
-                &.done {
-                    .dot {
-                        background: $green-060;
-                        border: 2px solid $green-060;
-                    }
-                    &::after {
-                        border-top: 4px solid $green-060;
-                    }
-                }
-                &.current {
-                    &:before {
-                        content: " ";
-                        display: block;
-                        width: 30px;
-                        height: 32px;
-                        background-image: url(#{$url-content}gz_pin.svg);
-                        position: absolute;
-                        top: -40px;
-                        left: calc(50% - 15px);
-                    }
-                    .dot {
-                        background: $green-060;
-                        border: 2px solid $green-060;
-                    }
-                    &::after {
-                        border-top: 4px solid $navy-020;
-                    }
-                }
-                &:last-child {
-                    &::after {
-                        border-top: 0;
-                    }
-                }
-                &.finish {
-                    .dot {
-                        background: $green-060;
-                        border: 2px solid $green-060;
-                    }
-                }
-                .date-reached {
-                    margin-top: 2px;
-                    color: $navy-040;
-                    @include fontSize(12);
-                }
-            }
-        }
-    }
+    //             &.start {
+    //                 position: relative;
+    //                 .dot {
+    //                     content: " ";
+    //                     display: block;
+    //                     width: 24px;
+    //                     height: 24px;
+    //                     border: 0;
+    //                     background: url(#{$url-content}ic_car_move.svg) center center no-repeat !important;
+    //                     margin: 4px auto;
+    //                     top: 0;
+    //                 }
+    //             }
+    //             &.done {
+    //                 .dot {
+    //                     background: $green-060;
+    //                     border: 2px solid $green-060;
+    //                 }
+    //                 &::after {
+    //                     border-top: 4px solid $green-060;
+    //                 }
+    //             }
+    //             &.current {
+    //                 &:before {
+    //                     content: " ";
+    //                     display: block;
+    //                     width: 30px;
+    //                     height: 32px;
+    //                     background-image: url(#{$url-content}gz_pin.svg);
+    //                     position: absolute;
+    //                     top: -40px;
+    //                     left: calc(50% - 15px);
+    //                 }
+    //                 .dot {
+    //                     background: $green-060;
+    //                     border: 2px solid $green-060;
+    //                 }
+    //                 &::after {
+    //                     border-top: 4px solid $navy-020;
+    //                 }
+    //             }
+    //             &:last-child {
+    //                 &::after {
+    //                     border-top: 0;
+    //                 }
+    //             }
+    //             &.finish {
+    //                 .dot {
+    //                     background: $green-060;
+    //                     border: 2px solid $green-060;
+    //                 }
+    //             }
+    //             .date-reached {
+    //                 margin-top: 2px;
+    //                 color: $navy-040;
+    //                 @include fontSize(12);
+    //             }
+    //         }
+    //     }
+    // }
 }
 
 .layer-body {
