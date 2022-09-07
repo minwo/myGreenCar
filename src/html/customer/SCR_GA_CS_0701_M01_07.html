@@ -73,30 +73,8 @@
                         <section>
                             <div class="file-attach">
                                 <h4>파일첨부</h4>
-                                <div class="file-wrap">
-                                    <div class="item-counter">
-                                        <span>2/4</span>
-                                    </div>
-                                    <li class="item attached">
-                                        <div class="item-preview">
-                                            <button class="btn icon md"><i class="ico pic-delete md"></i></button>
-                                            <img src="/images/dumm/id_card.png" />
-                                        </div>
-                                        <!-- <p class="item-info"> 2022.06.10 17:02 </p> -->
-                                    </li>
-                                    <li class="item attached">
-                                        <div class="item-preview">
-                                            <button class="btn icon md"><i class="ico pic-delete md"></i></button>
-                                            <img src="/images/dumm/id_card.png" />
-                                        </div>
-                                        <!-- <p class="item-info"> 2022.06.10 17:02 </p> -->
-                                    </li>
-                                    <li class="item">
-                                        <div class="item-preview"></div>
-                                    </li>
-                                    <li class="item">
-                                        <div class="item-preview"></div>
-                                    </li>
+                                <div class="btn-group">
+                                    <button type="button" class="btn lg"><i class="ico camera lg"></i><span class="text">첨부하기</span></button>
                                 </div>
                                 <p class="desc">10MB 미만의 이미지 파일만 업로드 가능합니다. (jpg, jpeg, png, bmp)</p>
                             </div>
@@ -126,7 +104,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="btn-group column mt8">
+                            <div class="btn-group column mt24">
                                 <button type="button" class="btn line lg">사고/고장 접수 전화연결</button>
                                 <button type="button" class="btn green lg mt32">접수하기</button>
                             </div>
@@ -137,4 +115,87 @@
             <!-- //container -->
         </div>
     </body>
+    <script type="text/javascript">
+        /* 아코디언 */
+        const getElIndex = (element, range) => {
+            if (!!range) return [].indexOf.call(element, range);
+            return [].indexOf.call(element.parentNode.children, element);
+        };
+        const uiAccodion = (() => {
+            let el, btnEl, layerEl, prevEl, liEl;
+            let idx, layerLgt, duration, layerHeight, elCheck;
+            let isclick;
+
+            const init = () => {
+                el = document.querySelector(".ui-accodion");
+                btnEl = el.querySelectorAll(".btn-acco");
+                layerEl = el.querySelectorAll(".layer");
+                liEl = el.querySelectorAll("li");
+
+                layerLgt = layerEl.length;
+                duration = 300;
+                isclick = true;
+
+                bindEvent();
+            };
+
+            const bindEvent = () => {
+                clickEvent();
+            };
+
+            const clickEvent = () => {
+                [].forEach.call(btnEl, (e) => {
+                    e.addEventListener("click", (event) => {
+                        prevEl = layerEl[idx];
+                        event.preventDefault();
+                        idx = getElIndex(btnEl, e);
+                        elCheck = prevEl !== layerEl[idx] && prevEl !== undefined;
+                        if (isclick) {
+                            isclick = false;
+                            if (!e.closest("li").classList.contains("active")) {
+                                for (let i = 0; liEl.length > i; i++) {
+                                    liEl[i].classList.remove("active");
+                                }
+                                e.closest("li").classList.add("active");
+                            } else {
+                                e.closest("li").classList.remove("active");
+                            }
+
+                            if (!layerEl[idx].style.height) {
+                                if (elCheck) remove(prevEl);
+
+                                layerEl[idx].style.display = "block";
+                                layerHeight = layerEl[idx].clientHeight;
+                                layerEl[idx].style.height = "0";
+
+                                setTimeout(() => {
+                                    layerEl[idx].style.height = layerHeight + "px";
+                                });
+                            } else {
+                                remove(layerEl[idx]);
+                            }
+
+                            setTimeout(function () {
+                                isclick = true;
+                            }, duration);
+                        }
+                    });
+                });
+
+                const remove = (el) => {
+                    el.style.height = "0";
+                    setTimeout(() => {
+                        el.style = null;
+                    }, duration);
+                };
+            };
+
+            return {
+                init: init,
+            };
+        })();
+
+        uiAccodion.init();
+        /* 아코디언 여기까지 */
+    </script>
 </html>

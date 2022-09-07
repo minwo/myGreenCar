@@ -334,6 +334,26 @@
         }
     }
 }
+
+.ip-box-input{
+    border: 1px solid $gray-020;
+    padding: 0 8px;
+    dl{
+        @include flex-center;
+        dt{
+            flex: 0 0 auto;
+            margin-right: 8px;
+            color: $navy-040;
+            @include fontSize(16);
+        }
+        dd{
+            flex: 1;
+            input[type="text"]{
+                width: 100%;
+            }
+        }
+    }
+}
 .example-area {
     em {
         color: $navy-040;
@@ -580,7 +600,7 @@
     .desc {
         color: $navy-040;
         margin-top: 8px;
-        @include fontSize(16);
+        @include fontSize(14);
     }
 }
 
