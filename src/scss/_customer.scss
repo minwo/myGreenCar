@@ -859,6 +859,41 @@
         border: 0;
         margin: 24px 0;
     }
+    .car-info {
+        padding: 32px 0;
+        position: relative;
+        @include flex-center;
+        .img {
+            width: 100px;
+            height: 100px;
+        }
+        .info {
+            margin-left: 16px;
+            strong {
+                @include fontSize(18, 500);
+            }
+            span {
+                color: $navy-040;
+                @include fontSize(12);
+                display: block;
+            }
+            .option {
+                @include flex-center;
+                .bar {
+                    width: 1px;
+                    height: 12px;
+                    background-color: $navy-020;
+                    margin: 0 4px;
+                    border: 0;
+                }
+            }
+        }
+        .btn{
+            position: absolute;
+            top: calc(50% - 12px);
+            right: 0;
+        }
+    }
 
     .way-to{
         margin: 0 -20px;
