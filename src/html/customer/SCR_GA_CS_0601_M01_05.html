@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('@@webRoot/include/head.html')
+    </head>
+    <body>
+        <div id="wrap">
+            <!-- header -->
+            @@include('@@webRoot/include/header.html', { type: "sub_02", title: "온라인서류제출" })
+            <!-- //header -->
+
+            <!-- container -->
+            <section id="container">
+                <div class="contents">
+                    <div class="customer">
+                        <section>
+                            <h3 class="intro-text">
+                                <span>추가정보를</span><br />
+                                안전하게 업데이트 해드리겠습니다.
+                            </h3>
+                            <div class="guide-box align-left mt16">
+                                <p>온라인서류제출 신청안내 확인 후, 기재 등록해주세요</p>
+                                <p>서류제출 사유를 자세히 입력해주시면, 보다 빠른 업무처리가 가능합니다.</p>
+                            </div>
+                            <div class="agree-group mt24">
+                                <div class="item check-all">
+                                    <label for="tmpCheckbook4" class="gc-checkbox round">
+                                        <input type="checkbox" id="tmpCheckbook4" checked />
+                                        <span>개인정보 수집 이용 및 제공 동의</span>
+                                    </label>
+                                </div>
+                                <div class="agree-module">
+                                    <div class="item active">
+                                        <button type="button" class="btn-check">
+                                            <i class="ico ico-check md"></i>
+                                        </button>
+                                        <a href="#">
+                                            <span class="emp">필수</span>
+                                            <span class="text">개인정보 수집 이용 및 제공 동의</span>
+                                            <i class="ico next-sm md"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <hr class="divider" />
+                        <section>
+                            <h4>접수유형</h4>
+                            <div class="type-select">
+                                <a href="#" class="item"> <span class="text">면허증 등 신분증</span><i class="ico next-sm md"></i> </a>
+                            </div>
+                            <h4 class="mt32">접수내용</h4>
+                            <div class="ip-textarea">
+                                <textarea
+                                    name=""
+                                    id=""
+                                    cols="30"
+                                    rows="10"
+                                    placeholder="안녕하세요  고객상담 진행 후, 추가 보완서류 요청이 있어서 온라인 서류제출을 진행합니다. 금번 면허증 갱신으로 인해 유효기간 변동이 있어 첨부드리니 확인 후 부탁드립니다. 
+                                "
+                                ></textarea>
+                                <div class="length-count">
+                                    <span>1/1000</span>
+                                </div>
+                            </div>
+                        </section>
+                        <hr class="divider" />
+                        <section>
+                            <div class="file-attach">
+                                <h4>파일첨부</h4>
+                                <div class="file-wrap">
+                                    <div class="item-counter">
+                                        <span>2/4</span>
+                                    </div>
+                                    <li class="item attached">
+                                        <div class="item-preview">
+                                            <button class="btn icon md"><i class="ico pic-delete md"></i></button>
+                                            <img src="/images/dumm/id_card.png" />
+                                        </div>
+                                        <!-- <p class="item-info"> 2022.06.10 17:02 </p> -->
+                                    </li>
+                                    <li class="item attached">
+                                        <div class="item-preview">
+                                            <button class="btn icon md"><i class="ico pic-delete md"></i></button>
+                                            <img src="/images/dumm/id_card.png" />
+                                        </div>
+                                        <!-- <p class="item-info"> 2022.06.10 17:02 </p> -->
+                                    </li>
+                                    <li class="item">
+                                        <div class="item-preview"></div>
+                                    </li>
+                                    <li class="item">
+                                        <div class="item-preview"></div>
+                                    </li>
+                                </div>
+                                <p class="desc">10MB 미만의 이미지 파일만 업로드 가능합니다. (jpg, jpeg, png, bmp)</p>
+                            </div>
+                            <div class="btn-group mt24">
+                                <button type="button" class="btn green lg">접수하기</button>
+                            </div>
+                            <p class="desc-gray mt8">※ 보유 및 이용기간 : 업무 목적 달성 후 즉시 폐기 (수집항목 공통)</p>
+                        </section>
+                    </div>
+                </div>
+            </section>
+            <!-- //container -->
+        </div>
+    </body>
+</html>

@@ -309,16 +309,28 @@
 }
 
 .ip-textarea {
+    width: 100%;
+    border: 1px solid $navy-020;
+    padding: 16px 8px;
     textarea {
         width: 100%;
-        border: 1px solid $navy-020;
-        padding: 8px;
+        @include fontSize(16);
+        resize: none;
         &::placeholder {
             color: $navy-040;
-            @include fontSize(14);
+            @include fontSize(16);
         }
         &:focus {
             outline: none;
+        }
+    }
+    .length-count{
+        border-top: 1px solid $gray-020;
+        padding-top: 8px;
+        text-align: right;
+        span{
+            color: $navy-040;
+            @include fontSize(16)
         }
     }
 }
