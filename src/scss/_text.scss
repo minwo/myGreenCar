@@ -40,6 +40,9 @@
     &-xl {
         @include fontSize(18);
     }
+	&-xxl {
+        @include fontSize(20);
+    }
 }
 
 .deco-througt {

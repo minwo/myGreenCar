@@ -2,6 +2,7 @@
 <html lang="ko">
     <head>
         @@include('@@webRoot/include/head.html')
+		<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     </head>
     <body>
         <div id="wrap">
@@ -44,8 +45,29 @@
 
 
 						</div>
+
+						<div class="loading">
+							<div class="lottie">
+								<lottie-player	lottie-player src="https://assets4.lottiefiles.com/datafiles/zc3XRzudyWE36ZBJr7PIkkqq0PFIrIBgp4ojqShI/newAnimation.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;margin:0 auto;"  loop controls autoplay></lottie-player>				
+							</div>
+							<p class="desc-xxl">
+								결제수단 등록이 곧 완료됩니다.
+							</p>
+							<p class="desc-md">
+								잠시만 기다려 주세요.
+							</p>
+						</div>
+
+						<div class="confirm">
+							<img src="/images/common/circle-check.svg" alt="">
+							<p class="desc-xxl">
+								결제수단 등록이 곧 완료됩니다.
+							</p>
+						</div>
+
 					</div>
 
+					@@include('@@webRoot/include/bot_fix.html', {type: "type01", title:"확인"})
                 </div>
             </section>
             <!-- //container -->

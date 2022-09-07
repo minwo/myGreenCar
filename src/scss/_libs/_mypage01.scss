@@ -338,6 +338,24 @@
 			}
 		}
 	}
+	.loading,.confirm{
+		$value:calc(-50% - 49.5px);
+		position:absolute;
+		top:50%;
+		left:50%;
+		width:100%;
+		text-align:center;
+		transform:translate(-50%, #{$value});
+		.desc-xxl{
+			margin-top:24px;
+			font-weight:500;
+		}
+		.desc-md{
+			margin-top:24px;
+			color:$navy-040;
+			font-weight:500;
+		}
+	}
 
 	// 카드등록
 	.card-registration{
