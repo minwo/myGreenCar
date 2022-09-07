@@ -324,31 +324,31 @@
             outline: none;
         }
     }
-    .length-count{
+    .length-count {
         border-top: 1px solid $gray-020;
         padding-top: 8px;
         text-align: right;
-        span{
+        span {
             color: $navy-040;
-            @include fontSize(16)
+            @include fontSize(16);
         }
     }
 }
 
-.ip-box-input{
+.ip-box-input {
     border: 1px solid $gray-020;
     padding: 0 8px;
-    dl{
+    dl {
         @include flex-center;
-        dt{
+        dt {
             flex: 0 0 auto;
             margin-right: 8px;
             color: $navy-040;
             @include fontSize(16);
         }
-        dd{
+        dd {
             flex: 1;
-            input[type="text"]{
+            input[type="text"] {
                 width: 100%;
             }
         }
@@ -764,8 +764,6 @@
     }
 }
 
-
-
 .filter-box {
     height: 72px;
     @include flex-center;
@@ -812,69 +810,244 @@
     }
 }
 
-.chat-area{
+.chat-area {
     margin-top: 315px;
-    p{
+    p {
         color: $navy-040;
         @include fontSize(14);
     }
-    p + .btn{
+    p + .btn {
         width: 120px;
-        margin: 0 auto ;
+        margin: 0 auto;
         margin-top: 16px;
     }
 }
 
-.btn-area{
-    &.center{
-        .btn{
+.btn-area {
+    &.center {
+        .btn {
             margin: 0 auto;
-            .text{
+            .text {
                 color: $navy-070;
             }
         }
     }
 }
-.desc-gray{
+.desc-gray {
     color: $navy-040;
     @include fontSize(14);
 }
 
-.agree-terms{
-    strong{
-        @include fontSize(16,500)
+.agree-terms {
+    strong {
+        @include fontSize(16, 500);
     }
 }
 
-
-
-
-
-
-
-.cm{
-    hr.divider-thin{
+.cm {
+    hr.divider-thin {
         height: 1px;
         background-color: $navy-020;
         border: 0;
         margin: 24px 0;
     }
+    .car-info {
+        padding: 32px 0;
+        position: relative;
+        @include flex-center;
+        .img {
+            width: 100px;
+            height: 100px;
+        }
+        .info {
+            margin-left: 16px;
+            strong {
+                @include fontSize(18, 500);
+            }
+            span {
+                color: $navy-040;
+                @include fontSize(12);
+                display: block;
+            }
+            .option {
+                @include flex-center;
+                .bar {
+                    width: 1px;
+                    height: 12px;
+                    background-color: $navy-020;
+                    margin: 0 4px;
+                    border: 0;
+                }
+            }
+        }
+        .btn {
+            position: absolute;
+            top: calc(50% - 12px);
+            right: 0;
+        }
+    }
 
-    .way-to{
+    .way-to {
         margin: 0 -20px;
-        .item{
-            .img{
+        .item {
+            .img {
                 height: 180px;
                 overflow: hidden;
-                img{
+                img {
                     width: 100%;
                 }
             }
 
-            .desc{
+            .desc {
                 padding: 24px 16px;
                 background-color: $gray-000;
-                @include fontSize(16,500)
+                @include fontSize(16, 500);
+            }
+        }
+    }
+}
+
+// 그린 댓글
+.green-reply {
+    .reply-item + .reply-item {
+        &::before {
+            content: " ";
+            display: block;
+            height: 7px;
+            margin: 0 -20px;
+            background-color: $gray-010;
+            border-top: 1px solid $gray-020;
+        }
+    }
+
+    .reply-head {
+        padding: 24px 0 8px;
+        border-bottom: 1px solid $navy-020;
+        @include flex-center;
+        > div {
+            @include flex-center;
+        }
+        .profile {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            overflow: hidden;
+            background-image: url(#{$url-ico}icon_profile.svg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+        }
+        .name {
+            margin-left: 8px;
+            @include fontSize(12, 500);
+        }
+        .date {
+            display: block;
+            margin-left: 16px;
+            color: $navy-040;
+            @include fontSize(12, 500);
+        }
+    }
+    .reply-body {
+        padding: 8px 0;
+        .img {
+            width: 84px;
+            height: 84px;
+            margin-top: 16px;
+            border-radius: $border-radius;
+            overflow: hidden;
+        }
+        .text {
+            @include fontSize(14, 500);
+        }
+    }
+    .reply-footer {
+        padding-bottom: 24px;
+        @include flex-center;
+        > div {
+            gap: 2px;
+            @include flex-center;
+        }
+        .like {
+            margin-right: 16px;
+            &.on {
+                .count {
+                    color: $green-060;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+    .comment-wrap {
+        .comment-item {
+            position: relative;
+            margin: 0 -20px;
+            padding: 16px 20px;
+            background-color: $gray-010;
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+            }
+            .comment-head {
+                @include fontSize(12, 500);
+                padding-bottom: 8px;
+                @include flex-center;
+                .profile {
+                    display: inline-block;
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    background-image: url(#{$url-ico}icon_profile.svg);
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    background-size: cover;
+                }
+                .name {
+                    margin-left: 8px;
+                }
+                .date {
+                    color: $navy-040;
+                    margin-left: 16px;
+                }
+            }
+            .comment-body {
+                color: $navy-070;
+                @include fontSize(14, 500);
+            }
+        }
+    }
+}
+
+// 그린존 - 주차장 정보
+.parking-lot-info {
+    margin: 0 -20px;
+    .img {
+        height: 180px;
+        overflow: hidden;
+        img {
+            width: 100%;
+        }
+    }
+    .info {
+        padding: 24px 20px;
+        .location {
+            @include flex-center;
+            .text {
+                @include fontSize(16, 500);
+            }
+            .text + .btn {
+                margin-left: 8px;
+            }
+        }
+        .btn-group{
+            justify-content: center;
+            margin-top: 24px;
+            .btn{
+                flex: 0 0 auto;
             }
         }
     }
