@@ -109,6 +109,9 @@ $btn-size: (
     &.icon{
         height: initial;
     }
+    &.round{
+        border-radius: 2rem;
+    }
 
     @each $value, $color in $btn-colors {
         &.#{$value} {
