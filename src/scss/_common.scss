@@ -768,3 +768,24 @@ $offset: 187;
 		border-radius:3.5px;
 	}
 }
+
+// 유의 사항
+.notice-txt{
+	margin-top:24px;
+	.tit{
+		@include fontSize(14,500);
+	}
+	.list{
+		li{
+			padding-left:14px;
+			@include fontSize(12);
+			&::before{
+				top:6px;
+				left:5px;
+			}
+			&:first-child{
+				margin-top:8px;
+			}
+		}
+	}
+}

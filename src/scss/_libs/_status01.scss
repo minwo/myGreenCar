@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-.status{
+.status:not(.layer-wrap){
 	padding-bottom:80px;
 	//사고접수안내
 	.title-area{
@@ -121,7 +121,7 @@
 				@include fontSize(12);
 				color:$navy-040;
 				&:not(.receipt){
-					margin-top:10px;
+					margin-top:4px;
 				}
 			}
 			.desc{
@@ -154,23 +154,6 @@
 		}
 	}
 
-	.notice-txt{
-		margin-top:24px;
-		.tit{
-			@include fontSize(14,500);
-		}
-		li{
-			padding-left:14px;
-			@include fontSize(12);
-			&::before{
-				top:6px;
-				left:5px;
-			}
-			&:first-child{
-				margin-top:8px;
-			}
-		}
-	}
 	.accident-photo{
 		margin-top:24px;
 		.swiper-module{
@@ -275,8 +258,11 @@
 	//청구/결제
 	.payment-infomation{
 		margin:24px 0 4px;
+		.title-sm{
+			margin-bottom:12px;
+		}
 		.grid-flex{
-			padding:6px 0;
+			padding:4px 0;
 			.flex{
 				@include fontSize(14);
 				&:last-child{
@@ -296,7 +282,7 @@
 			border-top:1px solid $navy-010;
 			border-bottom:1px solid $navy-010;
 			.grid-flex{
-				padding:19px 0;
+				padding:24px 0;
 				.flex{
 					@include fontSize(16,500);
 					&:last-child{
@@ -312,6 +298,9 @@
 
 	.payment{
 		margin-top:24px;
+		.title-area{
+			margin-bottom:16px;
+		}
 		.btn-copy{
 			width:18px;
 			height:18px;
@@ -365,6 +354,9 @@
 	}
 
 	//사고사진 등록
+	.photo-input{
+		margin-top:32px;
+	}
 	.photo-guide{
 		margin-top:32px;
 		text-align:right;
@@ -375,7 +367,9 @@
 		}
 		.under{
 			margin-left:4px;
+			@include fontSize(12);
 			border-color:$default;
+			text-decoration:underline;
 		}
 	}
 	.add{  
@@ -459,15 +453,18 @@
 			.block{
 				margin-top:24px;
 			}
+			.list.sm{
+				margin-top:16px;
+			}
 			.tb-wrap{
 				margin-top:16px;
 			}
 			.desc{
-				margin-top:24px;
+				margin-top:16px;
 				color:$navy-040;
 			}
 			.desc-xs{
-				margin-top:8px;
+				margin-top:16px;
 				@include fontSize(12);
 				color:$navy-040;
 				&:first-child{
