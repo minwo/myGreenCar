@@ -845,3 +845,18 @@
         @include fontSize(16,500)
     }
 }
+
+
+
+
+
+
+
+.cm{
+    hr.divider-thin{
+        height: 1px;
+        background-color: $navy-020;
+        border: 0;
+        margin: 24px 0;
+    }
+}
