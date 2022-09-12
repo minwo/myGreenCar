@@ -789,3 +789,109 @@ $offset: 187;
 		}
 	}
 }
+
+
+/****************************************
+* Badge
+* solid는 배경이 채워진, line은 외곽선만 
+  있는 형태 나타냄
+*<span class="badge solid red sm"/>
+*<span class="badge line green md"/>
+****************************************/
+.badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+	height:18px;
+	padding:0 8px;
+    border-radius: 2rem;
+	@include fontSize(10);
+	line-height:18xp;
+	color:$gray-000;
+    .ico + .text {
+        margin-left: 2px;
+    }
+    &.solid {
+        background-color: $navy-040;
+        &.green {
+            background-color: $green-060;
+        }
+        &.pink {
+            background-color: $fuchsia-050;
+        }
+        &.red {
+            background-color: $red-060;
+        }
+    }
+    &.line {
+        color: $navy-040;
+        border: 1px solid $navy-040;
+        background-color: transparent !important;
+        &.pink {
+            color: $fuchsia-050;
+            background-color: $fuchsia-050;
+            border-color: $fuchsia-050;
+        }
+        &.green {
+            color: $green-060;
+            background-color: $green-060;
+            border-color: $green-060;
+        }
+    }
+    // Badge Size
+    &.sm {
+        height: 16px;
+        min-width: 40px;
+        padding: 0 8px;
+        @include fontSize(10, 500);
+        letter-spacing: 0.05rem;
+    }
+    &.md {
+        height: 18px;
+        padding: 0 6px;
+        @include fontSize(12);
+    }
+    &.lg {
+        height: 20px;
+        padding: 0 8px;
+        @include fontSize(14);
+    }
+    // Badge Shape(Default == Round )
+    &.square {
+        border-radius: 6px;
+        padding: 12px;
+    }
+
+	&.plus{
+		@include border('',2);
+		border-color:$yellow-060;
+		background-color: #000000;
+	}
+	&.fuchsia{
+		background-color: $fuchsia-050;
+	}
+	&.pink{
+		background-color:$pink-040;
+	}
+	&.orange{
+		background-color:$orange-050;
+	}
+	&.light-blue{
+		background-color:$light-blue-040;
+	}
+	&.puple{
+		background-color:$puple-040;
+	}
+	&.navy{
+		background-color:$navy-020;
+	}
+	&.green{
+		background-color:$default;
+	}
+	&.navy-060{
+		background-color:$navy-060;
+	}
+	&.red{
+		background-color:$red-060;
+	}
+}
