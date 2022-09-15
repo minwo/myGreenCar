@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('@@webRoot/include/head.html')
+    </head>
+    <body>
+        <div id="wrap">
+            <!-- header -->
+            @@include('@@webRoot/include/header.html', { type: "search"})
+            <!-- //header -->
+
+            <!-- container -->
+            <section id="container">
+                <div class="contents">
+                    
+					<div class="mypage">
+						<div class="address-search">
+							
+							<div class="default">
+								<p class="desc-xxl">
+									검색할 장소, 주소를 입력하세요.
+								</p>
+								<p class="tip">
+									우편번호 통합검색 Tip
+								</p>
+								<ul class="list sm">
+									<li>
+										도로명 + 건물번호 (예: 송파대로 520)
+									</li>
+									<li>
+										동/읍/면/리 + 번지 (예: 삼성동 5-35)
+									</li>
+									<li>
+										건물명, 아파트명 (예: 반포자이아파트)
+									</li>
+								</ul>
+							</div>
+
+							<div class="reservation">
+								<div class="search-result">
+									<ul>
+										<li>
+											<a href="#">
+												<p class="code">06263</p>
+												<p class="keyword">서울 강남구 도곡로 18길 7(도곡동)</p>
+												<p class="address">서울 강남구 도곡동 548 강남구청인터넷 수능방송국...</p>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<p class="code">06263</p>
+												<p class="keyword">서울 강남구 도곡로 18길 7(도곡동)</p>
+												<p class="address">서울 강남구 도곡동 548 강남구청인터넷 수능방송국...</p>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+					@@include('@@webRoot/include/bot_fix.html', {type: "type01", title:"주소 변경하기"})
+                </div>
+            </section>
+            <!-- //container -->
+        </div>
+    </body>
+</html>

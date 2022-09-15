@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('@@webRoot/include/head.html')
+    </head>
+    <body>
+        <div id="wrap">
+            <!-- header -->
+            @@include('@@webRoot/include/header.html', { type: "sub_02", title: "주소 변경하기" })
+            <!-- //header -->
+
+            <!-- container -->
+            <section id="container">
+                <div class="contents">
+                    
+					<div class="mypage">
+						<div class="address-search">
+							<div class="ip-wrap">
+								<div class="ip-group">
+									<label for="ip01" class="ip-label">주소</label>
+									<div class="row">
+										<button type="button" class="btn line lg full">주소검색</button>
+									</div>
+									<div class="row">
+										<div class="module-ip">
+											<input id="ip01" type="text" class="ip-txt" placeholder="">
+											<div class="line"></div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="module-ip">
+											<input id="ip02" type="text" class="ip-txt" placeholder="상세주소를 입력해주세요.">
+											<div class="line"></div>
+										</div>
+										<div class="module-ico">
+											<button type="button" class="btn-del">
+												<i class="ico delete lg"></i>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					@@include('@@webRoot/include/bot_fix.html', {type: "type01", title:"주소 변경하기"})
+                </div>
+            </section>
+            <!-- //container -->
+        </div>
+    </body>
+</html>

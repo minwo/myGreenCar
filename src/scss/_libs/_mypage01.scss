@@ -394,7 +394,7 @@
 		padding-bottom:80px;
 	}
 
-	// 고지사항 목록
+	// 공지사항 목록
 	.notice{
 		.notice-list,.notice-detail{
 			a{
@@ -440,6 +440,34 @@
 			}
 			.cont{
 				padding:24px 0;
+			}
+		}
+	}
+
+	// 주소 검색
+	.address-search{
+		margin-top:32px;
+		.ip-group{
+			.row{
+				margin-top:16px;
+			}
+		}
+		.default{
+			.desc-xxl{
+				font-weight:500;
+			}
+			.tip{
+				margin-top:32px;
+				@include fontSize(12,500);
+			}
+			.list{
+				margin-top:24px;
+			}
+		}
+		.search-result{
+			.code{
+				@include fontSize(14);
+				color:$default;
 			}
 		}
 	}

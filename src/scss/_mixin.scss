@@ -221,7 +221,7 @@
 
 // input line
 @mixin ipLine(){
-	.line{
+	.module-ip .line{
 		position:absolute;
 		left:0;
 		bottom:0;
@@ -237,7 +237,7 @@
 	}
 
 	&:not(.box){
-		.line{
+		.module-ip .line{
 			height:1px;
 			background-color: $navy-020;
 			transition: $animation;
