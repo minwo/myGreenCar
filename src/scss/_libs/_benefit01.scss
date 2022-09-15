@@ -145,8 +145,33 @@
 
 		// 제휴처 상세보기
 		.partner-detail{
+			.img-group{
+				display:flex;
+				.thum-img{
+					padding-right:16px;
+				}
+				img{
+					max-width:100px;
+				}
+				.category{
+					display:inline-flex;
+					align-items:center;
+					justify-items:center;
+					height:26px;
+					margin-top:16px;
+					padding:0 12px;
+					@include fontSize(12);
+					color:$gray-000;
+					background-color: $pink-040;
+					border-radius:99px;
+				}
+				.data{
+					margin-top:8px;
+					@include fontSize(18);
+				}
+			}
 			.group{
-				margin-top:8px;
+				margin-top:24px;
 				&:first-child{
 					margin-top:0;
 				}
