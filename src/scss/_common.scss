@@ -619,7 +619,8 @@ textarea {
 	.toast-container{
 		position:fixed;
 		left:0;
-		bottom:94px;
+		bottom:132px;
+		z-index:999;
 		width:100%;
 		padding:0 20px;
 		opacity:0;
@@ -629,6 +630,7 @@ textarea {
 
 	.module{
 		display:flex;
+		justify-content:center;
 		align-items:center;
 		min-height:48px;
 		padding:16px 20px;
